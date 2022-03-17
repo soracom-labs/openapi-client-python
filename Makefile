@@ -6,7 +6,7 @@ INPUT_SPECS ?= api sandbox
 GIT_REVISION ?= $(shell git rev-parse --short HEAD)
 GIT_TAG ?= $(shell git describe --tags --abbrev=0 | sed -e s/v//g)
 
-SORACOM_PROFILE ?= configs/soracom-profile.json.sample # e.g. ~/.soracom/default.json
+SORACOM_PROFILE ?= ~/.soracom/default.json
 SORACOM_AUTH_KEY ?= $(shell cat $(SORACOM_PROFILE) | jq -r .authKey)
 SORACOM_AUTH_KEY_ID ?= $(shell cat $(SORACOM_PROFILE) | jq -r .authKeyId)
 
@@ -14,6 +14,9 @@ POETRY ?= poetry
 POETRY_RUN ?= $(POETRY) run
 POETRY_VENV_CREATE ?= true
 POETRY_VENV_IN_PROJECT ?= true
+
+IP ?= localhost
+PORT ?= 8000
 
 .PHONY: help
 help:
@@ -90,3 +93,15 @@ generate-diff-check: ## check if generated codes are the same as tracked ones
 
 .PHONY: ci-test
 ci-test: generate generate-diff-check install-poetry install-deps-dev format-check lint test build ## ci test
+
+.PHONY: docs-server
+docs-server: ## run docs server locally
+	$(POETRY_RUN) mkdocs serve --dev-addr $(IP):$(PORT)
+
+.PHONY: docs-build
+docs-build: ## build site
+	$(POETRY_RUN) mkdocs build
+
+.PHONY: docs-release
+docs-release: ## release docs
+	$(POETRY_RUN) mkdocs gh-deploy --force
