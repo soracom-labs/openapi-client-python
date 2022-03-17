@@ -92,7 +92,7 @@ class SimplifiedSubscriber(ModelNormal):
             'imsi': (str,),  # noqa: E501
             'msisdn': (str,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'subscription': (str,),  # noqa: E501
+            'subscription': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -155,7 +155,7 @@ class SimplifiedSubscriber(ModelNormal):
             imsi (str): [optional]  # noqa: E501
             msisdn (str): [optional]  # noqa: E501
             status (str): [optional]  # noqa: E501
-            subscription (str): [optional]  # noqa: E501
+            subscription (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,7 +242,7 @@ class SimplifiedSubscriber(ModelNormal):
             imsi (str): [optional]  # noqa: E501
             msisdn (str): [optional]  # noqa: E501
             status (str): [optional]  # noqa: E501
-            subscription (str): [optional]  # noqa: E501
+            subscription (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

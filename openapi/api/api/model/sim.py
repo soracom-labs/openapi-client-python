@@ -33,7 +33,6 @@ def lazy_import():
     from api.model.arc_session_status import ArcSessionStatus
     from api.model.capabilities import Capabilities
     from api.model.imei_lock import ImeiLock
-    from api.model.map import Map
     from api.model.previous_session_status import PreviousSessionStatus
     from api.model.session_status import SessionStatus
     from api.model.sim_profile import SimProfile
@@ -41,7 +40,6 @@ def lazy_import():
     globals()['ArcSessionStatus'] = ArcSessionStatus
     globals()['Capabilities'] = Capabilities
     globals()['ImeiLock'] = ImeiLock
-    globals()['Map'] = Map
     globals()['PreviousSessionStatus'] = PreviousSessionStatus
     globals()['SessionStatus'] = SessionStatus
     globals()['SimProfile'] = SimProfile
@@ -74,6 +72,7 @@ class Sim(ModelNormal):
 
     allowed_values = {
         ('expiry_action',): {
+            'None': None,
             'DONOTHING': "doNothing",
             'DELETESESSION': "deleteSession",
             'DEACTIVATE': "deactivate",
@@ -117,21 +116,21 @@ class Sim(ModelNormal):
             'arc_session_status': (ArcSessionStatus,),  # noqa: E501
             'capabilities': (Capabilities,),  # noqa: E501
             'created_time': (int,),  # noqa: E501
-            'expiry_action': (str,),  # noqa: E501
-            'expiry_time': (int,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'expiry_action': (str, none_type,),  # noqa: E501
+            'expiry_time': (int, none_type,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'imei_lock': (ImeiLock,),  # noqa: E501
             'last_modified_time': (int,),  # noqa: E501
-            'last_port_mapping_created_time': (int,),  # noqa: E501
-            'local_info': (Map,),  # noqa: E501
+            'last_port_mapping_created_time': (int, none_type,),  # noqa: E501
+            'local_info': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
             'module_type': (str,),  # noqa: E501
             'operator_id': (str,),  # noqa: E501
             'ota_serial_number': (str,),  # noqa: E501
-            'pcap_end_time': (int,),  # noqa: E501
-            'pcap_start_time': (int,),  # noqa: E501
+            'pcap_end_time': (int, none_type,),  # noqa: E501
+            'pcap_start_time': (int, none_type,),  # noqa: E501
             'previous_session': (PreviousSessionStatus,),  # noqa: E501
             'profiles': ({str: (SimProfile,)},),  # noqa: E501
-            'serial_number': (str,),  # noqa: E501
+            'serial_number': (str, none_type,),  # noqa: E501
             'session_status': (SessionStatus,),  # noqa: E501
             'sim_id': (str,),  # noqa: E501
             'speed_class': (str,),  # noqa: E501
@@ -220,21 +219,21 @@ class Sim(ModelNormal):
             arc_session_status (ArcSessionStatus): [optional]  # noqa: E501
             capabilities (Capabilities): [optional]  # noqa: E501
             created_time (int): [optional]  # noqa: E501
-            expiry_action (str): [optional]  # noqa: E501
-            expiry_time (int): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            expiry_action (str, none_type): [optional]  # noqa: E501
+            expiry_time (int, none_type): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             imei_lock (ImeiLock): [optional]  # noqa: E501
             last_modified_time (int): [optional]  # noqa: E501
-            last_port_mapping_created_time (int): [optional]  # noqa: E501
-            local_info (Map): [optional]  # noqa: E501
+            last_port_mapping_created_time (int, none_type): [optional]  # noqa: E501
+            local_info ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             module_type (str): [optional]  # noqa: E501
             operator_id (str): [optional]  # noqa: E501
             ota_serial_number (str): [optional]  # noqa: E501
-            pcap_end_time (int): [optional]  # noqa: E501
-            pcap_start_time (int): [optional]  # noqa: E501
+            pcap_end_time (int, none_type): [optional]  # noqa: E501
+            pcap_start_time (int, none_type): [optional]  # noqa: E501
             previous_session (PreviousSessionStatus): [optional]  # noqa: E501
             profiles ({str: (SimProfile,)}): [optional]  # noqa: E501
-            serial_number (str): [optional]  # noqa: E501
+            serial_number (str, none_type): [optional]  # noqa: E501
             session_status (SessionStatus): [optional]  # noqa: E501
             sim_id (str): [optional]  # noqa: E501
             speed_class (str): [optional]  # noqa: E501
@@ -327,21 +326,21 @@ class Sim(ModelNormal):
             arc_session_status (ArcSessionStatus): [optional]  # noqa: E501
             capabilities (Capabilities): [optional]  # noqa: E501
             created_time (int): [optional]  # noqa: E501
-            expiry_action (str): [optional]  # noqa: E501
-            expiry_time (int): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            expiry_action (str, none_type): [optional]  # noqa: E501
+            expiry_time (int, none_type): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             imei_lock (ImeiLock): [optional]  # noqa: E501
             last_modified_time (int): [optional]  # noqa: E501
-            last_port_mapping_created_time (int): [optional]  # noqa: E501
-            local_info (Map): [optional]  # noqa: E501
+            last_port_mapping_created_time (int, none_type): [optional]  # noqa: E501
+            local_info ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             module_type (str): [optional]  # noqa: E501
             operator_id (str): [optional]  # noqa: E501
             ota_serial_number (str): [optional]  # noqa: E501
-            pcap_end_time (int): [optional]  # noqa: E501
-            pcap_start_time (int): [optional]  # noqa: E501
+            pcap_end_time (int, none_type): [optional]  # noqa: E501
+            pcap_start_time (int, none_type): [optional]  # noqa: E501
             previous_session (PreviousSessionStatus): [optional]  # noqa: E501
             profiles ({str: (SimProfile,)}): [optional]  # noqa: E501
-            serial_number (str): [optional]  # noqa: E501
+            serial_number (str, none_type): [optional]  # noqa: E501
             session_status (SessionStatus): [optional]  # noqa: E501
             sim_id (str): [optional]  # noqa: E501
             speed_class (str): [optional]  # noqa: E501

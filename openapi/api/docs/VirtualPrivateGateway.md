@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **tags** | [**TagSet**](TagSet.md) |  | [optional] 
 **type** | **int** |  | [optional] 
 **use_internet_gateway** | **bool** |  | [optional] 
-**virtual_interfaces** | [**Map**](Map.md) |  | [optional] 
-**vpc_peering_connections** | [**Map**](Map.md) |  | [optional] 
+**virtual_interfaces** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
+**vpc_peering_connections** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

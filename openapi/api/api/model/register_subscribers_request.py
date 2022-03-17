@@ -88,7 +88,7 @@ class RegisterSubscribersRequest(ModelNormal):
         lazy_import()
         return {
             'registration_secret': (str,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'tags': ([TagUpdateRequest],),  # noqa: E501
         }
 
@@ -147,7 +147,7 @@ class RegisterSubscribersRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             tags ([TagUpdateRequest]): [optional]  # noqa: E501
         """
 
@@ -234,7 +234,7 @@ class RegisterSubscribersRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             tags ([TagUpdateRequest]): [optional]  # noqa: E501
         """
 

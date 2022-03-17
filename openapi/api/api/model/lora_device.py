@@ -94,7 +94,7 @@ class LoraDevice(ModelNormal):
         lazy_import()
         return {
             'device_id': (str,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'last_modified_time': (datetime,),  # noqa: E501
             'last_seen': (LastSeen,),  # noqa: E501
             'operator_id': (str,),  # noqa: E501
@@ -161,7 +161,7 @@ class LoraDevice(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             device_id (str): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             last_modified_time (datetime): [optional]  # noqa: E501
             last_seen (LastSeen): [optional]  # noqa: E501
             operator_id (str): [optional]  # noqa: E501
@@ -250,7 +250,7 @@ class LoraDevice(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             device_id (str): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             last_modified_time (datetime): [optional]  # noqa: E501
             last_seen (LastSeen): [optional]  # noqa: E501
             operator_id (str): [optional]  # noqa: E501

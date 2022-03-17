@@ -56,6 +56,7 @@ class ExpiryTime(ModelNormal):
 
     allowed_values = {
         ('expiry_action',): {
+            'None': None,
             'DONOTHING': "doNothing",
             'DELETESESSION': "deleteSession",
             'DEACTIVATE': "deactivate",
@@ -88,8 +89,8 @@ class ExpiryTime(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'expiry_time': (int,),  # noqa: E501
-            'expiry_action': (str,),  # noqa: E501
+            'expiry_time': (int, none_type,),  # noqa: E501
+            'expiry_action': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -113,7 +114,7 @@ class ExpiryTime(ModelNormal):
         """ExpiryTime - a model defined in OpenAPI
 
         Args:
-            expiry_time (int): The timestamp (in Unix milliseconds) of a date and time set using the Expiration function. If no Expiration function is set, null is returned.
+            expiry_time (int, none_type): The timestamp (in Unix milliseconds) of a date and time set using the Expiration function. If no Expiration function is set, null is returned.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -146,7 +147,7 @@ class ExpiryTime(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            expiry_action (str): [optional]  # noqa: E501
+            expiry_action (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -199,7 +200,7 @@ class ExpiryTime(ModelNormal):
         """ExpiryTime - a model defined in OpenAPI
 
         Args:
-            expiry_time (int): The timestamp (in Unix milliseconds) of a date and time set using the Expiration function. If no Expiration function is set, null is returned.
+            expiry_time (int, none_type): The timestamp (in Unix milliseconds) of a date and time set using the Expiration function. If no Expiration function is set, null is returned.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -232,7 +233,7 @@ class ExpiryTime(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            expiry_action (str): [optional]  # noqa: E501
+            expiry_action (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

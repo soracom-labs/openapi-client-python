@@ -628,7 +628,6 @@ Class | Method | HTTP request | Description
  - [MFAIssueRevokingTokenRequest](docs/MFAIssueRevokingTokenRequest.md)
  - [MFARevokingTokenVerifyRequest](docs/MFARevokingTokenVerifyRequest.md)
  - [MFAStatusOfUseResponse](docs/MFAStatusOfUseResponse.md)
- - [Map](docs/Map.md)
  - [MappingEntries](docs/MappingEntries.md)
  - [MonthlyBill](docs/MonthlyBill.md)
  - [NapterAuditLogDirection](docs/NapterAuditLogDirection.md)

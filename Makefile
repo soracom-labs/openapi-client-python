@@ -6,10 +6,6 @@ INPUT_SPECS ?= api sandbox
 GIT_REVISION ?= $(shell git rev-parse --short HEAD)
 GIT_TAG ?= $(shell git describe --tags --abbrev=0 | sed -e s/v//g)
 
-SORACOM_PROFILE ?= ~/.soracom/default.json
-SORACOM_AUTH_KEY ?= $(shell cat $(SORACOM_PROFILE) | jq -r .authKey)
-SORACOM_AUTH_KEY_ID ?= $(shell cat $(SORACOM_PROFILE) | jq -r .authKeyId)
-
 POETRY ?= poetry
 POETRY_RUN ?= $(POETRY) run
 POETRY_VENV_CREATE ?= true

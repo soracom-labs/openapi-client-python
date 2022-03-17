@@ -1770,6 +1770,7 @@ paths:
               properties:
                 groupId:
                   type: string
+                  nullable: true
               type: object
       responses:
         "200":
@@ -9330,6 +9331,7 @@ paths:
                 subscription:
                   description: Name of the subscription plan
                   type: string
+                  nullable: true
                 type:
                   enum:
                   - virtual
@@ -13727,6 +13729,7 @@ components:
       properties:
         subscription:
           type: string
+          nullable: true
         type:
           enum:
           - virtual
@@ -13893,6 +13896,7 @@ components:
           type: string
         groupId:
           type: string
+          nullable: true
         ipAddress:
           type: string
         lastModifiedTime:
@@ -13919,6 +13923,7 @@ components:
           type: integer
         serialNumber:
           type: string
+          nullable: true
         tags:
           additionalProperties:
             type: string
@@ -14245,12 +14250,14 @@ components:
           - suspend
           - terminate
           type: string
+          nullable: true
         expiryTime:
           description: The timestamp (in Unix milliseconds) of a date and time set
             using the Expiration function. If no Expiration function is set, null
             is returned.
           format: int64
           type: integer
+          nullable: true
       required:
       - expiryTime
       type: object
@@ -14632,6 +14639,7 @@ components:
           type: object
         groupId:
           type: string
+          nullable: true
         id:
           type: string
         lastModifiedTime:
@@ -15013,6 +15021,7 @@ components:
           type: integer
         groupId:
           type: string
+          nullable: true
         lastModifiedTime:
           format: int64
           type: integer
@@ -15044,7 +15053,9 @@ components:
       properties:
         imei:
           type: string
+          nullable: true
       type: object
+      nullable: true
     IndividualInformationModel:
       properties:
         addressLine1:
@@ -15488,6 +15499,7 @@ components:
           type: string
         groupId:
           type: string
+          nullable: true
         lastModifiedTime:
           format: date-time
           type: string
@@ -15598,8 +15610,9 @@ components:
           type: string
       type: object
     Map:
-      additionalProperties:
-        type: string
+      # fixme: commented out to avoid invalid schema issue
+      # additionalProperties:
+      #   type: string
       type: object
     MappingEntries:
       properties:
@@ -15732,6 +15745,7 @@ components:
         serialNumber:
           description: serialNumber
           type: string
+          nullable: true
       type: object
     PacketCaptureSession:
       properties:
@@ -15890,6 +15904,7 @@ components:
           items:
             type: string
           type: array
+          nullable: true
         gatewayPrivateIpAddress:
           type: string
         gatewayPublicIpAddress:
@@ -15897,9 +15912,11 @@ components:
         imei:
           description: The IMEI of the device using the SIM.
           type: string
+          nullable: true
         ueIpAddress:
           description: The IP address of the device.
           type: string
+          nullable: true
         vpgId:
           description: The Virtual Private Gateway IP address configured.
           type: string
@@ -16022,6 +16039,7 @@ components:
       properties:
         groupId:
           type: string
+          nullable: true
         registrationSecret:
           type: string
         tags:
@@ -16057,6 +16075,7 @@ components:
       properties:
         groupId:
           type: string
+          nullable: true
         registrationSecret:
           type: string
         tags:
@@ -16070,6 +16089,7 @@ components:
       properties:
         groupId:
           type: string
+          nullable: true
         registrationSecret:
           type: string
         tags:
@@ -16258,6 +16278,7 @@ components:
         imei:
           description: The IMEI of the device using the SIM.
           type: string
+          nullable: true
         imsi:
           description: The IMSI of the SIM.
           type: string
@@ -16271,6 +16292,7 @@ components:
         ueIpAddress:
           description: The IP address of the device.
           type: string
+          nullable: true
         vpgId:
           description: The Virtual Private Gateway IP address configured.
           type: string
@@ -16284,6 +16306,7 @@ components:
           items:
             type: string
           type: array
+          nullable: true
         gatewayPrivateIpAddress:
           type: string
         gatewayPublicIpAddress:
@@ -16291,6 +16314,7 @@ components:
         imei:
           description: The IMEI of the device using the SIM.
           type: string
+          nullable: true
         lastUpdatedAt:
           format: int64
           type: integer
@@ -16300,10 +16324,12 @@ components:
         ueIpAddress:
           description: The IP address of the device.
           type: string
+          nullable: true
         vpgId:
           description: The Virtual Private Gateway IP address configured.
           type: string
       type: object
+      nullable: true
     SetDeviceObjectModelScopeRequest:
       properties:
         scope:
@@ -16313,6 +16339,7 @@ components:
       properties:
         groupId:
           type: string
+          nullable: true
         tags:
           $ref: '#/components/schemas/TagSet'
       type: object
@@ -16320,6 +16347,7 @@ components:
       properties:
         imei:
           type: string
+          nullable: true
       type: object
     SetNetworkSetRequest:
       properties:
@@ -16423,6 +16451,7 @@ components:
           type: string
         groupId:
           type: string
+          nullable: true
         lastModifiedTime:
           format: date-time
           type: string
@@ -16473,11 +16502,14 @@ components:
           - suspend
           - terminate
           type: string
+          nullable: true
         expiryTime:
           format: int64
           type: integer
+          nullable: true
         groupId:
           type: string
+          nullable: true
         imeiLock:
           $ref: '#/components/schemas/ImeiLock'
         lastModifiedTime:
@@ -16486,6 +16518,7 @@ components:
         lastPortMappingCreatedTime:
           format: int64
           type: integer
+          nullable: true
         localInfo:
           $ref: '#/components/schemas/Map'
         moduleType:
@@ -16497,9 +16530,11 @@ components:
         pcapEndTime:
           format: int64
           type: integer
+          nullable: true
         pcapStartTime:
           format: int64
           type: integer
+          nullable: true
         previousSession:
           $ref: '#/components/schemas/PreviousSessionStatus'
         profiles:
@@ -16508,6 +16543,7 @@ components:
           type: object
         serialNumber:
           type: string
+          nullable: true
         sessionStatus:
           $ref: '#/components/schemas/SessionStatus'
         simId:
@@ -16560,6 +16596,7 @@ components:
           type: string
         subscription:
           type: string
+          nullable: true
       type: object
     SmsForwardingReport:
       properties:
@@ -16672,9 +16709,11 @@ components:
           - suspend
           - terminate
           type: string
+          nullable: true
         groupId:
           description: The SIM group ID where the SIM belongs to.
           type: string
+          nullable: true
         iccid:
           description: The ICCID of the SIM.
           type: string
@@ -16695,6 +16734,7 @@ components:
             If Napter has never been used with the subscriber, null is returned.
           format: int64
           type: integer
+          nullable: true
         moduleType:
           description: The form factor of the physical SIM. Possible values are "mini"
             for 2FF SIM card, "micro" for 3FF SIM card, "nano" for 4FF SIM card, "trio"
@@ -16723,6 +16763,7 @@ components:
         serialNumber:
           description: The serial number of the SIM.
           type: string
+          nullable: true
         sessionStatus:
           $ref: '#/components/schemas/SessionStatus'
         simId:
@@ -16738,6 +16779,7 @@ components:
         subscription:
           description: The name of the subscription for the SIM.
           type: string
+          nullable: true
         tags:
           $ref: '#/components/schemas/TagSet'
         terminationEnabled:
@@ -16774,6 +16816,7 @@ components:
                     type: integer
                   subscription:
                     type: string
+                    nullable: true
                 type: object
               plmnCode:
                 type: string

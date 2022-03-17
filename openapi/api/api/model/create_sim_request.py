@@ -84,7 +84,7 @@ class CreateSimRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'subscription': (str,),  # noqa: E501
+            'subscription': (str, none_type,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
 
@@ -109,7 +109,7 @@ class CreateSimRequest(ModelNormal):
         """CreateSimRequest - a model defined in OpenAPI
 
         Args:
-            subscription (str):
+            subscription (str, none_type):
 
         Keyword Args:
             type (str): defaults to "virtual", must be one of ["virtual", ]  # noqa: E501
@@ -197,7 +197,7 @@ class CreateSimRequest(ModelNormal):
         """CreateSimRequest - a model defined in OpenAPI
 
         Args:
-            subscription (str):
+            subscription (str, none_type):
 
         Keyword Args:
             type (str): defaults to "virtual", must be one of ["virtual", ]  # noqa: E501

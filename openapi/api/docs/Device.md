@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **device_id** | **str** |  | [optional] 
 **endpoint** | **str** |  | [optional] 
 **firmware_version** | **str** |  | [optional] 
-**group_id** | **str** |  | [optional] 
+**group_id** | **str, none_type** |  | [optional] 
 **ip_address** | **str** |  | [optional] 
 **last_modified_time** | **datetime** |  | [optional] 
 **last_registration_update** | **datetime** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **operator_id** | **str** |  | [optional] 
 **registration_id** | **str** |  | [optional] 
 **registration_life_time** | **int** |  | [optional] 
-**serial_number** | **str** |  | [optional] 
+**serial_number** | **str, none_type** |  | [optional] 
 **tags** | **{str: (str,)}** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

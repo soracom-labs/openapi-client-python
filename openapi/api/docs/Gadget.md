@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attributes** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
-**group_id** | **str** |  | [optional] 
+**group_id** | **str, none_type** |  | [optional] 
 **id** | **str** |  | [optional] 
 **last_modified_time** | **datetime** |  | [optional] 
 **last_seen** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 

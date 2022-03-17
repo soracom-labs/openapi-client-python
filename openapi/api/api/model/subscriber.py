@@ -66,6 +66,7 @@ class Subscriber(ModelNormal):
 
     allowed_values = {
         ('expiry_action',): {
+            'None': None,
             'DONOTHING': "doNothing",
             'DELETESESSION': "deleteSession",
             'DEACTIVATE': "deactivate",
@@ -105,26 +106,26 @@ class Subscriber(ModelNormal):
             'created_at': (int,),  # noqa: E501
             'expired_at': (int,),  # noqa: E501
             'expired_time': (int,),  # noqa: E501
-            'expiry_action': (str,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'expiry_action': (str, none_type,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'iccid': (str,),  # noqa: E501
             'imei_lock': (ImeiLock,),  # noqa: E501
             'imsi': (str,),  # noqa: E501
             'ip_address': (str,),  # noqa: E501
             'last_modified_at': (int,),  # noqa: E501
-            'last_port_mapping_created_time': (int,),  # noqa: E501
+            'last_port_mapping_created_time': (int, none_type,),  # noqa: E501
             'module_type': (str,),  # noqa: E501
             'msisdn': (str,),  # noqa: E501
             'operator_id': (str,),  # noqa: E501
             'plan': (int,),  # noqa: E501
             'previous_session': (PreviousSessionStatus,),  # noqa: E501
             'registered_time': (int,),  # noqa: E501
-            'serial_number': (str,),  # noqa: E501
+            'serial_number': (str, none_type,),  # noqa: E501
             'session_status': (SessionStatus,),  # noqa: E501
             'sim_id': (str,),  # noqa: E501
             'speed_class': (str,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'subscription': (str,),  # noqa: E501
+            'subscription': (str, none_type,),  # noqa: E501
             'tags': (TagSet,),  # noqa: E501
             'termination_enabled': (bool,),  # noqa: E501
             'type': (str,),  # noqa: E501
@@ -212,26 +213,26 @@ class Subscriber(ModelNormal):
             created_at (int): The timestamp that the SIM was created.. [optional]  # noqa: E501
             expired_at (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
             expired_time (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
-            expiry_action (str): [optional]  # noqa: E501
-            group_id (str): The SIM group ID where the SIM belongs to.. [optional]  # noqa: E501
+            expiry_action (str, none_type): [optional]  # noqa: E501
+            group_id (str, none_type): The SIM group ID where the SIM belongs to.. [optional]  # noqa: E501
             iccid (str): The ICCID of the SIM.. [optional]  # noqa: E501
             imei_lock (ImeiLock): [optional]  # noqa: E501
             imsi (str): The IMSI of the SIM.. [optional]  # noqa: E501
             ip_address (str): [optional]  # noqa: E501
             last_modified_at (int): The timestamp when the SIM information was modified.. [optional]  # noqa: E501
-            last_port_mapping_created_time (int): The timestamp (in Unix milliseconds) of the last instance where the Napter On-Demand Remote Access service was used with the subscriber. If Napter has never been used with the subscriber, null is returned.. [optional]  # noqa: E501
+            last_port_mapping_created_time (int, none_type): The timestamp (in Unix milliseconds) of the last instance where the Napter On-Demand Remote Access service was used with the subscriber. If Napter has never been used with the subscriber, null is returned.. [optional]  # noqa: E501
             module_type (str): The form factor of the physical SIM. Possible values are \"mini\" for 2FF SIM card, \"micro\" for 3FF SIM card, \"nano\" for 4FF SIM card, \"trio\" for a Universal 3-in-1 (2FF/3FF/4FF) SIM card, or \"embedded\" for MFF2 or Embedded SIM (eSIM).. [optional]  # noqa: E501
             msisdn (str): The MSISDN of the SIM.. [optional]  # noqa: E501
             operator_id (str): The Operator ID of the SIM.. [optional]  # noqa: E501
             plan (int): Whether or not the subscription supports SMS functionality. 0 = SMS not supported; 1 = SMS supported.. [optional]  # noqa: E501
             previous_session (PreviousSessionStatus): [optional]  # noqa: E501
             registered_time (int): The timestamp (in Unix milliseconds) that the subscriber was manually registered to your account. When purchasing SIMs directly through the User Console, SIMs will automatically be registered to your account, and null is returned.. [optional]  # noqa: E501
-            serial_number (str): The serial number of the SIM.. [optional]  # noqa: E501
+            serial_number (str, none_type): The serial number of the SIM.. [optional]  # noqa: E501
             session_status (SessionStatus): [optional]  # noqa: E501
             sim_id (str): The SIM ID of the SIM.. [optional]  # noqa: E501
             speed_class (str): The speed class of the SIM.. [optional]  # noqa: E501
             status (str): The subscription status of the subscriber. Possible values are \"ready\", \"active\", \"inactive\", \"standby\", \"suspended\", or \"terminated\".. [optional]  # noqa: E501
-            subscription (str): The name of the subscription for the SIM.. [optional]  # noqa: E501
+            subscription (str, none_type): The name of the subscription for the SIM.. [optional]  # noqa: E501
             tags (TagSet): [optional]  # noqa: E501
             termination_enabled (bool): [optional]  # noqa: E501
             type (str): The speed class of the SIM.. [optional]  # noqa: E501
@@ -321,26 +322,26 @@ class Subscriber(ModelNormal):
             created_at (int): The timestamp that the SIM was created.. [optional]  # noqa: E501
             expired_at (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
             expired_time (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
-            expiry_action (str): [optional]  # noqa: E501
-            group_id (str): The SIM group ID where the SIM belongs to.. [optional]  # noqa: E501
+            expiry_action (str, none_type): [optional]  # noqa: E501
+            group_id (str, none_type): The SIM group ID where the SIM belongs to.. [optional]  # noqa: E501
             iccid (str): The ICCID of the SIM.. [optional]  # noqa: E501
             imei_lock (ImeiLock): [optional]  # noqa: E501
             imsi (str): The IMSI of the SIM.. [optional]  # noqa: E501
             ip_address (str): [optional]  # noqa: E501
             last_modified_at (int): The timestamp when the SIM information was modified.. [optional]  # noqa: E501
-            last_port_mapping_created_time (int): The timestamp (in Unix milliseconds) of the last instance where the Napter On-Demand Remote Access service was used with the subscriber. If Napter has never been used with the subscriber, null is returned.. [optional]  # noqa: E501
+            last_port_mapping_created_time (int, none_type): The timestamp (in Unix milliseconds) of the last instance where the Napter On-Demand Remote Access service was used with the subscriber. If Napter has never been used with the subscriber, null is returned.. [optional]  # noqa: E501
             module_type (str): The form factor of the physical SIM. Possible values are \"mini\" for 2FF SIM card, \"micro\" for 3FF SIM card, \"nano\" for 4FF SIM card, \"trio\" for a Universal 3-in-1 (2FF/3FF/4FF) SIM card, or \"embedded\" for MFF2 or Embedded SIM (eSIM).. [optional]  # noqa: E501
             msisdn (str): The MSISDN of the SIM.. [optional]  # noqa: E501
             operator_id (str): The Operator ID of the SIM.. [optional]  # noqa: E501
             plan (int): Whether or not the subscription supports SMS functionality. 0 = SMS not supported; 1 = SMS supported.. [optional]  # noqa: E501
             previous_session (PreviousSessionStatus): [optional]  # noqa: E501
             registered_time (int): The timestamp (in Unix milliseconds) that the subscriber was manually registered to your account. When purchasing SIMs directly through the User Console, SIMs will automatically be registered to your account, and null is returned.. [optional]  # noqa: E501
-            serial_number (str): The serial number of the SIM.. [optional]  # noqa: E501
+            serial_number (str, none_type): The serial number of the SIM.. [optional]  # noqa: E501
             session_status (SessionStatus): [optional]  # noqa: E501
             sim_id (str): The SIM ID of the SIM.. [optional]  # noqa: E501
             speed_class (str): The speed class of the SIM.. [optional]  # noqa: E501
             status (str): The subscription status of the subscriber. Possible values are \"ready\", \"active\", \"inactive\", \"standby\", \"suspended\", or \"terminated\".. [optional]  # noqa: E501
-            subscription (str): The name of the subscription for the SIM.. [optional]  # noqa: E501
+            subscription (str, none_type): The name of the subscription for the SIM.. [optional]  # noqa: E501
             tags (TagSet): [optional]  # noqa: E501
             termination_enabled (bool): [optional]  # noqa: E501
             type (str): The speed class of the SIM.. [optional]  # noqa: E501

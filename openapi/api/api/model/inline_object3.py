@@ -85,7 +85,7 @@ class InlineObject3(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'subscription': (str,),  # noqa: E501
+            'subscription': (str, none_type,),  # noqa: E501
             'enable': (bool,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
@@ -112,7 +112,7 @@ class InlineObject3(ModelNormal):
         """InlineObject3 - a model defined in OpenAPI
 
         Args:
-            subscription (str): Name of the subscription plan
+            subscription (str, none_type): Name of the subscription plan
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -199,7 +199,7 @@ class InlineObject3(ModelNormal):
         """InlineObject3 - a model defined in OpenAPI
 
         Args:
-            subscription (str): Name of the subscription plan
+            subscription (str, none_type): Name of the subscription plan
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

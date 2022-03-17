@@ -30,10 +30,8 @@ from api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from api.model.map import Map
     from api.model.placement import Placement
     from api.model.tag_set import TagSet
-    globals()['Map'] = Map
     globals()['Placement'] = Placement
     globals()['TagSet'] = TagSet
 
@@ -106,8 +104,8 @@ class VirtualPrivateGateway(ModelNormal):
             'tags': (TagSet,),  # noqa: E501
             'type': (int,),  # noqa: E501
             'use_internet_gateway': (bool,),  # noqa: E501
-            'virtual_interfaces': (Map,),  # noqa: E501
-            'vpc_peering_connections': (Map,),  # noqa: E501
+            'virtual_interfaces': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'vpc_peering_connections': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
         }
 
     @cached_property
@@ -179,8 +177,8 @@ class VirtualPrivateGateway(ModelNormal):
             tags (TagSet): [optional]  # noqa: E501
             type (int): [optional]  # noqa: E501
             use_internet_gateway (bool): [optional]  # noqa: E501
-            virtual_interfaces (Map): [optional]  # noqa: E501
-            vpc_peering_connections (Map): [optional]  # noqa: E501
+            virtual_interfaces ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            vpc_peering_connections ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -271,8 +269,8 @@ class VirtualPrivateGateway(ModelNormal):
             tags (TagSet): [optional]  # noqa: E501
             type (int): [optional]  # noqa: E501
             use_internet_gateway (bool): [optional]  # noqa: E501
-            virtual_interfaces (Map): [optional]  # noqa: E501
-            vpc_peering_connections (Map): [optional]  # noqa: E501
+            virtual_interfaces ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            vpc_peering_connections ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

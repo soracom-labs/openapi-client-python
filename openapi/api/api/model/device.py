@@ -84,7 +84,7 @@ class Device(ModelNormal):
             'device_id': (str,),  # noqa: E501
             'endpoint': (str,),  # noqa: E501
             'firmware_version': (str,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'ip_address': (str,),  # noqa: E501
             'last_modified_time': (datetime,),  # noqa: E501
             'last_registration_update': (datetime,),  # noqa: E501
@@ -95,7 +95,7 @@ class Device(ModelNormal):
             'operator_id': (str,),  # noqa: E501
             'registration_id': (str,),  # noqa: E501
             'registration_life_time': (int,),  # noqa: E501
-            'serial_number': (str,),  # noqa: E501
+            'serial_number': (str, none_type,),  # noqa: E501
             'tags': ({str: (str,)},),  # noqa: E501
         }
 
@@ -167,7 +167,7 @@ class Device(ModelNormal):
             device_id (str): [optional]  # noqa: E501
             endpoint (str): [optional]  # noqa: E501
             firmware_version (str): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             ip_address (str): [optional]  # noqa: E501
             last_modified_time (datetime): [optional]  # noqa: E501
             last_registration_update (datetime): [optional]  # noqa: E501
@@ -178,7 +178,7 @@ class Device(ModelNormal):
             operator_id (str): [optional]  # noqa: E501
             registration_id (str): [optional]  # noqa: E501
             registration_life_time (int): [optional]  # noqa: E501
-            serial_number (str): [optional]  # noqa: E501
+            serial_number (str, none_type): [optional]  # noqa: E501
             tags ({str: (str,)}): [optional]  # noqa: E501
         """
 
@@ -264,7 +264,7 @@ class Device(ModelNormal):
             device_id (str): [optional]  # noqa: E501
             endpoint (str): [optional]  # noqa: E501
             firmware_version (str): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             ip_address (str): [optional]  # noqa: E501
             last_modified_time (datetime): [optional]  # noqa: E501
             last_registration_update (datetime): [optional]  # noqa: E501
@@ -275,7 +275,7 @@ class Device(ModelNormal):
             operator_id (str): [optional]  # noqa: E501
             registration_id (str): [optional]  # noqa: E501
             registration_life_time (int): [optional]  # noqa: E501
-            serial_number (str): [optional]  # noqa: E501
+            serial_number (str, none_type): [optional]  # noqa: E501
             tags ({str: (str,)}): [optional]  # noqa: E501
         """
 
