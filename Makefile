@@ -6,7 +6,7 @@ INPUT_SPECS ?= api sandbox
 GIT_REVISION ?= $(shell git rev-parse --short HEAD)
 GIT_TAG ?= $(shell git describe --tags --abbrev=0 | sed -e s/v//g)
 
-SORACOM_PROFILE ?= configs/soracom-profile.json.sample # e.g. ~/.soracom/default.json
+SORACOM_PROFILE ?= ~/.soracom/default.json
 SORACOM_AUTH_KEY ?= $(shell cat $(SORACOM_PROFILE) | jq -r .authKey)
 SORACOM_AUTH_KEY_ID ?= $(shell cat $(SORACOM_PROFILE) | jq -r .authKeyId)
 
