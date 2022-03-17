@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "soracom"
+version = "0.0.0"
+description = "SORACOM API Client for the Python programming language based on the OpenAPI specification"
+authors = ["ks6088ts <ks6088ts@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dateutil = "^2.8.2"
+urllib3 = "^1.26.8"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.1.0"
+flake8 = "^4.0.1"
+mypy = "^0.931"
+pytest = "^7.0.1"
+pytest-cov = "^3.0.0"
+twine = "^3.8.0"
+
+[tool.isort]
+profile = "black"
+include_trailing_comma = true
+line_length = 120
+
+[tool.black]
+line-length = 120
+exclude = '''
+(
+    migrations
+    | .mypy_cache
+    | .pytest_cache
+    | .tox
+    | .venv
+)
+'''
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
