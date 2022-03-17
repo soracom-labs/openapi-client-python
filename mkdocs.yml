@@ -1,0 +1,98 @@
+# Project information
+site_name: SORACOM API client for Python based on OpenAPI Generator
+site_url: https://soracom-labs.github.io/openapi-client-python
+site_author: Soracom, Inc.
+
+# Repository
+repo_name: soracom-labs/openapi-client-python
+repo_url: https://github.com/soracom-labs/openapi-client-python
+
+# Copyright
+copyright: Copyright &copy; 2022 Soracom, Inc.
+
+# Configuration
+edit_uri: ""
+theme:
+  name: material
+  include_search_page: false
+  search_index_only: true
+  language: ja
+  features:
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/soracom
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/SORACOM_PR
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - SORACOM API: api/index.md
+  - SORACOM API Sandbox: sandbox/index.md

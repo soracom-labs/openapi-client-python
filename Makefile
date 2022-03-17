@@ -15,6 +15,9 @@ POETRY_RUN ?= $(POETRY) run
 POETRY_VENV_CREATE ?= true
 POETRY_VENV_IN_PROJECT ?= true
 
+IP ?= localhost
+PORT ?= 8000
+
 .PHONY: help
 help:
 	echo $(SOURCE_FILES)
@@ -90,3 +93,15 @@ generate-diff-check: ## check if generated codes are the same as tracked ones
 
 .PHONY: ci-test
 ci-test: generate generate-diff-check install-poetry install-deps-dev format-check lint test build ## ci test
+
+.PHONY: docs-server
+docs-server: ## run docs server locally
+	$(POETRY_RUN) mkdocs serve --dev-addr $(IP):$(PORT)
+
+.PHONY: docs-build
+docs-build: ## build site
+	$(POETRY_RUN) mkdocs build
+
+.PHONY: docs-release
+docs-release: ## release docs
+	$(POETRY_RUN) mkdocs gh-deploy --force
