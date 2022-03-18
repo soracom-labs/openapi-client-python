@@ -82,7 +82,7 @@ class SubscriptionContainerStatusMappingRecord(ModelNormal):
         """
         return {
             'container_id': (int,),  # noqa: E501
-            'subscription': (str,),  # noqa: E501
+            'subscription': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -137,7 +137,7 @@ class SubscriptionContainerStatusMappingRecord(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             container_id (int): [optional]  # noqa: E501
-            subscription (str): [optional]  # noqa: E501
+            subscription (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -220,7 +220,7 @@ class SubscriptionContainerStatusMappingRecord(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             container_id (int): [optional]  # noqa: E501
-            subscription (str): [optional]  # noqa: E501
+            subscription (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

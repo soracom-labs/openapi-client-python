@@ -30,9 +30,7 @@ from api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from api.model.map import Map
     from api.model.tag_set import TagSet
-    globals()['Map'] = Map
     globals()['TagSet'] = TagSet
 
 
@@ -89,9 +87,9 @@ class Group(ModelNormal):
         """
         lazy_import()
         return {
-            'configuration': (Map,),  # noqa: E501
+            'configuration': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
             'created_time': (int,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'last_modified_time': (int,),  # noqa: E501
             'operator_id': (str,),  # noqa: E501
             'tags': (TagSet,),  # noqa: E501
@@ -152,9 +150,9 @@ class Group(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            configuration (Map): [optional]  # noqa: E501
+            configuration ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             created_time (int): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             last_modified_time (int): [optional]  # noqa: E501
             operator_id (str): [optional]  # noqa: E501
             tags (TagSet): [optional]  # noqa: E501
@@ -239,9 +237,9 @@ class Group(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            configuration (Map): [optional]  # noqa: E501
+            configuration ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             created_time (int): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             last_modified_time (int): [optional]  # noqa: E501
             operator_id (str): [optional]  # noqa: E501
             tags (TagSet): [optional]  # noqa: E501

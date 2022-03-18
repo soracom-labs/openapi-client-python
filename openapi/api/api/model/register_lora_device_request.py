@@ -81,7 +81,7 @@ class RegisterLoraDeviceRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'group_id': (str,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'registration_secret': (str,),  # noqa: E501
             'tags': ({str: (str,)},),  # noqa: E501
         }
@@ -138,7 +138,7 @@ class RegisterLoraDeviceRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             registration_secret (str): [optional]  # noqa: E501
             tags ({str: (str,)}): [optional]  # noqa: E501
         """
@@ -222,7 +222,7 @@ class RegisterLoraDeviceRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             registration_secret (str): [optional]  # noqa: E501
             tags ({str: (str,)}): [optional]  # noqa: E501
         """

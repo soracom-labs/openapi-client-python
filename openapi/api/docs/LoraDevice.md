@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device_id** | **str** |  | [optional] 
-**group_id** | **str** |  | [optional] 
+**group_id** | **str, none_type** |  | [optional] 
 **last_modified_time** | **datetime** |  | [optional] 
 **last_seen** | [**LastSeen**](LastSeen.md) |  | [optional] 
 **operator_id** | **str** |  | [optional] 

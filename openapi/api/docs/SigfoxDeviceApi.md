@@ -885,9 +885,7 @@ with api.ApiClient(configuration) as api_client:
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
     group = Group(
-        configuration=Map(
-            key="key_example",
-        ),
+        configuration={},
         created_time=1,
         group_id="group_id_example",
         last_modified_time=1,

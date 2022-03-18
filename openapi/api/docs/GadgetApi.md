@@ -704,9 +704,7 @@ with api.ApiClient(configuration) as api_client:
     product_id = "product_id_example" # str | Product ID of the target gadget.
     serial_number = "serial_number_example" # str | Serial Number of the target gadget.
     group = Group(
-        configuration=Map(
-            key="key_example",
-        ),
+        configuration={},
         created_time=1,
         group_id="group_id_example",
         last_modified_time=1,

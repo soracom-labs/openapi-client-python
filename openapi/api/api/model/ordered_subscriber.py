@@ -83,7 +83,7 @@ class OrderedSubscriber(ModelNormal):
         return {
             'imsi': (str,),  # noqa: E501
             'msisdn': (str,),  # noqa: E501
-            'serial_number': (str,),  # noqa: E501
+            'serial_number': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -140,7 +140,7 @@ class OrderedSubscriber(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             imsi (str): IMSI. [optional]  # noqa: E501
             msisdn (str): MSISDN. [optional]  # noqa: E501
-            serial_number (str): serialNumber. [optional]  # noqa: E501
+            serial_number (str, none_type): serialNumber. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,7 +224,7 @@ class OrderedSubscriber(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             imsi (str): IMSI. [optional]  # noqa: E501
             msisdn (str): MSISDN. [optional]  # noqa: E501
-            serial_number (str): serialNumber. [optional]  # noqa: E501
+            serial_number (str, none_type): serialNumber. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

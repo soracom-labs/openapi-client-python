@@ -9,12 +9,11 @@ from sandbox.model.sandbox_init_request import SandboxInitRequest
 
 @dataclass
 class SandboxConfig:
-    api_key: str
-    token: str
+    auth: SandboxAuthResponse
+    url: str
 
 
 def get_sandbox_config(auth_key: str, auth_key_id: str) -> SandboxConfig:
-
     with sandbox.ApiClient() as api_client:
         api_instance = operator_api.OperatorApi(api_client)
         random_str = uuid.uuid4()
@@ -34,7 +33,4 @@ def get_sandbox_config(auth_key: str, auth_key_id: str) -> SandboxConfig:
         assert isinstance(api_response.get("api_key"), str)
         assert isinstance(api_response.get("token"), str)
         assert isinstance(api_response.get("operator_id"), str)
-        return SandboxConfig(
-            api_response.get("api_key"),
-            api_response.get("token"),
-        )
+        return SandboxConfig(auth=api_response, url=sandbox.Configuration().get_host_settings()[0]["url"])

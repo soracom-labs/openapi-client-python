@@ -174,7 +174,6 @@ from api.model.mfa_authentication_request import MFAAuthenticationRequest
 from api.model.mfa_issue_revoking_token_request import MFAIssueRevokingTokenRequest
 from api.model.mfa_revoking_token_verify_request import MFARevokingTokenVerifyRequest
 from api.model.mfa_status_of_use_response import MFAStatusOfUseResponse
-from api.model.map import Map
 from api.model.mapping_entries import MappingEntries
 from api.model.monthly_bill import MonthlyBill
 from api.model.napter_audit_log_direction import NapterAuditLogDirection

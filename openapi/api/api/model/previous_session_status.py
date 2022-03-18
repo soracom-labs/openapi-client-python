@@ -90,11 +90,11 @@ class PreviousSessionStatus(ModelNormal):
             'cell': (Cell,),  # noqa: E501
             'created_time': (int,),  # noqa: E501
             'deleted_time': (int,),  # noqa: E501
-            'dns_servers': ([str],),  # noqa: E501
+            'dns_servers': ([str], none_type,),  # noqa: E501
             'gateway_private_ip_address': (str,),  # noqa: E501
             'gateway_public_ip_address': (str,),  # noqa: E501
-            'imei': (str,),  # noqa: E501
-            'ue_ip_address': (str,),  # noqa: E501
+            'imei': (str, none_type,),  # noqa: E501
+            'ue_ip_address': (str, none_type,),  # noqa: E501
             'vpg_id': (str,),  # noqa: E501
         }
 
@@ -159,11 +159,11 @@ class PreviousSessionStatus(ModelNormal):
             cell (Cell): [optional]  # noqa: E501
             created_time (int): The time when the previous session was created.. [optional]  # noqa: E501
             deleted_time (int): The time when the previous session was deleted.. [optional]  # noqa: E501
-            dns_servers ([str]): Array of IP address of the DNS servers.. [optional]  # noqa: E501
+            dns_servers ([str], none_type): Array of IP address of the DNS servers.. [optional]  # noqa: E501
             gateway_private_ip_address (str): [optional]  # noqa: E501
             gateway_public_ip_address (str): [optional]  # noqa: E501
-            imei (str): The IMEI of the device using the SIM.. [optional]  # noqa: E501
-            ue_ip_address (str): The IP address of the device.. [optional]  # noqa: E501
+            imei (str, none_type): The IMEI of the device using the SIM.. [optional]  # noqa: E501
+            ue_ip_address (str, none_type): The IP address of the device.. [optional]  # noqa: E501
             vpg_id (str): The Virtual Private Gateway IP address configured.. [optional]  # noqa: E501
         """
 
@@ -249,11 +249,11 @@ class PreviousSessionStatus(ModelNormal):
             cell (Cell): [optional]  # noqa: E501
             created_time (int): The time when the previous session was created.. [optional]  # noqa: E501
             deleted_time (int): The time when the previous session was deleted.. [optional]  # noqa: E501
-            dns_servers ([str]): Array of IP address of the DNS servers.. [optional]  # noqa: E501
+            dns_servers ([str], none_type): Array of IP address of the DNS servers.. [optional]  # noqa: E501
             gateway_private_ip_address (str): [optional]  # noqa: E501
             gateway_public_ip_address (str): [optional]  # noqa: E501
-            imei (str): The IMEI of the device using the SIM.. [optional]  # noqa: E501
-            ue_ip_address (str): The IP address of the device.. [optional]  # noqa: E501
+            imei (str, none_type): The IMEI of the device using the SIM.. [optional]  # noqa: E501
+            ue_ip_address (str, none_type): The IP address of the device.. [optional]  # noqa: E501
             vpg_id (str): The Virtual Private Gateway IP address configured.. [optional]  # noqa: E501
         """
 

@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration** | [**Map**](Map.md) |  | [optional] 
+**configuration** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **created_time** | **int** |  | [optional] 
-**group_id** | **str** |  | [optional] 
+**group_id** | **str, none_type** |  | [optional] 
 **last_modified_time** | **int** |  | [optional] 
 **operator_id** | **str** |  | [optional] 
 **tags** | [**TagSet**](TagSet.md) |  | [optional] 

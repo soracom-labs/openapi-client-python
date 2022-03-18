@@ -87,11 +87,11 @@ class SessionEvent(ModelNormal):
             'event': (str,),  # noqa: E501
             'gateway_private_ip_address': (str,),  # noqa: E501
             'gateway_public_ip_address': (str,),  # noqa: E501
-            'imei': (str,),  # noqa: E501
+            'imei': (str, none_type,),  # noqa: E501
             'imsi': (str,),  # noqa: E501
             'operator_id': (str,),  # noqa: E501
             'time': (int,),  # noqa: E501
-            'ue_ip_address': (str,),  # noqa: E501
+            'ue_ip_address': (str, none_type,),  # noqa: E501
             'vpg_id': (str,),  # noqa: E501
         }
 
@@ -162,11 +162,11 @@ class SessionEvent(ModelNormal):
             event (str): The type of behavior for the event. Possible values are \"Created\" indicates the device created a new session, \"Modified\" indicates that an existing connection was modified, \"Deleted\" indicates a network connection was closed.. [optional]  # noqa: E501
             gateway_private_ip_address (str): [optional]  # noqa: E501
             gateway_public_ip_address (str): [optional]  # noqa: E501
-            imei (str): The IMEI of the device using the SIM.. [optional]  # noqa: E501
+            imei (str, none_type): The IMEI of the device using the SIM.. [optional]  # noqa: E501
             imsi (str): The IMSI of the SIM.. [optional]  # noqa: E501
             operator_id (str): The operator ID of the session event.. [optional]  # noqa: E501
             time (int): The timestamp of the session event.. [optional]  # noqa: E501
-            ue_ip_address (str): The IP address of the device.. [optional]  # noqa: E501
+            ue_ip_address (str, none_type): The IP address of the device.. [optional]  # noqa: E501
             vpg_id (str): The Virtual Private Gateway IP address configured.. [optional]  # noqa: E501
         """
 
@@ -255,11 +255,11 @@ class SessionEvent(ModelNormal):
             event (str): The type of behavior for the event. Possible values are \"Created\" indicates the device created a new session, \"Modified\" indicates that an existing connection was modified, \"Deleted\" indicates a network connection was closed.. [optional]  # noqa: E501
             gateway_private_ip_address (str): [optional]  # noqa: E501
             gateway_public_ip_address (str): [optional]  # noqa: E501
-            imei (str): The IMEI of the device using the SIM.. [optional]  # noqa: E501
+            imei (str, none_type): The IMEI of the device using the SIM.. [optional]  # noqa: E501
             imsi (str): The IMSI of the SIM.. [optional]  # noqa: E501
             operator_id (str): The operator ID of the session event.. [optional]  # noqa: E501
             time (int): The timestamp of the session event.. [optional]  # noqa: E501
-            ue_ip_address (str): The IP address of the device.. [optional]  # noqa: E501
+            ue_ip_address (str, none_type): The IP address of the device.. [optional]  # noqa: E501
             vpg_id (str): The Virtual Private Gateway IP address configured.. [optional]  # noqa: E501
         """
 

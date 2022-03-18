@@ -887,9 +887,7 @@ with api.ApiClient(configuration) as api_client:
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
     group = Group(
-        configuration=Map(
-            key="key_example",
-        ),
+        configuration={},
         created_time=1,
         group_id="group_id_example",
         last_modified_time=1,

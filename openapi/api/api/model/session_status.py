@@ -73,7 +73,7 @@ class SessionStatus(ModelNormal):
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
 
-    _nullable = False
+    _nullable = True
 
     @cached_property
     def openapi_types():
@@ -88,13 +88,13 @@ class SessionStatus(ModelNormal):
         lazy_import()
         return {
             'cell': (Cell,),  # noqa: E501
-            'dns_servers': ([str],),  # noqa: E501
+            'dns_servers': ([str], none_type,),  # noqa: E501
             'gateway_private_ip_address': (str,),  # noqa: E501
             'gateway_public_ip_address': (str,),  # noqa: E501
-            'imei': (str,),  # noqa: E501
+            'imei': (str, none_type,),  # noqa: E501
             'last_updated_at': (int,),  # noqa: E501
             'online': (bool,),  # noqa: E501
-            'ue_ip_address': (str,),  # noqa: E501
+            'ue_ip_address': (str, none_type,),  # noqa: E501
             'vpg_id': (str,),  # noqa: E501
         }
 
@@ -157,13 +157,13 @@ class SessionStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             cell (Cell): [optional]  # noqa: E501
-            dns_servers ([str]): Array of IP address of the DNS servers.. [optional]  # noqa: E501
+            dns_servers ([str], none_type): Array of IP address of the DNS servers.. [optional]  # noqa: E501
             gateway_private_ip_address (str): [optional]  # noqa: E501
             gateway_public_ip_address (str): [optional]  # noqa: E501
-            imei (str): The IMEI of the device using the SIM.. [optional]  # noqa: E501
+            imei (str, none_type): The IMEI of the device using the SIM.. [optional]  # noqa: E501
             last_updated_at (int): [optional]  # noqa: E501
             online (bool): Whether or not the SIM is online.. [optional]  # noqa: E501
-            ue_ip_address (str): The IP address of the device.. [optional]  # noqa: E501
+            ue_ip_address (str, none_type): The IP address of the device.. [optional]  # noqa: E501
             vpg_id (str): The Virtual Private Gateway IP address configured.. [optional]  # noqa: E501
         """
 
@@ -247,13 +247,13 @@ class SessionStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             cell (Cell): [optional]  # noqa: E501
-            dns_servers ([str]): Array of IP address of the DNS servers.. [optional]  # noqa: E501
+            dns_servers ([str], none_type): Array of IP address of the DNS servers.. [optional]  # noqa: E501
             gateway_private_ip_address (str): [optional]  # noqa: E501
             gateway_public_ip_address (str): [optional]  # noqa: E501
-            imei (str): The IMEI of the device using the SIM.. [optional]  # noqa: E501
+            imei (str, none_type): The IMEI of the device using the SIM.. [optional]  # noqa: E501
             last_updated_at (int): [optional]  # noqa: E501
             online (bool): Whether or not the SIM is online.. [optional]  # noqa: E501
-            ue_ip_address (str): The IP address of the device.. [optional]  # noqa: E501
+            ue_ip_address (str, none_type): The IP address of the device.. [optional]  # noqa: E501
             vpg_id (str): The Virtual Private Gateway IP address configured.. [optional]  # noqa: E501
         """
 

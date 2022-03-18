@@ -86,7 +86,7 @@ class Gadget(ModelNormal):
         """
         return {
             'attributes': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
+            'group_id': (str, none_type,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'last_modified_time': (datetime,),  # noqa: E501
             'last_seen': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
@@ -159,7 +159,7 @@ class Gadget(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             attributes ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             last_modified_time (datetime): [optional]  # noqa: E501
             last_seen ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
@@ -251,7 +251,7 @@ class Gadget(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             attributes ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
+            group_id (str, none_type): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             last_modified_time (datetime): [optional]  # noqa: E501
             last_seen ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
