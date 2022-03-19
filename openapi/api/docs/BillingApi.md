@@ -1,4 +1,4 @@
-# api.BillingApi
+# soracom_api.BillingApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -26,13 +26,13 @@ Returns detailed information for the billing amounts for the specified month. Th
 
 ```python
 import time
-import api
-from api.api import billing_api
-from api.model.file_export_response import FileExportResponse
+import soracom_api
+from soracom_api.api import billing_api
+from soracom_api.model.file_export_response import FileExportResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -54,7 +54,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     yyyy_mm = "yyyyMM_example" # str | yyyyMM
@@ -65,7 +65,7 @@ with api.ApiClient(configuration) as api_client:
         # Output billing CSV file to S3.
         api_response = api_instance.export_billing(yyyy_mm)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->export_billing: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -74,7 +74,7 @@ with api.ApiClient(configuration) as api_client:
         # Output billing CSV file to S3.
         api_response = api_instance.export_billing(yyyy_mm, export_mode=export_mode)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->export_billing: %s\n" % e)
 ```
 
@@ -122,13 +122,13 @@ Returns detailed information of the billing amounts for the latest month. This d
 
 ```python
 import time
-import api
-from api.api import billing_api
-from api.model.file_export_response import FileExportResponse
+import soracom_api
+from soracom_api.api import billing_api
+from soracom_api.model.file_export_response import FileExportResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -150,7 +150,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     export_mode = "async" # str | export_mode (async, sync) (optional)
@@ -161,7 +161,7 @@ with api.ApiClient(configuration) as api_client:
         # Export latest billing CSV file to S3.
         api_response = api_instance.export_latest_billing(export_mode=export_mode)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->export_latest_billing: %s\n" % e)
 ```
 
@@ -208,13 +208,13 @@ Returns the billing history for the specified month (after applied discounts suc
 
 ```python
 import time
-import api
-from api.api import billing_api
-from api.model.monthly_bill import MonthlyBill
+import soracom_api
+from soracom_api.api import billing_api
+from soracom_api.model.monthly_bill import MonthlyBill
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -236,7 +236,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     yyyy_mm = "yyyyMM_example" # str | year and month
@@ -246,7 +246,7 @@ with api.ApiClient(configuration) as api_client:
         # Get bill.
         api_response = api_instance.get_billing(yyyy_mm)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->get_billing: %s\n" % e)
 ```
 
@@ -293,13 +293,13 @@ Returns past billing history (after applied discounts such as free tiers, etc., 
 
 ```python
 import time
-import api
-from api.api import billing_api
-from api.model.get_billing_history_response import GetBillingHistoryResponse
+import soracom_api
+from soracom_api.api import billing_api
+from soracom_api.model.get_billing_history_response import GetBillingHistoryResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -321,7 +321,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
 
@@ -330,7 +330,7 @@ with api.ApiClient(configuration) as api_client:
         # Get billing history.
         api_response = api_instance.get_billing_history()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->get_billing_history: %s\n" % e)
 ```
 
@@ -374,13 +374,13 @@ Returns detailed information of billing amounts per day for the specified month.
 
 ```python
 import time
-import api
-from api.api import billing_api
-from api.model.daily_bill_response import DailyBillResponse
+import soracom_api
+from soracom_api.api import billing_api
+from soracom_api.model.daily_bill_response import DailyBillResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -402,7 +402,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     yyyy_mm = "yyyyMM_example" # str | year and month
@@ -412,7 +412,7 @@ with api.ApiClient(configuration) as api_client:
         # Get bill per day.
         api_response = api_instance.get_billing_per_day(yyyy_mm)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->get_billing_per_day: %s\n" % e)
 ```
 
@@ -459,13 +459,13 @@ Returns the latest billing amounts after applied discounts such as free tiers, e
 
 ```python
 import time
-import api
-from api.api import billing_api
-from api.model.get_latest_bill import GetLatestBill
+import soracom_api
+from soracom_api.api import billing_api
+from soracom_api.model.get_latest_bill import GetLatestBill
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -487,7 +487,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
 
@@ -496,7 +496,7 @@ with api.ApiClient(configuration) as api_client:
         # Get latest bill.
         api_response = api_instance.get_latest_billing()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling BillingApi->get_latest_billing: %s\n" % e)
 ```
 

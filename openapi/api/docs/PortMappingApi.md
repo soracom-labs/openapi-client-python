@@ -1,4 +1,4 @@
-# api.PortMappingApi
+# soracom_api.PortMappingApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -24,14 +24,14 @@ Create a new port mapping.
 
 ```python
 import time
-import api
-from api.api import port_mapping_api
-from api.model.create_port_mapping_request import CreatePortMappingRequest
-from api.model.port_mapping import PortMapping
+import soracom_api
+from soracom_api.api import port_mapping_api
+from soracom_api.model.create_port_mapping_request import CreatePortMappingRequest
+from soracom_api.model.port_mapping import PortMapping
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -53,7 +53,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = port_mapping_api.PortMappingApi(api_client)
     create_port_mapping_request = CreatePortMappingRequest(
@@ -75,7 +75,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Port Mapping.
         api_response = api_instance.create_port_mapping(create_port_mapping_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PortMappingApi->create_port_mapping: %s\n" % e)
 ```
 
@@ -122,12 +122,12 @@ Deletes the specified port mapping entry
 
 ```python
 import time
-import api
-from api.api import port_mapping_api
+import soracom_api
+from soracom_api.api import port_mapping_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -149,7 +149,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = port_mapping_api.PortMappingApi(api_client)
     ip_address = "ip_address_example" # str | IP address of the target port mapping entry
@@ -159,7 +159,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete PortMapping.
         api_instance.delete_port_mapping(ip_address, port)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PortMappingApi->delete_port_mapping: %s\n" % e)
 ```
 
@@ -208,13 +208,13 @@ Returns a list of port mappings.
 
 ```python
 import time
-import api
-from api.api import port_mapping_api
-from api.model.port_mapping import PortMapping
+import soracom_api
+from soracom_api.api import port_mapping_api
+from soracom_api.model.port_mapping import PortMapping
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -236,7 +236,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = port_mapping_api.PortMappingApi(api_client)
     limit = 1 # int | Maximum number of results per response page. (optional)
@@ -248,7 +248,7 @@ with api.ApiClient(configuration) as api_client:
         # List Port Mapping Entries.
         api_response = api_instance.list_port_mappings(limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PortMappingApi->list_port_mappings: %s\n" % e)
 ```
 
@@ -296,13 +296,13 @@ Returns the port mapping entries for a subscriber.
 
 ```python
 import time
-import api
-from api.api import port_mapping_api
-from api.model.port_mapping import PortMapping
+import soracom_api
+from soracom_api.api import port_mapping_api
+from soracom_api.model.port_mapping import PortMapping
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -324,7 +324,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = port_mapping_api.PortMappingApi(api_client)
     imsi = "imsi_example" # str | Target subscriber IMSI.
@@ -334,7 +334,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Port Mapping entries for a subscriber.
         api_response = api_instance.list_port_mappings_for_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PortMappingApi->list_port_mappings_for_subscriber: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# sandbox.StatsApi
+# soracom_sandbox.StatsApi
 
 All URIs are relative to *https://api-sandbox.soracom.io/v1*
 
@@ -20,19 +20,19 @@ Populates Air stats for testing purpose. Inserted data are going to be automatic
 
 ```python
 import time
-import sandbox
-from sandbox.api import stats_api
-from sandbox.model.sandbox_insert_air_stats_request import SandboxInsertAirStatsRequest
+import soracom_sandbox
+from soracom_sandbox.api import stats_api
+from soracom_sandbox.model.sandbox_insert_air_stats_request import SandboxInsertAirStatsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     imsi = "imsi_example" # str | IMSI
@@ -70,7 +70,7 @@ with sandbox.ApiClient() as api_client:
     try:
         # Inserts Air stats for testing
         api_instance.sandbox_insert_air_stats(imsi, sandbox_insert_air_stats_request)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling StatsApi->sandbox_insert_air_stats: %s\n" % e)
 ```
 
@@ -117,19 +117,19 @@ Populates Beam stats for testing purpose. Inserted data are going to be automati
 
 ```python
 import time
-import sandbox
-from sandbox.api import stats_api
-from sandbox.model.sandbox_insert_beam_stats_request import SandboxInsertBeamStatsRequest
+import soracom_sandbox
+from soracom_sandbox.api import stats_api
+from soracom_sandbox.model.sandbox_insert_beam_stats_request import SandboxInsertBeamStatsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     imsi = "imsi_example" # str | IMSI
@@ -176,7 +176,7 @@ with sandbox.ApiClient() as api_client:
     try:
         # Inserts Beam stats for testing
         api_instance.sandbox_insert_beam_stats(imsi, sandbox_insert_beam_stats_request)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling StatsApi->sandbox_insert_beam_stats: %s\n" % e)
 ```
 

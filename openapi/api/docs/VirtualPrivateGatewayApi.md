@@ -1,4 +1,4 @@
-# api.VirtualPrivateGatewayApi
+# soracom_api.VirtualPrivateGatewayApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -47,12 +47,12 @@ Close SORACOM Gate on the specified VPG.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -74,7 +74,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -83,7 +83,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Close SORACOM Gate.
         api_instance.close_gate(vpg_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->close_gate: %s\n" % e)
 ```
 
@@ -132,13 +132,13 @@ Add node in the list of Junction mirroring peers
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.junction_mirroring_peer import JunctionMirroringPeer
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.junction_mirroring_peer import JunctionMirroringPeer
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -160,7 +160,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -175,7 +175,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Add node in the list of Junction mirroring peers
         api_instance.create_mirroring_peer(vpg_id, junction_mirroring_peer)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->create_mirroring_peer: %s\n" % e)
 ```
 
@@ -224,14 +224,14 @@ Create a packet capture sessions associated the VPG
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.packet_capture_session_request import PacketCaptureSessionRequest
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session_request import PacketCaptureSessionRequest
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -253,7 +253,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -267,7 +267,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Packet Capture Session
         api_response = api_instance.create_packet_capture_session(vpg_id, packet_capture_session_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->create_packet_capture_session: %s\n" % e)
 ```
 
@@ -316,14 +316,14 @@ Create new VPG.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.create_virtual_private_gateway_request import CreateVirtualPrivateGatewayRequest
-from api.model.virtual_private_gateway import VirtualPrivateGateway
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.create_virtual_private_gateway_request import CreateVirtualPrivateGatewayRequest
+from soracom_api.model.virtual_private_gateway import VirtualPrivateGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -345,7 +345,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     create_virtual_private_gateway_request = CreateVirtualPrivateGatewayRequest(
@@ -359,7 +359,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Virtual Private Gateway.
         api_response = api_instance.create_virtual_private_gateway(create_virtual_private_gateway_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->create_virtual_private_gateway: %s\n" % e)
 ```
 
@@ -406,13 +406,13 @@ Creates a VPC peering connection for the specified VPG.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.create_vpc_peering_connection_request import CreateVpcPeeringConnectionRequest
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.create_vpc_peering_connection_request import CreateVpcPeeringConnectionRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -434,7 +434,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -450,7 +450,7 @@ with api.ApiClient(configuration) as api_client:
         # Create VPC Peering Connection
         api_response = api_instance.create_vpc_peering_connection(vpg_id, create_vpc_peering_connection_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->create_vpc_peering_connection: %s\n" % e)
 ```
 
@@ -499,12 +499,12 @@ Remove peer from the list of Junction mirroring peers
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -526,7 +526,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -536,7 +536,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Remove peer from the list of Junction mirroring peers
         api_instance.delete_mirroring_peer(vpg_id, ipaddr)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->delete_mirroring_peer: %s\n" % e)
 ```
 
@@ -585,13 +585,13 @@ Delete a packet capture sessions associated the VPG
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -613,7 +613,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -624,7 +624,7 @@ with api.ApiClient(configuration) as api_client:
         # Delete Packet Capture Session
         api_response = api_instance.delete_packet_capture_session(vpg_id, session_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->delete_packet_capture_session: %s\n" % e)
 ```
 
@@ -674,13 +674,13 @@ Deletes an entry in VPG IP address map.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.ip_address_map_entry import IpAddressMapEntry
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.ip_address_map_entry import IpAddressMapEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -702,7 +702,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -713,7 +713,7 @@ with api.ApiClient(configuration) as api_client:
         # Delete VPG IP address map entry
         api_response = api_instance.delete_virtual_private_gateway_ip_address_map_entry(vpg_id, key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->delete_virtual_private_gateway_ip_address_map_entry: %s\n" % e)
 ```
 
@@ -763,12 +763,12 @@ Deletes the specified VPC peering connection.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -790,7 +790,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -800,7 +800,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete VPC Peering Connection.
         api_instance.delete_vpc_peering_connection(vpg_id, pcx_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->delete_vpc_peering_connection: %s\n" % e)
 ```
 
@@ -849,13 +849,13 @@ Get a packet capture sessions associated the VPG
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -877,7 +877,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -888,7 +888,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Packet Capture Session
         api_response = api_instance.get_packet_capture_session(vpg_id, session_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->get_packet_capture_session: %s\n" % e)
 ```
 
@@ -937,12 +937,12 @@ Retrieves information about the specified VPG.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -964,7 +964,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -973,7 +973,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Get Virtual Private Gateway.
         api_instance.get_virtual_private_gateway(vpg_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->get_virtual_private_gateway: %s\n" % e)
 ```
 
@@ -1021,13 +1021,13 @@ List Gate peers registered in the Virtual Private Gateway
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.gate_peer import GatePeer
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.gate_peer import GatePeer
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1049,7 +1049,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -1059,7 +1059,7 @@ with api.ApiClient(configuration) as api_client:
         # List VPG Gate peers
         api_response = api_instance.list_gate_peers(vpg_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->list_gate_peers: %s\n" % e)
 ```
 
@@ -1108,13 +1108,13 @@ List packet capture sessions associated with the VPG
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1136,7 +1136,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -1148,7 +1148,7 @@ with api.ApiClient(configuration) as api_client:
         # List Packet Capture Sessions
         api_response = api_instance.list_packet_capture_sessions(vpg_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->list_packet_capture_sessions: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1157,7 +1157,7 @@ with api.ApiClient(configuration) as api_client:
         # List Packet Capture Sessions
         api_response = api_instance.list_packet_capture_sessions(vpg_id, last_evaluated_key=last_evaluated_key, limit=limit)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->list_packet_capture_sessions: %s\n" % e)
 ```
 
@@ -1207,13 +1207,13 @@ Describes the list of IP address map entries in the Virtual Private Gateway
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.ip_address_map_entry import IpAddressMapEntry
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.ip_address_map_entry import IpAddressMapEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1235,7 +1235,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -1245,7 +1245,7 @@ with api.ApiClient(configuration) as api_client:
         # List VPG IP address map entries
         api_response = api_instance.list_virtual_private_gateway_ip_address_map_entries(vpg_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->list_virtual_private_gateway_ip_address_map_entries: %s\n" % e)
 ```
 
@@ -1294,13 +1294,13 @@ Returns a list of VPGs.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.virtual_private_gateway import VirtualPrivateGateway
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.virtual_private_gateway import VirtualPrivateGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1322,7 +1322,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     tag_name = "tag_name_example" # str | Tag name of the VPG. Filters through all VPGs that exactly match the tag name. When tag_name is specified, tag_value is required. (optional)
@@ -1337,7 +1337,7 @@ with api.ApiClient(configuration) as api_client:
         # List Virtual Private Gateways.
         api_response = api_instance.list_virtual_private_gateways(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->list_virtual_private_gateways: %s\n" % e)
 ```
 
@@ -1388,13 +1388,13 @@ Open SORACOM Gate on the specified VPG.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.open_gate_request import OpenGateRequest
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.open_gate_request import OpenGateRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1416,7 +1416,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -1429,7 +1429,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Open SORACOM Gate.
         api_instance.open_gate(vpg_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->open_gate: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1437,7 +1437,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Open SORACOM Gate.
         api_instance.open_gate(vpg_id, open_gate_request=open_gate_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->open_gate: %s\n" % e)
 ```
 
@@ -1487,14 +1487,14 @@ Puts an entry in VPG IP address map.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.put_ip_address_map_entry_request import PutIpAddressMapEntryRequest
-from api.model.ip_address_map_entry import IpAddressMapEntry
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.ip_address_map_entry import IpAddressMapEntry
+from soracom_api.model.put_ip_address_map_entry_request import PutIpAddressMapEntryRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1516,7 +1516,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -1530,7 +1530,7 @@ with api.ApiClient(configuration) as api_client:
         # Put an entry in VPG IP address map
         api_response = api_instance.put_virtual_private_gateway_ip_address_map_entry(vpg_id, put_ip_address_map_entry_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->put_virtual_private_gateway_ip_address_map_entry: %s\n" % e)
 ```
 
@@ -1580,14 +1580,14 @@ Register a host as a gate peer in the Virtual Private Gateway
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.gate_peer import GatePeer
-from api.model.register_gate_peer_request import RegisterGatePeerRequest
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.gate_peer import GatePeer
+from soracom_api.model.register_gate_peer_request import RegisterGatePeerRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1609,7 +1609,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -1623,7 +1623,7 @@ with api.ApiClient(configuration) as api_client:
         # Register VPG Gate peer
         api_response = api_instance.register_gate_peer(vpg_id, register_gate_peer_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->register_gate_peer: %s\n" % e)
 ```
 
@@ -1673,13 +1673,13 @@ Set configuration for Junction inspection feature
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.junction_inspection_configuration import JunctionInspectionConfiguration
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.junction_inspection_configuration import JunctionInspectionConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1701,7 +1701,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -1724,7 +1724,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Set configuration for Junction inspection feature
         api_instance.set_inspection_configuration(vpg_id, junction_inspection_configuration)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->set_inspection_configuration: %s\n" % e)
 ```
 
@@ -1773,13 +1773,13 @@ Set configuration for Junction redirection feature
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.junction_redirection_configuration import JunctionRedirectionConfiguration
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.junction_redirection_configuration import JunctionRedirectionConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1801,7 +1801,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -1815,7 +1815,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Set configuration for Junction redirection feature
         api_instance.set_redirection_configuration(vpg_id, junction_redirection_configuration)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->set_redirection_configuration: %s\n" % e)
 ```
 
@@ -1864,13 +1864,13 @@ Sets Virtual Private Gateway outbound routing filter.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.routing_filter_entry import RoutingFilterEntry
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.routing_filter_entry import RoutingFilterEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1892,7 +1892,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -1907,7 +1907,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Sets Virtual Private Gateway outbound routing filter.
         api_instance.set_routing_filter(vpg_id, routing_filter_entry)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->set_routing_filter: %s\n" % e)
 ```
 
@@ -1957,13 +1957,13 @@ Stop a packet capture session associated with the VPG
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1985,7 +1985,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -1996,7 +1996,7 @@ with api.ApiClient(configuration) as api_client:
         # Stop Packet Capture Session
         api_response = api_instance.stop_packet_capture_session(vpg_id, session_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->stop_packet_capture_session: %s\n" % e)
 ```
 
@@ -2047,12 +2047,12 @@ Terminates the specified VPG.
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2074,7 +2074,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -2083,7 +2083,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Terminate Virtual Private Gateway.
         api_instance.terminate_virtual_private_gateway(vpg_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->terminate_virtual_private_gateway: %s\n" % e)
 ```
 
@@ -2132,12 +2132,12 @@ Unregister a gate peer from the Virtual Private Gateway
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2159,7 +2159,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | Target VPG ID.
@@ -2169,7 +2169,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Unregister VPG gate peer
         api_instance.unregister_gate_peer(vpg_id, outer_ip_address)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->unregister_gate_peer: %s\n" % e)
 ```
 
@@ -2219,12 +2219,12 @@ Unset configuration for Junction inspection feature
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2246,7 +2246,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -2255,7 +2255,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Unset configuration for Junction inspection feature
         api_instance.unset_inspection_configuration(vpg_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->unset_inspection_configuration: %s\n" % e)
 ```
 
@@ -2303,12 +2303,12 @@ Unset configuration for Junction redirection feature
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2330,7 +2330,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -2339,7 +2339,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Unset configuration for Junction redirection feature
         api_instance.unset_redirection_configuration(vpg_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->unset_redirection_configuration: %s\n" % e)
 ```
 
@@ -2387,13 +2387,13 @@ Update a Junction mirroring peer
 
 ```python
 import time
-import api
-from api.api import virtual_private_gateway_api
-from api.model.attribute_update import AttributeUpdate
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.attribute_update import AttributeUpdate
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2415,7 +2415,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
     vpg_id = "vpg_id_example" # str | VPG ID
@@ -2431,7 +2431,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update a Junction mirroring peer
         api_instance.update_mirroring_peer(vpg_id, ipaddr, attribute_update)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling VirtualPrivateGatewayApi->update_mirroring_peer: %s\n" % e)
 ```
 

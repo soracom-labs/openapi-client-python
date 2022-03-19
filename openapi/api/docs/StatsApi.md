@@ -1,4 +1,4 @@
-# api.StatsApi
+# soracom_api.StatsApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -27,14 +27,14 @@ Retrieves a file containing the usage report of all subscribers for the specifie
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.file_export_response import FileExportResponse
-from api.model.export_request import ExportRequest
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.export_request import ExportRequest
+from soracom_api.model.file_export_response import FileExportResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -56,7 +56,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -72,7 +72,7 @@ with api.ApiClient(configuration) as api_client:
         # Export Air Usage Report of All Subscribers.
         api_response = api_instance.export_air_stats(operator_id, export_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->export_air_stats: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -81,7 +81,7 @@ with api.ApiClient(configuration) as api_client:
         # Export Air Usage Report of All Subscribers.
         api_response = api_instance.export_air_stats(operator_id, export_request, export_mode=export_mode)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->export_air_stats: %s\n" % e)
 ```
 
@@ -130,14 +130,14 @@ Retrieves a file containing the usage report of all subscribers for the specifie
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.file_export_response import FileExportResponse
-from api.model.export_request import ExportRequest
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.export_request import ExportRequest
+from soracom_api.model.file_export_response import FileExportResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -159,7 +159,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     operator_id = "operator_id_example" # str | operator ID
@@ -175,7 +175,7 @@ with api.ApiClient(configuration) as api_client:
         # Export Beam Usage Report of All Subscribers.
         api_response = api_instance.export_beam_stats(operator_id, export_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->export_beam_stats: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -184,7 +184,7 @@ with api.ApiClient(configuration) as api_client:
         # Export Beam Usage Report of All Subscribers.
         api_response = api_instance.export_beam_stats(operator_id, export_request, export_mode=export_mode)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->export_beam_stats: %s\n" % e)
 ```
 
@@ -233,13 +233,13 @@ Retrieves the usage report for the subscriber specified by the IMSI.
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.air_stats_response import AirStatsResponse
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.air_stats_response import AirStatsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -261,7 +261,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     imsi = "imsi_example" # str | imsi
@@ -274,7 +274,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Air Usage Report of Subscriber.
         api_response = api_instance.get_air_stats(imsi, _from, to, period)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->get_air_stats: %s\n" % e)
 ```
 
@@ -324,13 +324,13 @@ Retrieves the usage report for the SIM specified by the simId.
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.air_stats_response import AirStatsResponse
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.air_stats_response import AirStatsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -352,7 +352,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     sim_id = "simId_example" # str | SIM ID
@@ -365,7 +365,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Air Usage Report of SIM.
         api_response = api_instance.get_air_stats_of_sim(sim_id, _from, to, period)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->get_air_stats_of_sim: %s\n" % e)
 ```
 
@@ -415,13 +415,13 @@ Retrieves the Soracom Beam usage report for the subscriber specified by the IMSI
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.beam_stats_response import BeamStatsResponse
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.beam_stats_response import BeamStatsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -443,7 +443,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     imsi = "imsi_example" # str | imsi
@@ -456,7 +456,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Beam Usage Report of Subscriber.
         api_response = api_instance.get_beam_stats(imsi, _from, to, period)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->get_beam_stats: %s\n" % e)
 ```
 
@@ -506,13 +506,13 @@ Retrieves the SORACOM Harvest usage report for the operator.
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.harvest_exported_data_stats_response import HarvestExportedDataStatsResponse
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.harvest_exported_data_stats_response import HarvestExportedDataStatsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -534,7 +534,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -545,7 +545,7 @@ with api.ApiClient(configuration) as api_client:
         # Get 'Harvest usage report' for the specified operator.
         api_response = api_instance.get_harvest_exported_data_stats(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->get_harvest_exported_data_stats: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -554,7 +554,7 @@ with api.ApiClient(configuration) as api_client:
         # Get 'Harvest usage report' for the specified operator.
         api_response = api_instance.get_harvest_exported_data_stats(operator_id, year_month=year_month)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->get_harvest_exported_data_stats: %s\n" % e)
 ```
 
@@ -602,13 +602,13 @@ Get Napter audit logs' monthly exported data stats
 
 ```python
 import time
-import api
-from api.api import stats_api
-from api.model.napter_audit_logs_exported_data_stats_response import NapterAuditLogsExportedDataStatsResponse
+import soracom_api
+from soracom_api.api import stats_api
+from soracom_api.model.napter_audit_logs_exported_data_stats_response import NapterAuditLogsExportedDataStatsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -630,7 +630,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stats_api.StatsApi(api_client)
     year_month = "year_month_example" # str | Year/Month in 'YYYYMM' format. (optional)
@@ -641,7 +641,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Napter audit logs' monthly exported data stats
         api_response = api_instance.get_napter_audit_logs_exported_data_stats(year_month=year_month)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling StatsApi->get_napter_audit_logs_exported_data_stats: %s\n" % e)
 ```
 

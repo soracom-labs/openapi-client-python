@@ -1,4 +1,4 @@
-# sandbox.CouponApi
+# soracom_sandbox.CouponApi
 
 All URIs are relative to *https://api-sandbox.soracom.io/v1*
 
@@ -19,20 +19,20 @@ Creates a coupon.
 
 ```python
 import time
-import sandbox
-from sandbox.api import coupon_api
-from sandbox.model.sandbox_create_coupon_request import SandboxCreateCouponRequest
-from sandbox.model.sandbox_create_coupon_response import SandboxCreateCouponResponse
+import soracom_sandbox
+from soracom_sandbox.api import coupon_api
+from soracom_sandbox.model.sandbox_create_coupon_request import SandboxCreateCouponRequest
+from soracom_sandbox.model.sandbox_create_coupon_response import SandboxCreateCouponResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = coupon_api.CouponApi(api_client)
     sandbox_create_coupon_request = SandboxCreateCouponRequest(
@@ -46,7 +46,7 @@ with sandbox.ApiClient() as api_client:
         # Creates a coupon
         api_response = api_instance.sandbox_create_coupon(sandbox_create_coupon_request)
         pprint(api_response)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling CouponApi->sandbox_create_coupon: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# api.UserApi
+# soracom_api.UserApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -41,13 +41,13 @@ Adds a new SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.create_user_request import CreateUserRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.create_user_request import CreateUserRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -69,7 +69,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -82,7 +82,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Create User.
         api_instance.create_user(operator_id, user_name, create_user_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->create_user: %s\n" % e)
 ```
 
@@ -131,13 +131,13 @@ Creates a password for the SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.create_user_password_request import CreateUserPasswordRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.create_user_password_request import CreateUserPasswordRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -159,7 +159,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -172,7 +172,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Create Password.
         api_instance.create_user_password(operator_id, user_name, create_user_password_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->create_user_password: %s\n" % e)
 ```
 
@@ -221,13 +221,13 @@ Deletes the SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.api_call_error import APICallError
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.api_call_error import APICallError
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -249,7 +249,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -259,7 +259,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete User.
         api_instance.delete_user(operator_id, user_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->delete_user: %s\n" % e)
 ```
 
@@ -308,13 +308,13 @@ Deletes an AuthKey from the SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.api_call_error import APICallError
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.api_call_error import APICallError
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -336,7 +336,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -347,7 +347,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete User AuthKey.
         api_instance.delete_user_auth_key(operator_id, user_name, auth_key_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->delete_user_auth_key: %s\n" % e)
 ```
 
@@ -397,13 +397,13 @@ Deletes the user's password.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.api_call_error import APICallError
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.api_call_error import APICallError
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -425,7 +425,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -435,7 +435,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Password.
         api_instance.delete_user_password(operator_id, user_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->delete_user_password: %s\n" % e)
 ```
 
@@ -484,13 +484,13 @@ Enable SAM user's MFA
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.enable_mfaotp_response import EnableMFAOTPResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.enable_mfaotp_response import EnableMFAOTPResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -512,7 +512,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -523,7 +523,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable SAM user's MFA
         api_response = api_instance.enable_user_mfa(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->enable_user_mfa: %s\n" % e)
 ```
 
@@ -572,13 +572,13 @@ Generates an AuthKey for the SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.generate_user_auth_key_response import GenerateUserAuthKeyResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.generate_user_auth_key_response import GenerateUserAuthKeyResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -600,7 +600,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -611,7 +611,7 @@ with api.ApiClient(configuration) as api_client:
         # Generate AuthKey.
         api_response = api_instance.generate_user_auth_key(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->generate_user_auth_key: %s\n" % e)
 ```
 
@@ -659,13 +659,13 @@ Get the default permissions rule that is applied to all of the SAM users
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.get_default_permissions_response import GetDefaultPermissionsResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.get_default_permissions_response import GetDefaultPermissionsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -687,7 +687,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -697,7 +697,7 @@ with api.ApiClient(configuration) as api_client:
         # Get the default permissions
         api_response = api_instance.get_default_permissions(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->get_default_permissions: %s\n" % e)
 ```
 
@@ -746,13 +746,13 @@ Returns a SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.user_detail_response import UserDetailResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.user_detail_response import UserDetailResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -774,7 +774,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -785,7 +785,7 @@ with api.ApiClient(configuration) as api_client:
         # Get User.
         api_response = api_instance.get_user(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->get_user: %s\n" % e)
 ```
 
@@ -833,13 +833,13 @@ Returns the SAM user's AuthKey.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.auth_key_response import AuthKeyResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.auth_key_response import AuthKeyResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -861,7 +861,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -873,7 +873,7 @@ with api.ApiClient(configuration) as api_client:
         # Get AuthKey.
         api_response = api_instance.get_user_auth_key(operator_id, user_name, auth_key_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->get_user_auth_key: %s\n" % e)
 ```
 
@@ -922,13 +922,13 @@ Get SAM user's MFA status
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.mfa_status_of_use_response import MFAStatusOfUseResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.mfa_status_of_use_response import MFAStatusOfUseResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -950,7 +950,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -961,7 +961,7 @@ with api.ApiClient(configuration) as api_client:
         # Get SAM user's MFA status
         api_response = api_instance.get_user_mfa_status(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->get_user_mfa_status: %s\n" % e)
 ```
 
@@ -1010,13 +1010,13 @@ Retrieves the SAM user's permissions.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.get_user_permission_response import GetUserPermissionResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.get_user_permission_response import GetUserPermissionResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1038,7 +1038,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1049,7 +1049,7 @@ with api.ApiClient(configuration) as api_client:
         # Get User Permission.
         api_response = api_instance.get_user_permission(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->get_user_permission: %s\n" % e)
 ```
 
@@ -1097,13 +1097,13 @@ Retrieves whether the SAM user has a password or not.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.get_user_password_response import GetUserPasswordResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.get_user_password_response import GetUserPasswordResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1125,7 +1125,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1136,7 +1136,7 @@ with api.ApiClient(configuration) as api_client:
         # Has User Password.
         api_response = api_instance.has_user_password(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->has_user_password: %s\n" % e)
 ```
 
@@ -1184,13 +1184,13 @@ Returns the SAM user's AuthKey list.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.auth_key_response import AuthKeyResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.auth_key_response import AuthKeyResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1212,7 +1212,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1223,7 +1223,7 @@ with api.ApiClient(configuration) as api_client:
         # List User AuthKeys.
         api_response = api_instance.list_user_auth_keys(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->list_user_auth_keys: %s\n" % e)
 ```
 
@@ -1271,13 +1271,13 @@ Returns a list of SAM users.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.user_detail_response import UserDetailResponse
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.user_detail_response import UserDetailResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1299,7 +1299,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1309,7 +1309,7 @@ with api.ApiClient(configuration) as api_client:
         # List Users.
         api_response = api_instance.list_users(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->list_users: %s\n" % e)
 ```
 
@@ -1356,12 +1356,12 @@ Revoke SAM user's MFA
 
 ```python
 import time
-import api
-from api.api import user_api
+import soracom_api
+from soracom_api.api import user_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1383,7 +1383,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -1393,7 +1393,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Revoke SAM user's MFA
         api_instance.revoke_user_mfa(operator_id, user_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->revoke_user_mfa: %s\n" % e)
 ```
 
@@ -1442,13 +1442,13 @@ Update the default permissions rule that is applied to all of the SAM
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.update_default_permissions_request import UpdateDefaultPermissionsRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.update_default_permissions_request import UpdateDefaultPermissionsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1470,7 +1470,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -1482,7 +1482,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update the default permissions
         api_instance.update_default_permissions(operator_id, update_default_permissions_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->update_default_permissions: %s\n" % e)
 ```
 
@@ -1532,14 +1532,14 @@ Updates the SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.api_call_error import APICallError
-from api.model.update_user_request import UpdateUserRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.update_user_request import UpdateUserRequest
+from soracom_api.model.api_call_error import APICallError
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1561,7 +1561,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1574,7 +1574,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update User.
         api_instance.update_user(operator_id, user_name, update_user_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->update_user: %s\n" % e)
 ```
 
@@ -1624,13 +1624,13 @@ Updates the password of the SAM user.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.update_password_request import UpdatePasswordRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.update_password_request import UpdatePasswordRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1652,7 +1652,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1666,7 +1666,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update Password.
         api_instance.update_user_password(operator_id, user_name, update_password_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->update_user_password: %s\n" % e)
 ```
 
@@ -1715,13 +1715,13 @@ Updates the SAM user's permissions.
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.set_user_permission_request import SetUserPermissionRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.set_user_permission_request import SetUserPermissionRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1743,7 +1743,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1757,7 +1757,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update Permission to User.
         api_instance.update_user_permission(operator_id, user_name, set_user_permission_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->update_user_permission: %s\n" % e)
 ```
 
@@ -1806,13 +1806,13 @@ Verify SAM user's MFA OTP code when MFA activation phase
 
 ```python
 import time
-import api
-from api.api import user_api
-from api.model.mfa_authentication_request import MFAAuthenticationRequest
+import soracom_api
+from soracom_api.api import user_api
+from soracom_api.model.mfa_authentication_request import MFAAuthenticationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1834,7 +1834,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -1847,7 +1847,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Verify SAM user's MFA OTP code when MFA activation phase
         api_instance.verify_user_mfa(operator_id, user_name, mfa_authentication_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling UserApi->verify_user_mfa: %s\n" % e)
 ```
 

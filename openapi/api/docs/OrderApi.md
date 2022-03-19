@@ -1,4 +1,4 @@
-# api.OrderApi
+# soracom_api.OrderApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -33,12 +33,12 @@ Cancels an order. If the order has already been dispatched, an error is returned
 
 ```python
 import time
-import api
-from api.api import order_api
+import soracom_api
+from soracom_api.api import order_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -60,7 +60,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -70,7 +70,7 @@ with api.ApiClient(configuration) as api_client:
         # Cancel order.
         api_response = api_instance.cancel_order(order_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->cancel_order: %s\n" % e)
 ```
 
@@ -117,13 +117,13 @@ Performs a credit limit and confirms the order if no problems are encountered.
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.coupon_response import CouponResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.coupon_response import CouponResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -145,7 +145,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -155,7 +155,7 @@ with api.ApiClient(configuration) as api_client:
         # Confirm coupon order.
         api_response = api_instance.confirm_coupon_order(order_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->confirm_coupon_order: %s\n" % e)
 ```
 
@@ -202,12 +202,12 @@ Performs a credit limit and confirms the order if no problems are encountered.
 
 ```python
 import time
-import api
-from api.api import order_api
+import soracom_api
+from soracom_api.api import order_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -229,7 +229,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -238,7 +238,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Confirm order.
         api_instance.confirm_order(order_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->confirm_order: %s\n" % e)
 ```
 
@@ -285,13 +285,13 @@ Performs a credit limit and confirms the order if no problems are encountered.
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.get_volume_discount_response import GetVolumeDiscountResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.get_volume_discount_response import GetVolumeDiscountResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -313,7 +313,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -323,7 +323,7 @@ with api.ApiClient(configuration) as api_client:
         # Confirm long term discount order.
         api_response = api_instance.confirm_volume_discount_order(order_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->confirm_volume_discount_order: %s\n" % e)
 ```
 
@@ -370,14 +370,14 @@ Creates a new coupon quotation. If the orderId is put in /confirm, the order is 
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.create_estimated_coupon_request import CreateEstimatedCouponRequest
-from api.model.estimated_coupon_model import EstimatedCouponModel
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.create_estimated_coupon_request import CreateEstimatedCouponRequest
+from soracom_api.model.estimated_coupon_model import EstimatedCouponModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -399,7 +399,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     create_estimated_coupon_request = CreateEstimatedCouponRequest(
@@ -411,7 +411,7 @@ with api.ApiClient(configuration) as api_client:
         # Create coupon quotation.
         api_response = api_instance.create_coupon_quotation(create_estimated_coupon_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->create_coupon_quotation: %s\n" % e)
 ```
 
@@ -458,14 +458,14 @@ Creates a new order quotation. If the orderId is put in /confirm, the order is c
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.create_estimated_order_request import CreateEstimatedOrderRequest
-from api.model.estimated_order_model import EstimatedOrderModel
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.estimated_order_model import EstimatedOrderModel
+from soracom_api.model.create_estimated_order_request import CreateEstimatedOrderRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -487,7 +487,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     create_estimated_order_request = CreateEstimatedOrderRequest(
@@ -505,7 +505,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Quotation.
         api_response = api_instance.create_quotation(create_estimated_order_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->create_quotation: %s\n" % e)
 ```
 
@@ -552,14 +552,14 @@ Creates a new long term discount quotation. If the orderId is put in /confirm, t
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.create_estimated_volume_discount_request import CreateEstimatedVolumeDiscountRequest
-from api.model.estimated_volume_discount_model import EstimatedVolumeDiscountModel
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.create_estimated_volume_discount_request import CreateEstimatedVolumeDiscountRequest
+from soracom_api.model.estimated_volume_discount_model import EstimatedVolumeDiscountModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -581,7 +581,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     create_estimated_volume_discount_request = CreateEstimatedVolumeDiscountRequest(
@@ -597,7 +597,7 @@ with api.ApiClient(configuration) as api_client:
         # Create long term discount quotation.
         api_response = api_instance.create_volume_discount_quotation(create_estimated_volume_discount_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->create_volume_discount_quotation: %s\n" % e)
 ```
 
@@ -644,13 +644,13 @@ Returns a confirmed order.
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.get_order_response import GetOrderResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.get_order_response import GetOrderResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -672,7 +672,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -682,7 +682,7 @@ with api.ApiClient(configuration) as api_client:
         # Get confirmed order.
         api_response = api_instance.get_order(order_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->get_order: %s\n" % e)
 ```
 
@@ -729,13 +729,13 @@ Returns a list of available long term discounts.
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.available_long_term_discount_response import AvailableLongTermDiscountResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.available_long_term_discount_response import AvailableLongTermDiscountResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -757,7 +757,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
 
@@ -766,7 +766,7 @@ with api.ApiClient(configuration) as api_client:
         # List available long term discounts.
         api_response = api_instance.list_available_discounts()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->list_available_discounts: %s\n" % e)
 ```
 
@@ -810,13 +810,13 @@ List ordered subscribers
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.list_ordered_subscriber_response import ListOrderedSubscriberResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.list_ordered_subscriber_response import ListOrderedSubscriberResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -838,7 +838,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -850,7 +850,7 @@ with api.ApiClient(configuration) as api_client:
         # List ordered subscribers.
         api_response = api_instance.list_ordered_subscribers(order_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->list_ordered_subscribers: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -859,7 +859,7 @@ with api.ApiClient(configuration) as api_client:
         # List ordered subscribers.
         api_response = api_instance.list_ordered_subscribers(order_id, last_evaluated_key=last_evaluated_key, limit=limit)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->list_ordered_subscribers: %s\n" % e)
 ```
 
@@ -908,13 +908,13 @@ Returns a list of confirmed orders.
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.list_order_response import ListOrderResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.list_order_response import ListOrderResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -936,7 +936,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
 
@@ -945,7 +945,7 @@ with api.ApiClient(configuration) as api_client:
         # List confirmed orders.
         api_response = api_instance.list_orders()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->list_orders: %s\n" % e)
 ```
 
@@ -989,13 +989,13 @@ Returns a list of products.
 
 ```python
 import time
-import api
-from api.api import order_api
-from api.model.list_product_response import ListProductResponse
+import soracom_api
+from soracom_api.api import order_api
+from soracom_api.model.list_product_response import ListProductResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1017,7 +1017,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
 
@@ -1026,7 +1026,7 @@ with api.ApiClient(configuration) as api_client:
         # List products.
         api_response = api_instance.list_products()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->list_products: %s\n" % e)
 ```
 
@@ -1070,12 +1070,12 @@ Registers the ordered SIM with the operator.
 
 ```python
 import time
-import api
-from api.api import order_api
+import soracom_api
+from soracom_api.api import order_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1097,7 +1097,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     order_id = "order_id_example" # str | order_id
@@ -1107,7 +1107,7 @@ with api.ApiClient(configuration) as api_client:
         # Register subscribers for operator.
         api_response = api_instance.register_ordered_sim(order_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OrderApi->register_ordered_sim: %s\n" % e)
 ```
 

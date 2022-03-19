@@ -1,4 +1,4 @@
-# api.LogApi
+# soracom_api.LogApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -21,13 +21,13 @@ Returns a list of log entries that match certain criteria. If the total number o
 
 ```python
 import time
-import api
-from api.api import log_api
-from api.model.log_entry import LogEntry
+import soracom_api
+from soracom_api.api import log_api
+from soracom_api.model.log_entry import LogEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -49,7 +49,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = log_api.LogApi(api_client)
     resource_type = "Subscriber" # str | Type of the target resource to query log entries. (optional)
@@ -66,7 +66,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Logs.
         api_response = api_instance.get_logs(resource_type=resource_type, resource_id=resource_id, service=service, _from=_from, to=to, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LogApi->get_logs: %s\n" % e)
 ```
 

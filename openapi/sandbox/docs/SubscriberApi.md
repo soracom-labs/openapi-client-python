@@ -1,4 +1,4 @@
-# sandbox.SubscriberApi
+# soracom_sandbox.SubscriberApi
 
 All URIs are relative to *https://api-sandbox.soracom.io/v1*
 
@@ -19,20 +19,20 @@ Creates a new subscriber for sandbox.
 
 ```python
 import time
-import sandbox
-from sandbox.api import subscriber_api
-from sandbox.model.sandbox_create_subscriber_response import SandboxCreateSubscriberResponse
-from sandbox.model.sandbox_create_subscriber_request import SandboxCreateSubscriberRequest
+import soracom_sandbox
+from soracom_sandbox.api import subscriber_api
+from soracom_sandbox.model.sandbox_create_subscriber_response import SandboxCreateSubscriberResponse
+from soracom_sandbox.model.sandbox_create_subscriber_request import SandboxCreateSubscriberRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     sandbox_create_subscriber_request = SandboxCreateSubscriberRequest(
@@ -45,7 +45,7 @@ with sandbox.ApiClient() as api_client:
         # Creates a new subscriber for sandbox.
         api_response = api_instance.sandbox_create_subscriber(sandbox_create_subscriber_request=sandbox_create_subscriber_request)
         pprint(api_response)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling SubscriberApi->sandbox_create_subscriber: %s\n" % e)
 ```
 

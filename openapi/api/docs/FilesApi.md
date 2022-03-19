@@ -1,4 +1,4 @@
-# api.FilesApi
+# soracom_api.FilesApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -21,13 +21,13 @@ Get an exported file. The `url` field in the response will contain a URL to down
 
 ```python
 import time
-import api
-from api.api import files_api
-from api.model.get_exported_file_response import GetExportedFileResponse
+import soracom_api
+from soracom_api.api import files_api
+from soracom_api.model.get_exported_file_response import GetExportedFileResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -49,7 +49,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = files_api.FilesApi(api_client)
     exported_file_id = "exported_file_id_example" # str | file export id
@@ -59,7 +59,7 @@ with api.ApiClient(configuration) as api_client:
         # Get an exported file.
         api_response = api_instance.get_exported_file(exported_file_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FilesApi->get_exported_file: %s\n" % e)
 ```
 

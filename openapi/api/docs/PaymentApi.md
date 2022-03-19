@@ -1,4 +1,4 @@
-# api.PaymentApi
+# soracom_api.PaymentApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -31,12 +31,12 @@ Activates a current payment method that has an error.
 
 ```python
 import time
-import api
-from api.api import payment_api
+import soracom_api
+from soracom_api.api import payment_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -58,7 +58,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
 
@@ -67,7 +67,7 @@ with api.ApiClient(configuration) as api_client:
         # Activate payment method.
         api_response = api_instance.activate_payment_method()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->activate_payment_method: %s\n" % e)
 ```
 
@@ -112,13 +112,13 @@ Export payment statement.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.file_export_response import FileExportResponse
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.file_export_response import FileExportResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -140,7 +140,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
     payment_statement_id = "payment_statement_id_example" # str | Payment statement ID
@@ -151,7 +151,7 @@ with api.ApiClient(configuration) as api_client:
         # Export payment statement.
         api_response = api_instance.export_payment_statement(payment_statement_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->export_payment_statement: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -160,7 +160,7 @@ with api.ApiClient(configuration) as api_client:
         # Export payment statement.
         api_response = api_instance.export_payment_statement(payment_statement_id, export_mode=export_mode)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->export_payment_statement: %s\n" % e)
 ```
 
@@ -209,13 +209,13 @@ Export payer information.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.register_payer_information_model import RegisterPayerInformationModel
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.register_payer_information_model import RegisterPayerInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -237,7 +237,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
 
@@ -246,7 +246,7 @@ with api.ApiClient(configuration) as api_client:
         # Export payer information.
         api_response = api_instance.get_payer_information()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->get_payer_information: %s\n" % e)
 ```
 
@@ -291,13 +291,13 @@ Returns current payment methods. Detailed information is included in the propert
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.get_payment_method_result import GetPaymentMethodResult
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.get_payment_method_result import GetPaymentMethodResult
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -319,7 +319,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
 
@@ -328,7 +328,7 @@ with api.ApiClient(configuration) as api_client:
         # Get payment method information.
         api_response = api_instance.get_payment_method()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->get_payment_method: %s\n" % e)
 ```
 
@@ -373,13 +373,13 @@ Returns result of a payment transaction.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.get_payment_transaction_result import GetPaymentTransactionResult
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.get_payment_transaction_result import GetPaymentTransactionResult
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -401,7 +401,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
     payment_transaction_id = "payment_transaction_id_example" # str | Payment transaction ID
@@ -411,7 +411,7 @@ with api.ApiClient(configuration) as api_client:
         # Get payment transaction result.
         api_response = api_instance.get_payment_transaction(payment_transaction_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->get_payment_transaction: %s\n" % e)
 ```
 
@@ -460,13 +460,13 @@ Returns contracted long term discount.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.get_volume_discount_response import GetVolumeDiscountResponse
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.get_volume_discount_response import GetVolumeDiscountResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -488,7 +488,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
     contract_id = "contract_id_example" # str | contract_id
@@ -498,7 +498,7 @@ with api.ApiClient(configuration) as api_client:
         # Get long term discount.
         api_response = api_instance.get_volume_discount(contract_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->get_volume_discount: %s\n" % e)
 ```
 
@@ -546,13 +546,13 @@ Returns a list of currently registered coupons.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.list_coupon_response import ListCouponResponse
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.list_coupon_response import ListCouponResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -574,7 +574,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
 
@@ -583,7 +583,7 @@ with api.ApiClient(configuration) as api_client:
         # List coupons.
         api_response = api_instance.list_coupons()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->list_coupons: %s\n" % e)
 ```
 
@@ -627,13 +627,13 @@ List payment statements.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.list_payment_statement_response import ListPaymentStatementResponse
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.list_payment_statement_response import ListPaymentStatementResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -655,7 +655,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
 
@@ -664,7 +664,7 @@ with api.ApiClient(configuration) as api_client:
         # List payment statements.
         api_response = api_instance.list_payment_statements()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->list_payment_statements: %s\n" % e)
 ```
 
@@ -708,13 +708,13 @@ Returns a list of contracted long term discounts.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.list_volume_discount_response import ListVolumeDiscountResponse
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.list_volume_discount_response import ListVolumeDiscountResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -736,7 +736,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
 
@@ -745,7 +745,7 @@ with api.ApiClient(configuration) as api_client:
         # List long term discounts.
         api_response = api_instance.list_volume_discounts()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->list_volume_discounts: %s\n" % e)
 ```
 
@@ -789,13 +789,13 @@ Registers a coupon.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.coupon_response import CouponResponse
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.coupon_response import CouponResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -817,7 +817,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
     coupon_code = "coupon_code_example" # str | Coupon code
@@ -827,7 +827,7 @@ with api.ApiClient(configuration) as api_client:
         # Register Coupon.
         api_response = api_instance.register_coupon(coupon_code)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->register_coupon: %s\n" % e)
 ```
 
@@ -875,13 +875,13 @@ Register payer information.
 
 ```python
 import time
-import api
-from api.api import payment_api
-from api.model.register_payer_information_model import RegisterPayerInformationModel
+import soracom_api
+from soracom_api.api import payment_api
+from soracom_api.model.register_payer_information_model import RegisterPayerInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -903,7 +903,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = payment_api.PaymentApi(api_client)
     register_payer_information_model = RegisterPayerInformationModel(
@@ -916,7 +916,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Register payer information.
         api_instance.register_payer_information(register_payer_information_model)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling PaymentApi->register_payer_information: %s\n" % e)
 ```
 

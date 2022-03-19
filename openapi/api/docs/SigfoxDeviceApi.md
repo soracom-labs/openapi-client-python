@@ -1,4 +1,4 @@
-# api.SigfoxDeviceApi
+# soracom_api.SigfoxDeviceApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -32,12 +32,12 @@ Deletes a tag from the specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
+import soracom_api
+from soracom_api.api import sigfox_device_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -59,7 +59,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | device ID of the target Sigfox device.
@@ -69,7 +69,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Sigfox device Tag.
         api_instance.delete_sigfox_device_tag(device_id, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->delete_sigfox_device_tag: %s\n" % e)
 ```
 
@@ -118,13 +118,13 @@ Disables termination of specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -146,7 +146,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -156,7 +156,7 @@ with api.ApiClient(configuration) as api_client:
         # Disable Termination of Sigfox device.
         api_response = api_instance.disable_termination_on_sigfox_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->disable_termination_on_sigfox_device: %s\n" % e)
 ```
 
@@ -204,13 +204,13 @@ Enables termination of specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -232,7 +232,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -242,7 +242,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable Termination of Sigfox device.
         api_response = api_instance.enable_termination_on_sigfox_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->enable_termination_on_sigfox_device: %s\n" % e)
 ```
 
@@ -290,13 +290,13 @@ Returns a list of data entries sent from a Sigfox device that match certain crit
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.data_entry import DataEntry
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.data_entry import DataEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -318,7 +318,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target subscriber that generated data entries.
@@ -333,7 +333,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a Sigfox device.
         api_response = api_instance.get_data_from_sigfox_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->get_data_from_sigfox_device: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -342,7 +342,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a Sigfox device.
         api_response = api_instance.get_data_from_sigfox_device(device_id, _from=_from, to=to, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->get_data_from_sigfox_device: %s\n" % e)
 ```
 
@@ -394,13 +394,13 @@ Returns information about the specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -422,7 +422,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -432,7 +432,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Sigfox device.
         api_response = api_instance.get_sigfox_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->get_sigfox_device: %s\n" % e)
 ```
 
@@ -480,13 +480,13 @@ Returns a list of Sigfox devices that match certain criteria. If the total numbe
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -508,7 +508,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     tag_name = "tag_name_example" # str | Tag name for filtering the search (exact match). (optional)
@@ -523,7 +523,7 @@ with api.ApiClient(configuration) as api_client:
         # List Sigfox devices.
         api_response = api_instance.list_sigfox_devices(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->list_sigfox_devices: %s\n" % e)
 ```
 
@@ -574,14 +574,14 @@ Inserts/updates tags for the specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
-from api.model.tag_update_request import TagUpdateRequest
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -603,7 +603,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -619,7 +619,7 @@ with api.ApiClient(configuration) as api_client:
         # Bulk Insert or Update Sigfox device Tags.
         api_response = api_instance.put_sigfox_device_tags(device_id, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->put_sigfox_device_tags: %s\n" % e)
 ```
 
@@ -668,14 +668,14 @@ Registers a Sigfox device
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
-from api.model.sigfox_registration_request import SigfoxRegistrationRequest
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
+from soracom_api.model.sigfox_registration_request import SigfoxRegistrationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -697,7 +697,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target sigfox device to register
@@ -713,7 +713,7 @@ with api.ApiClient(configuration) as api_client:
         # Register a Sigfox device.
         api_response = api_instance.register_sigfox_device(device_id, sigfox_registration_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->register_sigfox_device: %s\n" % e)
 ```
 
@@ -762,13 +762,13 @@ Sends data to the specified Sigfox device. The data will be stored until the dev
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_data import SigfoxData
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_data import SigfoxData
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -790,7 +790,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | ID of the recipient device.
@@ -802,7 +802,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Send data to a Sigfox device.
         api_instance.send_data_to_sigfox_device(device_id, sigfox_data)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->send_data_to_sigfox_device: %s\n" % e)
 ```
 
@@ -851,14 +851,14 @@ Sets or overwrites a group for the specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.group import Group
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -880,7 +880,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -900,7 +900,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Group of Sigfox device.
         api_response = api_instance.set_sigfox_device_group(device_id, group)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->set_sigfox_device_group: %s\n" % e)
 ```
 
@@ -949,13 +949,13 @@ Terminates the specified Sigfox device
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -977,7 +977,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -988,7 +988,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate Sigfox device.
         api_response = api_instance.terminate_sigfox_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->terminate_sigfox_device: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -997,7 +997,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate Sigfox device.
         api_response = api_instance.terminate_sigfox_device(device_id, delete_immediately=delete_immediately)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->terminate_sigfox_device: %s\n" % e)
 ```
 
@@ -1046,13 +1046,13 @@ Removes the group configuration from the specified Sigfox device.
 
 ```python
 import time
-import api
-from api.api import sigfox_device_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import sigfox_device_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1074,7 +1074,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sigfox_device_api.SigfoxDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target Sigfox device.
@@ -1084,7 +1084,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset Group of Sigfox device.
         api_response = api_instance.unset_sigfox_device_group(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SigfoxDeviceApi->unset_sigfox_device_group: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# sandbox.OrderApi
+# soracom_sandbox.OrderApi
 
 All URIs are relative to *https://api-sandbox.soracom.io/v1*
 
@@ -19,19 +19,19 @@ Changes the shipping status to 'shipped' and gets ready the subscribers included
 
 ```python
 import time
-import sandbox
-from sandbox.api import order_api
-from sandbox.model.sandbox_ship_order_request import SandboxShipOrderRequest
+import soracom_sandbox
+from soracom_sandbox.api import order_api
+from soracom_sandbox.model.sandbox_ship_order_request import SandboxShipOrderRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = order_api.OrderApi(api_client)
     sandbox_ship_order_request = SandboxShipOrderRequest(
@@ -43,7 +43,7 @@ with sandbox.ApiClient() as api_client:
     try:
         # Ships the specified order.
         api_instance.sandbox_ship_order(sandbox_ship_order_request)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling OrderApi->sandbox_ship_order: %s\n" % e)
 ```
 

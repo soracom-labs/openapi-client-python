@@ -1,4 +1,4 @@
-# api.OperatorApi
+# soracom_api.OperatorApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -44,12 +44,12 @@ Adds the operator's coverage type.
 
 ```python
 import time
-import api
-from api.api import operator_api
+import soracom_api
+from soracom_api.api import operator_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -71,7 +71,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -81,7 +81,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Add coverage type.
         api_instance.add_coverage_type(operator_id, coverage_type)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->add_coverage_type: %s\n" % e)
 ```
 
@@ -129,14 +129,14 @@ Adds the operator's contract.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.contract_updating_request import ContractUpdatingRequest
-from api.model.contract_updated_response import ContractUpdatedResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.contract_updating_request import ContractUpdatingRequest
+from soracom_api.model.contract_updated_response import ContractUpdatedResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -158,7 +158,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -172,7 +172,7 @@ with api.ApiClient(configuration) as api_client:
         # Add Operator Contract.
         api_response = api_instance.add_operator_contract(operator_id, contract_updating_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->add_operator_contract: %s\n" % e)
 ```
 
@@ -220,13 +220,13 @@ Creates the operator's company information.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.company_information_model import CompanyInformationModel
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.company_information_model import CompanyInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -248,7 +248,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -271,7 +271,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Create company information.
         api_instance.create_company_information(operator_id, company_information_model)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->create_company_information: %s\n" % e)
 ```
 
@@ -319,13 +319,13 @@ Creates the operator's individual information.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.individual_information_model import IndividualInformationModel
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.individual_information_model import IndividualInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -347,7 +347,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -367,7 +367,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Create individual information.
         api_instance.create_individual_information(operator_id, individual_information_model)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->create_individual_information: %s\n" % e)
 ```
 
@@ -415,13 +415,13 @@ Makes a request to create a new operator. An e-mail is sent to the e-mail addres
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.register_operators_request import RegisterOperatorsRequest
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.register_operators_request import RegisterOperatorsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -443,7 +443,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     register_operators_request = RegisterOperatorsRequest(
@@ -455,7 +455,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Create Operator.
         api_instance.create_operator(register_operators_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->create_operator: %s\n" % e)
 ```
 
@@ -503,12 +503,12 @@ Deletes an AuthKey from the operator.
 
 ```python
 import time
-import api
-from api.api import operator_api
+import soracom_api
+from soracom_api.api import operator_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -530,7 +530,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -540,7 +540,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Operator AuthKey.
         api_instance.delete_operator_auth_key(operator_id, auth_key_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->delete_operator_auth_key: %s\n" % e)
 ```
 
@@ -588,12 +588,12 @@ Deletes the operator's contract.
 
 ```python
 import time
-import api
-from api.api import operator_api
+import soracom_api
+from soracom_api.api import operator_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -615,7 +615,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -625,7 +625,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Operator Contract.
         api_instance.delete_operator_contract(operator_id, contract_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->delete_operator_contract: %s\n" % e)
 ```
 
@@ -673,13 +673,13 @@ Enables operator's MFA. After calling this APIg, it should be verified by callin
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.enable_mfaotp_response import EnableMFAOTPResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.enable_mfaotp_response import EnableMFAOTPResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -701,7 +701,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -711,7 +711,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable Operator's MFA.
         api_response = api_instance.enable_mfa(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->enable_mfa: %s\n" % e)
 ```
 
@@ -759,15 +759,15 @@ Generates a new API token. If you insert the current API token into the header a
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.api_call_error import APICallError
-from api.model.generate_token_response import GenerateTokenResponse
-from api.model.generate_token_request import GenerateTokenRequest
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.generate_token_response import GenerateTokenResponse
+from soracom_api.model.generate_token_request import GenerateTokenRequest
+from soracom_api.model.api_call_error import APICallError
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -789,7 +789,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -802,7 +802,7 @@ with api.ApiClient(configuration) as api_client:
         # Generate Authentication Token.
         api_response = api_instance.generate_auth_token(operator_id, generate_token_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->generate_auth_token: %s\n" % e)
 ```
 
@@ -851,13 +851,13 @@ Generates an AuthKey for the operator.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.generate_operators_auth_key_response import GenerateOperatorsAuthKeyResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.generate_operators_auth_key_response import GenerateOperatorsAuthKeyResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -879,7 +879,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -889,7 +889,7 @@ with api.ApiClient(configuration) as api_client:
         # Generate Operator AuthKey.
         api_response = api_instance.generate_operator_auth_key(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->generate_operator_auth_key: %s\n" % e)
 ```
 
@@ -936,13 +936,13 @@ Returns a token for accessing the support console.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.support_token_response import SupportTokenResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.support_token_response import SupportTokenResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -964,7 +964,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -974,7 +974,7 @@ with api.ApiClient(configuration) as api_client:
         # Generate Token for Support Console.
         api_response = api_instance.generate_support_token(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->generate_support_token: %s\n" % e)
 ```
 
@@ -1023,13 +1023,13 @@ Gets the operator's company information.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.company_information_model import CompanyInformationModel
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.company_information_model import CompanyInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1051,7 +1051,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1061,7 +1061,7 @@ with api.ApiClient(configuration) as api_client:
         # Get company information.
         api_response = api_instance.get_company_information(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->get_company_information: %s\n" % e)
 ```
 
@@ -1108,13 +1108,13 @@ Gets the operator's individual information.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.individual_information_model import IndividualInformationModel
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.individual_information_model import IndividualInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1136,7 +1136,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1146,7 +1146,7 @@ with api.ApiClient(configuration) as api_client:
         # Get individual information.
         api_response = api_instance.get_individual_information(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->get_individual_information: %s\n" % e)
 ```
 
@@ -1193,13 +1193,13 @@ Gets operator's MFA status. The MFA status is one of `ACTIVE`, `INACTIVE` or `UN
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.mfa_status_of_use_response import MFAStatusOfUseResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.mfa_status_of_use_response import MFAStatusOfUseResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1221,7 +1221,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1231,7 +1231,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Operator's MFA Status.
         api_response = api_instance.get_mfa_status(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->get_mfa_status: %s\n" % e)
 ```
 
@@ -1279,13 +1279,13 @@ Returns information about the operator.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.get_operator_response import GetOperatorResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.get_operator_response import GetOperatorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1307,7 +1307,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1317,7 +1317,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Operator.
         api_response = api_instance.get_operator(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->get_operator: %s\n" % e)
 ```
 
@@ -1363,19 +1363,19 @@ Issues a token to revoke operator's MFA. The issued token will be sent to the op
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.mfa_issue_revoking_token_request import MFAIssueRevokingTokenRequest
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.mfa_issue_revoking_token_request import MFAIssueRevokingTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     mfa_issue_revoking_token_request = MFAIssueRevokingTokenRequest(
@@ -1387,7 +1387,7 @@ with api.ApiClient() as api_client:
     try:
         # Issue Operator's MFA Revoke Token.
         api_instance.issue_mfa_revoking_token(mfa_issue_revoking_token_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->issue_mfa_revoking_token: %s\n" % e)
 ```
 
@@ -1436,13 +1436,13 @@ Returns the operator's AuthKey list.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.auth_key_response import AuthKeyResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.auth_key_response import AuthKeyResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1464,7 +1464,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1474,7 +1474,7 @@ with api.ApiClient(configuration) as api_client:
         # List Operator AuthKeys.
         api_response = api_instance.list_operator_auth_keys(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->list_operator_auth_keys: %s\n" % e)
 ```
 
@@ -1521,12 +1521,12 @@ Revokes operator's MFA without backup codes.
 
 ```python
 import time
-import api
-from api.api import operator_api
+import soracom_api
+from soracom_api.api import operator_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1548,7 +1548,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1557,7 +1557,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Revoke Operator's MFA.
         api_instance.revoke_mfa(operator_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->revoke_mfa: %s\n" % e)
 ```
 
@@ -1605,13 +1605,13 @@ Updates the operator's company information.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.company_information_model import CompanyInformationModel
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.company_information_model import CompanyInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1633,7 +1633,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1656,7 +1656,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update company information.
         api_instance.update_company_information(operator_id, company_information_model)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->update_company_information: %s\n" % e)
 ```
 
@@ -1704,13 +1704,13 @@ Updates the operator's individual information.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.individual_information_model import IndividualInformationModel
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.individual_information_model import IndividualInformationModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1732,7 +1732,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1752,7 +1752,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update individual information.
         api_instance.update_individual_information(operator_id, individual_information_model)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->update_individual_information: %s\n" % e)
 ```
 
@@ -1800,13 +1800,13 @@ Updates the operator's password.
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.update_password_request import UpdatePasswordRequest
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.update_password_request import UpdatePasswordRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1828,7 +1828,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1841,7 +1841,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update Operator Password.
         api_instance.update_operator_password(operator_id, update_password_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->update_operator_password: %s\n" % e)
 ```
 
@@ -1890,14 +1890,14 @@ Verifies operator's MFA with OTP code after calling `Operator:enableMFA` API. MF
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.mfa_authentication_request import MFAAuthenticationRequest
-from api.model.operator_mfa_verifying_response import OperatorMFAVerifyingResponse
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.mfa_authentication_request import MFAAuthenticationRequest
+from soracom_api.model.operator_mfa_verifying_response import OperatorMFAVerifyingResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1919,7 +1919,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -1932,7 +1932,7 @@ with api.ApiClient(configuration) as api_client:
         # Verify Operator's MFA OTP Code.
         api_response = api_instance.verify_mfa(operator_id, mfa_authentication_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->verify_mfa: %s\n" % e)
 ```
 
@@ -1979,19 +1979,19 @@ Verifies the one-time token which is previously issued by calling `/operators/mf
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.mfa_revoking_token_verify_request import MFARevokingTokenVerifyRequest
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.mfa_revoking_token_verify_request import MFARevokingTokenVerifyRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     mfa_revoking_token_verify_request = MFARevokingTokenVerifyRequest(
@@ -2005,7 +2005,7 @@ with api.ApiClient() as api_client:
     try:
         # Verify Operator's MFA revoke token.
         api_instance.verify_mfa_revoking_token(mfa_revoking_token_verify_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->verify_mfa_revoking_token: %s\n" % e)
 ```
 
@@ -2052,19 +2052,19 @@ Verifies the operator's registration. Called by setting as parameter the one-tim
 
 ```python
 import time
-import api
-from api.api import operator_api
-from api.model.verify_operators_request import VerifyOperatorsRequest
+import soracom_api
+from soracom_api.api import operator_api
+from soracom_api.model.verify_operators_request import VerifyOperatorsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     verify_operators_request = VerifyOperatorsRequest(
@@ -2075,7 +2075,7 @@ with api.ApiClient() as api_client:
     try:
         # Verify Operator.
         api_instance.verify_operator(verify_operators_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling OperatorApi->verify_operator: %s\n" % e)
 ```
 
