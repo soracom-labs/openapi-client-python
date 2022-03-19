@@ -1,4 +1,4 @@
-# api.LoraDeviceApi
+# soracom_api.LoraDeviceApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -32,12 +32,12 @@ Deletes a tag from the specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
+import soracom_api
+from soracom_api.api import lora_device_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -59,7 +59,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | device ID of the target LoRa device.
@@ -69,7 +69,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete LoRa device Tag.
         api_instance.delete_lora_device_tag(device_id, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->delete_lora_device_tag: %s\n" % e)
 ```
 
@@ -118,13 +118,13 @@ Disables termination of specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -146,7 +146,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -156,7 +156,7 @@ with api.ApiClient(configuration) as api_client:
         # Disable Termination of LoRa device.
         api_response = api_instance.disable_termination_on_lora_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->disable_termination_on_lora_device: %s\n" % e)
 ```
 
@@ -204,13 +204,13 @@ Enables termination of specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -232,7 +232,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -242,7 +242,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable Termination of LoRa device.
         api_response = api_instance.enable_termination_on_lora_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->enable_termination_on_lora_device: %s\n" % e)
 ```
 
@@ -290,13 +290,13 @@ Returns a list of data entries sent from a LoRa device that match certain criter
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.data_entry import DataEntry
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.data_entry import DataEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -318,7 +318,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target subscriber that generated data entries.
@@ -333,7 +333,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a LoRa device.
         api_response = api_instance.get_data_from_lora_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->get_data_from_lora_device: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -342,7 +342,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a LoRa device.
         api_response = api_instance.get_data_from_lora_device(device_id, _from=_from, to=to, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->get_data_from_lora_device: %s\n" % e)
 ```
 
@@ -394,13 +394,13 @@ Returns information about the specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -422,7 +422,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -432,7 +432,7 @@ with api.ApiClient(configuration) as api_client:
         # Get LoRa device.
         api_response = api_instance.get_lora_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->get_lora_device: %s\n" % e)
 ```
 
@@ -480,13 +480,13 @@ Returns a list of LoRa devices that match certain criteria. If the total number 
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -508,7 +508,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     tag_name = "tag_name_example" # str | Tag name for filtering the search (exact match). (optional)
@@ -523,7 +523,7 @@ with api.ApiClient(configuration) as api_client:
         # List LoRa devices.
         api_response = api_instance.list_lora_devices(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->list_lora_devices: %s\n" % e)
 ```
 
@@ -574,14 +574,14 @@ Inserts/updates tags for the specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.tag_update_request import TagUpdateRequest
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
+from soracom_api.model.tag_update_request import TagUpdateRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -603,7 +603,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -619,7 +619,7 @@ with api.ApiClient(configuration) as api_client:
         # Bulk Insert or Update LoRa device Tags.
         api_response = api_instance.put_lora_device_tags(device_id, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->put_lora_device_tags: %s\n" % e)
 ```
 
@@ -668,14 +668,14 @@ Registers a LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.register_lora_device_request import RegisterLoraDeviceRequest
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
+from soracom_api.model.register_lora_device_request import RegisterLoraDeviceRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -697,7 +697,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -714,7 +714,7 @@ with api.ApiClient(configuration) as api_client:
         # Register LoRa device.
         api_response = api_instance.register_lora_device(device_id, register_lora_device_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->register_lora_device: %s\n" % e)
 ```
 
@@ -762,13 +762,13 @@ Sends data to the specified LoRa device. The data is sent to the LoRa network se
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_data import LoraData
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_data import LoraData
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -790,7 +790,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | ID of the recipient device.
@@ -803,7 +803,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Send data to a LoRa device.
         api_instance.send_data_to_lora_device(device_id, lora_data)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->send_data_to_lora_device: %s\n" % e)
 ```
 
@@ -853,14 +853,14 @@ Sets or overwrites a group for the specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.group import Group
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -882,7 +882,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -902,7 +902,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Group of LoRa device.
         api_response = api_instance.set_lora_device_group(device_id, group)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->set_lora_device_group: %s\n" % e)
 ```
 
@@ -951,13 +951,13 @@ Terminates the specified LoRa device
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -979,7 +979,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -989,7 +989,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate LoRa device.
         api_response = api_instance.terminate_lora_device(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->terminate_lora_device: %s\n" % e)
 ```
 
@@ -1037,13 +1037,13 @@ Removes the group configuration from the specified LoRa device.
 
 ```python
 import time
-import api
-from api.api import lora_device_api
-from api.model.lora_device import LoraDevice
+import soracom_api
+from soracom_api.api import lora_device_api
+from soracom_api.model.lora_device import LoraDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1065,7 +1065,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_device_api.LoraDeviceApi(api_client)
     device_id = "device_id_example" # str | Device ID of the target LoRa device.
@@ -1075,7 +1075,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset Group of LoRa device.
         api_response = api_instance.unset_lora_device_group(device_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraDeviceApi->unset_lora_device_group: %s\n" % e)
 ```
 

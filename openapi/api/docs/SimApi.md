@@ -1,4 +1,4 @@
-# api.SimApi
+# soracom_api.SimApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -62,13 +62,13 @@ Change status of specified SIM to active.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -90,7 +90,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -100,7 +100,7 @@ with api.ApiClient(configuration) as api_client:
         # Activate SIM.
         api_response = api_instance.activate_sim(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->activate_sim: %s\n" % e)
 ```
 
@@ -148,14 +148,14 @@ This API is used to trigger the OTA update of a new subscription container to a 
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim_profile import SimProfile
-from api.model.inline_object3 import InlineObject3
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim_profile import SimProfile
+from soracom_api.model.inline_object3 import InlineObject3
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -177,7 +177,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | Id of the target SIM
@@ -193,7 +193,7 @@ with api.ApiClient(configuration) as api_client:
         # Adds a new subscription container to a SIM profile
         api_response = api_instance.add_subscription(sim_id, iccid)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->add_subscription: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -202,7 +202,7 @@ with api.ApiClient(configuration) as api_client:
         # Adds a new subscription container to a SIM profile
         api_response = api_instance.add_subscription(sim_id, iccid, inline_object3=inline_object3)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->add_subscription: %s\n" % e)
 ```
 
@@ -252,14 +252,14 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.arc_credential_attach_request import ArcCredentialAttachRequest
-from api.model.arc_credential_attach_response import ArcCredentialAttachResponse
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.arc_credential_attach_request import ArcCredentialAttachRequest
+from soracom_api.model.arc_credential_attach_response import ArcCredentialAttachResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -281,7 +281,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -294,7 +294,7 @@ with api.ApiClient(configuration) as api_client:
         # (DEPRECATED) Attach the credentials for Arc to a SIM.
         api_response = api_instance.attach_arc_sim_credentials(sim_id, arc_credential_attach_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->attach_arc_sim_credentials: %s\n" % e)
 ```
 
@@ -342,13 +342,13 @@ Cancel the download of subscription before it gets downloaded to the SIM. The co
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.subscription_container_status import SubscriptionContainerStatus
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.subscription_container_status import SubscriptionContainerStatus
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -370,7 +370,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target subscription container.
@@ -382,7 +382,7 @@ with api.ApiClient(configuration) as api_client:
         # Cancel subscription download to subscription container
         api_response = api_instance.cancel_subscription_container_download(sim_id, iccid, imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->cancel_subscription_container_download: %s\n" % e)
 ```
 
@@ -432,13 +432,13 @@ Use this API to re-activate a session for a virtual SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.arc_session_create_response import ArcSessionCreateResponse
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.arc_session_create_response import ArcSessionCreateResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -460,7 +460,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -470,7 +470,7 @@ with api.ApiClient(configuration) as api_client:
         # Re-create an Arc session.
         api_response = api_instance.create_arc_session(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->create_arc_session: %s\n" % e)
 ```
 
@@ -518,14 +518,14 @@ Creates a SIM for example for use with Arc service.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.create_sim_request import CreateSimRequest
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.create_sim_request import CreateSimRequest
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -547,7 +547,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     create_sim_request = CreateSimRequest(
@@ -560,7 +560,7 @@ with api.ApiClient(configuration) as api_client:
         # Create a SIM.
         api_response = api_instance.create_sim(create_sim_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->create_sim: %s\n" % e)
 ```
 
@@ -607,14 +607,14 @@ Create a packet capture session associated with the SIM
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.packet_capture_session_request import PacketCaptureSessionRequest
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.packet_capture_session_request import PacketCaptureSessionRequest
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -636,7 +636,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | The SIM ID for which a packet capture session is created
@@ -650,7 +650,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Packet Capture Session
         api_response = api_instance.create_sim_packet_capture_session(sim_id, packet_capture_session_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->create_sim_packet_capture_session: %s\n" % e)
 ```
 
@@ -699,13 +699,13 @@ Change status of specified SIM to inactive.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -727,7 +727,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -737,7 +737,7 @@ with api.ApiClient(configuration) as api_client:
         # Deactivate SIM.
         api_response = api_instance.deactivate_sim(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->deactivate_sim: %s\n" % e)
 ```
 
@@ -785,13 +785,13 @@ Delete a packet capture session associated with the SIM
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -813,7 +813,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID
@@ -824,7 +824,7 @@ with api.ApiClient(configuration) as api_client:
         # Delete Packet Capture Session
         api_response = api_instance.delete_sim_packet_capture_session(sim_id, session_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->delete_sim_packet_capture_session: %s\n" % e)
 ```
 
@@ -874,13 +874,13 @@ Deletes session for the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -902,7 +902,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -912,7 +912,7 @@ with api.ApiClient(configuration) as api_client:
         # Delete Session
         api_response = api_instance.delete_sim_session(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->delete_sim_session: %s\n" % e)
 ```
 
@@ -960,12 +960,12 @@ Deletes a tag from the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
+import soracom_api
+from soracom_api.api import sim_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -987,7 +987,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | Sim Id of the target SIM.
@@ -997,7 +997,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete SIM tag.
         api_instance.delete_sim_tag(sim_id, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->delete_sim_tag: %s\n" % e)
 ```
 
@@ -1046,13 +1046,13 @@ Delete subscription container country mapping entries
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.subscription_container_status import SubscriptionContainerStatus
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.subscription_container_status import SubscriptionContainerStatus
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1074,7 +1074,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -1086,7 +1086,7 @@ with api.ApiClient(configuration) as api_client:
         # Delete subscription container mapping entries
         api_response = api_instance.delete_subscription_container_country_mapping_entry(sim_id, iccid, mcc)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->delete_subscription_container_country_mapping_entry: %s\n" % e)
 ```
 
@@ -1137,13 +1137,13 @@ Disables termination of the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1165,7 +1165,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -1175,7 +1175,7 @@ with api.ApiClient(configuration) as api_client:
         # Disable termination of the SIM.
         api_response = api_instance.disable_sim_termination(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->disable_sim_termination: %s\n" % e)
 ```
 
@@ -1223,14 +1223,14 @@ Send ICMP ping requests to a SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.downlink_ping_request import DownlinkPingRequest
-from api.model.downlink_ping_response import DownlinkPingResponse
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.downlink_ping_response import DownlinkPingResponse
+from soracom_api.model.downlink_ping_request import DownlinkPingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1252,7 +1252,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -1266,7 +1266,7 @@ with api.ApiClient(configuration) as api_client:
         # Send ping requests to a SIM.
         api_response = api_instance.downlink_ping_to_user_equipment(sim_id, downlink_ping_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->downlink_ping_to_user_equipment: %s\n" % e)
 ```
 
@@ -1314,13 +1314,13 @@ Enables termination of specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1342,7 +1342,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -1352,7 +1352,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable termination of the SIM.
         api_response = api_instance.enable_sim_termination(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->enable_sim_termination: %s\n" % e)
 ```
 
@@ -1400,13 +1400,13 @@ Causes the identified container to become the active one on the Sim.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.subscription_container_status import SubscriptionContainerStatus
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.subscription_container_status import SubscriptionContainerStatus
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1428,7 +1428,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -1440,7 +1440,7 @@ with api.ApiClient(configuration) as api_client:
         # Enables a subscription container.
         api_response = api_instance.enable_subscription_container(sim_id, iccid, container_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->enable_subscription_container: %s\n" % e)
 ```
 
@@ -1490,13 +1490,13 @@ Returns a list of data entries sent from a SIM that match certain criteria. If t
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.data_entry import DataEntry
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.data_entry import DataEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1518,7 +1518,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | Sim Id of the target SIM.
@@ -1533,7 +1533,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a SIM.
         api_response = api_instance.get_data_from_sim(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->get_data_from_sim: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1542,7 +1542,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a SIM.
         api_response = api_instance.get_data_from_sim(sim_id, _from=_from, to=to, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->get_data_from_sim: %s\n" % e)
 ```
 
@@ -1594,13 +1594,13 @@ Obtain a SIM record identified by the sim_id
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1622,7 +1622,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | Id of the target SIM
@@ -1632,7 +1632,7 @@ with api.ApiClient(configuration) as api_client:
         # Get a SIM identified by sim_id
         api_response = api_instance.get_sim(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->get_sim: %s\n" % e)
 ```
 
@@ -1680,13 +1680,13 @@ Get a packet capture sessions associated the SIM
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1708,7 +1708,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID
@@ -1719,7 +1719,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Packet Capture Session
         api_response = api_instance.get_sim_packet_capture_session(sim_id, session_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->get_sim_packet_capture_session: %s\n" % e)
 ```
 
@@ -1768,13 +1768,13 @@ List packet capture sessions associated with the SIM
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1796,7 +1796,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID
@@ -1808,7 +1808,7 @@ with api.ApiClient(configuration) as api_client:
         # List Packet Capture Sessions
         api_response = api_instance.list_sim_packet_capture_sessions(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->list_sim_packet_capture_sessions: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1817,7 +1817,7 @@ with api.ApiClient(configuration) as api_client:
         # List Packet Capture Sessions
         api_response = api_instance.list_sim_packet_capture_sessions(sim_id, last_evaluated_key=last_evaluated_key, limit=limit)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->list_sim_packet_capture_sessions: %s\n" % e)
 ```
 
@@ -1867,13 +1867,13 @@ Returns the history of session creation, change, and deletion events occurred on
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.session_event import SessionEvent
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.session_event import SessionEvent
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1895,7 +1895,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -1909,7 +1909,7 @@ with api.ApiClient(configuration) as api_client:
         # List Session Events.
         api_response = api_instance.list_sim_session_events(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->list_sim_session_events: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1918,7 +1918,7 @@ with api.ApiClient(configuration) as api_client:
         # List Session Events.
         api_response = api_instance.list_sim_session_events(sim_id, _from=_from, to=to, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->list_sim_session_events: %s\n" % e)
 ```
 
@@ -1969,13 +1969,13 @@ Returns a list of SIMs that match certain criteria. If the total number of SIMs 
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1997,7 +1997,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     limit = 1 # int | Maximum number of SIMs to retrieve. Setting a limit does not guarantee the number of sims returned in the response (i.e. the response may contain fewer sims than the specified limit). (optional)
@@ -2009,7 +2009,7 @@ with api.ApiClient(configuration) as api_client:
         # List SIMs.
         api_response = api_instance.list_sims(limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->list_sims: %s\n" % e)
 ```
 
@@ -2058,13 +2058,13 @@ Returns a schema listing subscription containers and containing a map of PLMN co
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.subscription_container_status import SubscriptionContainerStatus
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.subscription_container_status import SubscriptionContainerStatus
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2086,7 +2086,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | Sim Id of the target SIM.
@@ -2097,7 +2097,7 @@ with api.ApiClient(configuration) as api_client:
         # Get subscription container status.
         api_response = api_instance.list_subscription_containers(sim_id, iccid)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->list_subscription_containers: %s\n" % e)
 ```
 
@@ -2147,14 +2147,14 @@ Inserts/updates tags for the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
-from api.model.tag_update_request import TagUpdateRequest
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2176,7 +2176,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2192,7 +2192,7 @@ with api.ApiClient(configuration) as api_client:
         # Bulk insert or update SIM tags.
         api_response = api_instance.put_sim_tags(sim_id, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->put_sim_tags: %s\n" % e)
 ```
 
@@ -2241,14 +2241,14 @@ Inserts/updates Country (and optionally network) to subscription container mappi
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.mapping_entries import MappingEntries
-from api.model.subscription_container_status import SubscriptionContainerStatus
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.mapping_entries import MappingEntries
+from soracom_api.model.subscription_container_status import SubscriptionContainerStatus
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2270,7 +2270,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2290,7 +2290,7 @@ with api.ApiClient(configuration) as api_client:
         # Updates subscription container country mapping entries.
         api_response = api_instance.put_subscription_container_country_mapping_entries(sim_id, iccid, mapping_entries)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->put_subscription_container_country_mapping_entries: %s\n" % e)
 ```
 
@@ -2341,14 +2341,14 @@ Registers a SIM to an operator.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
-from api.model.register_sim_request import RegisterSimRequest
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.register_sim_request import RegisterSimRequest
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2370,7 +2370,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2390,7 +2390,7 @@ with api.ApiClient(configuration) as api_client:
         # Register SIM.
         api_response = api_instance.register_sim(sim_id, register_sim_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->register_sim: %s\n" % e)
 ```
 
@@ -2438,12 +2438,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import api
-from api.api import sim_api
+import soracom_api
+from soracom_api.api import sim_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2465,7 +2465,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2474,7 +2474,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # (DEPRECATED) Remove the credentials for Arc from a SIM.
         api_instance.remove_arc_sim_credentials(sim_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->remove_arc_sim_credentials: %s\n" % e)
 ```
 
@@ -2521,14 +2521,14 @@ Use this API to attach a set of credentials to a SIM and re-initialize a session
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.arc_credential_renew_request import ArcCredentialRenewRequest
-from api.model.arc_credential_renew_response import ArcCredentialRenewResponse
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.arc_credential_renew_request import ArcCredentialRenewRequest
+from soracom_api.model.arc_credential_renew_response import ArcCredentialRenewResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2550,7 +2550,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2563,7 +2563,7 @@ with api.ApiClient(configuration) as api_client:
         # Renew the credentials for Arc to a SIM.
         api_response = api_instance.renew_arc_sim_credentials(sim_id, arc_credential_renew_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->renew_arc_sim_credentials: %s\n" % e)
 ```
 
@@ -2611,13 +2611,13 @@ Triggers SIM to report SIM local info.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2639,7 +2639,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2649,7 +2649,7 @@ with api.ApiClient(configuration) as api_client:
         # Triggers SIM to report SIM local info.
         api_response = api_instance.report_sim_local_info(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->report_sim_local_info: %s\n" % e)
 ```
 
@@ -2698,14 +2698,14 @@ Send SMS to the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sms_forwarding_report import SmsForwardingReport
-from api.model.sms_forwarding_request import SmsForwardingRequest
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sms_forwarding_request import SmsForwardingRequest
+from soracom_api.model.sms_forwarding_report import SmsForwardingReport
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2727,7 +2727,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2741,7 +2741,7 @@ with api.ApiClient(configuration) as api_client:
         # Send SMS to SIM
         api_response = api_instance.send_sms_to_sim(sim_id, sms_forwarding_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->send_sms_to_sim: %s\n" % e)
 ```
 
@@ -2791,14 +2791,14 @@ Updates expiry time of the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
-from api.model.expiry_time import ExpiryTime
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.expiry_time import ExpiryTime
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2820,7 +2820,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2834,7 +2834,7 @@ with api.ApiClient(configuration) as api_client:
         # Update expiry time of SIM.
         api_response = api_instance.set_sim_expiry_time(sim_id, expiry_time)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->set_sim_expiry_time: %s\n" % e)
 ```
 
@@ -2883,14 +2883,14 @@ Sets or overwrites a group for the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
-from api.model.set_group_request import SetGroupRequest
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.set_group_request import SetGroupRequest
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2912,7 +2912,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -2928,7 +2928,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Group id of a SIM.
         api_response = api_instance.set_sim_group(sim_id, set_group_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->set_sim_group: %s\n" % e)
 ```
 
@@ -2977,14 +2977,14 @@ Set IMEI that the SIM should be locked to.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
-from api.model.set_imei_lock_request import SetImeiLockRequest
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.set_imei_lock_request import SetImeiLockRequest
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3006,7 +3006,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3019,7 +3019,7 @@ with api.ApiClient(configuration) as api_client:
         # Set IMEI lock configuration for the SIM.
         api_response = api_instance.set_sim_imei_lock(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->set_sim_imei_lock: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3028,7 +3028,7 @@ with api.ApiClient(configuration) as api_client:
         # Set IMEI lock configuration for the SIM.
         api_response = api_instance.set_sim_imei_lock(sim_id, set_imei_lock_request=set_imei_lock_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->set_sim_imei_lock: %s\n" % e)
 ```
 
@@ -3078,13 +3078,13 @@ Set the specified SIM to standby mode.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3106,7 +3106,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3116,7 +3116,7 @@ with api.ApiClient(configuration) as api_client:
         # Set SIM to standby mode.
         api_response = api_instance.set_sim_to_standby(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->set_sim_to_standby: %s\n" % e)
 ```
 
@@ -3165,13 +3165,13 @@ Stop a packet capture session associated with the SIM
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.packet_capture_session import PacketCaptureSession
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3193,7 +3193,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID
@@ -3204,7 +3204,7 @@ with api.ApiClient(configuration) as api_client:
         # Stop SIM Packet Capture Session
         api_response = api_instance.stop_sim_packet_capture_session(sim_id, session_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->stop_sim_packet_capture_session: %s\n" % e)
 ```
 
@@ -3255,13 +3255,13 @@ Suspends the specified SIM
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3283,7 +3283,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3293,7 +3293,7 @@ with api.ApiClient(configuration) as api_client:
         # Suspend SIM.
         api_response = api_instance.suspend_sim(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->suspend_sim: %s\n" % e)
 ```
 
@@ -3341,13 +3341,13 @@ Terminates the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3369,7 +3369,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3379,7 +3379,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate SIM.
         api_response = api_instance.terminate_sim(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->terminate_sim: %s\n" % e)
 ```
 
@@ -3427,12 +3427,12 @@ Terminate subscription container. Currently this API supports only for virtual s
 
 ```python
 import time
-import api
-from api.api import sim_api
+import soracom_api
+from soracom_api.api import sim_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3454,7 +3454,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target subscription container.
@@ -3465,7 +3465,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Terminate subscription container
         api_instance.terminate_subscription_container(sim_id, iccid, imsi)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->terminate_subscription_container: %s\n" % e)
 ```
 
@@ -3514,12 +3514,12 @@ Deletes expiry time of specified SIM and changes it to indefinite.
 
 ```python
 import time
-import api
-from api.api import sim_api
+import soracom_api
+from soracom_api.api import sim_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3541,7 +3541,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3550,7 +3550,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete expiry time of the SIM.
         api_instance.unset_sim_expiry_time(sim_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->unset_sim_expiry_time: %s\n" % e)
 ```
 
@@ -3598,13 +3598,13 @@ Removes the group configuration from the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3626,7 +3626,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3636,7 +3636,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset Group to SIM.
         api_response = api_instance.unset_sim_group(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->unset_sim_group: %s\n" % e)
 ```
 
@@ -3684,13 +3684,13 @@ Remove any existing IMEI lock configuration for the SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3712,7 +3712,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | Sim Id of the target SIM.
@@ -3722,7 +3722,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset IMEI lock configuration for SIM.
         api_response = api_instance.unset_sim_imei_lock(sim_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->unset_sim_imei_lock: %s\n" % e)
 ```
 
@@ -3770,14 +3770,14 @@ Changes the speed class of the specified SIM.
 
 ```python
 import time
-import api
-from api.api import sim_api
-from api.model.sim import Sim
-from api.model.update_speed_class_request import UpdateSpeedClassRequest
+import soracom_api
+from soracom_api.api import sim_api
+from soracom_api.model.update_speed_class_request import UpdateSpeedClassRequest
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -3799,7 +3799,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sim_api.SimApi(api_client)
     sim_id = "sim_id_example" # str | SIM ID of the target SIM.
@@ -3812,7 +3812,7 @@ with api.ApiClient(configuration) as api_client:
         # Update SIM speed class.
         api_response = api_instance.update_sim_speed_class(sim_id, update_speed_class_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SimApi->update_sim_speed_class: %s\n" % e)
 ```
 

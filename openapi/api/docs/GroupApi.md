@@ -1,4 +1,4 @@
-# api.GroupApi
+# soracom_api.GroupApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -30,14 +30,14 @@ Create a new group.
 
 ```python
 import time
-import api
-from api.api import group_api
-from api.model.group import Group
-from api.model.create_group_request import CreateGroupRequest
+import soracom_api
+from soracom_api.api import group_api
+from soracom_api.model.group import Group
+from soracom_api.model.create_group_request import CreateGroupRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -59,7 +59,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     create_group_request = CreateGroupRequest(
@@ -73,7 +73,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Group.
         api_response = api_instance.create_group(create_group_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->create_group: %s\n" % e)
 ```
 
@@ -120,12 +120,12 @@ Delete a namespace for the specified group.
 
 ```python
 import time
-import api
-from api.api import group_api
+import soracom_api
+from soracom_api.api import group_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -147,7 +147,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group.
@@ -157,7 +157,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Group Configuration Namespace.
         api_instance.delete_configuration_namespace(group_id, namespace)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->delete_configuration_namespace: %s\n" % e)
 ```
 
@@ -207,12 +207,12 @@ Delete parameters for the specified group.
 
 ```python
 import time
-import api
-from api.api import group_api
+import soracom_api
+from soracom_api.api import group_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -234,7 +234,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group.
@@ -245,7 +245,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Group Configuration Parameters.
         api_instance.delete_configuration_parameter(group_id, namespace, name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->delete_configuration_parameter: %s\n" % e)
 ```
 
@@ -295,12 +295,12 @@ Deletes the specified group by group ID
 
 ```python
 import time
-import api
-from api.api import group_api
+import soracom_api
+from soracom_api.api import group_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -322,7 +322,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group ID.
@@ -331,7 +331,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Group.
         api_instance.delete_group(group_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->delete_group: %s\n" % e)
 ```
 
@@ -379,12 +379,12 @@ Deletes tag from the specified group.
 
 ```python
 import time
-import api
-from api.api import group_api
+import soracom_api
+from soracom_api.api import group_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -406,7 +406,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group ID.
@@ -416,7 +416,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Group Tag.
         api_instance.delete_group_tag(group_id, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->delete_group_tag: %s\n" % e)
 ```
 
@@ -465,13 +465,13 @@ Returns the group specified by the group ID.
 
 ```python
 import time
-import api
-from api.api import group_api
-from api.model.group import Group
+import soracom_api
+from soracom_api.api import group_api
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -493,7 +493,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group ID.
@@ -503,7 +503,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Group.
         api_response = api_instance.get_group(group_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->get_group: %s\n" % e)
 ```
 
@@ -551,13 +551,13 @@ Returns a list of groups.
 
 ```python
 import time
-import api
-from api.api import group_api
-from api.model.group import Group
+import soracom_api
+from soracom_api.api import group_api
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -579,7 +579,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     tag_name = "tag_name_example" # str | Tag name of the group. Filters through all groups that exactly match the tag name. When tag_name is specified, tag_value is required. (optional)
@@ -594,7 +594,7 @@ with api.ApiClient(configuration) as api_client:
         # List Groups.
         api_response = api_instance.list_groups(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->list_groups: %s\n" % e)
 ```
 
@@ -645,13 +645,13 @@ Returns a list of subscribers that belong to the specified group by group ID.
 
 ```python
 import time
-import api
-from api.api import group_api
-from api.model.group import Group
+import soracom_api
+from soracom_api.api import group_api
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -673,7 +673,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group ID.
@@ -685,7 +685,7 @@ with api.ApiClient(configuration) as api_client:
         # List Subscribers in a group.
         api_response = api_instance.list_subscribers_in_group(group_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->list_subscribers_in_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -694,7 +694,7 @@ with api.ApiClient(configuration) as api_client:
         # List Subscribers in a group.
         api_response = api_instance.list_subscribers_in_group(group_id, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->list_subscribers_in_group: %s\n" % e)
 ```
 
@@ -744,14 +744,14 @@ Adds/updates parameters for the specified group.
 
 ```python
 import time
-import api
-from api.api import group_api
-from api.model.group import Group
-from api.model.group_configuration_update_request import GroupConfigurationUpdateRequest
+import soracom_api
+from soracom_api.api import group_api
+from soracom_api.model.group_configuration_update_request import GroupConfigurationUpdateRequest
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -773,7 +773,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group.
@@ -790,7 +790,7 @@ with api.ApiClient(configuration) as api_client:
         # Update Group Configuration Parameters.
         api_response = api_instance.put_configuration_parameters(group_id, namespace, group_configuration_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->put_configuration_parameters: %s\n" % e)
 ```
 
@@ -840,14 +840,14 @@ Adds/updates tags of specified configuration group.
 
 ```python
 import time
-import api
-from api.api import group_api
-from api.model.tag_update_request import TagUpdateRequest
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import group_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -869,7 +869,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = group_api.GroupApi(api_client)
     group_id = "group_id_example" # str | Target group ID.
@@ -885,7 +885,7 @@ with api.ApiClient(configuration) as api_client:
         # Update Group Tags.
         api_response = api_instance.put_group_tags(group_id, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GroupApi->put_group_tags: %s\n" % e)
 ```
 

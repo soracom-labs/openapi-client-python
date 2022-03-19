@@ -1,4 +1,4 @@
-# sandbox.OperatorApi
+# soracom_sandbox.OperatorApi
 
 All URIs are relative to *https://api-sandbox.soracom.io/v1*
 
@@ -21,18 +21,18 @@ Deletes the specified operator.
 
 ```python
 import time
-import sandbox
-from sandbox.api import operator_api
+import soracom_sandbox
+from soracom_sandbox.api import operator_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -41,7 +41,7 @@ with sandbox.ApiClient() as api_client:
     try:
         # Deletes an operator
         api_instance.sandbox_delete_operator(operator_id)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling OperatorApi->sandbox_delete_operator: %s\n" % e)
 ```
 
@@ -87,20 +87,20 @@ Retrieves a 'signup token' for registration confirmation. Please specify a pair 
 
 ```python
 import time
-import sandbox
-from sandbox.api import operator_api
-from sandbox.model.sandbox_get_signup_token_response import SandboxGetSignupTokenResponse
-from sandbox.model.sandbox_get_signup_token_request import SandboxGetSignupTokenRequest
+import soracom_sandbox
+from soracom_sandbox.api import operator_api
+from soracom_sandbox.model.sandbox_get_signup_token_request import SandboxGetSignupTokenRequest
+from soracom_sandbox.model.sandbox_get_signup_token_response import SandboxGetSignupTokenResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     email = "email_example" # str | email
@@ -114,7 +114,7 @@ with sandbox.ApiClient() as api_client:
         # Gets a signup token
         api_response = api_instance.sandbox_get_signup_token(email, sandbox_get_signup_token_request)
         pprint(api_response)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling OperatorApi->sandbox_get_signup_token: %s\n" % e)
 ```
 
@@ -161,20 +161,20 @@ Performs complex signup process at once, including registering dummy payment met
 
 ```python
 import time
-import sandbox
-from sandbox.api import operator_api
-from sandbox.model.sandbox_auth_response import SandboxAuthResponse
-from sandbox.model.sandbox_init_request import SandboxInitRequest
+import soracom_sandbox
+from soracom_sandbox.api import operator_api
+from soracom_sandbox.model.sandbox_init_request import SandboxInitRequest
+from soracom_sandbox.model.sandbox_auth_response import SandboxAuthResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api-sandbox.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sandbox.Configuration(
+configuration = soracom_sandbox.Configuration(
     host = "https://api-sandbox.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sandbox.ApiClient() as api_client:
+with soracom_sandbox.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = operator_api.OperatorApi(api_client)
     sandbox_init_request = SandboxInitRequest(
@@ -193,7 +193,7 @@ with sandbox.ApiClient() as api_client:
         # Creates an operator account.
         api_response = api_instance.sandbox_initialize_operator(sandbox_init_request)
         pprint(api_response)
-    except sandbox.ApiException as e:
+    except soracom_sandbox.ApiException as e:
         print("Exception when calling OperatorApi->sandbox_initialize_operator: %s\n" % e)
 ```
 

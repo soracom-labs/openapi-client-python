@@ -1,4 +1,4 @@
-# api.QueryApi
+# soracom_api.QueryApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -25,13 +25,13 @@ Search SORACOM Inventory devices by query terms. It returns partial match result
 
 ```python
 import time
-import api
-from api.api import query_api
-from api.model.device import Device
+import soracom_api
+from soracom_api.api import query_api
+from soracom_api.model.device import Device
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -53,7 +53,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = query_api.QueryApi(api_client)
     name = [
@@ -84,7 +84,7 @@ with api.ApiClient(configuration) as api_client:
         # Search SORACOM Inventory devices by query
         api_response = api_instance.search_devices(name=name, group=group, device_id=device_id, tag=tag, imsi=imsi, imei=imei, limit=limit, last_evaluated_key=last_evaluated_key, search_type=search_type)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling QueryApi->search_devices: %s\n" % e)
 ```
 
@@ -140,13 +140,13 @@ Search Sigfox devices by query terms. It returns partial match results. When thi
 
 ```python
 import time
-import api
-from api.api import query_api
-from api.model.sigfox_device import SigfoxDevice
+import soracom_api
+from soracom_api.api import query_api
+from soracom_api.model.sigfox_device import SigfoxDevice
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -168,7 +168,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = query_api.QueryApi(api_client)
     name = [
@@ -195,7 +195,7 @@ with api.ApiClient(configuration) as api_client:
         # Search Sigfox devices by query
         api_response = api_instance.search_sigfox_devices(name=name, group=group, device_id=device_id, tag=tag, status=status, registration=registration, limit=limit, last_evaluated_key=last_evaluated_key, search_type=search_type)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling QueryApi->search_sigfox_devices: %s\n" % e)
 ```
 
@@ -251,13 +251,13 @@ Search SIMs by query terms. It returns partial match results. When this API perm
 
 ```python
 import time
-import api
-from api.api import query_api
-from api.model.sim import Sim
+import soracom_api
+from soracom_api.api import query_api
+from soracom_api.model.sim import Sim
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -279,7 +279,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = query_api.QueryApi(api_client)
     name = [
@@ -320,7 +320,7 @@ with api.ApiClient(configuration) as api_client:
         # Search SIMs by query terms
         api_response = api_instance.search_sims(name=name, group=group, sim_id=sim_id, imsi=imsi, msisdn=msisdn, iccid=iccid, serial_number=serial_number, tag=tag, bundles=bundles, session_status=session_status, limit=limit, last_evaluated_key=last_evaluated_key, search_type=search_type)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling QueryApi->search_sims: %s\n" % e)
 ```
 
@@ -380,13 +380,13 @@ Search traffic volume ranking of subscribers
 
 ```python
 import time
-import api
-from api.api import query_api
-from api.model.traffic_volume_ranking import TrafficVolumeRanking
+import soracom_api
+from soracom_api.api import query_api
+from soracom_api.model.traffic_volume_ranking import TrafficVolumeRanking
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -408,7 +408,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = query_api.QueryApi(api_client)
     _from = 1 # int | The beginning point of searching range (unixtime: in milliseconds)
@@ -421,7 +421,7 @@ with api.ApiClient(configuration) as api_client:
         # Search traffic volume ranking of subscribers
         api_response = api_instance.search_subscriber_traffic_volume_ranking(_from, to)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling QueryApi->search_subscriber_traffic_volume_ranking: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -430,7 +430,7 @@ with api.ApiClient(configuration) as api_client:
         # Search traffic volume ranking of subscribers
         api_response = api_instance.search_subscriber_traffic_volume_ranking(_from, to, limit=limit, order=order)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling QueryApi->search_subscriber_traffic_volume_ranking: %s\n" % e)
 ```
 
@@ -480,13 +480,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import api
-from api.api import query_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import query_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -508,7 +508,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = query_api.QueryApi(api_client)
     name = [
@@ -548,7 +548,7 @@ with api.ApiClient(configuration) as api_client:
         # (DEPRECATED) Search subscribers by query terms
         api_response = api_instance.search_subscribers(name=name, group=group, imsi=imsi, msisdn=msisdn, iccid=iccid, serial_number=serial_number, tag=tag, subscription=subscription, module_type=module_type, limit=limit, last_evaluated_key=last_evaluated_key, search_type=search_type)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling QueryApi->search_subscribers: %s\n" % e)
 ```
 

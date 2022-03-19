@@ -9,8 +9,8 @@ license = "MIT"
 python = "^3.9"
 python-dateutil = "^2.8.2"
 urllib3 = "^1.26.8"
-api = {path = "openapi/api"}
-sandbox = {path = "openapi/sandbox"}
+soracom_api = {path = "openapi/api"}
+soracom_sandbox = {path = "openapi/sandbox"}
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"

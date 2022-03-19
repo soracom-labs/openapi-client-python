@@ -1,4 +1,4 @@
-# api.AuditLogApi
+# soracom_api.AuditLogApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -22,13 +22,13 @@ Retrieve audit logs for API calls.
 
 ```python
 import time
-import api
-from api.api import audit_log_api
-from api.model.api_audit_log_entry import APIAuditLogEntry
+import soracom_api
+from soracom_api.api import audit_log_api
+from soracom_api.model.api_audit_log_entry import APIAuditLogEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -50,7 +50,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = audit_log_api.AuditLogApi(api_client)
     api_kind = "api_kind_example" # str | Filter item for audit log retrieval by API kind (e.g. `/v1/auth`). (optional)
@@ -65,7 +65,7 @@ with api.ApiClient(configuration) as api_client:
         # Retrieve audit logs for API calls
         api_response = api_instance.get_api_audit_logs(api_kind=api_kind, from_epoch_ms=from_epoch_ms, to_epoch_ms=to_epoch_ms, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling AuditLogApi->get_api_audit_logs: %s\n" % e)
 ```
 
@@ -116,13 +116,13 @@ Retrieve audit logs for Napter.
 
 ```python
 import time
-import api
-from api.api import audit_log_api
-from api.model.napter_audit_log_entry import NapterAuditLogEntry
+import soracom_api
+from soracom_api.api import audit_log_api
+from soracom_api.model.napter_audit_log_entry import NapterAuditLogEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -144,7 +144,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = audit_log_api.AuditLogApi(api_client)
     resource_type = "Subscriber" # str | Type of the target resource to query Napter audit log entries. (optional) if omitted the server will use the default value of "Subscriber"
@@ -160,7 +160,7 @@ with api.ApiClient(configuration) as api_client:
         # Retrieve audit logs for Napter
         api_response = api_instance.get_napter_audit_logs(resource_type=resource_type, resource_id=resource_id, _from=_from, to=to, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling AuditLogApi->get_napter_audit_logs: %s\n" % e)
 ```
 

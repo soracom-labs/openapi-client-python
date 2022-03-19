@@ -1,10 +1,10 @@
 import uuid
 from dataclasses import dataclass
 
-import sandbox
-from sandbox.api import operator_api
-from sandbox.model.sandbox_auth_response import SandboxAuthResponse
-from sandbox.model.sandbox_init_request import SandboxInitRequest
+import soracom_sandbox
+from soracom_sandbox.api import operator_api
+from soracom_sandbox.model.sandbox_auth_response import SandboxAuthResponse
+from soracom_sandbox.model.sandbox_init_request import SandboxInitRequest
 
 
 @dataclass
@@ -14,7 +14,7 @@ class SandboxConfig:
 
 
 def get_sandbox_config(auth_key: str, auth_key_id: str) -> SandboxConfig:
-    with sandbox.ApiClient() as api_client:
+    with soracom_sandbox.ApiClient() as api_client:
         api_instance = operator_api.OperatorApi(api_client)
         random_str = uuid.uuid4()
         sandbox_init_request = SandboxInitRequest(
@@ -33,4 +33,4 @@ def get_sandbox_config(auth_key: str, auth_key_id: str) -> SandboxConfig:
         assert isinstance(api_response.get("api_key"), str)
         assert isinstance(api_response.get("token"), str)
         assert isinstance(api_response.get("operator_id"), str)
-        return SandboxConfig(auth=api_response, url=sandbox.Configuration().get_host_settings()[0]["url"])
+        return SandboxConfig(auth=api_response, url=soracom_sandbox.Configuration().get_host_settings()[0]["url"])

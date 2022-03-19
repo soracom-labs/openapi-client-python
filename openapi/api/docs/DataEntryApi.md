@@ -1,4 +1,4 @@
-# api.DataEntryApi
+# soracom_api.DataEntryApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -24,12 +24,12 @@ Deletes a data entry identified with resource ID and timestamp
 
 ```python
 import time
-import api
-from api.api import data_entry_api
+import soracom_api
+from soracom_api.api import data_entry_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -51,7 +51,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_entry_api.DataEntryApi(api_client)
     resource_type = "Subscriber" # str | Type of data source resource
@@ -62,7 +62,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Deletes a data entry
         api_instance.delete_data_entry(resource_type, resource_id, time)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DataEntryApi->delete_data_entry: %s\n" % e)
 ```
 
@@ -111,13 +111,13 @@ Returns a list of data entries sent from a resource that match certain criteria.
 
 ```python
 import time
-import api
-from api.api import data_entry_api
-from api.model.data_entry import DataEntry
+import soracom_api
+from soracom_api.api import data_entry_api
+from soracom_api.model.data_entry import DataEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -139,7 +139,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_entry_api.DataEntryApi(api_client)
     resource_type = "Subscriber" # str | Type of data source resource
@@ -155,7 +155,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a resource.
         api_response = api_instance.get_data_entries(resource_type, resource_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DataEntryApi->get_data_entries: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -164,7 +164,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a resource.
         api_response = api_instance.get_data_entries(resource_type, resource_id, _from=_from, to=to, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DataEntryApi->get_data_entries: %s\n" % e)
 ```
 
@@ -217,12 +217,12 @@ Gets a data entry identified with resource ID and timestamp
 
 ```python
 import time
-import api
-from api.api import data_entry_api
+import soracom_api
+from soracom_api.api import data_entry_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -244,7 +244,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_entry_api.DataEntryApi(api_client)
     resource_type = "Subscriber" # str | Type of data source resource
@@ -255,7 +255,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Gets a data entry
         api_instance.get_data_entry(resource_type, resource_id, time)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DataEntryApi->get_data_entry: %s\n" % e)
 ```
 
@@ -305,13 +305,13 @@ Returns a list of data source resources that have sent data from resources that 
 
 ```python
 import time
-import api
-from api.api import data_entry_api
-from api.model.data_source_resource_metadata import DataSourceResourceMetadata
+import soracom_api
+from soracom_api.api import data_entry_api
+from soracom_api.model.data_source_resource_metadata import DataSourceResourceMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -333,7 +333,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_entry_api.DataEntryApi(api_client)
     resource_type = "Subscriber" # str | Type of data source resource (optional)
@@ -346,7 +346,7 @@ with api.ApiClient(configuration) as api_client:
         # Get the list of data source resources
         api_response = api_instance.list_data_source_resources(resource_type=resource_type, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DataEntryApi->list_data_source_resources: %s\n" % e)
 ```
 

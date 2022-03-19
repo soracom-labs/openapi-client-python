@@ -1,4 +1,4 @@
-# api.DiagnosticApi
+# soracom_api.DiagnosticApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -22,13 +22,13 @@ Returns a diagnostic.
 
 ```python
 import time
-import api
-from api.api import diagnostic_api
-from api.model.diagnostic_response import DiagnosticResponse
+import soracom_api
+from soracom_api.api import diagnostic_api
+from soracom_api.model.diagnostic_response import DiagnosticResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -50,7 +50,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = diagnostic_api.DiagnosticApi(api_client)
     diagnostic_id = "diagnostic_id_example" # str | The identifier of diagnostic request.
@@ -60,7 +60,7 @@ with api.ApiClient(configuration) as api_client:
         # Get diagnostic
         api_response = api_instance.get_diagnostic(diagnostic_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DiagnosticApi->get_diagnostic: %s\n" % e)
 ```
 
@@ -108,14 +108,14 @@ Send a diagnostic request.
 
 ```python
 import time
-import api
-from api.api import diagnostic_api
-from api.model.diagnostic_response import DiagnosticResponse
-from api.model.diagnostic_request import DiagnosticRequest
+import soracom_api
+from soracom_api.api import diagnostic_api
+from soracom_api.model.diagnostic_response import DiagnosticResponse
+from soracom_api.model.diagnostic_request import DiagnosticRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -137,7 +137,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = diagnostic_api.DiagnosticApi(api_client)
     diagnostic_request = DiagnosticRequest(
@@ -153,7 +153,7 @@ with api.ApiClient(configuration) as api_client:
         # Send diagnostic request
         api_response = api_instance.send_diagnostic_request(diagnostic_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DiagnosticApi->send_diagnostic_request: %s\n" % e)
 ```
 

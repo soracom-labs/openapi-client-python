@@ -1,4 +1,4 @@
-# api.SubscriberApi
+# soracom_api.SubscriberApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -51,13 +51,13 @@ Activates status of specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -79,7 +79,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -89,7 +89,7 @@ with api.ApiClient(configuration) as api_client:
         # Activate Subscriber.
         api_response = api_instance.activate_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->activate_subscriber: %s\n" % e)
 ```
 
@@ -137,13 +137,13 @@ Deactivates specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -165,7 +165,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -175,7 +175,7 @@ with api.ApiClient(configuration) as api_client:
         # Deactivate Subscriber.
         api_response = api_instance.deactivate_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->deactivate_subscriber: %s\n" % e)
 ```
 
@@ -223,13 +223,13 @@ Deletes session for the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -251,7 +251,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -261,7 +261,7 @@ with api.ApiClient(configuration) as api_client:
         # Delete Session
         api_response = api_instance.delete_subscriber_session(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->delete_subscriber_session: %s\n" % e)
 ```
 
@@ -309,12 +309,12 @@ Deletes a tag from the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
+import soracom_api
+from soracom_api.api import subscriber_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -336,7 +336,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -346,7 +346,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Subscriber Tag.
         api_instance.delete_subscriber_tag(imsi, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->delete_subscriber_tag: %s\n" % e)
 ```
 
@@ -395,12 +395,12 @@ Deletes the subscriber's inter-operator control transfer token, and cancels the 
 
 ```python
 import time
-import api
-from api.api import subscriber_api
+import soracom_api
+from soracom_api.api import subscriber_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -422,7 +422,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     token = "token_example" # str | token
@@ -431,7 +431,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Subscribers Transfer Token.
         api_instance.delete_subscriber_transfer_token(token)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->delete_subscriber_transfer_token: %s\n" % e)
 ```
 
@@ -479,13 +479,13 @@ Disables termination of specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -507,7 +507,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -517,7 +517,7 @@ with api.ApiClient(configuration) as api_client:
         # Disable Termination of Subscriber.
         api_response = api_instance.disable_termination(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->disable_termination: %s\n" % e)
 ```
 
@@ -565,13 +565,13 @@ Enables termination of specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -593,7 +593,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -603,7 +603,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable Termination of Subscriber.
         api_response = api_instance.enable_termination(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->enable_termination: %s\n" % e)
 ```
 
@@ -651,13 +651,13 @@ Export all subscribers as a CSV file.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.file_export_response import FileExportResponse
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.file_export_response import FileExportResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -679,7 +679,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     export_mode = "sync" # str | export mode (async, sync) (optional) if omitted the server will use the default value of "sync"
@@ -690,7 +690,7 @@ with api.ApiClient(configuration) as api_client:
         # Export all subscribers.
         api_response = api_instance.export_subscribers(export_mode=export_mode)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->export_subscribers: %s\n" % e)
 ```
 
@@ -737,13 +737,13 @@ Returns a list of data entries sent from a subscriber that match certain criteri
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.data_entry import DataEntry
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.data_entry import DataEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -765,7 +765,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber that generated data entries.
@@ -780,7 +780,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a subscriber.
         api_response = api_instance.get_data_from_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->get_data_from_subscriber: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -789,7 +789,7 @@ with api.ApiClient(configuration) as api_client:
         # Get data sent from a subscriber.
         api_response = api_instance.get_data_from_subscriber(imsi, _from=_from, to=to, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->get_data_from_subscriber: %s\n" % e)
 ```
 
@@ -841,13 +841,13 @@ Returns information about the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -869,7 +869,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -879,7 +879,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Subscriber.
         api_response = api_instance.get_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->get_subscriber: %s\n" % e)
 ```
 
@@ -927,14 +927,14 @@ Sends the subscriber's inter-operator control transfer token to the control dest
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.issue_subscriber_transfer_token_response import IssueSubscriberTransferTokenResponse
-from api.model.issue_subscriber_transfer_token_request import IssueSubscriberTransferTokenRequest
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.issue_subscriber_transfer_token_request import IssueSubscriberTransferTokenRequest
+from soracom_api.model.issue_subscriber_transfer_token_response import IssueSubscriberTransferTokenResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -956,7 +956,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     issue_subscriber_transfer_token_request = IssueSubscriberTransferTokenRequest(
@@ -972,7 +972,7 @@ with api.ApiClient(configuration) as api_client:
         # Issue Subscribers Transfer Token.
         api_response = api_instance.issue_subscriber_transfer_token(issue_subscriber_transfer_token_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->issue_subscriber_transfer_token: %s\n" % e)
 ```
 
@@ -1019,13 +1019,13 @@ Returns the event history for the specified subscriber, including session creati
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.session_event import SessionEvent
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.session_event import SessionEvent
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1047,7 +1047,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1061,7 +1061,7 @@ with api.ApiClient(configuration) as api_client:
         # List Session Events.
         api_response = api_instance.list_session_events(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->list_session_events: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1070,7 +1070,7 @@ with api.ApiClient(configuration) as api_client:
         # List Session Events.
         api_response = api_instance.list_session_events(imsi, _from=_from, to=to, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->list_session_events: %s\n" % e)
 ```
 
@@ -1121,13 +1121,13 @@ Returns a list of subscribers that match certain criteria. If the total number o
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1149,7 +1149,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     tag_name = "tag_name_example" # str | Tag name for filtering the search (exact match). (optional)
@@ -1167,7 +1167,7 @@ with api.ApiClient(configuration) as api_client:
         # List Subscribers.
         api_response = api_instance.list_subscribers(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, status_filter=status_filter, speed_class_filter=speed_class_filter, serial_number_filter=serial_number_filter, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->list_subscribers: %s\n" % e)
 ```
 
@@ -1221,13 +1221,13 @@ Sets bundles to the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1249,7 +1249,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1262,7 +1262,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Bundles to Subscriber.
         api_response = api_instance.put_bundles(imsi, request_body)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->put_bundles: %s\n" % e)
 ```
 
@@ -1311,14 +1311,14 @@ Inserts/updates tags for the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.tag_update_request import TagUpdateRequest
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1340,7 +1340,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1356,7 +1356,7 @@ with api.ApiClient(configuration) as api_client:
         # Bulk Insert or Update Subscriber Tags.
         api_response = api_instance.put_subscriber_tags(imsi, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->put_subscriber_tags: %s\n" % e)
 ```
 
@@ -1405,14 +1405,14 @@ Registers a subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.register_subscribers_request import RegisterSubscribersRequest
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
+from soracom_api.model.register_subscribers_request import RegisterSubscribersRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1434,7 +1434,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1454,7 +1454,7 @@ with api.ApiClient(configuration) as api_client:
         # Register Subscriber.
         api_response = api_instance.register_subscriber(imsi, register_subscribers_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->register_subscriber: %s\n" % e)
 ```
 
@@ -1502,13 +1502,13 @@ Triggers Subscriber to report SIM local info.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1530,7 +1530,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1540,7 +1540,7 @@ with api.ApiClient(configuration) as api_client:
         # Triggers Subscriber to report SIM local info.
         api_response = api_instance.report_local_info(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->report_local_info: %s\n" % e)
 ```
 
@@ -1589,14 +1589,14 @@ Send SMS to the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.sms_forwarding_report import SmsForwardingReport
-from api.model.sms_forwarding_request import SmsForwardingRequest
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.sms_forwarding_request import SmsForwardingRequest
+from soracom_api.model.sms_forwarding_report import SmsForwardingReport
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1618,7 +1618,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1632,7 +1632,7 @@ with api.ApiClient(configuration) as api_client:
         # Send SMS to Subscriber
         api_response = api_instance.send_sms(imsi, sms_forwarding_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->send_sms: %s\n" % e)
 ```
 
@@ -1682,14 +1682,14 @@ Send SMS to a subscriber specified with MSISDN.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.sms_forwarding_report import SmsForwardingReport
-from api.model.sms_forwarding_request import SmsForwardingRequest
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.sms_forwarding_request import SmsForwardingRequest
+from soracom_api.model.sms_forwarding_report import SmsForwardingReport
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1711,7 +1711,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     msisdn = "msisdn_example" # str | MSISDN of the target subscriber.
@@ -1725,7 +1725,7 @@ with api.ApiClient(configuration) as api_client:
         # Send SMS to Subscriber by MSISDN
         api_response = api_instance.send_sms_by_msisdn(msisdn, sms_forwarding_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->send_sms_by_msisdn: %s\n" % e)
 ```
 
@@ -1775,14 +1775,14 @@ Send ICMP ping requests to a subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.downlink_ping_request import DownlinkPingRequest
-from api.model.downlink_ping_response import DownlinkPingResponse
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.downlink_ping_response import DownlinkPingResponse
+from soracom_api.model.downlink_ping_request import DownlinkPingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1804,7 +1804,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1818,7 +1818,7 @@ with api.ApiClient(configuration) as api_client:
         # Send ping requests to a subscriber.
         api_response = api_instance.send_subscriber_downlink_ping(imsi, downlink_ping_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->send_subscriber_downlink_ping: %s\n" % e)
 ```
 
@@ -1866,14 +1866,14 @@ Updates expiry time of specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.expiry_time import ExpiryTime
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
+from soracom_api.model.expiry_time import ExpiryTime
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1895,7 +1895,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -1909,7 +1909,7 @@ with api.ApiClient(configuration) as api_client:
         # Update Expiry Time of Subscriber.
         api_response = api_instance.set_expiry_time(imsi, expiry_time)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->set_expiry_time: %s\n" % e)
 ```
 
@@ -1958,14 +1958,14 @@ Sets or overwrites a group for the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.set_group_request import SetGroupRequest
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
+from soracom_api.model.set_group_request import SetGroupRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1987,7 +1987,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2003,7 +2003,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Group to Subscriber.
         api_response = api_instance.set_group(imsi, set_group_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->set_group: %s\n" % e)
 ```
 
@@ -2052,14 +2052,14 @@ Set IMEI that the subscriber should be locked to.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.set_imei_lock_request import SetImeiLockRequest
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.set_imei_lock_request import SetImeiLockRequest
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2081,7 +2081,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2094,7 +2094,7 @@ with api.ApiClient(configuration) as api_client:
         # Set IMEI lock configuration for Subscriber.
         api_response = api_instance.set_imei_lock(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->set_imei_lock: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2103,7 +2103,7 @@ with api.ApiClient(configuration) as api_client:
         # Set IMEI lock configuration for Subscriber.
         api_response = api_instance.set_imei_lock(imsi, set_imei_lock_request=set_imei_lock_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->set_imei_lock: %s\n" % e)
 ```
 
@@ -2153,13 +2153,13 @@ Set the specified subscriber to standby mode.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2181,7 +2181,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2191,7 +2191,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Subscriber to standby mode.
         api_response = api_instance.set_subscriber_to_standby(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->set_subscriber_to_standby: %s\n" % e)
 ```
 
@@ -2240,13 +2240,13 @@ Suspends the specified subscriber
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2268,7 +2268,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2278,7 +2278,7 @@ with api.ApiClient(configuration) as api_client:
         # Suspend Subscriber.
         api_response = api_instance.suspend_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->suspend_subscriber: %s\n" % e)
 ```
 
@@ -2326,13 +2326,13 @@ Terminates the specified subscriber
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2354,7 +2354,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2364,7 +2364,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate Subscriber.
         api_response = api_instance.terminate_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->terminate_subscriber: %s\n" % e)
 ```
 
@@ -2412,12 +2412,12 @@ Deletes expiry time of specified subscriber and changes it to indefinite.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
+import soracom_api
+from soracom_api.api import subscriber_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2439,7 +2439,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2448,7 +2448,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Expiry Time of Subscriber.
         api_instance.unset_expiry_time(imsi)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->unset_expiry_time: %s\n" % e)
 ```
 
@@ -2496,13 +2496,13 @@ Removes the group configuration from the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2524,7 +2524,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2534,7 +2534,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset Group to Subscriber.
         api_response = api_instance.unset_group(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->unset_group: %s\n" % e)
 ```
 
@@ -2582,13 +2582,13 @@ Remove any existing IMEI lock configuration for the subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2610,7 +2610,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2620,7 +2620,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset IMEI lock configuration for Subscriber.
         api_response = api_instance.unset_imei_lock(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->unset_imei_lock: %s\n" % e)
 ```
 
@@ -2668,14 +2668,14 @@ Changes the speed class of the specified subscriber.
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.update_speed_class_request import UpdateSpeedClassRequest
-from api.model.subscriber import Subscriber
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.update_speed_class_request import UpdateSpeedClassRequest
+from soracom_api.model.subscriber import Subscriber
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2697,7 +2697,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     imsi = "imsi_example" # str | IMSI of the target subscriber.
@@ -2710,7 +2710,7 @@ with api.ApiClient(configuration) as api_client:
         # Update Subscriber speed class.
         api_response = api_instance.update_speed_class(imsi, update_speed_class_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->update_speed_class: %s\n" % e)
 ```
 
@@ -2759,14 +2759,14 @@ Verifies the subscriber's control transfer token, and executes the transfer. Thi
 
 ```python
 import time
-import api
-from api.api import subscriber_api
-from api.model.verify_subscriber_transfer_token_request import VerifySubscriberTransferTokenRequest
-from api.model.verify_subscriber_transfer_token_response import VerifySubscriberTransferTokenResponse
+import soracom_api
+from soracom_api.api import subscriber_api
+from soracom_api.model.verify_subscriber_transfer_token_response import VerifySubscriberTransferTokenResponse
+from soracom_api.model.verify_subscriber_transfer_token_request import VerifySubscriberTransferTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -2788,7 +2788,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = subscriber_api.SubscriberApi(api_client)
     verify_subscriber_transfer_token_request = VerifySubscriberTransferTokenRequest(
@@ -2800,7 +2800,7 @@ with api.ApiClient(configuration) as api_client:
         # Verify Subscriber Transfer Token.
         api_response = api_instance.verify_subscriber_transfer_token(verify_subscriber_transfer_token_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SubscriberApi->verify_subscriber_transfer_token: %s\n" % e)
 ```
 

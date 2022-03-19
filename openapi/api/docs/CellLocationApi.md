@@ -1,4 +1,4 @@
-# api.CellLocationApi
+# soracom_api.CellLocationApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -22,14 +22,14 @@ Retrieves a list of location information (latitude / longitude) for multiple cel
 
 ```python
 import time
-import api
-from api.api import cell_location_api
-from api.model.cell_location import CellLocation
-from api.model.cell_identifier import CellIdentifier
+import soracom_api
+from soracom_api.api import cell_location_api
+from soracom_api.model.cell_identifier import CellIdentifier
+from soracom_api.model.cell_location import CellLocation
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -51,7 +51,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cell_location_api.CellLocationApi(api_client)
     cell_identifier = [
@@ -72,7 +72,7 @@ with api.ApiClient(configuration) as api_client:
         # List location information for multiple cell towers.
         api_response = api_instance.batch_get_cell_locations(cell_identifier)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CellLocationApi->batch_get_cell_locations: %s\n" % e)
 ```
 
@@ -119,13 +119,13 @@ Retrieves location information (latitude / longitude) for a cell tower which is 
 
 ```python
 import time
-import api
-from api.api import cell_location_api
-from api.model.cell_location import CellLocation
+import soracom_api
+from soracom_api.api import cell_location_api
+from soracom_api.model.cell_location import CellLocation
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -147,7 +147,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cell_location_api.CellLocationApi(api_client)
     mcc = "mcc_example" # str | MCC - Mobile Country Code
@@ -163,7 +163,7 @@ with api.ApiClient(configuration) as api_client:
         # Get location information for a cell tower.
         api_response = api_instance.get_cell_location(mcc, mnc)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CellLocationApi->get_cell_location: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -172,7 +172,7 @@ with api.ApiClient(configuration) as api_client:
         # Get location information for a cell tower.
         api_response = api_instance.get_cell_location(mcc, mnc, lac=lac, cid=cid, tac=tac, ecid=ecid, eci=eci)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CellLocationApi->get_cell_location: %s\n" % e)
 ```
 

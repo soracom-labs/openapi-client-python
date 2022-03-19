@@ -1,4 +1,4 @@
-# api.LagoonApi
+# soracom_api.LagoonApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -37,14 +37,14 @@ Create a SORACOM Lagoon user.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_user_creation_response import LagoonUserCreationResponse
-from api.model.lagoon_user_creation_request import LagoonUserCreationRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_user_creation_response import LagoonUserCreationResponse
+from soracom_api.model.lagoon_user_creation_request import LagoonUserCreationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -66,7 +66,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_user_creation_request = LagoonUserCreationRequest(
@@ -80,7 +80,7 @@ with api.ApiClient(configuration) as api_client:
         # Create a SORACOM Lagoon user
         api_response = api_instance.create_lagoon_user(lagoon_user_creation_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->create_lagoon_user: %s\n" % e)
 ```
 
@@ -128,12 +128,12 @@ Delete a SORACOM Lagoon user.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
+import soracom_api
+from soracom_api.api import lagoon_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -155,7 +155,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_user_id = 1 # int | Target ID of the lagoon user
@@ -164,7 +164,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete a SORACOM Lagoon user
         api_instance.delete_lagoon_user(lagoon_user_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->delete_lagoon_user: %s\n" % e)
 ```
 
@@ -210,18 +210,18 @@ Get a custom icon image link of SORACOM Lagoon
 
 ```python
 import time
-import api
-from api.api import lagoon_api
+import soracom_api
+from soracom_api.api import lagoon_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     classic = True # bool | If the value is true, a request will be issued to Lagoon Classic. This is only valid if both Lagoon and Lagoon Classic are enabled. (optional)
@@ -232,7 +232,7 @@ with api.ApiClient() as api_client:
         # Get a custom icon image link of SORACOM Lagoon
         api_response = api_instance.get_image_link(classic=classic)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->get_image_link: %s\n" % e)
 ```
 
@@ -280,13 +280,13 @@ Get the version migration information for SORACOM Lagoon. Only the root account 
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_plan_changing_request import LagoonPlanChangingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_plan_changing_request import LagoonPlanChangingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -308,7 +308,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_plan_changing_request = LagoonPlanChangingRequest(
@@ -319,7 +319,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Get the version migration information for SORACOM Lagoon
         api_instance.get_lagoon_migration_info(lagoon_plan_changing_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->get_lagoon_migration_info: %s\n" % e)
 ```
 
@@ -364,18 +364,18 @@ Update permissions to the initial state for a dashboard of SORACOM Lagoon
 
 ```python
 import time
-import api
-from api.api import lagoon_api
+import soracom_api
+from soracom_api.api import lagoon_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     dashboard_id = 1 # int | dashboard_id
@@ -385,7 +385,7 @@ with api.ApiClient() as api_client:
     try:
         # Update permissions to the initial state for a dashboard of SORACOM Lagoon
         api_instance.initialize_lagoon_dashboard_permissions(dashboard_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->initialize_lagoon_dashboard_permissions: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -393,7 +393,7 @@ with api.ApiClient() as api_client:
     try:
         # Update permissions to the initial state for a dashboard of SORACOM Lagoon
         api_instance.initialize_lagoon_dashboard_permissions(dashboard_id, classic=classic)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->initialize_lagoon_dashboard_permissions: %s\n" % e)
 ```
 
@@ -443,13 +443,13 @@ List permissions for all SORACOM Lagoon dashboards
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_dashboard_permissions_response import LagoonDashboardPermissionsResponse
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_dashboard_permissions_response import LagoonDashboardPermissionsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -471,7 +471,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     classic = True # bool | If the value is true, a request will be issued to Lagoon Classic. This is only valid if both Lagoon and Lagoon Classic are enabled. (optional)
@@ -482,7 +482,7 @@ with api.ApiClient(configuration) as api_client:
         # List permissions for all SORACOM Lagoon dashboards
         api_response = api_instance.list_lagoon_dashboards_permissions(classic=classic)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->list_lagoon_dashboards_permissions: %s\n" % e)
 ```
 
@@ -528,19 +528,19 @@ Get the status of active SORACOM Lagoon license packs
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_license_pack_status_response import LagoonLicensePackStatusResponse
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_license_pack_status_response import LagoonLicensePackStatusResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
 
@@ -549,7 +549,7 @@ with api.ApiClient() as api_client:
         # Get the status of active SORACOM Lagoon license packs
         api_response = api_instance.list_lagoon_license_pack_status()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->list_lagoon_license_pack_status: %s\n" % e)
 ```
 
@@ -594,13 +594,13 @@ List SORACOM Lagoon users that belong to operator.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_user import LagoonUser
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_user import LagoonUser
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -622,7 +622,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     classic = True # bool | If the value is true, a request will be issued to Lagoon Classic. This is only valid if both Lagoon and Lagoon Classic are enabled. (optional)
@@ -633,7 +633,7 @@ with api.ApiClient(configuration) as api_client:
         # List SORACOM Lagoon users that belong to operator
         api_response = api_instance.list_lagoon_users(classic=classic)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->list_lagoon_users: %s\n" % e)
 ```
 
@@ -681,13 +681,13 @@ Migrate SORACOM Lagoon version. Only the root account can operate this.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_migration_from_classic_request import LagoonMigrationFromClassicRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_migration_from_classic_request import LagoonMigrationFromClassicRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -709,7 +709,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_migration_from_classic_request = LagoonMigrationFromClassicRequest(
@@ -722,7 +722,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Migrate SORACOM Lagoon version
         api_instance.migrate_lagoon(lagoon_migration_from_classic_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->migrate_lagoon: %s\n" % e)
 ```
 
@@ -769,14 +769,14 @@ Register (activate) SORACOM Lagoon. This API is only allowed to operate by root 
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_registration_request import LagoonRegistrationRequest
-from api.model.lagoon_registration_response import LagoonRegistrationResponse
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_registration_response import LagoonRegistrationResponse
+from soracom_api.model.lagoon_registration_request import LagoonRegistrationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -798,7 +798,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_registration_request = LagoonRegistrationRequest(
@@ -811,7 +811,7 @@ with api.ApiClient(configuration) as api_client:
         # Register (activate) SORACOM Lagoon
         api_response = api_instance.register_lagoon(lagoon_registration_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->register_lagoon: %s\n" % e)
 ```
 
@@ -859,12 +859,12 @@ Terminate (deactivate) SORACOM Lagoon.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
+import soracom_api
+from soracom_api.api import lagoon_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -886,7 +886,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
 
@@ -894,7 +894,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Terminate (deactivate) SORACOM Lagoon
         api_instance.terminate_lagoon()
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->terminate_lagoon: %s\n" % e)
 ```
 
@@ -938,19 +938,19 @@ Update permissions for a dashboard of SORACOM Lagoon
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_dashboard_permissions_updating_request import LagoonDashboardPermissionsUpdatingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_dashboard_permissions_updating_request import LagoonDashboardPermissionsUpdatingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     dashboard_id = 1 # int | dashboard_id
@@ -968,7 +968,7 @@ with api.ApiClient() as api_client:
     try:
         # Update permissions for a dashboard of SORACOM Lagoon
         api_instance.update_lagoon_dashboard_permissions(dashboard_id, lagoon_dashboard_permissions_updating_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_dashboard_permissions: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -976,7 +976,7 @@ with api.ApiClient() as api_client:
     try:
         # Update permissions for a dashboard of SORACOM Lagoon
         api_instance.update_lagoon_dashboard_permissions(dashboard_id, lagoon_dashboard_permissions_updating_request, classic=classic)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_dashboard_permissions: %s\n" % e)
 ```
 
@@ -1025,19 +1025,19 @@ Update the quantities for license packs of SORACOM Lagoon. This API is only allo
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_license_packs_updating_request import LagoonLicensePacksUpdatingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_license_packs_updating_request import LagoonLicensePacksUpdatingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_license_packs_updating_request = LagoonLicensePacksUpdatingRequest(
@@ -1053,7 +1053,7 @@ with api.ApiClient() as api_client:
     try:
         # Update the quantities for license packs of SORACOM Lagoon
         api_instance.update_lagoon_license_pack(lagoon_license_packs_updating_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_license_pack: %s\n" % e)
 ```
 
@@ -1100,19 +1100,19 @@ Update the plan of SORACOM Lagoon. This API is only allowed to operate by root a
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_plan_changing_request import LagoonPlanChangingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_plan_changing_request import LagoonPlanChangingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_plan_changing_request = LagoonPlanChangingRequest(
@@ -1123,7 +1123,7 @@ with api.ApiClient() as api_client:
     try:
         # Update the plan of SORACOM Lagoon
         api_instance.update_lagoon_plan(lagoon_plan_changing_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_plan: %s\n" % e)
 ```
 
@@ -1172,13 +1172,13 @@ Update email address of a SORACOM Lagoon user.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_user_email_updating_request import LagoonUserEmailUpdatingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_user_email_updating_request import LagoonUserEmailUpdatingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1200,7 +1200,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_user_id = 1 # int | Target ID of the lagoon user
@@ -1212,7 +1212,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update email address of a SORACOM Lagoon user
         api_instance.update_lagoon_user_email(lagoon_user_id, lagoon_user_email_updating_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_user_email: %s\n" % e)
 ```
 
@@ -1261,13 +1261,13 @@ Update password of a SORACOM Lagoon user.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_user_password_updating_request import LagoonUserPasswordUpdatingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_user_password_updating_request import LagoonUserPasswordUpdatingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1289,7 +1289,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_user_id = 1 # int | Target ID of the lagoon user
@@ -1302,7 +1302,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update password of a SORACOM Lagoon user
         api_instance.update_lagoon_user_password(lagoon_user_id, lagoon_user_password_updating_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_user_password: %s\n" % e)
 ```
 
@@ -1351,13 +1351,13 @@ Update permission of a SORACOM Lagoon user.
 
 ```python
 import time
-import api
-from api.api import lagoon_api
-from api.model.lagoon_user_permission_updating_request import LagoonUserPermissionUpdatingRequest
+import soracom_api
+from soracom_api.api import lagoon_api
+from soracom_api.model.lagoon_user_permission_updating_request import LagoonUserPermissionUpdatingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -1379,7 +1379,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lagoon_api.LagoonApi(api_client)
     lagoon_user_id = 1 # int | Target ID of the lagoon user
@@ -1391,7 +1391,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update permission of a SORACOM Lagoon user
         api_instance.update_lagoon_user_permission(lagoon_user_id, lagoon_user_permission_updating_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LagoonApi->update_lagoon_user_permission: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# api.CredentialApi
+# soracom_api.CredentialApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -24,14 +24,14 @@ Creates a new credential.
 
 ```python
 import time
-import api
-from api.api import credential_api
-from api.model.credentials_model import CredentialsModel
-from api.model.create_and_update_credentials_model import CreateAndUpdateCredentialsModel
+import soracom_api
+from soracom_api.api import credential_api
+from soracom_api.model.credentials_model import CredentialsModel
+from soracom_api.model.create_and_update_credentials_model import CreateAndUpdateCredentialsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -53,7 +53,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = credential_api.CredentialApi(api_client)
     credentials_id = "credentials_id_example" # str | credentials_id
@@ -68,7 +68,7 @@ with api.ApiClient(configuration) as api_client:
         # Create a credential.
         api_response = api_instance.create_credential(credentials_id, create_and_update_credentials_model)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CredentialApi->create_credential: %s\n" % e)
 ```
 
@@ -116,12 +116,12 @@ Deletes a credential.
 
 ```python
 import time
-import api
-from api.api import credential_api
+import soracom_api
+from soracom_api.api import credential_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -143,7 +143,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = credential_api.CredentialApi(api_client)
     credentials_id = "credentials_id_example" # str | Credentials ID
@@ -152,7 +152,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete a credential.
         api_instance.delete_credential(credentials_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CredentialApi->delete_credential: %s\n" % e)
 ```
 
@@ -200,13 +200,13 @@ Returns a list of credentials.
 
 ```python
 import time
-import api
-from api.api import credential_api
-from api.model.credentials_model import CredentialsModel
+import soracom_api
+from soracom_api.api import credential_api
+from soracom_api.model.credentials_model import CredentialsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -228,7 +228,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = credential_api.CredentialApi(api_client)
 
@@ -237,7 +237,7 @@ with api.ApiClient(configuration) as api_client:
         # List of credentials.
         api_response = api_instance.list_credentials()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CredentialApi->list_credentials: %s\n" % e)
 ```
 
@@ -281,14 +281,14 @@ Updates a credential.
 
 ```python
 import time
-import api
-from api.api import credential_api
-from api.model.credentials_model import CredentialsModel
-from api.model.create_and_update_credentials_model import CreateAndUpdateCredentialsModel
+import soracom_api
+from soracom_api.api import credential_api
+from soracom_api.model.credentials_model import CredentialsModel
+from soracom_api.model.create_and_update_credentials_model import CreateAndUpdateCredentialsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -310,7 +310,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = credential_api.CredentialApi(api_client)
     credentials_id = "credentials_id_example" # str | credentials_id
@@ -325,7 +325,7 @@ with api.ApiClient(configuration) as api_client:
         # Update a credential.
         api_response = api_instance.update_credential(credentials_id, create_and_update_credentials_model)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling CredentialApi->update_credential: %s\n" % e)
 ```
 

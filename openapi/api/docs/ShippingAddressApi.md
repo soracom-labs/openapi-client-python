@@ -1,4 +1,4 @@
-# api.ShippingAddressApi
+# soracom_api.ShippingAddressApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -25,14 +25,14 @@ Creates a new shipping address.
 
 ```python
 import time
-import api
-from api.api import shipping_address_api
-from api.model.get_shipping_address_response import GetShippingAddressResponse
-from api.model.shipping_address_model import ShippingAddressModel
+import soracom_api
+from soracom_api.api import shipping_address_api
+from soracom_api.model.get_shipping_address_response import GetShippingAddressResponse
+from soracom_api.model.shipping_address_model import ShippingAddressModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -54,7 +54,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = shipping_address_api.ShippingAddressApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -78,7 +78,7 @@ with api.ApiClient(configuration) as api_client:
         # Create shipping address.
         api_response = api_instance.create_shipping_address(operator_id, shipping_address_model)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling ShippingAddressApi->create_shipping_address: %s\n" % e)
 ```
 
@@ -126,12 +126,12 @@ Deletes a shipping address.
 
 ```python
 import time
-import api
-from api.api import shipping_address_api
+import soracom_api
+from soracom_api.api import shipping_address_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -153,7 +153,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = shipping_address_api.ShippingAddressApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -163,7 +163,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete shipping address.
         api_instance.delete_shipping_address(operator_id, shipping_address_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling ShippingAddressApi->delete_shipping_address: %s\n" % e)
 ```
 
@@ -211,13 +211,13 @@ Returns a shipping address.
 
 ```python
 import time
-import api
-from api.api import shipping_address_api
-from api.model.get_shipping_address_response import GetShippingAddressResponse
+import soracom_api
+from soracom_api.api import shipping_address_api
+from soracom_api.model.get_shipping_address_response import GetShippingAddressResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -239,7 +239,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = shipping_address_api.ShippingAddressApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -250,7 +250,7 @@ with api.ApiClient(configuration) as api_client:
         # Get shipping address.
         api_response = api_instance.get_shipping_address(operator_id, shipping_address_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling ShippingAddressApi->get_shipping_address: %s\n" % e)
 ```
 
@@ -298,13 +298,13 @@ Returns a list of shipping addresses.
 
 ```python
 import time
-import api
-from api.api import shipping_address_api
-from api.model.list_shipping_address_response import ListShippingAddressResponse
+import soracom_api
+from soracom_api.api import shipping_address_api
+from soracom_api.model.list_shipping_address_response import ListShippingAddressResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -326,7 +326,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = shipping_address_api.ShippingAddressApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -336,7 +336,7 @@ with api.ApiClient(configuration) as api_client:
         # List shipping addresses.
         api_response = api_instance.list_shipping_addresses(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling ShippingAddressApi->list_shipping_addresses: %s\n" % e)
 ```
 
@@ -383,13 +383,13 @@ Updates a shipping address.
 
 ```python
 import time
-import api
-from api.api import shipping_address_api
-from api.model.shipping_address_model import ShippingAddressModel
+import soracom_api
+from soracom_api.api import shipping_address_api
+from soracom_api.model.shipping_address_model import ShippingAddressModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -411,7 +411,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = shipping_address_api.ShippingAddressApi(api_client)
     operator_id = "operator_id_example" # str | Operator ID
@@ -435,7 +435,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update shipping address.
         api_instance.update_shipping_address(operator_id, shipping_address_id, shipping_address_model)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling ShippingAddressApi->update_shipping_address: %s\n" % e)
 ```
 

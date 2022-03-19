@@ -1,4 +1,4 @@
-# api.FileEntryApi
+# soracom_api.FileEntryApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -27,12 +27,12 @@ Deletes the specified directory in the scope. Only `private` scope is allowed fo
 
 ```python
 import time
-import api
-from api.api import file_entry_api
+import soracom_api
+from soracom_api.api import file_entry_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -54,7 +54,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     path = "path_example" # str | Target directory path
@@ -63,7 +63,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete specified directory in the scope.
         api_instance.delete_directory(path)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->delete_directory: %s\n" % e)
 ```
 
@@ -113,12 +113,12 @@ Deletes the specified file in the scope. Only `private` scope is allowed for the
 
 ```python
 import time
-import api
-from api.api import file_entry_api
+import soracom_api
+from soracom_api.api import file_entry_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -140,7 +140,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     path = "path_example" # str | Target path
@@ -149,7 +149,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete specified file in the scope.
         api_instance.delete_file(path)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->delete_file: %s\n" % e)
 ```
 
@@ -198,13 +198,13 @@ Returns a list of file entries which beginnings of their file paths are matched 
 
 ```python
 import time
-import api
-from api.api import file_entry_api
-from api.model.file_entry import FileEntry
+import soracom_api
+from soracom_api.api import file_entry_api
+from soracom_api.model.file_entry import FileEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -226,7 +226,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     scope = "private" # str | Scope of the request
@@ -239,7 +239,7 @@ with api.ApiClient(configuration) as api_client:
         # Find files with prefix query parameter in the scope
         api_response = api_instance.find_files(scope, prefix)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->find_files: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -248,7 +248,7 @@ with api.ApiClient(configuration) as api_client:
         # Find files with prefix query parameter in the scope
         api_response = api_instance.find_files(scope, prefix, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->find_files: %s\n" % e)
 ```
 
@@ -299,12 +299,12 @@ Redirects the client to URL for the link to download the file specified by the s
 
 ```python
 import time
-import api
-from api.api import file_entry_api
+import soracom_api
+from soracom_api.api import file_entry_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -326,7 +326,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     path = "path_example" # str | Target path
@@ -335,7 +335,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Download file specified by the path and the scope
         api_instance.get_file(path)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->get_file: %s\n" % e)
 ```
 
@@ -384,13 +384,13 @@ Gets metadata of the file specified by the path and the scope.
 
 ```python
 import time
-import api
-from api.api import file_entry_api
-from api.model.file_entry import FileEntry
+import soracom_api
+from soracom_api.api import file_entry_api
+from soracom_api.model.file_entry import FileEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -412,7 +412,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     path = "path_example" # str | Target path
@@ -422,7 +422,7 @@ with api.ApiClient(configuration) as api_client:
         # Get the metadata of the file specified by the path and the scope
         api_response = api_instance.get_file_metadata(path)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->get_file_metadata: %s\n" % e)
 ```
 
@@ -471,13 +471,13 @@ Returns a list of file entries under the path in the scope. This operation works
 
 ```python
 import time
-import api
-from api.api import file_entry_api
-from api.model.file_entry import FileEntry
+import soracom_api
+from soracom_api.api import file_entry_api
+from soracom_api.model.file_entry import FileEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -499,7 +499,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     limit = "10" # str | Num of entries (optional) if omitted the server will use the default value of "10"
@@ -510,7 +510,7 @@ with api.ApiClient(configuration) as api_client:
         # List files and directories on the path in the scope
         api_response = api_instance.list_files()
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->list_files: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -519,7 +519,7 @@ with api.ApiClient(configuration) as api_client:
         # List files and directories on the path in the scope
         api_response = api_instance.list_files(limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->list_files: %s\n" % e)
 ```
 
@@ -570,12 +570,12 @@ Uploads the file to the specified path in the scope. Only `private` scope is all
 
 ```python
 import time
-import api
-from api.api import file_entry_api
+import soracom_api
+from soracom_api.api import file_entry_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -597,7 +597,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = file_entry_api.FileEntryApi(api_client)
     path = "path_example" # str | Target path
@@ -608,7 +608,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Upload file to the path in the scope.
         api_instance.put_file(path, body)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->put_file: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -616,7 +616,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Upload file to the path in the scope.
         api_instance.put_file(path, body, content_type=content_type)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling FileEntryApi->put_file: %s\n" % e)
 ```
 

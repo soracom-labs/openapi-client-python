@@ -1,4 +1,4 @@
-# api.SoraletApi
+# soracom_api.SoraletApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -29,13 +29,13 @@ Create a Soralet.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.create_soralet_request import CreateSoraletRequest
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.create_soralet_request import CreateSoraletRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -57,7 +57,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     create_soralet_request = CreateSoraletRequest(
@@ -69,7 +69,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Create a Soralet.
         api_instance.create_soralet(create_soralet_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->create_soralet: %s\n" % e)
 ```
 
@@ -117,12 +117,12 @@ Delete the specified Soralet.
 
 ```python
 import time
-import api
-from api.api import soralet_api
+import soracom_api
+from soracom_api.api import soralet_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -144,7 +144,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -153,7 +153,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Soralet.
         api_instance.delete_soralet(soralet_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->delete_soralet: %s\n" % e)
 ```
 
@@ -201,12 +201,12 @@ Delete the specified Soralet version.
 
 ```python
 import time
-import api
-from api.api import soralet_api
+import soracom_api
+from soracom_api.api import soralet_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -228,7 +228,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -238,7 +238,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete a Soralet version.
         api_instance.delete_soralet_version(soralet_id, version)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->delete_soralet_version: %s\n" % e)
 ```
 
@@ -287,13 +287,13 @@ Returns a Soralet.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.soralet import Soralet
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.soralet import Soralet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -315,7 +315,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -325,7 +325,7 @@ with api.ApiClient(configuration) as api_client:
         # Get a Soralet.
         api_response = api_instance.get_soralet(soralet_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->get_soralet: %s\n" % e)
 ```
 
@@ -373,13 +373,13 @@ Returns a list of log messages from the specified Soralet.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.soralet_log import SoraletLog
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.soralet_log import SoraletLog
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -401,7 +401,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -414,7 +414,7 @@ with api.ApiClient(configuration) as api_client:
         # Get log messages from Soralet.
         api_response = api_instance.get_soralet_logs(soralet_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->get_soralet_logs: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -423,7 +423,7 @@ with api.ApiClient(configuration) as api_client:
         # Get log messages from Soralet.
         api_response = api_instance.get_soralet_logs(soralet_id, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->get_soralet_logs: %s\n" % e)
 ```
 
@@ -473,13 +473,13 @@ Returns a list of Soralet versions.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.soralet_version import SoraletVersion
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.soralet_version import SoraletVersion
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -501,7 +501,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -514,7 +514,7 @@ with api.ApiClient(configuration) as api_client:
         # List versions of Soralet.
         api_response = api_instance.list_soralet_versions(soralet_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->list_soralet_versions: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -523,7 +523,7 @@ with api.ApiClient(configuration) as api_client:
         # List versions of Soralet.
         api_response = api_instance.list_soralet_versions(soralet_id, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->list_soralet_versions: %s\n" % e)
 ```
 
@@ -573,13 +573,13 @@ Returns a list of Soralets.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.soralet import Soralet
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.soralet import Soralet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -601,7 +601,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     sort = "asc" # str | Sort order (optional) if omitted the server will use the default value of "asc"
@@ -614,7 +614,7 @@ with api.ApiClient(configuration) as api_client:
         # List Soralets.
         api_response = api_instance.list_soralets(sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->list_soralets: %s\n" % e)
 ```
 
@@ -663,14 +663,14 @@ Execute the specified Soralet with the specified arguments.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.execute_soralet_response import ExecuteSoraletResponse
-from api.model.execute_soralet_request import ExecuteSoraletRequest
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.execute_soralet_response import ExecuteSoraletResponse
+from soracom_api.model.execute_soralet_request import ExecuteSoraletRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -692,7 +692,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -716,7 +716,7 @@ with api.ApiClient(configuration) as api_client:
         # Execute Soralet with arguments.
         api_response = api_instance.test_soralet(soralet_id, execute_soralet_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->test_soralet: %s\n" % e)
 ```
 
@@ -764,13 +764,13 @@ Upload code and create a new version.
 
 ```python
 import time
-import api
-from api.api import soralet_api
-from api.model.soralet_version import SoraletVersion
+import soracom_api
+from soracom_api.api import soralet_api
+from soracom_api.model.soralet_version import SoraletVersion
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -792,7 +792,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = soralet_api.SoraletApi(api_client)
     soralet_id = "soralet_id_example" # str | The identifier of Soralet.
@@ -804,7 +804,7 @@ with api.ApiClient(configuration) as api_client:
         # Upload code and create a new version.
         api_response = api_instance.upload_soralet_code(soralet_id, body)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->upload_soralet_code: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -813,7 +813,7 @@ with api.ApiClient(configuration) as api_client:
         # Upload code and create a new version.
         api_response = api_instance.upload_soralet_code(soralet_id, body, content_type=content_type)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SoraletApi->upload_soralet_code: %s\n" % e)
 ```
 

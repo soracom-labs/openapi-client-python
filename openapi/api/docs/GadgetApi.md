@@ -1,4 +1,4 @@
-# api.GadgetApi
+# soracom_api.GadgetApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -30,12 +30,12 @@ Deletes a tag from the specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
+import soracom_api
+from soracom_api.api import gadget_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -57,7 +57,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -68,7 +68,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete gadget Tag.
         api_instance.delete_gadget_tag(product_id, serial_number, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->delete_gadget_tag: %s\n" % e)
 ```
 
@@ -118,13 +118,13 @@ Disables termination of specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -146,7 +146,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -157,7 +157,7 @@ with api.ApiClient(configuration) as api_client:
         # Disable Termination of gadget.
         api_response = api_instance.disable_termination_on_gadget(product_id, serial_number)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->disable_termination_on_gadget: %s\n" % e)
 ```
 
@@ -206,13 +206,13 @@ Enables termination of specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -234,7 +234,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -245,7 +245,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable Termination of gadget.
         api_response = api_instance.enable_termination_on_gadget(product_id, serial_number)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->enable_termination_on_gadget: %s\n" % e)
 ```
 
@@ -294,13 +294,13 @@ Returns information about the specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -322,7 +322,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -333,7 +333,7 @@ with api.ApiClient(configuration) as api_client:
         # Get gadget.
         api_response = api_instance.get_gadget(product_id, serial_number)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->get_gadget: %s\n" % e)
 ```
 
@@ -382,13 +382,13 @@ Returns a list of gadgets that match certain criteria. If the total number of ga
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -410,7 +410,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID for filtering the search. (optional)
@@ -426,7 +426,7 @@ with api.ApiClient(configuration) as api_client:
         # List gadgets.
         api_response = api_instance.list_gadgets(product_id=product_id, tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->list_gadgets: %s\n" % e)
 ```
 
@@ -478,14 +478,14 @@ Inserts/updates tags for the specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.tag_update_request import TagUpdateRequest
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
+from soracom_api.model.tag_update_request import TagUpdateRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -507,7 +507,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -524,7 +524,7 @@ with api.ApiClient(configuration) as api_client:
         # Bulk Insert or Update gadget Tags.
         api_response = api_instance.put_gadget_tags(product_id, serial_number, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->put_gadget_tags: %s\n" % e)
 ```
 
@@ -574,14 +574,14 @@ Registers a gadget
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget_registration_request import GadgetRegistrationRequest
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
+from soracom_api.model.gadget_registration_request import GadgetRegistrationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -603,7 +603,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -619,7 +619,7 @@ with api.ApiClient(configuration) as api_client:
         # Register a gadget.
         api_response = api_instance.register_gadget(product_id, serial_number, gadget_registration_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->register_gadget: %s\n" % e)
 ```
 
@@ -669,14 +669,14 @@ Sets or overwrites a group for the specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.group import Group
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
+from soracom_api.model.group import Group
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -698,7 +698,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -719,7 +719,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Group of gadget.
         api_response = api_instance.set_gadget_group(product_id, serial_number, group)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->set_gadget_group: %s\n" % e)
 ```
 
@@ -769,13 +769,13 @@ Terminates the specified gadget
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -797,7 +797,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -808,7 +808,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate gadget.
         api_response = api_instance.terminate_gadget(product_id, serial_number)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->terminate_gadget: %s\n" % e)
 ```
 
@@ -857,13 +857,13 @@ Removes the group configuration from the specified gadget.
 
 ```python
 import time
-import api
-from api.api import gadget_api
-from api.model.gadget import Gadget
+import soracom_api
+from soracom_api.api import gadget_api
+from soracom_api.model.gadget import Gadget
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -885,7 +885,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gadget_api.GadgetApi(api_client)
     product_id = "product_id_example" # str | Product ID of the target gadget.
@@ -896,7 +896,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset Group of gadget.
         api_response = api_instance.unset_gadget_group(product_id, serial_number)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling GadgetApi->unset_gadget_group: %s\n" % e)
 ```
 

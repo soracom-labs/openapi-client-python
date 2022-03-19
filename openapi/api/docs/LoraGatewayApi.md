@@ -1,4 +1,4 @@
-# api.LoraGatewayApi
+# soracom_api.LoraGatewayApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -29,12 +29,12 @@ Deletes a tag from the specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
+import soracom_api
+from soracom_api.api import lora_gateway_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -56,7 +56,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | ID of the target LoRa gateway.
@@ -66,7 +66,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete LoRa gateway tag.
         api_instance.delete_lora_gateway_tag(gateway_id, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->delete_lora_gateway_tag: %s\n" % e)
 ```
 
@@ -115,13 +115,13 @@ Disables termination of specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -143,7 +143,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | ID of the target LoRa gateway.
@@ -153,7 +153,7 @@ with api.ApiClient(configuration) as api_client:
         # Disable Termination of LoRa gateway.
         api_response = api_instance.disable_termination_on_lora_gateway(gateway_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->disable_termination_on_lora_gateway: %s\n" % e)
 ```
 
@@ -201,13 +201,13 @@ Enables termination of specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -229,7 +229,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | ID of the target LoRa gateway.
@@ -239,7 +239,7 @@ with api.ApiClient(configuration) as api_client:
         # Enable Termination of LoRa gateway.
         api_response = api_instance.enable_termination_on_lora_gateway(gateway_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->enable_termination_on_lora_gateway: %s\n" % e)
 ```
 
@@ -287,13 +287,13 @@ Returns information about the specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -315,7 +315,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | Gateway ID of the target LoRa gateway.
@@ -325,7 +325,7 @@ with api.ApiClient(configuration) as api_client:
         # Get LoRa gateway.
         api_response = api_instance.get_lora_gateway(gateway_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->get_lora_gateway: %s\n" % e)
 ```
 
@@ -373,13 +373,13 @@ Returns a list of LoRa gateways that match certain criteria. If the total number
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -401,7 +401,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     tag_name = "tag_name_example" # str | Tag name for filtering the search (exact match). (optional)
@@ -416,7 +416,7 @@ with api.ApiClient(configuration) as api_client:
         # List LoRa Gateways.
         api_response = api_instance.list_lora_gateways(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->list_lora_gateways: %s\n" % e)
 ```
 
@@ -467,14 +467,14 @@ Inserts/updates tags for the specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
-from api.model.tag_update_request import TagUpdateRequest
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -496,7 +496,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | ID of the target LoRa gateway.
@@ -512,7 +512,7 @@ with api.ApiClient(configuration) as api_client:
         # Bulk Insert or Update LoRa gateway Tags.
         api_response = api_instance.put_lora_gateway_tags(gateway_id, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->put_lora_gateway_tags: %s\n" % e)
 ```
 
@@ -561,14 +561,14 @@ Sets or overwrites network set ID for the specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
-from api.model.set_network_set_request import SetNetworkSetRequest
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
+from soracom_api.model.set_network_set_request import SetNetworkSetRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -590,7 +590,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | ID of the target LoRa gateway.
@@ -603,7 +603,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Network Set ID of LoRa gateway.
         api_response = api_instance.set_lora_network_set(gateway_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->set_lora_network_set: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -612,7 +612,7 @@ with api.ApiClient(configuration) as api_client:
         # Set Network Set ID of LoRa gateway.
         api_response = api_instance.set_lora_network_set(gateway_id, set_network_set_request=set_network_set_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->set_lora_network_set: %s\n" % e)
 ```
 
@@ -661,13 +661,13 @@ Terminates the specified LoRa gateway
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -689,7 +689,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | Device ID of the target LoRa gateway.
@@ -699,7 +699,7 @@ with api.ApiClient(configuration) as api_client:
         # Terminate LoRa gateway.
         api_response = api_instance.terminate_lora_gateway(gateway_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->terminate_lora_gateway: %s\n" % e)
 ```
 
@@ -747,13 +747,13 @@ Unset network set ID of the specified LoRa gateway.
 
 ```python
 import time
-import api
-from api.api import lora_gateway_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_gateway_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -775,7 +775,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_gateway_api.LoraGatewayApi(api_client)
     gateway_id = "gateway_id_example" # str | ID of the target LoRa gateway.
@@ -785,7 +785,7 @@ with api.ApiClient(configuration) as api_client:
         # Unset Network Set ID of LoRa gateway.
         api_response = api_instance.unset_lora_network_set(gateway_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraGatewayApi->unset_lora_network_set: %s\n" % e)
 ```
 

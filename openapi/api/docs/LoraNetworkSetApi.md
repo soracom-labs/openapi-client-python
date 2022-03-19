@@ -1,4 +1,4 @@
-# api.LoraNetworkSetApi
+# soracom_api.LoraNetworkSetApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -29,14 +29,14 @@ Adds permission to allow another operator to use the network set.
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.update_permission_request import UpdatePermissionRequest
-from api.model.lora_network_set import LoraNetworkSet
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.update_permission_request import UpdatePermissionRequest
+from soracom_api.model.lora_network_set import LoraNetworkSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -58,7 +58,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -71,7 +71,7 @@ with api.ApiClient(configuration) as api_client:
         # Adds permission to a LoRa network set.
         api_response = api_instance.add_permission_to_lora_network_set(ns_id, update_permission_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->add_permission_to_lora_network_set: %s\n" % e)
 ```
 
@@ -119,13 +119,13 @@ Creates a specified LoRa network set
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.lora_network_set import LoraNetworkSet
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.lora_network_set import LoraNetworkSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -147,7 +147,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     lora_network_set = LoraNetworkSet(
@@ -168,7 +168,7 @@ with api.ApiClient(configuration) as api_client:
         # Create a LoRa network set.
         api_response = api_instance.create_lora_network_set(lora_network_set)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->create_lora_network_set: %s\n" % e)
 ```
 
@@ -215,12 +215,12 @@ Deletes the specified LoRa network set
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
+import soracom_api
+from soracom_api.api import lora_network_set_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -242,7 +242,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -251,7 +251,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete LoRa network set.
         api_instance.delete_lora_network_set(ns_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->delete_lora_network_set: %s\n" % e)
 ```
 
@@ -299,12 +299,12 @@ Deletes a tag from the specified LoRa network set.
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
+import soracom_api
+from soracom_api.api import lora_network_set_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -326,7 +326,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -336,7 +336,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete LoRa network set tag.
         api_instance.delete_lora_network_set_tag(ns_id, tag_name)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->delete_lora_network_set_tag: %s\n" % e)
 ```
 
@@ -385,13 +385,13 @@ Returns information about the specified LoRa network set.
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.lora_network_set import LoraNetworkSet
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.lora_network_set import LoraNetworkSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -413,7 +413,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -423,7 +423,7 @@ with api.ApiClient(configuration) as api_client:
         # Get LoRa network set.
         api_response = api_instance.get_lora_network_set(ns_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->get_lora_network_set: %s\n" % e)
 ```
 
@@ -471,13 +471,13 @@ Returns a list of LoRa gateways that belong to the specified network set. If the
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.lora_gateway import LoraGateway
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.lora_gateway import LoraGateway
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -499,7 +499,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -511,7 +511,7 @@ with api.ApiClient(configuration) as api_client:
         # List LoRa Gateways in a Network Set.
         api_response = api_instance.list_gateways_in_lora_network_set(ns_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->list_gateways_in_lora_network_set: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -520,7 +520,7 @@ with api.ApiClient(configuration) as api_client:
         # List LoRa Gateways in a Network Set.
         api_response = api_instance.list_gateways_in_lora_network_set(ns_id, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->list_gateways_in_lora_network_set: %s\n" % e)
 ```
 
@@ -570,13 +570,13 @@ Returns a list of LoRa network sets that match certain criteria. If the total nu
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.lora_network_set import LoraNetworkSet
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.lora_network_set import LoraNetworkSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -598,7 +598,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     tag_name = "tag_name_example" # str | Tag name for filtering the search (exact match). (optional)
@@ -613,7 +613,7 @@ with api.ApiClient(configuration) as api_client:
         # List LoRa Network Sets.
         api_response = api_instance.list_lora_network_sets(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->list_lora_network_sets: %s\n" % e)
 ```
 
@@ -662,20 +662,20 @@ Inserts/updates tags for the specified LoRa network set.
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.tag_update_request import TagUpdateRequest
-from api.model.lora_network_set import LoraNetworkSet
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.lora_network_set import LoraNetworkSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -691,7 +691,7 @@ with api.ApiClient() as api_client:
         # Bulk Insert or Update LoRa network set tags.
         api_response = api_instance.put_lora_network_set_tags(ns_id, tag_update_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->put_lora_network_set_tags: %s\n" % e)
 ```
 
@@ -740,14 +740,14 @@ Revokes a permission and removes an operator from the list of allowed operators 
 
 ```python
 import time
-import api
-from api.api import lora_network_set_api
-from api.model.update_permission_request import UpdatePermissionRequest
-from api.model.lora_network_set import LoraNetworkSet
+import soracom_api
+from soracom_api.api import lora_network_set_api
+from soracom_api.model.update_permission_request import UpdatePermissionRequest
+from soracom_api.model.lora_network_set import LoraNetworkSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -769,7 +769,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lora_network_set_api.LoraNetworkSetApi(api_client)
     ns_id = "ns_id_example" # str | ID of the target LoRa network set.
@@ -782,7 +782,7 @@ with api.ApiClient(configuration) as api_client:
         # Revokes a permission from a LoRa network set.
         api_response = api_instance.revoke_permission_from_lora_network_set(ns_id, update_permission_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling LoraNetworkSetApi->revoke_permission_from_lora_network_set: %s\n" % e)
 ```
 

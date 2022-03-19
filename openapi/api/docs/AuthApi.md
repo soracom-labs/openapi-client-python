@@ -1,4 +1,4 @@
-# api.AuthApi
+# soracom_api.AuthApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -21,20 +21,20 @@ Performs authentication to access to the SORACOM API. To perform authentication 
 
 ```python
 import time
-import api
-from api.api import auth_api
-from api.model.auth_request import AuthRequest
-from api.model.auth_response import AuthResponse
+import soracom_api
+from soracom_api.api import auth_api
+from soracom_api.model.auth_response import AuthResponse
+from soracom_api.model.auth_request import AuthRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_api.AuthApi(api_client)
     auth_request = AuthRequest(
@@ -53,7 +53,7 @@ with api.ApiClient() as api_client:
         # Performs authentication to access to the SORACOM API.
         api_response = api_instance.auth(auth_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling AuthApi->auth: %s\n" % e)
 ```
 
@@ -99,19 +99,19 @@ Generates a password reset token and send it to the operator's mail address. Aft
 
 ```python
 import time
-import api
-from api.api import auth_api
-from api.model.issue_password_reset_token_request import IssuePasswordResetTokenRequest
+import soracom_api
+from soracom_api.api import auth_api
+from soracom_api.model.issue_password_reset_token_request import IssuePasswordResetTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_api.AuthApi(api_client)
     issue_password_reset_token_request = IssuePasswordResetTokenRequest(
@@ -122,7 +122,7 @@ with api.ApiClient() as api_client:
     try:
         # Issues a password reset token for the operator.
         api_instance.issue_password_reset_token(issue_password_reset_token_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling AuthApi->issue_password_reset_token: %s\n" % e)
 ```
 
@@ -168,19 +168,19 @@ Updates the operator's password if the password reset token is verified.
 
 ```python
 import time
-import api
-from api.api import auth_api
-from api.model.verify_password_reset_token_request import VerifyPasswordResetTokenRequest
+import soracom_api
+from soracom_api.api import auth_api
+from soracom_api.model.verify_password_reset_token_request import VerifyPasswordResetTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_api.AuthApi(api_client)
     verify_password_reset_token_request = VerifyPasswordResetTokenRequest(
@@ -192,7 +192,7 @@ with api.ApiClient() as api_client:
     try:
         # Verifies the password reset token and updates password.
         api_instance.verify_password_reset_token(verify_password_reset_token_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling AuthApi->verify_password_reset_token: %s\n" % e)
 ```
 

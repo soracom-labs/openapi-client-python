@@ -1,4 +1,4 @@
-# api.EmailApi
+# soracom_api.EmailApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -25,12 +25,12 @@ Deletes an email address.
 
 ```python
 import time
-import api
-from api.api import email_api
+import soracom_api
+from soracom_api.api import email_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -52,7 +52,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_api.EmailApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -62,7 +62,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete email address
         api_instance.delete_email(operator_id, email_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EmailApi->delete_email: %s\n" % e)
 ```
 
@@ -110,13 +110,13 @@ Returns an email address.
 
 ```python
 import time
-import api
-from api.api import email_api
-from api.model.emails_model import EmailsModel
+import soracom_api
+from soracom_api.api import email_api
+from soracom_api.model.emails_model import EmailsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -138,7 +138,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_api.EmailApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -149,7 +149,7 @@ with api.ApiClient(configuration) as api_client:
         # Get email address
         api_response = api_instance.get_email(operator_id, email_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EmailApi->get_email: %s\n" % e)
 ```
 
@@ -197,13 +197,13 @@ Sends an email with a one-time token for adding an e-mail address.
 
 ```python
 import time
-import api
-from api.api import email_api
-from api.model.issue_add_email_token_request import IssueAddEmailTokenRequest
+import soracom_api
+from soracom_api.api import email_api
+from soracom_api.model.issue_add_email_token_request import IssueAddEmailTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -225,7 +225,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_api.EmailApi(api_client)
     issue_add_email_token_request = IssueAddEmailTokenRequest(
@@ -237,7 +237,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Issue a token to add an email address
         api_instance.issue_add_email_token(issue_add_email_token_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EmailApi->issue_add_email_token: %s\n" % e)
 ```
 
@@ -284,13 +284,13 @@ Returns a list of email addresses.
 
 ```python
 import time
-import api
-from api.api import email_api
-from api.model.emails_model import EmailsModel
+import soracom_api
+from soracom_api.api import email_api
+from soracom_api.model.emails_model import EmailsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -312,7 +312,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_api.EmailApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -322,7 +322,7 @@ with api.ApiClient(configuration) as api_client:
         # List email addresses
         api_response = api_instance.list_emails(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EmailApi->list_emails: %s\n" % e)
 ```
 
@@ -367,19 +367,19 @@ Verifies the token for adding email address.
 
 ```python
 import time
-import api
-from api.api import email_api
-from api.model.verify_add_email_token_request import VerifyAddEmailTokenRequest
+import soracom_api
+from soracom_api.api import email_api
+from soracom_api.model.verify_add_email_token_request import VerifyAddEmailTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with api.ApiClient() as api_client:
+with soracom_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = email_api.EmailApi(api_client)
     verify_add_email_token_request = VerifyAddEmailTokenRequest(
@@ -390,7 +390,7 @@ with api.ApiClient() as api_client:
     try:
         # Verify a token to add an email address
         api_instance.verify_add_email_token(verify_add_email_token_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EmailApi->verify_add_email_token: %s\n" % e)
 ```
 

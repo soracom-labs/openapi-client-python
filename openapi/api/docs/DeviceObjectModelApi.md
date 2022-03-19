@@ -1,4 +1,4 @@
-# api.DeviceObjectModelApi
+# soracom_api.DeviceObjectModelApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -26,13 +26,13 @@ Creates a new device object model
 
 ```python
 import time
-import api
-from api.api import device_object_model_api
-from api.model.device_object_model import DeviceObjectModel
+import soracom_api
+from soracom_api.api import device_object_model_api
+from soracom_api.model.device_object_model import DeviceObjectModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -54,7 +54,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = device_object_model_api.DeviceObjectModelApi(api_client)
     device_object_model = DeviceObjectModel(
@@ -72,7 +72,7 @@ with api.ApiClient(configuration) as api_client:
         # Creates a new device object model
         api_response = api_instance.create_device_object_model(device_object_model)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DeviceObjectModelApi->create_device_object_model: %s\n" % e)
 ```
 
@@ -120,12 +120,12 @@ Deletes a device object model
 
 ```python
 import time
-import api
-from api.api import device_object_model_api
+import soracom_api
+from soracom_api.api import device_object_model_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -147,7 +147,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = device_object_model_api.DeviceObjectModelApi(api_client)
     model_id = "model_id_example" # str | Device object model ID
@@ -156,7 +156,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Deletes a device object model
         api_instance.delete_device_object_model(model_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DeviceObjectModelApi->delete_device_object_model: %s\n" % e)
 ```
 
@@ -204,13 +204,13 @@ Gets a device object model
 
 ```python
 import time
-import api
-from api.api import device_object_model_api
-from api.model.device_object_model import DeviceObjectModel
+import soracom_api
+from soracom_api.api import device_object_model_api
+from soracom_api.model.device_object_model import DeviceObjectModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -232,7 +232,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = device_object_model_api.DeviceObjectModelApi(api_client)
     model_id = "model_id_example" # str | Device object model ID
@@ -242,7 +242,7 @@ with api.ApiClient(configuration) as api_client:
         # Gets a device object model
         api_response = api_instance.get_device_object_model(model_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DeviceObjectModelApi->get_device_object_model: %s\n" % e)
 ```
 
@@ -290,13 +290,13 @@ Returns a list of device object models
 
 ```python
 import time
-import api
-from api.api import device_object_model_api
-from api.model.device_object_model import DeviceObjectModel
+import soracom_api
+from soracom_api.api import device_object_model_api
+from soracom_api.model.device_object_model import DeviceObjectModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -318,7 +318,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = device_object_model_api.DeviceObjectModelApi(api_client)
     last_evaluated_key = "last_evaluated_key_example" # str | ID of the last device object model in the previous page (optional)
@@ -330,7 +330,7 @@ with api.ApiClient(configuration) as api_client:
         # Returns a list of device object models
         api_response = api_instance.list_device_object_models(last_evaluated_key=last_evaluated_key, limit=limit)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DeviceObjectModelApi->list_device_object_models: %s\n" % e)
 ```
 
@@ -378,14 +378,14 @@ Sets scope for a device object model
 
 ```python
 import time
-import api
-from api.api import device_object_model_api
-from api.model.set_device_object_model_scope_request import SetDeviceObjectModelScopeRequest
-from api.model.device_object_model import DeviceObjectModel
+import soracom_api
+from soracom_api.api import device_object_model_api
+from soracom_api.model.device_object_model import DeviceObjectModel
+from soracom_api.model.set_device_object_model_scope_request import SetDeviceObjectModelScopeRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -407,7 +407,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = device_object_model_api.DeviceObjectModelApi(api_client)
     model_id = "model_id_example" # str | Target device object model ID
@@ -420,7 +420,7 @@ with api.ApiClient(configuration) as api_client:
         # Sets scope for a device object model
         api_response = api_instance.set_device_object_model_scope(model_id, set_device_object_model_scope_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DeviceObjectModelApi->set_device_object_model_scope: %s\n" % e)
 ```
 
@@ -469,13 +469,13 @@ Updates a device object model
 
 ```python
 import time
-import api
-from api.api import device_object_model_api
-from api.model.device_object_model import DeviceObjectModel
+import soracom_api
+from soracom_api.api import device_object_model_api
+from soracom_api.model.device_object_model import DeviceObjectModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -497,7 +497,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = device_object_model_api.DeviceObjectModelApi(api_client)
     model_id = "model_id_example" # str | Device object model ID
@@ -516,7 +516,7 @@ with api.ApiClient(configuration) as api_client:
         # Updates a device object model
         api_response = api_instance.update_device_object_model(model_id, device_object_model)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling DeviceObjectModelApi->update_device_object_model: %s\n" % e)
 ```
 

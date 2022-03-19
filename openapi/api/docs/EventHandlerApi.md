@@ -1,4 +1,4 @@
-# api.EventHandlerApi
+# soracom_api.EventHandlerApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -28,14 +28,14 @@ Creates a new event handler. Please see also https://developers.soracom.io/en/do
 
 ```python
 import time
-import api
-from api.api import event_handler_api
-from api.model.event_handler_model import EventHandlerModel
-from api.model.create_event_handler_request import CreateEventHandlerRequest
+import soracom_api
+from soracom_api.api import event_handler_api
+from soracom_api.model.event_handler_model import EventHandlerModel
+from soracom_api.model.create_event_handler_request import CreateEventHandlerRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -57,7 +57,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     create_event_handler_request = CreateEventHandlerRequest(
@@ -114,7 +114,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Event Handler.
         api_response = api_instance.create_event_handler(create_event_handler_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->create_event_handler: %s\n" % e)
 ```
 
@@ -161,12 +161,12 @@ Deletes the specified event handler.
 
 ```python
 import time
-import api
-from api.api import event_handler_api
+import soracom_api
+from soracom_api.api import event_handler_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -188,7 +188,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     handler_id = "handler_id_example" # str | handler ID
@@ -197,7 +197,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Event Handler.
         api_instance.delete_event_handler(handler_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->delete_event_handler: %s\n" % e)
 ```
 
@@ -245,12 +245,12 @@ Deletes the setting for ignoring the specified event handler of the specified IM
 
 ```python
 import time
-import api
-from api.api import event_handler_api
+import soracom_api
+from soracom_api.api import event_handler_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -272,7 +272,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     imsi = "imsi_example" # str | imsi
@@ -282,7 +282,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Ignore Event Handler.
         api_instance.delete_ignore_event_handler(imsi, handler_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->delete_ignore_event_handler: %s\n" % e)
 ```
 
@@ -331,13 +331,13 @@ Returns information about the specified event handler.
 
 ```python
 import time
-import api
-from api.api import event_handler_api
-from api.model.event_handler_model import EventHandlerModel
+import soracom_api
+from soracom_api.api import event_handler_api
+from soracom_api.model.event_handler_model import EventHandlerModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -359,7 +359,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     handler_id = "handler_id_example" # str | handler ID
@@ -369,7 +369,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Event Handler.
         api_response = api_instance.get_event_handler(handler_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->get_event_handler: %s\n" % e)
 ```
 
@@ -417,13 +417,13 @@ Returns a list of event handlers.
 
 ```python
 import time
-import api
-from api.api import event_handler_api
-from api.model.event_handler_model import EventHandlerModel
+import soracom_api
+from soracom_api.api import event_handler_api
+from soracom_api.model.event_handler_model import EventHandlerModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -445,7 +445,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     target = "operator" # str | target (optional)
@@ -456,7 +456,7 @@ with api.ApiClient(configuration) as api_client:
         # List Event Handlers.
         api_response = api_instance.list_event_handlers(target=target)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->list_event_handlers: %s\n" % e)
 ```
 
@@ -503,13 +503,13 @@ Returns a list of event handlers related to the specified IMSI.
 
 ```python
 import time
-import api
-from api.api import event_handler_api
-from api.model.event_handler_model import EventHandlerModel
+import soracom_api
+from soracom_api.api import event_handler_api
+from soracom_api.model.event_handler_model import EventHandlerModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -531,7 +531,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     imsi = "imsi_example" # str | imsi
@@ -541,7 +541,7 @@ with api.ApiClient(configuration) as api_client:
         # List Event Handlers related to Subscriber.
         api_response = api_instance.list_event_handlers_by_subscriber(imsi)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->list_event_handlers_by_subscriber: %s\n" % e)
 ```
 
@@ -589,12 +589,12 @@ Adds a setting for ignoring the specified event handler of the specified IMSI.
 
 ```python
 import time
-import api
-from api.api import event_handler_api
+import soracom_api
+from soracom_api.api import event_handler_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -616,7 +616,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     imsi = "imsi_example" # str | imsi
@@ -626,7 +626,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Ignore Event Handler.
         api_instance.set_ignore_event_handler(imsi, handler_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->set_ignore_event_handler: %s\n" % e)
 ```
 
@@ -674,13 +674,13 @@ Updates the specified event handler. Please see also https://developers.soracom.
 
 ```python
 import time
-import api
-from api.api import event_handler_api
-from api.model.create_event_handler_request import CreateEventHandlerRequest
+import soracom_api
+from soracom_api.api import event_handler_api
+from soracom_api.model.create_event_handler_request import CreateEventHandlerRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -702,7 +702,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_handler_api.EventHandlerApi(api_client)
     handler_id = "handler_id_example" # str | handler ID
@@ -759,7 +759,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update Event Handler.
         api_instance.update_event_handler(handler_id, body)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling EventHandlerApi->update_event_handler: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# api.RoleApi
+# soracom_api.RoleApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -29,13 +29,13 @@ Attaches a role to a user.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.attach_role_request import AttachRoleRequest
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.attach_role_request import AttachRoleRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -57,7 +57,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -70,7 +70,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Attach Role to User.
         api_instance.attach_role(operator_id, user_name, attach_role_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->attach_role: %s\n" % e)
 ```
 
@@ -119,14 +119,14 @@ Adds a new role.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.create_role_response import CreateRoleResponse
-from api.model.create_or_update_role_request import CreateOrUpdateRoleRequest
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.create_or_update_role_request import CreateOrUpdateRoleRequest
+from soracom_api.model.create_role_response import CreateRoleResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -148,7 +148,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -163,7 +163,7 @@ with api.ApiClient(configuration) as api_client:
         # Create Role.
         api_response = api_instance.create_role(operator_id, role_id, create_or_update_role_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->create_role: %s\n" % e)
 ```
 
@@ -212,12 +212,12 @@ Deletes a role.
 
 ```python
 import time
-import api
-from api.api import role_api
+import soracom_api
+from soracom_api.api import role_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -239,7 +239,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -249,7 +249,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete Role.
         api_instance.delete_role(operator_id, role_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->delete_role: %s\n" % e)
 ```
 
@@ -297,12 +297,12 @@ Detaches a role from a user.
 
 ```python
 import time
-import api
-from api.api import role_api
+import soracom_api
+from soracom_api.api import role_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -324,7 +324,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -335,7 +335,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Detach Role from User.
         api_instance.detach_role(operator_id, user_name, role_id)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->detach_role: %s\n" % e)
 ```
 
@@ -384,13 +384,13 @@ Retrieves a role.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.role_response import RoleResponse
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.role_response import RoleResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -412,7 +412,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -423,7 +423,7 @@ with api.ApiClient(configuration) as api_client:
         # Get Role.
         api_response = api_instance.get_role(operator_id, role_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->get_role: %s\n" % e)
 ```
 
@@ -471,13 +471,13 @@ Retrieves a list of users attached to a role.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.user_detail_response import UserDetailResponse
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.user_detail_response import UserDetailResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -499,7 +499,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -510,7 +510,7 @@ with api.ApiClient(configuration) as api_client:
         # List Role Attached Users.
         api_response = api_instance.list_role_attached_users(operator_id, role_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->list_role_attached_users: %s\n" % e)
 ```
 
@@ -558,13 +558,13 @@ Returns a list of roles.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.list_roles_response import ListRolesResponse
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.list_roles_response import ListRolesResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -586,7 +586,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -596,7 +596,7 @@ with api.ApiClient(configuration) as api_client:
         # List Roles.
         api_response = api_instance.list_roles(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->list_roles: %s\n" % e)
 ```
 
@@ -643,13 +643,13 @@ Retrieves a list of the user's roles.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.role_response import RoleResponse
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.role_response import RoleResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -671,7 +671,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -682,7 +682,7 @@ with api.ApiClient(configuration) as api_client:
         # List User Roles.
         api_response = api_instance.list_user_roles(operator_id, user_name)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->list_user_roles: %s\n" % e)
 ```
 
@@ -730,13 +730,13 @@ Edits a role.
 
 ```python
 import time
-import api
-from api.api import role_api
-from api.model.create_or_update_role_request import CreateOrUpdateRoleRequest
+import soracom_api
+from soracom_api.api import role_api
+from soracom_api.model.create_or_update_role_request import CreateOrUpdateRoleRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -758,7 +758,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -772,7 +772,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Update Role.
         api_instance.update_role(operator_id, role_id, create_or_update_role_request)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling RoleApi->update_role: %s\n" % e)
 ```
 

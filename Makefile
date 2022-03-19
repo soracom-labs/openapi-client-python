@@ -14,6 +14,9 @@ POETRY_VENV_IN_PROJECT ?= true
 IP ?= localhost
 PORT ?= 8000
 
+REPOSITORY ?= testpypi
+DIST ?= $(GENERATED_DIR)/api/dist/*
+
 .PHONY: help
 help:
 	echo $(SOURCE_FILES)
@@ -57,12 +60,14 @@ test: ## run tests
 		$(SOURCE_FILES)
 
 .PHONY: build
-build: ## build package
-	$(POETRY) build
+build: ## build packages
+	@for spec in $(INPUT_SPECS) ; do \
+		cd $(GENERATED_DIR)/$$spec && $(POETRY) build && cd - ; \
+    done
 
 .PHONY: release
 release: ## release
-	$(POETRY_RUN) twine upload --repository-url $(REPOSITORY_URL) dist/*
+	$(POETRY_RUN) twine upload --repository $(REPOSITORY) $(DIST)
 
 .PHONY: generate
 generate: ## run OpenAPI Generator
@@ -76,11 +81,11 @@ generate-spec: ## run OpenAPI Generator
 		--input-spec specs/$(INPUT_SPEC).yaml \
 		--generator-name python \
 		--output $(GENERATED_DIR)/$(INPUT_SPEC) \
-		--package-name $(INPUT_SPEC) \
+		--package-name soracom_$(INPUT_SPEC) \
 		--git-host github.com \
 		--git-user-id soracom-labs \
 		--git-repo-id openapi-client-python \
-		--http-user-agent openapi-client-python/$(GIT_TAG)
+		--http-user-agent soracom-$(INPUT_SPEC)/$(GIT_TAG)
 	cd $(GENERATED_DIR)/$(INPUT_SPEC) && rm -rf $(REMOVE_GENERATED_FILES)
 
 .PHONY: generate-diff-check

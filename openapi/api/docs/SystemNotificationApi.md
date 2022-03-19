@@ -1,4 +1,4 @@
-# api.SystemNotificationApi
+# soracom_api.SystemNotificationApi
 
 All URIs are relative to *https://api.soracom.io/v1*
 
@@ -24,12 +24,12 @@ Deletes a system notification.
 
 ```python
 import time
-import api
-from api.api import system_notification_api
+import soracom_api
+from soracom_api.api import system_notification_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -51,7 +51,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = system_notification_api.SystemNotificationApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -61,7 +61,7 @@ with api.ApiClient(configuration) as api_client:
     try:
         # Delete system notification
         api_instance.delete_system_notification(operator_id, type)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SystemNotificationApi->delete_system_notification: %s\n" % e)
 ```
 
@@ -109,13 +109,13 @@ Returns a system notification.
 
 ```python
 import time
-import api
-from api.api import system_notification_api
-from api.model.system_notifications_model import SystemNotificationsModel
+import soracom_api
+from soracom_api.api import system_notification_api
+from soracom_api.model.system_notifications_model import SystemNotificationsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -137,7 +137,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = system_notification_api.SystemNotificationApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -148,7 +148,7 @@ with api.ApiClient(configuration) as api_client:
         # Get system notification
         api_response = api_instance.get_system_notification(operator_id, type)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SystemNotificationApi->get_system_notification: %s\n" % e)
 ```
 
@@ -196,13 +196,13 @@ Returns a list of system notifications.
 
 ```python
 import time
-import api
-from api.api import system_notification_api
-from api.model.system_notifications_model import SystemNotificationsModel
+import soracom_api
+from soracom_api.api import system_notification_api
+from soracom_api.model.system_notifications_model import SystemNotificationsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -224,7 +224,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = system_notification_api.SystemNotificationApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -234,7 +234,7 @@ with api.ApiClient(configuration) as api_client:
         # List system notifications
         api_response = api_instance.list_system_notifications(operator_id)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SystemNotificationApi->list_system_notifications: %s\n" % e)
 ```
 
@@ -281,14 +281,14 @@ Sets a system notification.
 
 ```python
 import time
-import api
-from api.api import system_notification_api
-from api.model.set_system_notifications_request import SetSystemNotificationsRequest
-from api.model.system_notifications_model import SystemNotificationsModel
+import soracom_api
+from soracom_api.api import system_notification_api
+from soracom_api.model.set_system_notifications_request import SetSystemNotificationsRequest
+from soracom_api.model.system_notifications_model import SystemNotificationsModel
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.soracom.io/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = api.Configuration(
+configuration = soracom_api.Configuration(
     host = "https://api.soracom.io/v1"
 )
 
@@ -310,7 +310,7 @@ configuration.api_key['api_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['api_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with api.ApiClient(configuration) as api_client:
+with soracom_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = system_notification_api.SystemNotificationApi(api_client)
     operator_id = "operator_id_example" # str | operator_id
@@ -327,7 +327,7 @@ with api.ApiClient(configuration) as api_client:
         # Set system notification
         api_response = api_instance.set_system_notification(operator_id, type, set_system_notifications_request)
         pprint(api_response)
-    except api.ApiException as e:
+    except soracom_api.ApiException as e:
         print("Exception when calling SystemNotificationApi->set_system_notification: %s\n" % e)
 ```
 
