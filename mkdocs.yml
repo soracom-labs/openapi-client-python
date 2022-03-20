@@ -94,5 +94,5 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - SORACOM API: api/index.md
-  - SORACOM API Sandbox: sandbox/index.md
+  - SORACOM API: api/README.md
+  - SORACOM API Sandbox: sandbox/README.md
