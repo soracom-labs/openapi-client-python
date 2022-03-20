@@ -1,7 +1,8 @@
 GENERATED_DIR ?= openapi
-REMOVE_GENERATED_FILES ?= .openapi-generator test .gitlab-ci.yml .openapi-generator-ignore .gitignore .travis.yml git_push.sh 
+REMOVE_GENERATED_FILES ?= .openapi-generator test .gitlab-ci.yml .openapi-generator-ignore .gitignore .travis.yml git_push.sh docs
 SOURCE_FILES ?= $(shell find . -not -path "./.venv/*" -not -path "./$(GENERATED_DIR)/*" -type f -name '*.py' -print)
 INPUT_SPECS ?= api sandbox
+PACKAGE_NAME ?= soracom_$(INPUT_SPEC)
 
 GIT_REVISION ?= $(shell git rev-parse --short HEAD)
 GIT_TAG ?= $(shell git describe --tags --abbrev=0 | sed -e s/v//g)
@@ -81,11 +82,12 @@ generate-spec: ## run OpenAPI Generator
 		--input-spec specs/$(INPUT_SPEC).yaml \
 		--generator-name python \
 		--output $(GENERATED_DIR)/$(INPUT_SPEC) \
-		--package-name soracom_$(INPUT_SPEC) \
+		--package-name $(PACKAGE_NAME) \
 		--git-host github.com \
 		--git-user-id soracom-labs \
 		--git-repo-id openapi-client-python \
 		--http-user-agent soracom-$(INPUT_SPEC)/$(GIT_TAG)
+	mv $(GENERATED_DIR)/$(INPUT_SPEC)/docs/* docs/$(INPUT_SPEC)/
 	cd $(GENERATED_DIR)/$(INPUT_SPEC) && rm -rf $(REMOVE_GENERATED_FILES)
 
 .PHONY: generate-diff-check
