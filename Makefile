@@ -1,5 +1,5 @@
 GENERATED_DIR ?= openapi
-REMOVE_GENERATED_FILES ?= .openapi-generator test .gitlab-ci.yml .openapi-generator-ignore .gitignore .travis.yml git_push.sh
+REMOVE_GENERATED_FILES ?= .openapi-generator test .gitlab-ci.yml .openapi-generator-ignore .gitignore .travis.yml git_push.sh docs
 SOURCE_FILES ?= $(shell find . -not -path "./.venv/*" -not -path "./$(GENERATED_DIR)/*" -type f -name '*.py' -print)
 INPUT_SPECS ?= api sandbox
 PACKAGE_NAME ?= soracom_$(INPUT_SPEC)
