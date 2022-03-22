@@ -89,7 +89,7 @@ generate-spec: ## run OpenAPI Generator
 		--http-user-agent soracom-$(INPUT_SPEC)/$(GIT_TAG)
 	mkdir -p $(GENERATED_DIR)/$(INPUT_SPEC)/docs docs/$(INPUT_SPEC)/docs
 	mv $(GENERATED_DIR)/$(INPUT_SPEC)/docs/* docs/$(INPUT_SPEC)/docs/
-	mv $(GENERATED_DIR)/$(INPUT_SPEC)/README.md docs/$(INPUT_SPEC)/README.md
+	mv $(GENERATED_DIR)/$(INPUT_SPEC)/README.md docs/$(INPUT_SPEC)/index.md
 	cd $(GENERATED_DIR)/$(INPUT_SPEC) && rm -rf $(REMOVE_GENERATED_FILES)
 
 .PHONY: generate-diff-check

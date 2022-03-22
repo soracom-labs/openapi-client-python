@@ -3,5 +3,27 @@
 [![gh-pages](https://github.com/soracom-labs/openapi-client-python/workflows/gh-pages/badge.svg)](https://github.com/soracom-labs/openapi-client-python/actions/workflows/gh-pages.yml)
 [![labeler](https://github.com/soracom-labs/openapi-client-python/workflows/labeler/badge.svg)](https://github.com/soracom-labs/openapi-client-python/actions/workflows/labeler.yml)
 
-# openapi-client-python
-SORACOM API Client for the Python programming language based on the OpenAPI specification
+# SORACOM API client for Python based on OpenAPI Generator
+
+`soracom-labs/openapi-client-python` is a SORACOM API client for the Python programming language based on OpenAPI Generator.
+This project only contains auto-generated codes from SORACOM API schema from OpenAPI Generator.
+
+## Documentation
+
+Refer to the following docs for more detail about the client.
+
+- [SORACOM API](https://soracom-labs.github.io/openapi-client-python/api/)
+- [SORACOM API Sandbox](https://soracom-labs.github.io/openapi-client-python/sandbox/)
+
+## Project Maturity
+
+`soracom-labs/openapi-client-python` is based on OpenAPI Generator. This is under active development. We’re still working on implementing various kinds of features. We’re iterating fast and are likely to introduce breaking changes to existing APIs to improve the overall user experience of the product.
+
+## Feedback
+
+The `soracom-labs/openapi-client-python` will use GitHub Issues to track feature requests and issues with the client. You can provide feedback to us in the following way. 
+
+**GitHub issues**. To provide feedback or report bugs, file GitHub Issues on the client. This is the preferred mechanism to give feedback so that other users can engage in the conversation, +1 issues, etc.
+
+## Contributing
+Please see [CONTRIBUTING](./.github/CONTRIBUTING.md) for detail.
