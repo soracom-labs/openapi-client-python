@@ -110,3 +110,11 @@ docs-build: ## build site
 .PHONY: docs-release
 docs-release: ## release docs
 	$(POETRY_RUN) mkdocs gh-deploy --force
+
+.PHONY: jupyterlab
+jupyterlab: ## run jupyterlab server
+	$(POETRY_RUN) jupyter lab \
+		--ip $(IP) \
+		--port $(PORT) \
+		--no-browser \
+		--notebook-dir ./notebooks
