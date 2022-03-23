@@ -116,5 +116,4 @@ jupyterlab: ## run jupyterlab server
 	$(POETRY_RUN) jupyter lab \
 		--ip $(IP) \
 		--port $(PORT) \
-		--no-browser \
 		--notebook-dir ./notebooks

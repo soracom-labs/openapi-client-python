@@ -8,6 +8,38 @@
 `soracom-labs/openapi-client-python` is a SORACOM API client for the Python programming language based on OpenAPI Generator.
 This project only contains auto-generated codes from SORACOM API schema from OpenAPI Generator.
 
+## Quick Start
+
+### Look at some notebooks without executing any code
+
+* <a href="https://nbviewer.jupyter.org/github/soracom-labs/openapi-client-python/blob/main/index.ipynb"><img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg" alt="Render nbviewer" /></a>
+
+### Run notebooks in locals
+
+To run notebooks in locals, install dependencies first by the followings commands.
+
+```bash
+# if poetry is not installed yet.
+make install-poetry
+
+# install dependencies for the repo
+make install-deps-dev
+```
+
+Virtual environment artifacts were created in `.venv` directory at the project root.
+
+#### From browser
+
+Just run the followings to open the default url in the browser
+
+```console
+make jupyterlab
+```
+
+#### From Visual Studio Code
+
+Install [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and open `*.ipynb` file.
+
 ## Documentation
 
 Refer to the following docs for more detail about the client.
