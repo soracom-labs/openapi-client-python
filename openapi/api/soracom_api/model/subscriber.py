@@ -104,7 +104,7 @@ class Subscriber(ModelNormal):
             'apn': (str,),  # noqa: E501
             'bundles': ([str],),  # noqa: E501
             'created_at': (int,),  # noqa: E501
-            'expired_at': (int,),  # noqa: E501
+            'expired_at': (int, none_type,),  # noqa: E501
             'expired_time': (int,),  # noqa: E501
             'expiry_action': (str, none_type,),  # noqa: E501
             'group_id': (str, none_type,),  # noqa: E501
@@ -211,7 +211,7 @@ class Subscriber(ModelNormal):
             apn (str): The Access Point Name configured.. [optional]  # noqa: E501
             bundles ([str]): [optional]  # noqa: E501
             created_at (int): The timestamp that the SIM was created.. [optional]  # noqa: E501
-            expired_at (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
+            expired_at (int, none_type): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
             expired_time (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
             expiry_action (str, none_type): [optional]  # noqa: E501
             group_id (str, none_type): The SIM group ID where the SIM belongs to.. [optional]  # noqa: E501
@@ -320,7 +320,7 @@ class Subscriber(ModelNormal):
             apn (str): The Access Point Name configured.. [optional]  # noqa: E501
             bundles ([str]): [optional]  # noqa: E501
             created_at (int): The timestamp that the SIM was created.. [optional]  # noqa: E501
-            expired_at (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
+            expired_at (int, none_type): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
             expired_time (int): The timestamp of a date and time where the SIM was expired.. [optional]  # noqa: E501
             expiry_action (str, none_type): [optional]  # noqa: E501
             group_id (str, none_type): The SIM group ID where the SIM belongs to.. [optional]  # noqa: E501

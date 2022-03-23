@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **apn** | **str** | The Access Point Name configured. | [optional] 
 **bundles** | **[str]** |  | [optional] 
 **created_at** | **int** | The timestamp that the SIM was created. | [optional] 
-**expired_at** | **int** | The timestamp of a date and time where the SIM was expired. | [optional] 
+**expired_at** | **int, none_type** | The timestamp of a date and time where the SIM was expired. | [optional] 
 **expired_time** | **int** | The timestamp of a date and time where the SIM was expired. | [optional] 
 **expiry_action** | **str, none_type** |  | [optional] 
 **group_id** | **str, none_type** | The SIM group ID where the SIM belongs to. | [optional] 

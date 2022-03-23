@@ -16697,6 +16697,7 @@ components:
           description: The timestamp of a date and time where the SIM was expired.
           format: int64
           type: integer
+          nullable: true
         expiredTime:
           description: The timestamp of a date and time where the SIM was expired.
           format: int64
