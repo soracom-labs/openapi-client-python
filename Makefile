@@ -63,7 +63,7 @@ test: ## run tests
 .PHONY: build
 build: ## build packages
 	@for spec in $(INPUT_SPECS) ; do \
-		cd $(GENERATED_DIR)/$$spec && $(POETRY) build && cd - ; \
+		cd $(GENERATED_DIR)/$$spec && rm -rf dist && $(POETRY) build && cd - ; \
     done
 
 .PHONY: release
