@@ -1,0 +1,2662 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Soracom, Inc.">
+      
+      
+        <link rel="canonical" href="https://soracom-labs.github.io/openapi-client-python/api/docs/DeviceApi/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>soracom_api.DeviceApi - SORACOM API client for Python based on OpenAPI Generator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#soracom_apideviceapi" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="SORACOM API client for Python based on OpenAPI Generator" class="md-header__button md-logo" aria-label="SORACOM API client for Python based on OpenAPI Generator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SORACOM API client for Python based on OpenAPI Generator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              soracom_api.DeviceApi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/soracom-labs/openapi-client-python" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    soracom-labs/openapi-client-python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../" class="md-tabs__link">
+      SORACOM API
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../sandbox/" class="md-tabs__link">
+      SORACOM API Sandbox
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SORACOM API client for Python based on OpenAPI Generator" class="md-nav__button md-logo" aria-label="SORACOM API client for Python based on OpenAPI Generator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    SORACOM API client for Python based on OpenAPI Generator
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/soracom-labs/openapi-client-python" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    soracom-labs/openapi-client-python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        SORACOM API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sandbox/" class="md-nav__link">
+        SORACOM API Sandbox
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="soracom_apideviceapi">soracom_api.DeviceApi<a class="headerlink" href="#soracom_apideviceapi" title="Permanent link">&para;</a></h1>
+<p>All URIs are relative to <em><a href="https://api.soracom.io/v1">https://api.soracom.io/v1</a></em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#create_device"><strong>create_device</strong></a></td>
+<td><strong>POST</strong> /devices</td>
+<td>Creates a new Device</td>
+</tr>
+<tr>
+<td><a href="./#delete_device"><strong>delete_device</strong></a></td>
+<td><strong>DELETE</strong> /devices/{device_id}</td>
+<td>Delete Device</td>
+</tr>
+<tr>
+<td><a href="./#delete_device_tag"><strong>delete_device_tag</strong></a></td>
+<td><strong>DELETE</strong> /devices/{device_id}/tags/{tag_name}</td>
+<td>Delete device tag</td>
+</tr>
+<tr>
+<td><a href="./#execute_device_resource"><strong>execute_device_resource</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/{resource}/execute</td>
+<td>Executes a resource of a device</td>
+</tr>
+<tr>
+<td><a href="./#get_data_from_device"><strong>get_data_from_device</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}/data</td>
+<td>Get data sent from a device.</td>
+</tr>
+<tr>
+<td><a href="./#get_device"><strong>get_device</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}</td>
+<td>Returns a Device identified by device ID</td>
+</tr>
+<tr>
+<td><a href="./#list_devices"><strong>list_devices</strong></a></td>
+<td><strong>GET</strong> /devices</td>
+<td>Returns a list of Devices</td>
+</tr>
+<tr>
+<td><a href="./#observe_device_resource"><strong>observe_device_resource</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/{resource}/observe</td>
+<td>Triggers observation of the specified resource of a device</td>
+</tr>
+<tr>
+<td><a href="./#observe_device_resources"><strong>observe_device_resources</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/observe</td>
+<td>Triggers observation of resources under an object instance of a device</td>
+</tr>
+<tr>
+<td><a href="./#put_device_tags"><strong>put_device_tags</strong></a></td>
+<td><strong>PUT</strong> /devices/{device_id}/tags</td>
+<td>Updates device tags</td>
+</tr>
+<tr>
+<td><a href="./#read_device_resource"><strong>read_device_resource</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}/{object}/{instance}/{resource}</td>
+<td>Get the specified resource of a device</td>
+</tr>
+<tr>
+<td><a href="./#read_device_resources"><strong>read_device_resources</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}/{object}/{instance}</td>
+<td>Get resources under an object instance of a device</td>
+</tr>
+<tr>
+<td><a href="./#set_device_group"><strong>set_device_group</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/set_group</td>
+<td>Lets a device join a group</td>
+</tr>
+<tr>
+<td><a href="./#unobserve_device_resource"><strong>unobserve_device_resource</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/{resource}/unobserve</td>
+<td>Stops observation of a resource of a device</td>
+</tr>
+<tr>
+<td><a href="./#unobserve_device_resources"><strong>unobserve_device_resources</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/unobserve</td>
+<td>Stops observation of resources under an object instance of a device</td>
+</tr>
+<tr>
+<td><a href="./#unset_device_group"><strong>unset_device_group</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/unset_group</td>
+<td>Lets a device leave from a group</td>
+</tr>
+<tr>
+<td><a href="./#write_device_resource"><strong>write_device_resource</strong></a></td>
+<td><strong>PUT</strong> /devices/{device_id}/{object}/{instance}/{resource}</td>
+<td>Write value to a resource of a device</td>
+</tr>
+</tbody>
+</table>
+<h1 id="create_device"><strong>create_device</strong><a class="headerlink" href="#create_device" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Device create_device(device)</p>
+</blockquote>
+<p>Creates a new Device</p>
+<p>Creates a new Device</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.device import Device
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device = Device(
+        device_id=&quot;device_id_example&quot;,
+        endpoint=&quot;endpoint_example&quot;,
+        firmware_version=&quot;firmware_version_example&quot;,
+        group_id=&quot;group_id_example&quot;,
+        ip_address=&quot;ip_address_example&quot;,
+        last_modified_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_registration_update=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        manufacturer=&quot;manufacturer_example&quot;,
+        model_number=&quot;model_number_example&quot;,
+        objects={},
+        online=False,
+        operator_id=&quot;operator_id_example&quot;,
+        registration_id=&quot;registration_id_example&quot;,
+        registration_life_time=1,
+        serial_number=&quot;serial_number_example&quot;,
+        tags={
+            &quot;key&quot;: &quot;key_example&quot;,
+        },
+    ) # Device | Device to create
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Creates a new Device
+        api_response = api_instance.create_device(device)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;create_device: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device</strong></td>
+<td><a href="../Device/"><strong>Device</strong></a></td>
+<td>Device to create</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type<a class="headerlink" href="#return-type" title="Permanent link">&para;</a></h3>
+<p><a href="../Device/"><strong>Device</strong></a></p>
+<h3 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers">HTTP request headers<a class="headerlink" href="#http-request-headers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details">HTTP response details<a class="headerlink" href="#http-response-details" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>Device created</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="delete_device"><strong>delete_device</strong><a class="headerlink" href="#delete_device" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>delete_device(device_id)</p>
+</blockquote>
+<p>Delete Device</p>
+<p>Delete Device</p>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device to delete
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Device
+        api_instance.delete_device(device_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;delete_device: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type<a class="headerlink" href="#return-type_1" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization<a class="headerlink" href="#authorization_1" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_1">HTTP request headers<a class="headerlink" href="#http-request-headers_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_1">HTTP response details<a class="headerlink" href="#http-response-details_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Device deleted</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such device found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="delete_device_tag"><strong>delete_device_tag</strong><a class="headerlink" href="#delete_device_tag" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>delete_device_tag(device_id, tag_name)</p>
+</blockquote>
+<p>Delete device tag</p>
+<p>Delete device tag</p>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device to update
+    tag_name = &quot;tag_name_example&quot; # str | Name of tag to delete
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete device tag
+        api_instance.delete_device_tag(device_id, tag_name)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;delete_device_tag: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>tag_name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of tag to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type<a class="headerlink" href="#return-type_2" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization<a class="headerlink" href="#authorization_2" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_2">HTTP request headers<a class="headerlink" href="#http-request-headers_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_2">HTTP response details<a class="headerlink" href="#http-response-details_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Device tag deleted</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such device or tag found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="execute_device_resource"><strong>execute_device_resource</strong><a class="headerlink" href="#execute_device_resource" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>execute_device_resource(device_id, object, instance, resource)</p>
+</blockquote>
+<p>Executes a resource of a device</p>
+<p>Executes a resource of a device</p>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.inline_object1 import InlineObject1
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    resource = &quot;resource_example&quot; # str | Resource ID
+    inline_object1 = InlineObject1(
+        value=&quot;value_example&quot;,
+    ) # InlineObject1 |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Executes a resource of a device
+        api_instance.execute_device_resource(device_id, object, instance, resource)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;execute_device_resource: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Executes a resource of a device
+        api_instance.execute_device_resource(device_id, object, instance, resource, inline_object1=inline_object1)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;execute_device_resource: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>resource</strong></td>
+<td><strong>str</strong></td>
+<td>Resource ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>inline_object1</strong></td>
+<td><a href="../InlineObject1/"><strong>InlineObject1</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type<a class="headerlink" href="#return-type_3" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization<a class="headerlink" href="#authorization_3" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_3">HTTP request headers<a class="headerlink" href="#http-request-headers_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_3">HTTP response details<a class="headerlink" href="#http-response-details_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>202</strong></td>
+<td>Execution request is accepted</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Resource is not executable</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="get_data_from_device"><strong>get_data_from_device</strong><a class="headerlink" href="#get_data_from_device" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>[DataEntry] get_data_from_device(device_id)</p>
+</blockquote>
+<p>Get data sent from a device.</p>
+<p>Returns a list of data entries sent from a device that match certain criteria. If the total number of entries does not fit in one page, a URL for accessing the next page is returned in the 'Link' header of the response.</p>
+<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.data_entry import DataEntry
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device ID of the target subscriber that generated data entries.
+    _from = 1 # int | Start time for the data entries search range (unixtime in milliseconds). (optional)
+    to = 1 # int | End time for the data entries search range (unixtime in milliseconds). (optional)
+    sort = &quot;desc&quot; # str | Sort order of the data entries. Either descending (latest data entry first) or ascending (oldest data entry first). (optional) if omitted the server will use the default value of &quot;desc&quot;
+    limit = 1 # int | Maximum number of data entries to retrieve. (optional)
+    last_evaluated_key = &quot;last_evaluated_key_example&quot; # str | The value of `time` in the last log entry retrieved in the previous page. By specifying this parameter, you can continue to retrieve the list from the next page onward. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get data sent from a device.
+        api_response = api_instance.get_data_from_device(device_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;get_data_from_device: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get data sent from a device.
+        api_response = api_instance.get_data_from_device(device_id, _from=_from, to=to, sort=sort, limit=limit, last_evaluated_key=last_evaluated_key)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;get_data_from_device: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device ID of the target subscriber that generated data entries.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>_from</strong></td>
+<td><strong>int</strong></td>
+<td>Start time for the data entries search range (unixtime in milliseconds).</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>to</strong></td>
+<td><strong>int</strong></td>
+<td>End time for the data entries search range (unixtime in milliseconds).</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sort</strong></td>
+<td><strong>str</strong></td>
+<td>Sort order of the data entries. Either descending (latest data entry first) or ascending (oldest data entry first).</td>
+<td>[optional] if omitted the server will use the default value of "desc"</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>Maximum number of data entries to retrieve.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>last_evaluated_key</strong></td>
+<td><strong>str</strong></td>
+<td>The value of &#x60;time&#x60; in the last log entry retrieved in the previous page. By specifying this parameter, you can continue to retrieve the list from the next page onward.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type<a class="headerlink" href="#return-type_4" title="Permanent link">&para;</a></h3>
+<p><a href="../DataEntry/"><strong>[DataEntry]</strong></a></p>
+<h3 id="authorization_4">Authorization<a class="headerlink" href="#authorization_4" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_4">HTTP request headers<a class="headerlink" href="#http-request-headers_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_4">HTTP response details<a class="headerlink" href="#http-response-details_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>A list of data entries.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="get_device"><strong>get_device</strong><a class="headerlink" href="#get_device" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Device get_device(device_id)</p>
+</blockquote>
+<p>Returns a Device identified by device ID</p>
+<p>Returns a Device identified by device ID</p>
+<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.device import Device
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device ID
+    model = False # bool | Whether or not to add model information (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Returns a Device identified by device ID
+        api_response = api_instance.get_device(device_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;get_device: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns a Device identified by device ID
+        api_response = api_instance.get_device(device_id, model=model)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;get_device: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether or not to add model information</td>
+<td>[optional] if omitted the server will use the default value of False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type<a class="headerlink" href="#return-type_5" title="Permanent link">&para;</a></h3>
+<p><a href="../Device/"><strong>Device</strong></a></p>
+<h3 id="authorization_5">Authorization<a class="headerlink" href="#authorization_5" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_5">HTTP request headers<a class="headerlink" href="#http-request-headers_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_5">HTTP response details<a class="headerlink" href="#http-response-details_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>A Device identified by device ID</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such device found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="list_devices"><strong>list_devices</strong><a class="headerlink" href="#list_devices" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>[Device] list_devices()</p>
+</blockquote>
+<p>Returns a list of Devices</p>
+<p>Returns a list of Devices</p>
+<h3 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.device import Device
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    tag_name = &quot;tag_name_example&quot; # str | Tag name (optional)
+    tag_value = &quot;tag_value_example&quot; # str | Tag value (optional)
+    tag_value_match_mode = &quot;tag_value_match_mode_example&quot; # str | Tag value match mode (exact | prefix) (optional)
+    last_evaluated_key = &quot;last_evaluated_key_example&quot; # str | ID of the last Device in the previous page (optional)
+    limit = -1 # int | Max number of Devices in a response (optional) if omitted the server will use the default value of -1
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns a list of Devices
+        api_response = api_instance.list_devices(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, last_evaluated_key=last_evaluated_key, limit=limit)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;list_devices: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tag_name</strong></td>
+<td><strong>str</strong></td>
+<td>Tag name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag_value</strong></td>
+<td><strong>str</strong></td>
+<td>Tag value</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag_value_match_mode</strong></td>
+<td><strong>str</strong></td>
+<td>Tag value match mode (exact</td>
+<td>prefix)</td>
+</tr>
+<tr>
+<td><strong>last_evaluated_key</strong></td>
+<td><strong>str</strong></td>
+<td>ID of the last Device in the previous page</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>Max number of Devices in a response</td>
+<td>[optional] if omitted the server will use the default value of -1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_6">Return type<a class="headerlink" href="#return-type_6" title="Permanent link">&para;</a></h3>
+<p><a href="../Device/"><strong>[Device]</strong></a></p>
+<h3 id="authorization_6">Authorization<a class="headerlink" href="#authorization_6" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_6">HTTP request headers<a class="headerlink" href="#http-request-headers_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_6">HTTP response details<a class="headerlink" href="#http-response-details_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>List of Devices</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="observe_device_resource"><strong>observe_device_resource</strong><a class="headerlink" href="#observe_device_resource" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>observe_device_resource(device_id, object, instance, resource)</p>
+</blockquote>
+<p>Triggers observation of the specified resource of a device</p>
+<p>Triggers observation of the specified resource of a device</p>
+<h3 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    resource = &quot;resource_example&quot; # str | Resource ID
+    model = False # bool | Whether or not to add model information (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Triggers observation of the specified resource of a device
+        api_instance.observe_device_resource(device_id, object, instance, resource)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;observe_device_resource: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Triggers observation of the specified resource of a device
+        api_instance.observe_device_resource(device_id, object, instance, resource, model=model)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;observe_device_resource: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>resource</strong></td>
+<td><strong>str</strong></td>
+<td>Resource ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether or not to add model information</td>
+<td>[optional] if omitted the server will use the default value of False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_7">Return type<a class="headerlink" href="#return-type_7" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_7">Authorization<a class="headerlink" href="#authorization_7" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_7">HTTP request headers<a class="headerlink" href="#http-request-headers_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_7">HTTP response details<a class="headerlink" href="#http-response-details_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>202</strong></td>
+<td>Observation started.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Resource is not readable</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="observe_device_resources"><strong>observe_device_resources</strong><a class="headerlink" href="#observe_device_resources" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>observe_device_resources(device_id, object, instance)</p>
+</blockquote>
+<p>Triggers observation of resources under an object instance of a device</p>
+<p>Triggers observation of resources under an object instance of a device</p>
+<h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    model = False # bool | Whether or not to add model information (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Triggers observation of resources under an object instance of a device
+        api_instance.observe_device_resources(device_id, object, instance)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;observe_device_resources: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Triggers observation of resources under an object instance of a device
+        api_instance.observe_device_resources(device_id, object, instance, model=model)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;observe_device_resources: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether or not to add model information</td>
+<td>[optional] if omitted the server will use the default value of False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_8">Return type<a class="headerlink" href="#return-type_8" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_8">Authorization<a class="headerlink" href="#authorization_8" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_8">HTTP request headers<a class="headerlink" href="#http-request-headers_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_8">HTTP response details<a class="headerlink" href="#http-response-details_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>202</strong></td>
+<td>Observation started.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Resource is not readable</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="put_device_tags"><strong>put_device_tags</strong><a class="headerlink" href="#put_device_tags" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Device put_device_tags(device_id, tag_update_request)</p>
+</blockquote>
+<p>Updates device tags</p>
+<p>Updates device tags</p>
+<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.tag_update_request import TagUpdateRequest
+from soracom_api.model.device import Device
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device to update
+    tag_update_request = [
+        TagUpdateRequest(
+            tag_name=&quot;tag_name_example&quot;,
+            tag_value=&quot;tag_value_example&quot;,
+        ),
+    ] # [TagUpdateRequest] | Array of values for tags to be updated.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Updates device tags
+        api_response = api_instance.put_device_tags(device_id, tag_update_request)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;put_device_tags: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>tag_update_request</strong></td>
+<td><a href="../TagUpdateRequest/"><strong>[TagUpdateRequest]</strong></a></td>
+<td>Array of values for tags to be updated.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_9">Return type<a class="headerlink" href="#return-type_9" title="Permanent link">&para;</a></h3>
+<p><a href="../Device/"><strong>Device</strong></a></p>
+<h3 id="authorization_9">Authorization<a class="headerlink" href="#authorization_9" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_9">HTTP request headers<a class="headerlink" href="#http-request-headers_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_9">HTTP response details<a class="headerlink" href="#http-response-details_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Device updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such device found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="read_device_resource"><strong>read_device_resource</strong><a class="headerlink" href="#read_device_resource" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>ResourceInstance read_device_resource(device_id, object, instance, resource)</p>
+</blockquote>
+<p>Get the specified resource of a device</p>
+<p>Get the specified resource of a device</p>
+<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.resource_instance import ResourceInstance
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    resource = &quot;resource_example&quot; # str | Resource ID
+    model = False # bool | Whether or not to add model information (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get the specified resource of a device
+        api_response = api_instance.read_device_resource(device_id, object, instance, resource)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;read_device_resource: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get the specified resource of a device
+        api_response = api_instance.read_device_resource(device_id, object, instance, resource, model=model)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;read_device_resource: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>resource</strong></td>
+<td><strong>str</strong></td>
+<td>Resource ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether or not to add model information</td>
+<td>[optional] if omitted the server will use the default value of False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_10">Return type<a class="headerlink" href="#return-type_10" title="Permanent link">&para;</a></h3>
+<p><a href="../ResourceInstance/"><strong>ResourceInstance</strong></a></p>
+<h3 id="authorization_10">Authorization<a class="headerlink" href="#authorization_10" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_10">HTTP request headers<a class="headerlink" href="#http-request-headers_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_10">HTTP response details<a class="headerlink" href="#http-response-details_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Resource</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Resource is not readable</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="read_device_resources"><strong>read_device_resources</strong><a class="headerlink" href="#read_device_resources" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>ObjectInstance read_device_resources(device_id, object, instance)</p>
+</blockquote>
+<p>Get resources under an object instance of a device</p>
+<p>Get resources under an object instance of a device</p>
+<h3 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.object_instance import ObjectInstance
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    model = False # bool | Whether or not to add model information (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get resources under an object instance of a device
+        api_response = api_instance.read_device_resources(device_id, object, instance)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;read_device_resources: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get resources under an object instance of a device
+        api_response = api_instance.read_device_resources(device_id, object, instance, model=model)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;read_device_resources: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether or not to add model information</td>
+<td>[optional] if omitted the server will use the default value of False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_11">Return type<a class="headerlink" href="#return-type_11" title="Permanent link">&para;</a></h3>
+<p><a href="../ObjectInstance/"><strong>ObjectInstance</strong></a></p>
+<h3 id="authorization_11">Authorization<a class="headerlink" href="#authorization_11" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_11">HTTP request headers<a class="headerlink" href="#http-request-headers_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_11">HTTP response details<a class="headerlink" href="#http-response-details_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Resources under the specified object instance</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Object instance is not readable</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Object instance is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="set_device_group"><strong>set_device_group</strong><a class="headerlink" href="#set_device_group" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Device set_device_group(device_id)</p>
+</blockquote>
+<p>Lets a device join a group</p>
+<p>Lets a device join a group</p>
+<h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.device import Device
+from soracom_api.model.inline_object2 import InlineObject2
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device to update
+    inline_object2 = InlineObject2(
+        group_id=&quot;group_id_example&quot;,
+    ) # InlineObject2 |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Lets a device join a group
+        api_response = api_instance.set_device_group(device_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;set_device_group: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Lets a device join a group
+        api_response = api_instance.set_device_group(device_id, inline_object2=inline_object2)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;set_device_group: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>inline_object2</strong></td>
+<td><a href="../InlineObject2/"><strong>InlineObject2</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_12">Return type<a class="headerlink" href="#return-type_12" title="Permanent link">&para;</a></h3>
+<p><a href="../Device/"><strong>Device</strong></a></p>
+<h3 id="authorization_12">Authorization<a class="headerlink" href="#authorization_12" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_12">HTTP request headers<a class="headerlink" href="#http-request-headers_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_12">HTTP response details<a class="headerlink" href="#http-response-details_12" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Device updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such device found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="unobserve_device_resource"><strong>unobserve_device_resource</strong><a class="headerlink" href="#unobserve_device_resource" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>unobserve_device_resource(device_id, object, instance, resource)</p>
+</blockquote>
+<p>Stops observation of a resource of a device</p>
+<p>Stops observation of a resource of a device</p>
+<h3 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    resource = &quot;resource_example&quot; # str | Resource ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Stops observation of a resource of a device
+        api_instance.unobserve_device_resource(device_id, object, instance, resource)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;unobserve_device_resource: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>resource</strong></td>
+<td><strong>str</strong></td>
+<td>Resource ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_13">Return type<a class="headerlink" href="#return-type_13" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_13">Authorization<a class="headerlink" href="#authorization_13" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_13">HTTP request headers<a class="headerlink" href="#http-request-headers_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_13">HTTP response details<a class="headerlink" href="#http-response-details_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Observation cancelled</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="unobserve_device_resources"><strong>unobserve_device_resources</strong><a class="headerlink" href="#unobserve_device_resources" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>unobserve_device_resources(device_id, object, instance)</p>
+</blockquote>
+<p>Stops observation of resources under an object instance of a device</p>
+<p>Stops observation of resources under an object instance of a device</p>
+<h3 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Stops observation of resources under an object instance of a device
+        api_instance.unobserve_device_resources(device_id, object, instance)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;unobserve_device_resources: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_14">Return type<a class="headerlink" href="#return-type_14" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_14">Authorization<a class="headerlink" href="#authorization_14" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_14">HTTP request headers<a class="headerlink" href="#http-request-headers_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_14">HTTP response details<a class="headerlink" href="#http-response-details_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Observation cancelled</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="unset_device_group"><strong>unset_device_group</strong><a class="headerlink" href="#unset_device_group" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Device unset_device_group(device_id)</p>
+</blockquote>
+<p>Lets a device leave from a group</p>
+<p>Lets a device leave from a group</p>
+<h3 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.device import Device
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Device to update
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Lets a device leave from a group
+        api_response = api_instance.unset_device_group(device_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;unset_device_group: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Device to update</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_15">Return type<a class="headerlink" href="#return-type_15" title="Permanent link">&para;</a></h3>
+<p><a href="../Device/"><strong>Device</strong></a></p>
+<h3 id="authorization_15">Authorization<a class="headerlink" href="#authorization_15" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_15">HTTP request headers<a class="headerlink" href="#http-request-headers_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_15">HTTP response details<a class="headerlink" href="#http-response-details_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Device updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such device found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="write_device_resource"><strong>write_device_resource</strong><a class="headerlink" href="#write_device_resource" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>write_device_resource(device_id, object, instance, resource, inline_object)</p>
+</blockquote>
+<p>Write value to a resource of a device</p>
+<p>Write value to a resource of a device</p>
+<h3 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import device_api
+from soracom_api.model.inline_object import InlineObject
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = device_api.DeviceApi(api_client)
+    device_id = &quot;device_id_example&quot; # str | Target device
+    object = &quot;object_example&quot; # str | Object ID
+    instance = &quot;instance_example&quot; # str | Instance ID
+    resource = &quot;resource_example&quot; # str | Resource ID
+    inline_object = InlineObject(
+        value=&quot;value_example&quot;,
+    ) # InlineObject | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Write value to a resource of a device
+        api_instance.write_device_resource(device_id, object, instance, resource, inline_object)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling DeviceApi-&gt;write_device_resource: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>device_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target device</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>str</strong></td>
+<td>Object ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>instance</strong></td>
+<td><strong>str</strong></td>
+<td>Instance ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>resource</strong></td>
+<td><strong>str</strong></td>
+<td>Resource ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>inline_object</strong></td>
+<td><a href="../InlineObject/"><strong>InlineObject</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_16">Return type<a class="headerlink" href="#return-type_16" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_16">Authorization<a class="headerlink" href="#authorization_16" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_16">HTTP request headers<a class="headerlink" href="#http-request-headers_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_16">HTTP response details<a class="headerlink" href="#http-response-details_16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>202</strong></td>
+<td>Updating resource is accepted</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Specified Resource does not support write (Including case of connection error such as offline device)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource is not found</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td>Error response from the device. (It includes the case where the LwM2M response message is error from the device, and the error message from the device is included in the response &#39;message&#39;.)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Soracom, Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/soracom" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/SORACOM_PR" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+    
+  </body>
+</html>

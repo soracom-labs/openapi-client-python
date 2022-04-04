@@ -1,0 +1,3640 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Soracom, Inc.">
+      
+      
+        <link rel="canonical" href="https://soracom-labs.github.io/openapi-client-python/api/docs/VirtualPrivateGatewayApi/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>soracom_api.VirtualPrivateGatewayApi - SORACOM API client for Python based on OpenAPI Generator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#soracom_apivirtualprivategatewayapi" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="SORACOM API client for Python based on OpenAPI Generator" class="md-header__button md-logo" aria-label="SORACOM API client for Python based on OpenAPI Generator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SORACOM API client for Python based on OpenAPI Generator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              soracom_api.VirtualPrivateGatewayApi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/soracom-labs/openapi-client-python" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    soracom-labs/openapi-client-python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../" class="md-tabs__link">
+      SORACOM API
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../sandbox/" class="md-tabs__link">
+      SORACOM API Sandbox
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SORACOM API client for Python based on OpenAPI Generator" class="md-nav__button md-logo" aria-label="SORACOM API client for Python based on OpenAPI Generator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    SORACOM API client for Python based on OpenAPI Generator
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/soracom-labs/openapi-client-python" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    soracom-labs/openapi-client-python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        SORACOM API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sandbox/" class="md-nav__link">
+        SORACOM API Sandbox
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="soracom_apivirtualprivategatewayapi">soracom_api.VirtualPrivateGatewayApi<a class="headerlink" href="#soracom_apivirtualprivategatewayapi" title="Permanent link">&para;</a></h1>
+<p>All URIs are relative to <em><a href="https://api.soracom.io/v1">https://api.soracom.io/v1</a></em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#close_gate"><strong>close_gate</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/gate/close</td>
+<td>Close SORACOM Gate.</td>
+</tr>
+<tr>
+<td><a href="./#create_mirroring_peer"><strong>create_mirroring_peer</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/mirroring/peers</td>
+<td>Add node in the list of Junction mirroring peers</td>
+</tr>
+<tr>
+<td><a href="./#create_packet_capture_session"><strong>create_packet_capture_session</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions</td>
+<td>Create Packet Capture Session</td>
+</tr>
+<tr>
+<td><a href="./#create_virtual_private_gateway"><strong>create_virtual_private_gateway</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways</td>
+<td>Create Virtual Private Gateway.</td>
+</tr>
+<tr>
+<td><a href="./#create_vpc_peering_connection"><strong>create_vpc_peering_connection</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/vpc_peering_connections</td>
+<td>Create VPC Peering Connection</td>
+</tr>
+<tr>
+<td><a href="./#delete_mirroring_peer"><strong>delete_mirroring_peer</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/junction/mirroring/peers/{ipaddr}</td>
+<td>Remove peer from the list of Junction mirroring peers</td>
+</tr>
+<tr>
+<td><a href="./#delete_packet_capture_session"><strong>delete_packet_capture_session</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions/{session_id}</td>
+<td>Delete Packet Capture Session</td>
+</tr>
+<tr>
+<td><a href="./#delete_virtual_private_gateway_ip_address_map_entry"><strong>delete_virtual_private_gateway_ip_address_map_entry</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/ip_address_map/{key}</td>
+<td>Delete VPG IP address map entry</td>
+</tr>
+<tr>
+<td><a href="./#delete_vpc_peering_connection"><strong>delete_vpc_peering_connection</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/vpc_peering_connections/{pcx_id}</td>
+<td>Delete VPC Peering Connection.</td>
+</tr>
+<tr>
+<td><a href="./#get_packet_capture_session"><strong>get_packet_capture_session</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions/{session_id}</td>
+<td>Get Packet Capture Session</td>
+</tr>
+<tr>
+<td><a href="./#get_virtual_private_gateway"><strong>get_virtual_private_gateway</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}</td>
+<td>Get Virtual Private Gateway.</td>
+</tr>
+<tr>
+<td><a href="./#list_gate_peers"><strong>list_gate_peers</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/gate/peers</td>
+<td>List VPG Gate peers</td>
+</tr>
+<tr>
+<td><a href="./#list_packet_capture_sessions"><strong>list_packet_capture_sessions</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions</td>
+<td>List Packet Capture Sessions</td>
+</tr>
+<tr>
+<td><a href="./#list_virtual_private_gateway_ip_address_map_entries"><strong>list_virtual_private_gateway_ip_address_map_entries</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/ip_address_map</td>
+<td>List VPG IP address map entries</td>
+</tr>
+<tr>
+<td><a href="./#list_virtual_private_gateways"><strong>list_virtual_private_gateways</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways</td>
+<td>List Virtual Private Gateways.</td>
+</tr>
+<tr>
+<td><a href="./#open_gate"><strong>open_gate</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/gate/open</td>
+<td>Open SORACOM Gate.</td>
+</tr>
+<tr>
+<td><a href="./#put_virtual_private_gateway_ip_address_map_entry"><strong>put_virtual_private_gateway_ip_address_map_entry</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/ip_address_map</td>
+<td>Put an entry in VPG IP address map</td>
+</tr>
+<tr>
+<td><a href="./#register_gate_peer"><strong>register_gate_peer</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/gate/peers</td>
+<td>Register VPG Gate peer</td>
+</tr>
+<tr>
+<td><a href="./#set_inspection_configuration"><strong>set_inspection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/set_inspection</td>
+<td>Set configuration for Junction inspection feature</td>
+</tr>
+<tr>
+<td><a href="./#set_redirection_configuration"><strong>set_redirection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/set_redirection</td>
+<td>Set configuration for Junction redirection feature</td>
+</tr>
+<tr>
+<td><a href="./#set_routing_filter"><strong>set_routing_filter</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/set_routing_filter</td>
+<td>Sets Virtual Private Gateway outbound routing filter.</td>
+</tr>
+<tr>
+<td><a href="./#stop_packet_capture_session"><strong>stop_packet_capture_session</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions/{session_id}/stop</td>
+<td>Stop Packet Capture Session</td>
+</tr>
+<tr>
+<td><a href="./#terminate_virtual_private_gateway"><strong>terminate_virtual_private_gateway</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/terminate</td>
+<td>Terminate Virtual Private Gateway.</td>
+</tr>
+<tr>
+<td><a href="./#unregister_gate_peer"><strong>unregister_gate_peer</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/gate/peers/{outer_ip_address}</td>
+<td>Unregister VPG gate peer</td>
+</tr>
+<tr>
+<td><a href="./#unset_inspection_configuration"><strong>unset_inspection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/unset_inspection</td>
+<td>Unset configuration for Junction inspection feature</td>
+</tr>
+<tr>
+<td><a href="./#unset_redirection_configuration"><strong>unset_redirection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/unset_redirection</td>
+<td>Unset configuration for Junction redirection feature</td>
+</tr>
+<tr>
+<td><a href="./#update_mirroring_peer"><strong>update_mirroring_peer</strong></a></td>
+<td><strong>PUT</strong> /virtual_private_gateways/{vpg_id}/junction/mirroring/peers/{ipaddr}</td>
+<td>Update a Junction mirroring peer</td>
+</tr>
+</tbody>
+</table>
+<h1 id="close_gate"><strong>close_gate</strong><a class="headerlink" href="#close_gate" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>close_gate(vpg_id)</p>
+</blockquote>
+<p>Close SORACOM Gate.</p>
+<p>Close SORACOM Gate on the specified VPG.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Close SORACOM Gate.
+        api_instance.close_gate(vpg_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;close_gate: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type<a class="headerlink" href="#return-type" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers">HTTP request headers<a class="headerlink" href="#http-request-headers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details">HTTP response details<a class="headerlink" href="#http-response-details" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>SORACOM Gate is successfully closed on the VPG.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Client side error.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="create_mirroring_peer"><strong>create_mirroring_peer</strong><a class="headerlink" href="#create_mirroring_peer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>create_mirroring_peer(vpg_id, junction_mirroring_peer)</p>
+</blockquote>
+<p>Add node in the list of Junction mirroring peers</p>
+<p>Add node in the list of Junction mirroring peers</p>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.junction_mirroring_peer import JunctionMirroringPeer
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    junction_mirroring_peer = JunctionMirroringPeer(
+        description=&quot;description_example&quot;,
+        enabled=False,
+        ip_address=&quot;ip_address_example&quot;,
+        protocol=&quot;gre&quot;,
+    ) # JunctionMirroringPeer | Mirroring peer
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Add node in the list of Junction mirroring peers
+        api_instance.create_mirroring_peer(vpg_id, junction_mirroring_peer)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;create_mirroring_peer: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>junction_mirroring_peer</strong></td>
+<td><a href="../JunctionMirroringPeer/"><strong>JunctionMirroringPeer</strong></a></td>
+<td>Mirroring peer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type<a class="headerlink" href="#return-type_1" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization<a class="headerlink" href="#authorization_1" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_1">HTTP request headers<a class="headerlink" href="#http-request-headers_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_1">HTTP response details<a class="headerlink" href="#http-response-details_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>Mirroring peer added/updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="create_packet_capture_session"><strong>create_packet_capture_session</strong><a class="headerlink" href="#create_packet_capture_session" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>PacketCaptureSession create_packet_capture_session(vpg_id, packet_capture_session_request)</p>
+</blockquote>
+<p>Create Packet Capture Session</p>
+<p>Create a packet capture sessions associated the VPG</p>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session_request import PacketCaptureSessionRequest
+from soracom_api.model.packet_capture_session import PacketCaptureSession
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    packet_capture_session_request = PacketCaptureSessionRequest(
+        duration=30,
+        prefix=&quot;zBAMDTMv2D2ylmgd10Z3UB&quot;,
+    ) # PacketCaptureSessionRequest | A packet capture session request
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Packet Capture Session
+        api_response = api_instance.create_packet_capture_session(vpg_id, packet_capture_session_request)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;create_packet_capture_session: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>packet_capture_session_request</strong></td>
+<td><a href="../PacketCaptureSessionRequest/"><strong>PacketCaptureSessionRequest</strong></a></td>
+<td>A packet capture session request</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type<a class="headerlink" href="#return-type_2" title="Permanent link">&para;</a></h3>
+<p><a href="../PacketCaptureSession/"><strong>PacketCaptureSession</strong></a></p>
+<h3 id="authorization_2">Authorization<a class="headerlink" href="#authorization_2" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_2">HTTP request headers<a class="headerlink" href="#http-request-headers_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_2">HTTP response details<a class="headerlink" href="#http-response-details_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Created a new packet capture sessions associated with the VPG</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Failed to create a packet capture sessions associated with the VPG</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="create_virtual_private_gateway"><strong>create_virtual_private_gateway</strong><a class="headerlink" href="#create_virtual_private_gateway" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>VirtualPrivateGateway create_virtual_private_gateway(create_virtual_private_gateway_request)</p>
+</blockquote>
+<p>Create Virtual Private Gateway.</p>
+<p>Create new VPG.</p>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.create_virtual_private_gateway_request import CreateVirtualPrivateGatewayRequest
+from soracom_api.model.virtual_private_gateway import VirtualPrivateGateway
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    create_virtual_private_gateway_request = CreateVirtualPrivateGatewayRequest(
+        device_subnet_cidr_range=&quot;10.128.0.0/9&quot;,
+        type=14,
+        use_internet_gateway=True,
+    ) # CreateVirtualPrivateGatewayRequest | Request containing information for the new VPG to be created.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Virtual Private Gateway.
+        api_response = api_instance.create_virtual_private_gateway(create_virtual_private_gateway_request)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;create_virtual_private_gateway: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>create_virtual_private_gateway_request</strong></td>
+<td><a href="../CreateVirtualPrivateGatewayRequest/"><strong>CreateVirtualPrivateGatewayRequest</strong></a></td>
+<td>Request containing information for the new VPG to be created.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type<a class="headerlink" href="#return-type_3" title="Permanent link">&para;</a></h3>
+<p><a href="../VirtualPrivateGateway/"><strong>VirtualPrivateGateway</strong></a></p>
+<h3 id="authorization_3">Authorization<a class="headerlink" href="#authorization_3" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_3">HTTP request headers<a class="headerlink" href="#http-request-headers_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_3">HTTP response details<a class="headerlink" href="#http-response-details_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>Created</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="create_vpc_peering_connection"><strong>create_vpc_peering_connection</strong><a class="headerlink" href="#create_vpc_peering_connection" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>CreateVpcPeeringConnectionRequest create_vpc_peering_connection(vpg_id, create_vpc_peering_connection_request)</p>
+</blockquote>
+<p>Create VPC Peering Connection</p>
+<p>Creates a VPC peering connection for the specified VPG.</p>
+<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.create_vpc_peering_connection_request import CreateVpcPeeringConnectionRequest
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    create_vpc_peering_connection_request = CreateVpcPeeringConnectionRequest(
+        destination_cidr_block=&quot;destination_cidr_block_example&quot;,
+        peer_owner_id=&quot;peer_owner_id_example&quot;,
+        peer_region=&quot;peer_region_example&quot;,
+        peer_vpc_id=&quot;peer_vpc_id_example&quot;,
+    ) # CreateVpcPeeringConnectionRequest | VPC peering connection to be created.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create VPC Peering Connection
+        api_response = api_instance.create_vpc_peering_connection(vpg_id, create_vpc_peering_connection_request)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;create_vpc_peering_connection: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>create_vpc_peering_connection_request</strong></td>
+<td><a href="../CreateVpcPeeringConnectionRequest/"><strong>CreateVpcPeeringConnectionRequest</strong></a></td>
+<td>VPC peering connection to be created.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type<a class="headerlink" href="#return-type_4" title="Permanent link">&para;</a></h3>
+<p><a href="../CreateVpcPeeringConnectionRequest/"><strong>CreateVpcPeeringConnectionRequest</strong></a></p>
+<h3 id="authorization_4">Authorization<a class="headerlink" href="#authorization_4" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_4">HTTP request headers<a class="headerlink" href="#http-request-headers_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_4">HTTP response details<a class="headerlink" href="#http-response-details_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>The created VPC peering connection.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPC peering connection does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="delete_mirroring_peer"><strong>delete_mirroring_peer</strong><a class="headerlink" href="#delete_mirroring_peer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>delete_mirroring_peer(vpg_id, ipaddr)</p>
+</blockquote>
+<p>Remove peer from the list of Junction mirroring peers</p>
+<p>Remove peer from the list of Junction mirroring peers</p>
+<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    ipaddr = &quot;ipaddr_example&quot; # str | IP address of mirroring peer
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Remove peer from the list of Junction mirroring peers
+        api_instance.delete_mirroring_peer(vpg_id, ipaddr)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;delete_mirroring_peer: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ipaddr</strong></td>
+<td><strong>str</strong></td>
+<td>IP address of mirroring peer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type<a class="headerlink" href="#return-type_5" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_5">Authorization<a class="headerlink" href="#authorization_5" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_5">HTTP request headers<a class="headerlink" href="#http-request-headers_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_5">HTTP response details<a class="headerlink" href="#http-response-details_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Mirroring peer removed</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="delete_packet_capture_session"><strong>delete_packet_capture_session</strong><a class="headerlink" href="#delete_packet_capture_session" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>PacketCaptureSession delete_packet_capture_session(vpg_id, session_id)</p>
+</blockquote>
+<p>Delete Packet Capture Session</p>
+<p>Delete a packet capture sessions associated the VPG</p>
+<h3 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    session_id = &quot;session_id_example&quot; # str | Packet capture session ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Packet Capture Session
+        api_response = api_instance.delete_packet_capture_session(vpg_id, session_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;delete_packet_capture_session: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>session_id</strong></td>
+<td><strong>str</strong></td>
+<td>Packet capture session ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_6">Return type<a class="headerlink" href="#return-type_6" title="Permanent link">&para;</a></h3>
+<p><a href="../PacketCaptureSession/"><strong>PacketCaptureSession</strong></a></p>
+<h3 id="authorization_6">Authorization<a class="headerlink" href="#authorization_6" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_6">HTTP request headers<a class="headerlink" href="#http-request-headers_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_6">HTTP response details<a class="headerlink" href="#http-response-details_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Deleted the packet capture sessions associated with the VPG</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Failed to delete the packet capture sessions associated with the VPG was not found</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The packet capture sessions associated with the VPG was not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="delete_virtual_private_gateway_ip_address_map_entry"><strong>delete_virtual_private_gateway_ip_address_map_entry</strong><a class="headerlink" href="#delete_virtual_private_gateway_ip_address_map_entry" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>IpAddressMapEntry delete_virtual_private_gateway_ip_address_map_entry(vpg_id, key)</p>
+</blockquote>
+<p>Delete VPG IP address map entry</p>
+<p>Deletes an entry in VPG IP address map.</p>
+<h3 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.ip_address_map_entry import IpAddressMapEntry
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    key = &quot;key_example&quot; # str | Target key to remove.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete VPG IP address map entry
+        api_response = api_instance.delete_virtual_private_gateway_ip_address_map_entry(vpg_id, key)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;delete_virtual_private_gateway_ip_address_map_entry: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>key</strong></td>
+<td><strong>str</strong></td>
+<td>Target key to remove.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_7">Return type<a class="headerlink" href="#return-type_7" title="Permanent link">&para;</a></h3>
+<p><a href="../IpAddressMapEntry/"><strong>IpAddressMapEntry</strong></a></p>
+<h3 id="authorization_7">Authorization<a class="headerlink" href="#authorization_7" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_7">HTTP request headers<a class="headerlink" href="#http-request-headers_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_7">HTTP response details<a class="headerlink" href="#http-response-details_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Successfully deleted the entry from the VPG IP address map.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Error in the request.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG or node does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="delete_vpc_peering_connection"><strong>delete_vpc_peering_connection</strong><a class="headerlink" href="#delete_vpc_peering_connection" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>delete_vpc_peering_connection(vpg_id, pcx_id)</p>
+</blockquote>
+<p>Delete VPC Peering Connection.</p>
+<p>Deletes the specified VPC peering connection.</p>
+<h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    pcx_id = &quot;pcx_id_example&quot; # str | VPC peering connection ID to be deleted.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete VPC Peering Connection.
+        api_instance.delete_vpc_peering_connection(vpg_id, pcx_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;delete_vpc_peering_connection: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pcx_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPC peering connection ID to be deleted.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_8">Return type<a class="headerlink" href="#return-type_8" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_8">Authorization<a class="headerlink" href="#authorization_8" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_8">HTTP request headers<a class="headerlink" href="#http-request-headers_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_8">HTTP response details<a class="headerlink" href="#http-response-details_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Deletion of specified VPC peering connection complete.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPC peering connection does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="get_packet_capture_session"><strong>get_packet_capture_session</strong><a class="headerlink" href="#get_packet_capture_session" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>PacketCaptureSession get_packet_capture_session(vpg_id, session_id)</p>
+</blockquote>
+<p>Get Packet Capture Session</p>
+<p>Get a packet capture sessions associated the VPG</p>
+<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    session_id = &quot;session_id_example&quot; # str | Packet capture session ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Packet Capture Session
+        api_response = api_instance.get_packet_capture_session(vpg_id, session_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;get_packet_capture_session: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>session_id</strong></td>
+<td><strong>str</strong></td>
+<td>Packet capture session ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_9">Return type<a class="headerlink" href="#return-type_9" title="Permanent link">&para;</a></h3>
+<p><a href="../PacketCaptureSession/"><strong>PacketCaptureSession</strong></a></p>
+<h3 id="authorization_9">Authorization<a class="headerlink" href="#authorization_9" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_9">HTTP request headers<a class="headerlink" href="#http-request-headers_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_9">HTTP response details<a class="headerlink" href="#http-response-details_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>The packet capture sessions associated with the VPG</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The packet capture sessions associated with the VPG was not found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="get_virtual_private_gateway"><strong>get_virtual_private_gateway</strong><a class="headerlink" href="#get_virtual_private_gateway" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>get_virtual_private_gateway(vpg_id)</p>
+</blockquote>
+<p>Get Virtual Private Gateway.</p>
+<p>Retrieves information about the specified VPG.</p>
+<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Virtual Private Gateway.
+        api_instance.get_virtual_private_gateway(vpg_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;get_virtual_private_gateway: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_10">Return type<a class="headerlink" href="#return-type_10" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_10">Authorization<a class="headerlink" href="#authorization_10" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_10">HTTP request headers<a class="headerlink" href="#http-request-headers_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_10">HTTP response details<a class="headerlink" href="#http-response-details_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>The specified VPG.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="list_gate_peers"><strong>list_gate_peers</strong><a class="headerlink" href="#list_gate_peers" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>[GatePeer] list_gate_peers(vpg_id)</p>
+</blockquote>
+<p>List VPG Gate peers</p>
+<p>List Gate peers registered in the Virtual Private Gateway</p>
+<h3 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.gate_peer import GatePeer
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # List VPG Gate peers
+        api_response = api_instance.list_gate_peers(vpg_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;list_gate_peers: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_11">Return type<a class="headerlink" href="#return-type_11" title="Permanent link">&para;</a></h3>
+<p><a href="../GatePeer/"><strong>[GatePeer]</strong></a></p>
+<h3 id="authorization_11">Authorization<a class="headerlink" href="#authorization_11" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_11">HTTP request headers<a class="headerlink" href="#http-request-headers_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_11">HTTP response details<a class="headerlink" href="#http-response-details_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>List of peers registered in the VPG.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Client side error in the request.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="list_packet_capture_sessions"><strong>list_packet_capture_sessions</strong><a class="headerlink" href="#list_packet_capture_sessions" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>[PacketCaptureSession] list_packet_capture_sessions(vpg_id)</p>
+</blockquote>
+<p>List Packet Capture Sessions</p>
+<p>List packet capture sessions associated with the VPG</p>
+<h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    last_evaluated_key = &quot;null&quot; # str | ID of the last group in the previous page (optional) if omitted the server will use the default value of &quot;null&quot;
+    limit = 10 # int | Max number of results in a response (optional) if omitted the server will use the default value of 10
+
+    # example passing only required values which don't have defaults set
+    try:
+        # List Packet Capture Sessions
+        api_response = api_instance.list_packet_capture_sessions(vpg_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;list_packet_capture_sessions: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # List Packet Capture Sessions
+        api_response = api_instance.list_packet_capture_sessions(vpg_id, last_evaluated_key=last_evaluated_key, limit=limit)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;list_packet_capture_sessions: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>last_evaluated_key</strong></td>
+<td><strong>str</strong></td>
+<td>ID of the last group in the previous page</td>
+<td>[optional] if omitted the server will use the default value of "null"</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>Max number of results in a response</td>
+<td>[optional] if omitted the server will use the default value of 10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_12">Return type<a class="headerlink" href="#return-type_12" title="Permanent link">&para;</a></h3>
+<p><a href="../PacketCaptureSession/"><strong>[PacketCaptureSession]</strong></a></p>
+<h3 id="authorization_12">Authorization<a class="headerlink" href="#authorization_12" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_12">HTTP request headers<a class="headerlink" href="#http-request-headers_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_12">HTTP response details<a class="headerlink" href="#http-response-details_12" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>List of packet capture sessions associated with the VPG</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Failed to list packet capture sessions associated with the VPG</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="list_virtual_private_gateway_ip_address_map_entries"><strong>list_virtual_private_gateway_ip_address_map_entries</strong><a class="headerlink" href="#list_virtual_private_gateway_ip_address_map_entries" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>[IpAddressMapEntry] list_virtual_private_gateway_ip_address_map_entries(vpg_id)</p>
+</blockquote>
+<p>List VPG IP address map entries</p>
+<p>Describes the list of IP address map entries in the Virtual Private Gateway</p>
+<h3 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.ip_address_map_entry import IpAddressMapEntry
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # List VPG IP address map entries
+        api_response = api_instance.list_virtual_private_gateway_ip_address_map_entries(vpg_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;list_virtual_private_gateway_ip_address_map_entries: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_13">Return type<a class="headerlink" href="#return-type_13" title="Permanent link">&para;</a></h3>
+<p><a href="../IpAddressMapEntry/"><strong>[IpAddressMapEntry]</strong></a></p>
+<h3 id="authorization_13">Authorization<a class="headerlink" href="#authorization_13" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_13">HTTP request headers<a class="headerlink" href="#http-request-headers_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_13">HTTP response details<a class="headerlink" href="#http-response-details_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Successfully fetched the list of IP address map entries.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Error in the request.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG or node does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="list_virtual_private_gateways"><strong>list_virtual_private_gateways</strong><a class="headerlink" href="#list_virtual_private_gateways" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>[VirtualPrivateGateway] list_virtual_private_gateways()</p>
+</blockquote>
+<p>List Virtual Private Gateways.</p>
+<p>Returns a list of VPGs.</p>
+<h3 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.virtual_private_gateway import VirtualPrivateGateway
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    tag_name = &quot;tag_name_example&quot; # str | Tag name of the VPG. Filters through all VPGs that exactly match the tag name. When tag_name is specified, tag_value is required. (optional)
+    tag_value = &quot;tag_value_example&quot; # str | Tag value of the VPGs. (optional)
+    tag_value_match_mode = &quot;exact&quot; # str | Tag match mode. (optional) if omitted the server will use the default value of &quot;exact&quot;
+    limit = 1 # int | Maximum number of results per response page. (optional)
+    last_evaluated_key = &quot;last_evaluated_key_example&quot; # str | The last group ID retrieved on the current page. By specifying this parameter, you can continue to retrieve the list from the next VPG onward. (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # List Virtual Private Gateways.
+        api_response = api_instance.list_virtual_private_gateways(tag_name=tag_name, tag_value=tag_value, tag_value_match_mode=tag_value_match_mode, limit=limit, last_evaluated_key=last_evaluated_key)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;list_virtual_private_gateways: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tag_name</strong></td>
+<td><strong>str</strong></td>
+<td>Tag name of the VPG. Filters through all VPGs that exactly match the tag name. When tag_name is specified, tag_value is required.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag_value</strong></td>
+<td><strong>str</strong></td>
+<td>Tag value of the VPGs.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag_value_match_mode</strong></td>
+<td><strong>str</strong></td>
+<td>Tag match mode.</td>
+<td>[optional] if omitted the server will use the default value of "exact"</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>int</strong></td>
+<td>Maximum number of results per response page.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>last_evaluated_key</strong></td>
+<td><strong>str</strong></td>
+<td>The last group ID retrieved on the current page. By specifying this parameter, you can continue to retrieve the list from the next VPG onward.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_14">Return type<a class="headerlink" href="#return-type_14" title="Permanent link">&para;</a></h3>
+<p><a href="../VirtualPrivateGateway/"><strong>[VirtualPrivateGateway]</strong></a></p>
+<h3 id="authorization_14">Authorization<a class="headerlink" href="#authorization_14" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_14">HTTP request headers<a class="headerlink" href="#http-request-headers_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_14">HTTP response details<a class="headerlink" href="#http-response-details_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>List of VPGs.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="open_gate"><strong>open_gate</strong><a class="headerlink" href="#open_gate" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>open_gate(vpg_id)</p>
+</blockquote>
+<p>Open SORACOM Gate.</p>
+<p>Open SORACOM Gate on the specified VPG.</p>
+<h3 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.open_gate_request import OpenGateRequest
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    open_gate_request = OpenGateRequest(
+        privacy_separator_enabled=False,
+        vxlan_id=10,
+    ) # OpenGateRequest | Optional configuration parameters for Gate. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Open SORACOM Gate.
+        api_instance.open_gate(vpg_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;open_gate: %s\n&quot; % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Open SORACOM Gate.
+        api_instance.open_gate(vpg_id, open_gate_request=open_gate_request)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;open_gate: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>open_gate_request</strong></td>
+<td><a href="../OpenGateRequest/"><strong>OpenGateRequest</strong></a></td>
+<td>Optional configuration parameters for Gate.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_15">Return type<a class="headerlink" href="#return-type_15" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_15">Authorization<a class="headerlink" href="#authorization_15" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_15">HTTP request headers<a class="headerlink" href="#http-request-headers_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_15">HTTP response details<a class="headerlink" href="#http-response-details_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>SORACOM Gate is successfully opened on the VPG.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Client side error.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="put_virtual_private_gateway_ip_address_map_entry"><strong>put_virtual_private_gateway_ip_address_map_entry</strong><a class="headerlink" href="#put_virtual_private_gateway_ip_address_map_entry" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>IpAddressMapEntry put_virtual_private_gateway_ip_address_map_entry(vpg_id, put_ip_address_map_entry_request)</p>
+</blockquote>
+<p>Put an entry in VPG IP address map</p>
+<p>Puts an entry in VPG IP address map.</p>
+<h3 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.ip_address_map_entry import IpAddressMapEntry
+from soracom_api.model.put_ip_address_map_entry_request import PutIpAddressMapEntryRequest
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    put_ip_address_map_entry_request = PutIpAddressMapEntryRequest(
+        ip_address=&quot;ip_address_example&quot;,
+        key=&quot;key_example&quot;,
+    ) # PutIpAddressMapEntryRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Put an entry in VPG IP address map
+        api_response = api_instance.put_virtual_private_gateway_ip_address_map_entry(vpg_id, put_ip_address_map_entry_request)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;put_virtual_private_gateway_ip_address_map_entry: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>put_ip_address_map_entry_request</strong></td>
+<td><a href="../PutIpAddressMapEntryRequest/"><strong>PutIpAddressMapEntryRequest</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_16">Return type<a class="headerlink" href="#return-type_16" title="Permanent link">&para;</a></h3>
+<p><a href="../IpAddressMapEntry/"><strong>IpAddressMapEntry</strong></a></p>
+<h3 id="authorization_16">Authorization<a class="headerlink" href="#authorization_16" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_16">HTTP request headers<a class="headerlink" href="#http-request-headers_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_16">HTTP response details<a class="headerlink" href="#http-response-details_16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Successfully put an entry for the specified key and IP address.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Error in the request.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG or node does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="register_gate_peer"><strong>register_gate_peer</strong><a class="headerlink" href="#register_gate_peer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>GatePeer register_gate_peer(vpg_id, register_gate_peer_request)</p>
+</blockquote>
+<p>Register VPG Gate peer</p>
+<p>Register a host as a gate peer in the Virtual Private Gateway</p>
+<h3 id="example_17">Example<a class="headerlink" href="#example_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.gate_peer import GatePeer
+from soracom_api.model.register_gate_peer_request import RegisterGatePeerRequest
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    register_gate_peer_request = RegisterGatePeerRequest(
+        inner_ip_address=&quot;inner_ip_address_example&quot;,
+        outer_ip_address=&quot;outer_ip_address_example&quot;,
+    ) # RegisterGatePeerRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Register VPG Gate peer
+        api_response = api_instance.register_gate_peer(vpg_id, register_gate_peer_request)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;register_gate_peer: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>register_gate_peer_request</strong></td>
+<td><a href="../RegisterGatePeerRequest/"><strong>RegisterGatePeerRequest</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_17">Return type<a class="headerlink" href="#return-type_17" title="Permanent link">&para;</a></h3>
+<p><a href="../GatePeer/"><strong>GatePeer</strong></a></p>
+<h3 id="authorization_17">Authorization<a class="headerlink" href="#authorization_17" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_17">HTTP request headers<a class="headerlink" href="#http-request-headers_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_17">HTTP response details<a class="headerlink" href="#http-response-details_17" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Gate peer is successfully registered.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Client side error in the request.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="set_inspection_configuration"><strong>set_inspection_configuration</strong><a class="headerlink" href="#set_inspection_configuration" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>set_inspection_configuration(vpg_id, junction_inspection_configuration)</p>
+</blockquote>
+<p>Set configuration for Junction inspection feature</p>
+<p>Set configuration for Junction inspection feature</p>
+<h3 id="example_18">Example<a class="headerlink" href="#example_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.junction_inspection_configuration import JunctionInspectionConfiguration
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    junction_inspection_configuration = JunctionInspectionConfiguration(
+        enabled=False,
+        report=FunnelConfiguration(
+            add_sim_id=False,
+            content_type=FunnelContentType(&quot;json&quot;),
+            credentials_id=&quot;credentials_id_example&quot;,
+            destination=FunnelDestination(
+                provider=&quot;provider_example&quot;,
+                resource_url=&quot;resource_url_example&quot;,
+                service=&quot;service_example&quot;,
+            ),
+            enabled=False,
+        ),
+    ) # JunctionInspectionConfiguration | Inspection configuration
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Set configuration for Junction inspection feature
+        api_instance.set_inspection_configuration(vpg_id, junction_inspection_configuration)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;set_inspection_configuration: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>junction_inspection_configuration</strong></td>
+<td><a href="../JunctionInspectionConfiguration/"><strong>JunctionInspectionConfiguration</strong></a></td>
+<td>Inspection configuration</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_18">Return type<a class="headerlink" href="#return-type_18" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_18">Authorization<a class="headerlink" href="#authorization_18" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_18">HTTP request headers<a class="headerlink" href="#http-request-headers_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_18">HTTP response details<a class="headerlink" href="#http-response-details_18" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Configuration added/updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="set_redirection_configuration"><strong>set_redirection_configuration</strong><a class="headerlink" href="#set_redirection_configuration" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>set_redirection_configuration(vpg_id, junction_redirection_configuration)</p>
+</blockquote>
+<p>Set configuration for Junction redirection feature</p>
+<p>Set configuration for Junction redirection feature</p>
+<h3 id="example_19">Example<a class="headerlink" href="#example_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.junction_redirection_configuration import JunctionRedirectionConfiguration
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    junction_redirection_configuration = JunctionRedirectionConfiguration(
+        description=&quot;description_example&quot;,
+        enabled=False,
+        gateway=&quot;gateway_example&quot;,
+    ) # JunctionRedirectionConfiguration | Redirection configuration
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Set configuration for Junction redirection feature
+        api_instance.set_redirection_configuration(vpg_id, junction_redirection_configuration)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;set_redirection_configuration: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>junction_redirection_configuration</strong></td>
+<td><a href="../JunctionRedirectionConfiguration/"><strong>JunctionRedirectionConfiguration</strong></a></td>
+<td>Redirection configuration</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_19">Return type<a class="headerlink" href="#return-type_19" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_19">Authorization<a class="headerlink" href="#authorization_19" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_19">HTTP request headers<a class="headerlink" href="#http-request-headers_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_19">HTTP response details<a class="headerlink" href="#http-response-details_19" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Configuration added/updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="set_routing_filter"><strong>set_routing_filter</strong><a class="headerlink" href="#set_routing_filter" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>set_routing_filter(vpg_id, routing_filter_entry)</p>
+</blockquote>
+<p>Sets Virtual Private Gateway outbound routing filter.</p>
+<p>Sets Virtual Private Gateway outbound routing filter.</p>
+<h3 id="example_20">Example<a class="headerlink" href="#example_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.routing_filter_entry import RoutingFilterEntry
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    routing_filter_entry = [
+        RoutingFilterEntry(
+            action=&quot;allow&quot;,
+            ip_range=&quot;ip_range_example&quot;,
+        ),
+    ] # [RoutingFilterEntry] | List of routing filter entries
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Sets Virtual Private Gateway outbound routing filter.
+        api_instance.set_routing_filter(vpg_id, routing_filter_entry)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;set_routing_filter: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>routing_filter_entry</strong></td>
+<td><a href="../RoutingFilterEntry/"><strong>[RoutingFilterEntry]</strong></a></td>
+<td>List of routing filter entries</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_20">Return type<a class="headerlink" href="#return-type_20" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_20">Authorization<a class="headerlink" href="#authorization_20" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_20">HTTP request headers<a class="headerlink" href="#http-request-headers_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_20">HTTP response details<a class="headerlink" href="#http-response-details_20" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>The routing filter is successfully configured.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Invalid argument is given</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="stop_packet_capture_session"><strong>stop_packet_capture_session</strong><a class="headerlink" href="#stop_packet_capture_session" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>PacketCaptureSession stop_packet_capture_session(vpg_id, session_id)</p>
+</blockquote>
+<p>Stop Packet Capture Session</p>
+<p>Stop a packet capture session associated with the VPG</p>
+<h3 id="example_21">Example<a class="headerlink" href="#example_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.packet_capture_session import PacketCaptureSession
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    session_id = &quot;session_id_example&quot; # str | Packet capture session ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Stop Packet Capture Session
+        api_response = api_instance.stop_packet_capture_session(vpg_id, session_id)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;stop_packet_capture_session: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>session_id</strong></td>
+<td><strong>str</strong></td>
+<td>Packet capture session ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_21">Return type<a class="headerlink" href="#return-type_21" title="Permanent link">&para;</a></h3>
+<p><a href="../PacketCaptureSession/"><strong>PacketCaptureSession</strong></a></p>
+<h3 id="authorization_21">Authorization<a class="headerlink" href="#authorization_21" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_21">HTTP request headers<a class="headerlink" href="#http-request-headers_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h3 id="http-response-details_21">HTTP response details<a class="headerlink" href="#http-response-details_21" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>The stopped packet capture session associated with the VPG</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>The packet capture session can be stopped only when its status is CAPTURING</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The packet capture session associated with the VPG was not found</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td>The packet capture session could not be stopped</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="terminate_virtual_private_gateway"><strong>terminate_virtual_private_gateway</strong><a class="headerlink" href="#terminate_virtual_private_gateway" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>terminate_virtual_private_gateway(vpg_id)</p>
+</blockquote>
+<p>Terminate Virtual Private Gateway.</p>
+<p>Terminates the specified VPG.</p>
+<h3 id="example_22">Example<a class="headerlink" href="#example_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Terminate Virtual Private Gateway.
+        api_instance.terminate_virtual_private_gateway(vpg_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;terminate_virtual_private_gateway: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_22">Parameters<a class="headerlink" href="#parameters_22" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_22">Return type<a class="headerlink" href="#return-type_22" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_22">Authorization<a class="headerlink" href="#authorization_22" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_22">HTTP request headers<a class="headerlink" href="#http-request-headers_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_22">HTTP response details<a class="headerlink" href="#http-response-details_22" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Termination of specified VPG started.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>There is a reason why the specified VPG cannot be terminated.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="unregister_gate_peer"><strong>unregister_gate_peer</strong><a class="headerlink" href="#unregister_gate_peer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>unregister_gate_peer(vpg_id, outer_ip_address)</p>
+</blockquote>
+<p>Unregister VPG gate peer</p>
+<p>Unregister a gate peer from the Virtual Private Gateway</p>
+<h3 id="example_23">Example<a class="headerlink" href="#example_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | Target VPG ID.
+    outer_ip_address = &quot;outer_ip_address_example&quot; # str | ID of the target node.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Unregister VPG gate peer
+        api_instance.unregister_gate_peer(vpg_id, outer_ip_address)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;unregister_gate_peer: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_23">Parameters<a class="headerlink" href="#parameters_23" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>Target VPG ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>outer_ip_address</strong></td>
+<td><strong>str</strong></td>
+<td>ID of the target node.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_23">Return type<a class="headerlink" href="#return-type_23" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_23">Authorization<a class="headerlink" href="#authorization_23" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_23">HTTP request headers<a class="headerlink" href="#http-request-headers_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_23">HTTP response details<a class="headerlink" href="#http-response-details_23" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Successfully deregistered the Gate peer.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Error in the request.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>The specified VPG or node does not exist.</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="unset_inspection_configuration"><strong>unset_inspection_configuration</strong><a class="headerlink" href="#unset_inspection_configuration" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>unset_inspection_configuration(vpg_id)</p>
+</blockquote>
+<p>Unset configuration for Junction inspection feature</p>
+<p>Unset configuration for Junction inspection feature</p>
+<h3 id="example_24">Example<a class="headerlink" href="#example_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Unset configuration for Junction inspection feature
+        api_instance.unset_inspection_configuration(vpg_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;unset_inspection_configuration: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_24">Parameters<a class="headerlink" href="#parameters_24" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_24">Return type<a class="headerlink" href="#return-type_24" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_24">Authorization<a class="headerlink" href="#authorization_24" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_24">HTTP request headers<a class="headerlink" href="#http-request-headers_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_24">HTTP response details<a class="headerlink" href="#http-response-details_24" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Configuration unset</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="unset_redirection_configuration"><strong>unset_redirection_configuration</strong><a class="headerlink" href="#unset_redirection_configuration" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>unset_redirection_configuration(vpg_id)</p>
+</blockquote>
+<p>Unset configuration for Junction redirection feature</p>
+<p>Unset configuration for Junction redirection feature</p>
+<h3 id="example_25">Example<a class="headerlink" href="#example_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Unset configuration for Junction redirection feature
+        api_instance.unset_redirection_configuration(vpg_id)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;unset_redirection_configuration: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_25">Parameters<a class="headerlink" href="#parameters_25" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_25">Return type<a class="headerlink" href="#return-type_25" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_25">Authorization<a class="headerlink" href="#authorization_25" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_25">HTTP request headers<a class="headerlink" href="#http-request-headers_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_25">HTTP response details<a class="headerlink" href="#http-response-details_25" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Configuration unset</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+<h1 id="update_mirroring_peer"><strong>update_mirroring_peer</strong><a class="headerlink" href="#update_mirroring_peer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>update_mirroring_peer(vpg_id, ipaddr, attribute_update)</p>
+</blockquote>
+<p>Update a Junction mirroring peer</p>
+<p>Update a Junction mirroring peer</p>
+<h3 id="example_26">Example<a class="headerlink" href="#example_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Api Key Authentication (api_key):</li>
+<li>Api Key Authentication (api_token):</li>
+</ul>
+<pre><code class="language-python">import time
+import soracom_api
+from soracom_api.api import virtual_private_gateway_api
+from soracom_api.model.attribute_update import AttributeUpdate
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = virtual_private_gateway_api.VirtualPrivateGatewayApi(api_client)
+    vpg_id = &quot;vpg_id_example&quot; # str | VPG ID
+    ipaddr = &quot;ipaddr_example&quot; # str | Mirroring peer IP address
+    attribute_update = [
+        AttributeUpdate(
+            key=&quot;key_example&quot;,
+            value=&quot;value_example&quot;,
+        ),
+    ] # [AttributeUpdate] | List of attributes to update
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update a Junction mirroring peer
+        api_instance.update_mirroring_peer(vpg_id, ipaddr, attribute_update)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling VirtualPrivateGatewayApi-&gt;update_mirroring_peer: %s\n&quot; % e)
+</code></pre>
+<h3 id="parameters_26">Parameters<a class="headerlink" href="#parameters_26" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vpg_id</strong></td>
+<td><strong>str</strong></td>
+<td>VPG ID</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ipaddr</strong></td>
+<td><strong>str</strong></td>
+<td>Mirroring peer IP address</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>attribute_update</strong></td>
+<td><a href="../AttributeUpdate/"><strong>[AttributeUpdate]</strong></a></td>
+<td>List of attributes to update</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_26">Return type<a class="headerlink" href="#return-type_26" title="Permanent link">&para;</a></h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_26">Authorization<a class="headerlink" href="#authorization_26" title="Permanent link">&para;</a></h3>
+<p><a href="../README.md#api_key">api_key</a>, <a href="../README.md#api_token">api_token</a></p>
+<h3 id="http-request-headers_26">HTTP request headers<a class="headerlink" href="#http-request-headers_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<h3 id="http-response-details_26">HTTP response details<a class="headerlink" href="#http-response-details_26" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+<th>Response headers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Mirroring peer updated</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such VPG found</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#">[Back to top]</a> <a href="../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.md#documentation-for-models">[Back to Model list]</a> <a href="../README.md">[Back to README]</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Soracom, Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/soracom" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/SORACOM_PR" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+    
+  </body>
+</html>

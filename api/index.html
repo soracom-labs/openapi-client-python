@@ -1,0 +1,3177 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Soracom, Inc.">
+      
+      
+        <link rel="canonical" href="https://soracom-labs.github.io/openapi-client-python/api/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>SORACOM API - SORACOM API client for Python based on OpenAPI Generator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#soracom-api" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="SORACOM API client for Python based on OpenAPI Generator" class="md-header__button md-logo" aria-label="SORACOM API client for Python based on OpenAPI Generator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SORACOM API client for Python based on OpenAPI Generator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SORACOM API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/soracom-labs/openapi-client-python" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    soracom-labs/openapi-client-python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      SORACOM API
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../sandbox/" class="md-tabs__link">
+      SORACOM API Sandbox
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SORACOM API client for Python based on OpenAPI Generator" class="md-nav__button md-logo" aria-label="SORACOM API client for Python based on OpenAPI Generator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    SORACOM API client for Python based on OpenAPI Generator
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/soracom-labs/openapi-client-python" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    soracom-labs/openapi-client-python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SORACOM API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SORACOM API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-usage" class="md-nav__link">
+    Installation &amp; Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation &amp; Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-install" class="md-nav__link">
+    pip install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setuptools" class="md-nav__link">
+    Setuptools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-for-api-endpoints" class="md-nav__link">
+    Documentation for API Endpoints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-for-models" class="md-nav__link">
+    Documentation For Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-for-authorization" class="md-nav__link">
+    Documentation For Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_key" class="md-nav__link">
+    api_key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_token" class="md-nav__link">
+    api_token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    Author
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-for-large-openapi-documents" class="md-nav__link">
+    Notes for Large OpenAPI documents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox/" class="md-nav__link">
+        SORACOM API Sandbox
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-usage" class="md-nav__link">
+    Installation &amp; Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation &amp; Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-install" class="md-nav__link">
+    pip install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setuptools" class="md-nav__link">
+    Setuptools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-for-api-endpoints" class="md-nav__link">
+    Documentation for API Endpoints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-for-models" class="md-nav__link">
+    Documentation For Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-for-authorization" class="md-nav__link">
+    Documentation For Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_key" class="md-nav__link">
+    api_key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_token" class="md-nav__link">
+    api_token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    Author
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-for-large-openapi-documents" class="md-nav__link">
+    Notes for Large OpenAPI documents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="soracom-api">soracom-api<a class="headerlink" href="#soracom-api" title="Permanent link">&para;</a></h1>
+<p>SORACOM API v1</p>
+<p>This Python package is automatically generated by the <a href="https://openapi-generator.tech">OpenAPI Generator</a> project:</p>
+<ul>
+<li>API version: VERSION_PLACEHOLDER</li>
+<li>Package version: 1.0.0</li>
+<li>Build package: org.openapitools.codegen.languages.PythonClientCodegen</li>
+</ul>
+<h2 id="requirements">Requirements.<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>Python &gt;=3.6</p>
+<h2 id="installation-usage">Installation &amp; Usage<a class="headerlink" href="#installation-usage" title="Permanent link">&para;</a></h2>
+<h3 id="pip-install">pip install<a class="headerlink" href="#pip-install" title="Permanent link">&para;</a></h3>
+<p>If the python package is hosted on a repository, you can install directly using:</p>
+<pre><code class="language-sh">pip install git+https://github.com/soracom-labs/openapi-client-python.git
+</code></pre>
+<p>(you may need to run <code>pip</code> with root permission: <code>sudo pip install git+https://github.com/soracom-labs/openapi-client-python.git</code>)</p>
+<p>Then import the package:</p>
+<pre><code class="language-python">import soracom_api
+</code></pre>
+<h3 id="setuptools">Setuptools<a class="headerlink" href="#setuptools" title="Permanent link">&para;</a></h3>
+<p>Install via <a href="http://pypi.python.org/pypi/setuptools">Setuptools</a>.</p>
+<pre><code class="language-sh">python setup.py install --user
+</code></pre>
+<p>(or <code>sudo python setup.py install</code> to install the package for all users)</p>
+<p>Then import the package:</p>
+<pre><code class="language-python">import soracom_api
+</code></pre>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>Please follow the <a href="#installation--usage">installation procedure</a> and then run the following:</p>
+<pre><code class="language-python">
+import time
+import soracom_api
+from pprint import pprint
+from soracom_api.api import audit_log_api
+from soracom_api.model.api_audit_log_entry import APIAuditLogEntry
+from soracom_api.model.napter_audit_log_entry import NapterAuditLogEntry
+# Defining the host is optional and defaults to https://api.soracom.io/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = soracom_api.Configuration(
+    host = &quot;https://api.soracom.io/v1&quot;
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_key'] = 'Bearer'
+
+# Configure API key authorization: api_token
+configuration.api_key['api_token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['api_token'] = 'Bearer'
+
+
+# Enter a context with an instance of the API client
+with soracom_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = audit_log_api.AuditLogApi(api_client)
+    api_kind = &quot;api_kind_example&quot; # str | Filter item for audit log retrieval by API kind (e.g. `/v1/auth`). (optional)
+from_epoch_ms = 1 # int | Start time for the log search range (unixtime milliseconds). (optional)
+to_epoch_ms = 1 # int | End time for the log search range (unixtime milliseconds). (optional)
+limit = 1 # int | Maximum number of log entries to retrieve. (optional)
+last_evaluated_key = &quot;last_evaluated_key_example&quot; # str | The value of `requestedTimeEpochMs` in the last log entry retrieved in the previous page. By specifying this parameter, you can continue to retrieve the list from the next page onward. (optional)
+
+    try:
+        # Retrieve audit logs for API calls
+        api_response = api_instance.get_api_audit_logs(api_kind=api_kind, from_epoch_ms=from_epoch_ms, to_epoch_ms=to_epoch_ms, limit=limit, last_evaluated_key=last_evaluated_key)
+        pprint(api_response)
+    except soracom_api.ApiException as e:
+        print(&quot;Exception when calling AuditLogApi-&gt;get_api_audit_logs: %s\n&quot; % e)
+</code></pre>
+<h2 id="documentation-for-api-endpoints">Documentation for API Endpoints<a class="headerlink" href="#documentation-for-api-endpoints" title="Permanent link">&para;</a></h2>
+<p>All URIs are relative to <em><a href="https://api.soracom.io/v1">https://api.soracom.io/v1</a></em></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>AuditLogApi</em></td>
+<td><a href="docs/AuditLogApi/#get_api_audit_logs"><strong>get_api_audit_logs</strong></a></td>
+<td><strong>GET</strong> /audit_logs/api</td>
+<td>Retrieve audit logs for API calls</td>
+</tr>
+<tr>
+<td><em>AuditLogApi</em></td>
+<td><a href="docs/AuditLogApi/#get_napter_audit_logs"><strong>get_napter_audit_logs</strong></a></td>
+<td><strong>GET</strong> /audit_logs/napter</td>
+<td>Retrieve audit logs for Napter</td>
+</tr>
+<tr>
+<td><em>AuthApi</em></td>
+<td><a href="docs/AuthApi/#auth"><strong>auth</strong></a></td>
+<td><strong>POST</strong> /auth</td>
+<td>Performs authentication to access to the SORACOM API.</td>
+</tr>
+<tr>
+<td><em>AuthApi</em></td>
+<td><a href="docs/AuthApi/#issue_password_reset_token"><strong>issue_password_reset_token</strong></a></td>
+<td><strong>POST</strong> /auth/password_reset_token/issue</td>
+<td>Issues a password reset token for the operator.</td>
+</tr>
+<tr>
+<td><em>AuthApi</em></td>
+<td><a href="docs/AuthApi/#verify_password_reset_token"><strong>verify_password_reset_token</strong></a></td>
+<td><strong>POST</strong> /auth/password_reset_token/verify</td>
+<td>Verifies the password reset token and updates password.</td>
+</tr>
+<tr>
+<td><em>BillingApi</em></td>
+<td><a href="docs/BillingApi/#export_billing"><strong>export_billing</strong></a></td>
+<td><strong>POST</strong> /bills/{yyyyMM}/export</td>
+<td>Output billing CSV file to S3.</td>
+</tr>
+<tr>
+<td><em>BillingApi</em></td>
+<td><a href="docs/BillingApi/#export_latest_billing"><strong>export_latest_billing</strong></a></td>
+<td><strong>POST</strong> /bills/latest/export</td>
+<td>Export latest billing CSV file to S3.</td>
+</tr>
+<tr>
+<td><em>BillingApi</em></td>
+<td><a href="docs/BillingApi/#get_billing"><strong>get_billing</strong></a></td>
+<td><strong>GET</strong> /bills/{yyyyMM}</td>
+<td>Get bill.</td>
+</tr>
+<tr>
+<td><em>BillingApi</em></td>
+<td><a href="docs/BillingApi/#get_billing_history"><strong>get_billing_history</strong></a></td>
+<td><strong>GET</strong> /bills</td>
+<td>Get billing history.</td>
+</tr>
+<tr>
+<td><em>BillingApi</em></td>
+<td><a href="docs/BillingApi/#get_billing_per_day"><strong>get_billing_per_day</strong></a></td>
+<td><strong>GET</strong> /bills/{yyyyMM}/daily</td>
+<td>Get bill per day.</td>
+</tr>
+<tr>
+<td><em>BillingApi</em></td>
+<td><a href="docs/BillingApi/#get_latest_billing"><strong>get_latest_billing</strong></a></td>
+<td><strong>GET</strong> /bills/latest</td>
+<td>Get latest bill.</td>
+</tr>
+<tr>
+<td><em>CellLocationApi</em></td>
+<td><a href="docs/CellLocationApi/#batch_get_cell_locations"><strong>batch_get_cell_locations</strong></a></td>
+<td><strong>POST</strong> /cell_locations</td>
+<td>List location information for multiple cell towers.</td>
+</tr>
+<tr>
+<td><em>CellLocationApi</em></td>
+<td><a href="docs/CellLocationApi/#get_cell_location"><strong>get_cell_location</strong></a></td>
+<td><strong>GET</strong> /cell_locations</td>
+<td>Get location information for a cell tower.</td>
+</tr>
+<tr>
+<td><em>CredentialApi</em></td>
+<td><a href="docs/CredentialApi/#create_credential"><strong>create_credential</strong></a></td>
+<td><strong>POST</strong> /credentials/{credentials_id}</td>
+<td>Create a credential.</td>
+</tr>
+<tr>
+<td><em>CredentialApi</em></td>
+<td><a href="docs/CredentialApi/#delete_credential"><strong>delete_credential</strong></a></td>
+<td><strong>DELETE</strong> /credentials/{credentials_id}</td>
+<td>Delete a credential.</td>
+</tr>
+<tr>
+<td><em>CredentialApi</em></td>
+<td><a href="docs/CredentialApi/#list_credentials"><strong>list_credentials</strong></a></td>
+<td><strong>GET</strong> /credentials</td>
+<td>List of credentials.</td>
+</tr>
+<tr>
+<td><em>CredentialApi</em></td>
+<td><a href="docs/CredentialApi/#update_credential"><strong>update_credential</strong></a></td>
+<td><strong>PUT</strong> /credentials/{credentials_id}</td>
+<td>Update a credential.</td>
+</tr>
+<tr>
+<td><em>DataEntryApi</em></td>
+<td><a href="docs/DataEntryApi/#delete_data_entry"><strong>delete_data_entry</strong></a></td>
+<td><strong>DELETE</strong> /data/{resource_type}/{resource_id}/{time}</td>
+<td>Deletes a data entry</td>
+</tr>
+<tr>
+<td><em>DataEntryApi</em></td>
+<td><a href="docs/DataEntryApi/#get_data_entries"><strong>get_data_entries</strong></a></td>
+<td><strong>GET</strong> /data/{resource_type}/{resource_id}</td>
+<td>Get data sent from a resource.</td>
+</tr>
+<tr>
+<td><em>DataEntryApi</em></td>
+<td><a href="docs/DataEntryApi/#get_data_entry"><strong>get_data_entry</strong></a></td>
+<td><strong>GET</strong> /data/{resource_type}/{resource_id}/{time}</td>
+<td>Gets a data entry</td>
+</tr>
+<tr>
+<td><em>DataEntryApi</em></td>
+<td><a href="docs/DataEntryApi/#list_data_source_resources"><strong>list_data_source_resources</strong></a></td>
+<td><strong>GET</strong> /data/resources</td>
+<td>Get the list of data source resources</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#create_device"><strong>create_device</strong></a></td>
+<td><strong>POST</strong> /devices</td>
+<td>Creates a new Device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#delete_device"><strong>delete_device</strong></a></td>
+<td><strong>DELETE</strong> /devices/{device_id}</td>
+<td>Delete Device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#delete_device_tag"><strong>delete_device_tag</strong></a></td>
+<td><strong>DELETE</strong> /devices/{device_id}/tags/{tag_name}</td>
+<td>Delete device tag</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#execute_device_resource"><strong>execute_device_resource</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/{resource}/execute</td>
+<td>Executes a resource of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#get_data_from_device"><strong>get_data_from_device</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}/data</td>
+<td>Get data sent from a device.</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#get_device"><strong>get_device</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}</td>
+<td>Returns a Device identified by device ID</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#list_devices"><strong>list_devices</strong></a></td>
+<td><strong>GET</strong> /devices</td>
+<td>Returns a list of Devices</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#observe_device_resource"><strong>observe_device_resource</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/{resource}/observe</td>
+<td>Triggers observation of the specified resource of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#observe_device_resources"><strong>observe_device_resources</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/observe</td>
+<td>Triggers observation of resources under an object instance of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#put_device_tags"><strong>put_device_tags</strong></a></td>
+<td><strong>PUT</strong> /devices/{device_id}/tags</td>
+<td>Updates device tags</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#read_device_resource"><strong>read_device_resource</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}/{object}/{instance}/{resource}</td>
+<td>Get the specified resource of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#read_device_resources"><strong>read_device_resources</strong></a></td>
+<td><strong>GET</strong> /devices/{device_id}/{object}/{instance}</td>
+<td>Get resources under an object instance of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#set_device_group"><strong>set_device_group</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/set_group</td>
+<td>Lets a device join a group</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#unobserve_device_resource"><strong>unobserve_device_resource</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/{resource}/unobserve</td>
+<td>Stops observation of a resource of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#unobserve_device_resources"><strong>unobserve_device_resources</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/{object}/{instance}/unobserve</td>
+<td>Stops observation of resources under an object instance of a device</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#unset_device_group"><strong>unset_device_group</strong></a></td>
+<td><strong>POST</strong> /devices/{device_id}/unset_group</td>
+<td>Lets a device leave from a group</td>
+</tr>
+<tr>
+<td><em>DeviceApi</em></td>
+<td><a href="docs/DeviceApi/#write_device_resource"><strong>write_device_resource</strong></a></td>
+<td><strong>PUT</strong> /devices/{device_id}/{object}/{instance}/{resource}</td>
+<td>Write value to a resource of a device</td>
+</tr>
+<tr>
+<td><em>DeviceObjectModelApi</em></td>
+<td><a href="docs/DeviceObjectModelApi/#create_device_object_model"><strong>create_device_object_model</strong></a></td>
+<td><strong>POST</strong> /device_object_models</td>
+<td>Creates a new device object model</td>
+</tr>
+<tr>
+<td><em>DeviceObjectModelApi</em></td>
+<td><a href="docs/DeviceObjectModelApi/#delete_device_object_model"><strong>delete_device_object_model</strong></a></td>
+<td><strong>DELETE</strong> /device_object_models/{model_id}</td>
+<td>Deletes a device object model</td>
+</tr>
+<tr>
+<td><em>DeviceObjectModelApi</em></td>
+<td><a href="docs/DeviceObjectModelApi/#get_device_object_model"><strong>get_device_object_model</strong></a></td>
+<td><strong>GET</strong> /device_object_models/{model_id}</td>
+<td>Gets a device object model</td>
+</tr>
+<tr>
+<td><em>DeviceObjectModelApi</em></td>
+<td><a href="docs/DeviceObjectModelApi/#list_device_object_models"><strong>list_device_object_models</strong></a></td>
+<td><strong>GET</strong> /device_object_models</td>
+<td>Returns a list of device object models</td>
+</tr>
+<tr>
+<td><em>DeviceObjectModelApi</em></td>
+<td><a href="docs/DeviceObjectModelApi/#set_device_object_model_scope"><strong>set_device_object_model_scope</strong></a></td>
+<td><strong>POST</strong> /device_object_models/{model_id}/set_scope</td>
+<td>Sets scope for a device object model</td>
+</tr>
+<tr>
+<td><em>DeviceObjectModelApi</em></td>
+<td><a href="docs/DeviceObjectModelApi/#update_device_object_model"><strong>update_device_object_model</strong></a></td>
+<td><strong>POST</strong> /device_object_models/{model_id}</td>
+<td>Updates a device object model</td>
+</tr>
+<tr>
+<td><em>DiagnosticApi</em></td>
+<td><a href="docs/DiagnosticApi/#get_diagnostic"><strong>get_diagnostic</strong></a></td>
+<td><strong>GET</strong> /diagnostics/{diagnostic_id}</td>
+<td>Get diagnostic</td>
+</tr>
+<tr>
+<td><em>DiagnosticApi</em></td>
+<td><a href="docs/DiagnosticApi/#send_diagnostic_request"><strong>send_diagnostic_request</strong></a></td>
+<td><strong>POST</strong> /diagnostics</td>
+<td>Send diagnostic request</td>
+</tr>
+<tr>
+<td><em>EmailApi</em></td>
+<td><a href="docs/EmailApi/#delete_email"><strong>delete_email</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/emails/{email_id}</td>
+<td>Delete email address</td>
+</tr>
+<tr>
+<td><em>EmailApi</em></td>
+<td><a href="docs/EmailApi/#get_email"><strong>get_email</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/emails/{email_id}</td>
+<td>Get email address</td>
+</tr>
+<tr>
+<td><em>EmailApi</em></td>
+<td><a href="docs/EmailApi/#issue_add_email_token"><strong>issue_add_email_token</strong></a></td>
+<td><strong>POST</strong> /operators/add_email_token/issue</td>
+<td>Issue a token to add an email address</td>
+</tr>
+<tr>
+<td><em>EmailApi</em></td>
+<td><a href="docs/EmailApi/#list_emails"><strong>list_emails</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/emails</td>
+<td>List email addresses</td>
+</tr>
+<tr>
+<td><em>EmailApi</em></td>
+<td><a href="docs/EmailApi/#verify_add_email_token"><strong>verify_add_email_token</strong></a></td>
+<td><strong>POST</strong> /operators/add_email_token/verify</td>
+<td>Verify a token to add an email address</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#create_event_handler"><strong>create_event_handler</strong></a></td>
+<td><strong>POST</strong> /event_handlers</td>
+<td>Create Event Handler.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#delete_event_handler"><strong>delete_event_handler</strong></a></td>
+<td><strong>DELETE</strong> /event_handlers/{handler_id}</td>
+<td>Delete Event Handler.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#delete_ignore_event_handler"><strong>delete_ignore_event_handler</strong></a></td>
+<td><strong>DELETE</strong> /event_handlers/{handler_id}/subscribers/{imsi}/ignore</td>
+<td>Delete Ignore Event Handler.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#get_event_handler"><strong>get_event_handler</strong></a></td>
+<td><strong>GET</strong> /event_handlers/{handler_id}</td>
+<td>Get Event Handler.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#list_event_handlers"><strong>list_event_handlers</strong></a></td>
+<td><strong>GET</strong> /event_handlers</td>
+<td>List Event Handlers.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#list_event_handlers_by_subscriber"><strong>list_event_handlers_by_subscriber</strong></a></td>
+<td><strong>GET</strong> /event_handlers/subscribers/{imsi}</td>
+<td>List Event Handlers related to Subscriber.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#set_ignore_event_handler"><strong>set_ignore_event_handler</strong></a></td>
+<td><strong>POST</strong> /event_handlers/{handler_id}/subscribers/{imsi}/ignore</td>
+<td>Ignore Event Handler.</td>
+</tr>
+<tr>
+<td><em>EventHandlerApi</em></td>
+<td><a href="docs/EventHandlerApi/#update_event_handler"><strong>update_event_handler</strong></a></td>
+<td><strong>PUT</strong> /event_handlers/{handler_id}</td>
+<td>Update Event Handler.</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#delete_directory"><strong>delete_directory</strong></a></td>
+<td><strong>DELETE</strong> /files/{scope}/{path}/</td>
+<td>Delete specified directory in the scope.</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#delete_file"><strong>delete_file</strong></a></td>
+<td><strong>DELETE</strong> /files/{scope}/{path}</td>
+<td>Delete specified file in the scope.</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#find_files"><strong>find_files</strong></a></td>
+<td><strong>GET</strong> /files</td>
+<td>Find files with prefix query parameter in the scope</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#get_file"><strong>get_file</strong></a></td>
+<td><strong>GET</strong> /files/{scope}/{path}</td>
+<td>Download file specified by the path and the scope</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#get_file_metadata"><strong>get_file_metadata</strong></a></td>
+<td><strong>HEAD</strong> /files/{scope}/{path}</td>
+<td>Get the metadata of the file specified by the path and the scope</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#list_files"><strong>list_files</strong></a></td>
+<td><strong>GET</strong> /files/{scope}/{path}/</td>
+<td>List files and directories on the path in the scope</td>
+</tr>
+<tr>
+<td><em>FileEntryApi</em></td>
+<td><a href="docs/FileEntryApi/#put_file"><strong>put_file</strong></a></td>
+<td><strong>PUT</strong> /files/{scope}/{path}</td>
+<td>Upload file to the path in the scope.</td>
+</tr>
+<tr>
+<td><em>FilesApi</em></td>
+<td><a href="docs/FilesApi/#get_exported_file"><strong>get_exported_file</strong></a></td>
+<td><strong>GET</strong> /files/exported/{exported_file_id}</td>
+<td>Get an exported file.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#delete_gadget_tag"><strong>delete_gadget_tag</strong></a></td>
+<td><strong>DELETE</strong> /gadgets/{product_id}/{serial_number}/tags/{tag_name}</td>
+<td>Delete gadget Tag.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#disable_termination_on_gadget"><strong>disable_termination_on_gadget</strong></a></td>
+<td><strong>POST</strong> /gadgets/{product_id}/{serial_number}/disable_termination</td>
+<td>Disable Termination of gadget.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#enable_termination_on_gadget"><strong>enable_termination_on_gadget</strong></a></td>
+<td><strong>POST</strong> /gadgets/{product_id}/{serial_number}/enable_termination</td>
+<td>Enable Termination of gadget.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#get_gadget"><strong>get_gadget</strong></a></td>
+<td><strong>GET</strong> /gadgets/{product_id}/{serial_number}</td>
+<td>Get gadget.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#list_gadgets"><strong>list_gadgets</strong></a></td>
+<td><strong>GET</strong> /gadgets</td>
+<td>List gadgets.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#put_gadget_tags"><strong>put_gadget_tags</strong></a></td>
+<td><strong>PUT</strong> /gadgets/{product_id}/{serial_number}/tags</td>
+<td>Bulk Insert or Update gadget Tags.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#register_gadget"><strong>register_gadget</strong></a></td>
+<td><strong>POST</strong> /gadgets/{product_id}/{serial_number}/register</td>
+<td>Register a gadget.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#set_gadget_group"><strong>set_gadget_group</strong></a></td>
+<td><strong>POST</strong> /gadgets/{product_id}/{serial_number}/set_group</td>
+<td>Set Group of gadget.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#terminate_gadget"><strong>terminate_gadget</strong></a></td>
+<td><strong>POST</strong> /gadgets/{product_id}/{serial_number}/terminate</td>
+<td>Terminate gadget.</td>
+</tr>
+<tr>
+<td><em>GadgetApi</em></td>
+<td><a href="docs/GadgetApi/#unset_gadget_group"><strong>unset_gadget_group</strong></a></td>
+<td><strong>POST</strong> /gadgets/{product_id}/{serial_number}/unset_group</td>
+<td>Unset Group of gadget.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#create_group"><strong>create_group</strong></a></td>
+<td><strong>POST</strong> /groups</td>
+<td>Create Group.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#delete_configuration_namespace"><strong>delete_configuration_namespace</strong></a></td>
+<td><strong>DELETE</strong> /groups/{group_id}/configuration/{namespace}</td>
+<td>Delete Group Configuration Namespace.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#delete_configuration_parameter"><strong>delete_configuration_parameter</strong></a></td>
+<td><strong>DELETE</strong> /groups/{group_id}/configuration/{namespace}/{name}</td>
+<td>Delete Group Configuration Parameters.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#delete_group"><strong>delete_group</strong></a></td>
+<td><strong>DELETE</strong> /groups/{group_id}</td>
+<td>Delete Group.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#delete_group_tag"><strong>delete_group_tag</strong></a></td>
+<td><strong>DELETE</strong> /groups/{group_id}/tags/{tag_name}</td>
+<td>Delete Group Tag.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#get_group"><strong>get_group</strong></a></td>
+<td><strong>GET</strong> /groups/{group_id}</td>
+<td>Get Group.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#list_groups"><strong>list_groups</strong></a></td>
+<td><strong>GET</strong> /groups</td>
+<td>List Groups.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#list_subscribers_in_group"><strong>list_subscribers_in_group</strong></a></td>
+<td><strong>GET</strong> /groups/{group_id}/subscribers</td>
+<td>List Subscribers in a group.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#put_configuration_parameters"><strong>put_configuration_parameters</strong></a></td>
+<td><strong>PUT</strong> /groups/{group_id}/configuration/{namespace}</td>
+<td>Update Group Configuration Parameters.</td>
+</tr>
+<tr>
+<td><em>GroupApi</em></td>
+<td><a href="docs/GroupApi/#put_group_tags"><strong>put_group_tags</strong></a></td>
+<td><strong>PUT</strong> /groups/{group_id}/tags</td>
+<td>Update Group Tags.</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#create_lagoon_user"><strong>create_lagoon_user</strong></a></td>
+<td><strong>POST</strong> /lagoon/users</td>
+<td>Create a SORACOM Lagoon user</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#delete_lagoon_user"><strong>delete_lagoon_user</strong></a></td>
+<td><strong>DELETE</strong> /lagoon/users/{lagoon_user_id}</td>
+<td>Delete a SORACOM Lagoon user</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#get_image_link"><strong>get_image_link</strong></a></td>
+<td><strong>GET</strong> /lagoon/image/link</td>
+<td>Get a custom icon image link of SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#get_lagoon_migration_info"><strong>get_lagoon_migration_info</strong></a></td>
+<td><strong>GET</strong> /lagoon/migration</td>
+<td>Get the version migration information for SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#initialize_lagoon_dashboard_permissions"><strong>initialize_lagoon_dashboard_permissions</strong></a></td>
+<td><strong>POST</strong> /lagoon/dashboards/{dashboard_id}/permissions/init</td>
+<td>Update permissions to the initial state for a dashboard of SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#list_lagoon_dashboards_permissions"><strong>list_lagoon_dashboards_permissions</strong></a></td>
+<td><strong>GET</strong> /lagoon/dashboards/permissions</td>
+<td>List permissions for all SORACOM Lagoon dashboards</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#list_lagoon_license_pack_status"><strong>list_lagoon_license_pack_status</strong></a></td>
+<td><strong>GET</strong> /lagoon/license_packs</td>
+<td>Get the status of active SORACOM Lagoon license packs</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#list_lagoon_users"><strong>list_lagoon_users</strong></a></td>
+<td><strong>GET</strong> /lagoon/users</td>
+<td>List SORACOM Lagoon users that belong to operator</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#migrate_lagoon"><strong>migrate_lagoon</strong></a></td>
+<td><strong>POST</strong> /lagoon/migration</td>
+<td>Migrate SORACOM Lagoon version</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#register_lagoon"><strong>register_lagoon</strong></a></td>
+<td><strong>POST</strong> /lagoon/register</td>
+<td>Register (activate) SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#terminate_lagoon"><strong>terminate_lagoon</strong></a></td>
+<td><strong>POST</strong> /lagoon/terminate</td>
+<td>Terminate (deactivate) SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#update_lagoon_dashboard_permissions"><strong>update_lagoon_dashboard_permissions</strong></a></td>
+<td><strong>PUT</strong> /lagoon/dashboards/{dashboard_id}/permissions</td>
+<td>Update permissions for a dashboard of SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#update_lagoon_license_pack"><strong>update_lagoon_license_pack</strong></a></td>
+<td><strong>PUT</strong> /lagoon/license_packs</td>
+<td>Update the quantities for license packs of SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#update_lagoon_plan"><strong>update_lagoon_plan</strong></a></td>
+<td><strong>PUT</strong> /lagoon/plan</td>
+<td>Update the plan of SORACOM Lagoon</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#update_lagoon_user_email"><strong>update_lagoon_user_email</strong></a></td>
+<td><strong>PUT</strong> /lagoon/users/{lagoon_user_id}/email</td>
+<td>Update email address of a SORACOM Lagoon user</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#update_lagoon_user_password"><strong>update_lagoon_user_password</strong></a></td>
+<td><strong>PUT</strong> /lagoon/users/{lagoon_user_id}/password</td>
+<td>Update password of a SORACOM Lagoon user</td>
+</tr>
+<tr>
+<td><em>LagoonApi</em></td>
+<td><a href="docs/LagoonApi/#update_lagoon_user_permission"><strong>update_lagoon_user_permission</strong></a></td>
+<td><strong>PUT</strong> /lagoon/users/{lagoon_user_id}/permission</td>
+<td>Update permission of a SORACOM Lagoon user</td>
+</tr>
+<tr>
+<td><em>LogApi</em></td>
+<td><a href="docs/LogApi/#get_logs"><strong>get_logs</strong></a></td>
+<td><strong>GET</strong> /logs</td>
+<td>Get Logs.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#delete_lora_device_tag"><strong>delete_lora_device_tag</strong></a></td>
+<td><strong>DELETE</strong> /lora_devices/{device_id}/tags/{tag_name}</td>
+<td>Delete LoRa device Tag.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#disable_termination_on_lora_device"><strong>disable_termination_on_lora_device</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/disable_termination</td>
+<td>Disable Termination of LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#enable_termination_on_lora_device"><strong>enable_termination_on_lora_device</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/enable_termination</td>
+<td>Enable Termination of LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#get_data_from_lora_device"><strong>get_data_from_lora_device</strong></a></td>
+<td><strong>GET</strong> /lora_devices/{device_id}/data</td>
+<td>Get data sent from a LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#get_lora_device"><strong>get_lora_device</strong></a></td>
+<td><strong>GET</strong> /lora_devices/{device_id}</td>
+<td>Get LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#list_lora_devices"><strong>list_lora_devices</strong></a></td>
+<td><strong>GET</strong> /lora_devices</td>
+<td>List LoRa devices.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#put_lora_device_tags"><strong>put_lora_device_tags</strong></a></td>
+<td><strong>PUT</strong> /lora_devices/{device_id}/tags</td>
+<td>Bulk Insert or Update LoRa device Tags.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#register_lora_device"><strong>register_lora_device</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/register</td>
+<td>Register LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#send_data_to_lora_device"><strong>send_data_to_lora_device</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/data</td>
+<td>Send data to a LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#set_lora_device_group"><strong>set_lora_device_group</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/set_group</td>
+<td>Set Group of LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#terminate_lora_device"><strong>terminate_lora_device</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/terminate</td>
+<td>Terminate LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraDeviceApi</em></td>
+<td><a href="docs/LoraDeviceApi/#unset_lora_device_group"><strong>unset_lora_device_group</strong></a></td>
+<td><strong>POST</strong> /lora_devices/{device_id}/unset_group</td>
+<td>Unset Group of LoRa device.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#delete_lora_gateway_tag"><strong>delete_lora_gateway_tag</strong></a></td>
+<td><strong>DELETE</strong> /lora_gateways/{gateway_id}/tags/{tag_name}</td>
+<td>Delete LoRa gateway tag.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#disable_termination_on_lora_gateway"><strong>disable_termination_on_lora_gateway</strong></a></td>
+<td><strong>POST</strong> /lora_gateways/{gateway_id}/disable_termination</td>
+<td>Disable Termination of LoRa gateway.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#enable_termination_on_lora_gateway"><strong>enable_termination_on_lora_gateway</strong></a></td>
+<td><strong>POST</strong> /lora_gateways/{gateway_id}/enable_termination</td>
+<td>Enable Termination of LoRa gateway.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#get_lora_gateway"><strong>get_lora_gateway</strong></a></td>
+<td><strong>GET</strong> /lora_gateways/{gateway_id}</td>
+<td>Get LoRa gateway.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#list_lora_gateways"><strong>list_lora_gateways</strong></a></td>
+<td><strong>GET</strong> /lora_gateways</td>
+<td>List LoRa Gateways.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#put_lora_gateway_tags"><strong>put_lora_gateway_tags</strong></a></td>
+<td><strong>PUT</strong> /lora_gateways/{gateway_id}/tags</td>
+<td>Bulk Insert or Update LoRa gateway Tags.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#set_lora_network_set"><strong>set_lora_network_set</strong></a></td>
+<td><strong>POST</strong> /lora_gateways/{gateway_id}/set_network_set</td>
+<td>Set Network Set ID of LoRa gateway.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#terminate_lora_gateway"><strong>terminate_lora_gateway</strong></a></td>
+<td><strong>POST</strong> /lora_gateways/{gateway_id}/terminate</td>
+<td>Terminate LoRa gateway.</td>
+</tr>
+<tr>
+<td><em>LoraGatewayApi</em></td>
+<td><a href="docs/LoraGatewayApi/#unset_lora_network_set"><strong>unset_lora_network_set</strong></a></td>
+<td><strong>POST</strong> /lora_gateways/{gateway_id}/unset_network_set</td>
+<td>Unset Network Set ID of LoRa gateway.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#add_permission_to_lora_network_set"><strong>add_permission_to_lora_network_set</strong></a></td>
+<td><strong>POST</strong> /lora_network_sets/{ns_id}/add_permission</td>
+<td>Adds permission to a LoRa network set.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#create_lora_network_set"><strong>create_lora_network_set</strong></a></td>
+<td><strong>POST</strong> /lora_network_sets</td>
+<td>Create a LoRa network set.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#delete_lora_network_set"><strong>delete_lora_network_set</strong></a></td>
+<td><strong>DELETE</strong> /lora_network_sets/{ns_id}</td>
+<td>Delete LoRa network set.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#delete_lora_network_set_tag"><strong>delete_lora_network_set_tag</strong></a></td>
+<td><strong>DELETE</strong> /lora_network_sets/{ns_id}/tags/{tag_name}</td>
+<td>Delete LoRa network set tag.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#get_lora_network_set"><strong>get_lora_network_set</strong></a></td>
+<td><strong>GET</strong> /lora_network_sets/{ns_id}</td>
+<td>Get LoRa network set.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#list_gateways_in_lora_network_set"><strong>list_gateways_in_lora_network_set</strong></a></td>
+<td><strong>GET</strong> /lora_network_sets/{ns_id}/gateways</td>
+<td>List LoRa Gateways in a Network Set.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#list_lora_network_sets"><strong>list_lora_network_sets</strong></a></td>
+<td><strong>GET</strong> /lora_network_sets</td>
+<td>List LoRa Network Sets.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#put_lora_network_set_tags"><strong>put_lora_network_set_tags</strong></a></td>
+<td><strong>PUT</strong> /lora_network_sets/{ns_id}/tags</td>
+<td>Bulk Insert or Update LoRa network set tags.</td>
+</tr>
+<tr>
+<td><em>LoraNetworkSetApi</em></td>
+<td><a href="docs/LoraNetworkSetApi/#revoke_permission_from_lora_network_set"><strong>revoke_permission_from_lora_network_set</strong></a></td>
+<td><strong>POST</strong> /lora_network_sets/{ns_id}/revoke_permission</td>
+<td>Revokes a permission from a LoRa network set.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#add_coverage_type"><strong>add_coverage_type</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/coverage_type/{coverage_type}</td>
+<td>Add coverage type.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#add_operator_contract"><strong>add_operator_contract</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/contracts</td>
+<td>Add Operator Contract.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#create_company_information"><strong>create_company_information</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/company_information</td>
+<td>Create company information.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#create_individual_information"><strong>create_individual_information</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/individual_information</td>
+<td>Create individual information.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#create_operator"><strong>create_operator</strong></a></td>
+<td><strong>POST</strong> /operators</td>
+<td>Create Operator.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#delete_operator_auth_key"><strong>delete_operator_auth_key</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/auth_keys/{auth_key_id}</td>
+<td>Delete Operator AuthKey.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#delete_operator_contract"><strong>delete_operator_contract</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/contracts/{contract_name}</td>
+<td>Delete Operator Contract.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#enable_mfa"><strong>enable_mfa</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/mfa</td>
+<td>Enable Operator&#39;s MFA.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#generate_auth_token"><strong>generate_auth_token</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/token</td>
+<td>Generate Authentication Token.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#generate_operator_auth_key"><strong>generate_operator_auth_key</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/auth_keys</td>
+<td>Generate Operator AuthKey.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#generate_support_token"><strong>generate_support_token</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/support/token</td>
+<td>Generate Token for Support Console.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#get_company_information"><strong>get_company_information</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/company_information</td>
+<td>Get company information.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#get_individual_information"><strong>get_individual_information</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/individual_information</td>
+<td>Get individual information.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#get_mfa_status"><strong>get_mfa_status</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/mfa</td>
+<td>Get Operator&#39;s MFA Status.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#get_operator"><strong>get_operator</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}</td>
+<td>Get Operator.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#issue_mfa_revoking_token"><strong>issue_mfa_revoking_token</strong></a></td>
+<td><strong>POST</strong> /operators/mfa_revoke_token/issue</td>
+<td>Issue Operator&#39;s MFA Revoke Token.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#list_operator_auth_keys"><strong>list_operator_auth_keys</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/auth_keys</td>
+<td>List Operator AuthKeys.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#revoke_mfa"><strong>revoke_mfa</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/mfa</td>
+<td>Revoke Operator&#39;s MFA.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#update_company_information"><strong>update_company_information</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/company_information</td>
+<td>Update company information.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#update_individual_information"><strong>update_individual_information</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/individual_information</td>
+<td>Update individual information.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#update_operator_password"><strong>update_operator_password</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/password</td>
+<td>Update Operator Password.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#verify_mfa"><strong>verify_mfa</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/mfa/verify</td>
+<td>Verify Operator&#39;s MFA OTP Code.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#verify_mfa_revoking_token"><strong>verify_mfa_revoking_token</strong></a></td>
+<td><strong>POST</strong> /operators/mfa_revoke_token/verify</td>
+<td>Verify Operator&#39;s MFA revoke token.</td>
+</tr>
+<tr>
+<td><em>OperatorApi</em></td>
+<td><a href="docs/OperatorApi/#verify_operator"><strong>verify_operator</strong></a></td>
+<td><strong>POST</strong> /operators/verify</td>
+<td>Verify Operator.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#cancel_order"><strong>cancel_order</strong></a></td>
+<td><strong>PUT</strong> /orders/{order_id}/cancel</td>
+<td>Cancel order.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#confirm_coupon_order"><strong>confirm_coupon_order</strong></a></td>
+<td><strong>PUT</strong> /coupons/{order_id}/confirm</td>
+<td>Confirm coupon order.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#confirm_order"><strong>confirm_order</strong></a></td>
+<td><strong>PUT</strong> /orders/{order_id}/confirm</td>
+<td>Confirm order.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#confirm_volume_discount_order"><strong>confirm_volume_discount_order</strong></a></td>
+<td><strong>PUT</strong> /volume_discounts/{order_id}/confirm</td>
+<td>Confirm long term discount order.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#create_coupon_quotation"><strong>create_coupon_quotation</strong></a></td>
+<td><strong>POST</strong> /coupons</td>
+<td>Create coupon quotation.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#create_quotation"><strong>create_quotation</strong></a></td>
+<td><strong>POST</strong> /orders</td>
+<td>Create Quotation.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#create_volume_discount_quotation"><strong>create_volume_discount_quotation</strong></a></td>
+<td><strong>POST</strong> /volume_discounts</td>
+<td>Create long term discount quotation.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#get_order"><strong>get_order</strong></a></td>
+<td><strong>GET</strong> /orders/{order_id}</td>
+<td>Get confirmed order.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#list_available_discounts"><strong>list_available_discounts</strong></a></td>
+<td><strong>GET</strong> /volume_discounts/available_discounts</td>
+<td>List available long term discounts.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#list_ordered_subscribers"><strong>list_ordered_subscribers</strong></a></td>
+<td><strong>GET</strong> /orders/{order_id}/subscribers</td>
+<td>List ordered subscribers.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#list_orders"><strong>list_orders</strong></a></td>
+<td><strong>GET</strong> /orders</td>
+<td>List confirmed orders.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#list_products"><strong>list_products</strong></a></td>
+<td><strong>GET</strong> /products</td>
+<td>List products.</td>
+</tr>
+<tr>
+<td><em>OrderApi</em></td>
+<td><a href="docs/OrderApi/#register_ordered_sim"><strong>register_ordered_sim</strong></a></td>
+<td><strong>POST</strong> /orders/{order_id}/subscribers/register</td>
+<td>Register subscribers for operator.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#activate_payment_method"><strong>activate_payment_method</strong></a></td>
+<td><strong>POST</strong> /payment_methods/current/activate</td>
+<td>Activate payment method.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#export_payment_statement"><strong>export_payment_statement</strong></a></td>
+<td><strong>POST</strong> /payment_statements/{payment_statement_id}/export</td>
+<td>Export payment statement.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#get_payer_information"><strong>get_payer_information</strong></a></td>
+<td><strong>GET</strong> /payment_statements/payer_information</td>
+<td>Export payer information.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#get_payment_method"><strong>get_payment_method</strong></a></td>
+<td><strong>GET</strong> /payment_methods/current</td>
+<td>Get payment method information.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#get_payment_transaction"><strong>get_payment_transaction</strong></a></td>
+<td><strong>GET</strong> /payment_history/transactions/{payment_transaction_id}</td>
+<td>Get payment transaction result.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#get_volume_discount"><strong>get_volume_discount</strong></a></td>
+<td><strong>GET</strong> /volume_discounts/{contract_id}</td>
+<td>Get long term discount.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#list_coupons"><strong>list_coupons</strong></a></td>
+<td><strong>GET</strong> /coupons</td>
+<td>List coupons.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#list_payment_statements"><strong>list_payment_statements</strong></a></td>
+<td><strong>GET</strong> /payment_statements</td>
+<td>List payment statements.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#list_volume_discounts"><strong>list_volume_discounts</strong></a></td>
+<td><strong>GET</strong> /volume_discounts</td>
+<td>List long term discounts.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#register_coupon"><strong>register_coupon</strong></a></td>
+<td><strong>POST</strong> /coupons/{coupon_code}/register</td>
+<td>Register Coupon.</td>
+</tr>
+<tr>
+<td><em>PaymentApi</em></td>
+<td><a href="docs/PaymentApi/#register_payer_information"><strong>register_payer_information</strong></a></td>
+<td><strong>POST</strong> /payment_statements/payer_information</td>
+<td>Register payer information.</td>
+</tr>
+<tr>
+<td><em>PortMappingApi</em></td>
+<td><a href="docs/PortMappingApi/#create_port_mapping"><strong>create_port_mapping</strong></a></td>
+<td><strong>POST</strong> /port_mappings</td>
+<td>Create Port Mapping.</td>
+</tr>
+<tr>
+<td><em>PortMappingApi</em></td>
+<td><a href="docs/PortMappingApi/#delete_port_mapping"><strong>delete_port_mapping</strong></a></td>
+<td><strong>DELETE</strong> /port_mappings/{ip_address}/{port}</td>
+<td>Delete PortMapping.</td>
+</tr>
+<tr>
+<td><em>PortMappingApi</em></td>
+<td><a href="docs/PortMappingApi/#list_port_mappings"><strong>list_port_mappings</strong></a></td>
+<td><strong>GET</strong> /port_mappings</td>
+<td>List Port Mapping Entries.</td>
+</tr>
+<tr>
+<td><em>PortMappingApi</em></td>
+<td><a href="docs/PortMappingApi/#list_port_mappings_for_subscriber"><strong>list_port_mappings_for_subscriber</strong></a></td>
+<td><strong>GET</strong> /port_mappings/subscribers/{imsi}</td>
+<td>Get Port Mapping entries for a subscriber.</td>
+</tr>
+<tr>
+<td><em>QueryApi</em></td>
+<td><a href="docs/QueryApi/#search_devices"><strong>search_devices</strong></a></td>
+<td><strong>GET</strong> /query/devices</td>
+<td>Search SORACOM Inventory devices by query</td>
+</tr>
+<tr>
+<td><em>QueryApi</em></td>
+<td><a href="docs/QueryApi/#search_sigfox_devices"><strong>search_sigfox_devices</strong></a></td>
+<td><strong>GET</strong> /query/sigfox_devices</td>
+<td>Search Sigfox devices by query</td>
+</tr>
+<tr>
+<td><em>QueryApi</em></td>
+<td><a href="docs/QueryApi/#search_sims"><strong>search_sims</strong></a></td>
+<td><strong>GET</strong> /query/sims</td>
+<td>Search SIMs by query terms</td>
+</tr>
+<tr>
+<td><em>QueryApi</em></td>
+<td><a href="docs/QueryApi/#search_subscriber_traffic_volume_ranking"><strong>search_subscriber_traffic_volume_ranking</strong></a></td>
+<td><strong>GET</strong> /query/subscribers/traffic_volume/ranking</td>
+<td>Search traffic volume ranking of subscribers</td>
+</tr>
+<tr>
+<td><em>QueryApi</em></td>
+<td><a href="docs/QueryApi/#search_subscribers"><strong>search_subscribers</strong></a></td>
+<td><strong>GET</strong> /query/subscribers</td>
+<td>(DEPRECATED) Search subscribers by query terms</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#attach_role"><strong>attach_role</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/users/{user_name}/roles</td>
+<td>Attach Role to User.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#create_role"><strong>create_role</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/roles/{role_id}</td>
+<td>Create Role.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#delete_role"><strong>delete_role</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/roles/{role_id}</td>
+<td>Delete Role.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#detach_role"><strong>detach_role</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/users/{user_name}/roles/{role_id}</td>
+<td>Detach Role from User.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#get_role"><strong>get_role</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/roles/{role_id}</td>
+<td>Get Role.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#list_role_attached_users"><strong>list_role_attached_users</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/roles/{role_id}/users</td>
+<td>List Role Attached Users.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#list_roles"><strong>list_roles</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/roles</td>
+<td>List Roles.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#list_user_roles"><strong>list_user_roles</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}/roles</td>
+<td>List User Roles.</td>
+</tr>
+<tr>
+<td><em>RoleApi</em></td>
+<td><a href="docs/RoleApi/#update_role"><strong>update_role</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/roles/{role_id}</td>
+<td>Update Role.</td>
+</tr>
+<tr>
+<td><em>ShippingAddressApi</em></td>
+<td><a href="docs/ShippingAddressApi/#create_shipping_address"><strong>create_shipping_address</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/shipping_addresses</td>
+<td>Create shipping address.</td>
+</tr>
+<tr>
+<td><em>ShippingAddressApi</em></td>
+<td><a href="docs/ShippingAddressApi/#delete_shipping_address"><strong>delete_shipping_address</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/shipping_addresses/{shipping_address_id}</td>
+<td>Delete shipping address.</td>
+</tr>
+<tr>
+<td><em>ShippingAddressApi</em></td>
+<td><a href="docs/ShippingAddressApi/#get_shipping_address"><strong>get_shipping_address</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/shipping_addresses/{shipping_address_id}</td>
+<td>Get shipping address.</td>
+</tr>
+<tr>
+<td><em>ShippingAddressApi</em></td>
+<td><a href="docs/ShippingAddressApi/#list_shipping_addresses"><strong>list_shipping_addresses</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/shipping_addresses</td>
+<td>List shipping addresses.</td>
+</tr>
+<tr>
+<td><em>ShippingAddressApi</em></td>
+<td><a href="docs/ShippingAddressApi/#update_shipping_address"><strong>update_shipping_address</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/shipping_addresses/{shipping_address_id}</td>
+<td>Update shipping address.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#delete_sigfox_device_tag"><strong>delete_sigfox_device_tag</strong></a></td>
+<td><strong>DELETE</strong> /sigfox_devices/{device_id}/tags/{tag_name}</td>
+<td>Delete Sigfox device Tag.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#disable_termination_on_sigfox_device"><strong>disable_termination_on_sigfox_device</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/disable_termination</td>
+<td>Disable Termination of Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#enable_termination_on_sigfox_device"><strong>enable_termination_on_sigfox_device</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/enable_termination</td>
+<td>Enable Termination of Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#get_data_from_sigfox_device"><strong>get_data_from_sigfox_device</strong></a></td>
+<td><strong>GET</strong> /sigfox_devices/{device_id}/data</td>
+<td>Get data sent from a Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#get_sigfox_device"><strong>get_sigfox_device</strong></a></td>
+<td><strong>GET</strong> /sigfox_devices/{device_id}</td>
+<td>Get Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#list_sigfox_devices"><strong>list_sigfox_devices</strong></a></td>
+<td><strong>GET</strong> /sigfox_devices</td>
+<td>List Sigfox devices.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#put_sigfox_device_tags"><strong>put_sigfox_device_tags</strong></a></td>
+<td><strong>PUT</strong> /sigfox_devices/{device_id}/tags</td>
+<td>Bulk Insert or Update Sigfox device Tags.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#register_sigfox_device"><strong>register_sigfox_device</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/register</td>
+<td>Register a Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#send_data_to_sigfox_device"><strong>send_data_to_sigfox_device</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/data</td>
+<td>Send data to a Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#set_sigfox_device_group"><strong>set_sigfox_device_group</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/set_group</td>
+<td>Set Group of Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#terminate_sigfox_device"><strong>terminate_sigfox_device</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/terminate</td>
+<td>Terminate Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SigfoxDeviceApi</em></td>
+<td><a href="docs/SigfoxDeviceApi/#unset_sigfox_device_group"><strong>unset_sigfox_device_group</strong></a></td>
+<td><strong>POST</strong> /sigfox_devices/{device_id}/unset_group</td>
+<td>Unset Group of Sigfox device.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#activate_sim"><strong>activate_sim</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/activate</td>
+<td>Activate SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#add_subscription"><strong>add_subscription</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/profiles/{iccid}/add_subscription</td>
+<td>Adds a new subscription container to a SIM profile</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#attach_arc_sim_credentials"><strong>attach_arc_sim_credentials</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/credentials/arc</td>
+<td>(DEPRECATED) Attach the credentials for Arc to a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#cancel_subscription_container_download"><strong>cancel_subscription_container_download</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/profiles/{iccid}/subscribers/{imsi}/cancel_download</td>
+<td>Cancel subscription download to subscription container</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#create_arc_session"><strong>create_arc_session</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/sessions/arc</td>
+<td>Re-create an Arc session.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#create_sim"><strong>create_sim</strong></a></td>
+<td><strong>POST</strong> /sims</td>
+<td>Create a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#create_sim_packet_capture_session"><strong>create_sim_packet_capture_session</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/packet_capture_sessions</td>
+<td>Create Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#deactivate_sim"><strong>deactivate_sim</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/deactivate</td>
+<td>Deactivate SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#delete_sim_packet_capture_session"><strong>delete_sim_packet_capture_session</strong></a></td>
+<td><strong>DELETE</strong> /sims/{sim_id}/packet_capture_sessions/{session_id}</td>
+<td>Delete Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#delete_sim_session"><strong>delete_sim_session</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/delete_session</td>
+<td>Delete Session</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#delete_sim_tag"><strong>delete_sim_tag</strong></a></td>
+<td><strong>DELETE</strong> /sims/{sim_id}/tags/{tag_name}</td>
+<td>Delete SIM tag.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#delete_subscription_container_country_mapping_entry"><strong>delete_subscription_container_country_mapping_entry</strong></a></td>
+<td><strong>DELETE</strong> /sims/{sim_id}/profiles/{iccid}/subscription_containers/country_mapping/{mcc}</td>
+<td>Delete subscription container mapping entries</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#disable_sim_termination"><strong>disable_sim_termination</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/disable_termination</td>
+<td>Disable termination of the SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#downlink_ping_to_user_equipment"><strong>downlink_ping_to_user_equipment</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/downlink/ping</td>
+<td>Send ping requests to a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#enable_sim_termination"><strong>enable_sim_termination</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/enable_termination</td>
+<td>Enable termination of the SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#enable_subscription_container"><strong>enable_subscription_container</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/profiles/{iccid}/subscription_containers/{containerId}/enable</td>
+<td>Enables a subscription container.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#get_data_from_sim"><strong>get_data_from_sim</strong></a></td>
+<td><strong>GET</strong> /sims/{sim_id}/data</td>
+<td>Get data sent from a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#get_sim"><strong>get_sim</strong></a></td>
+<td><strong>GET</strong> /sims/{sim_id}</td>
+<td>Get a SIM identified by sim_id</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#get_sim_packet_capture_session"><strong>get_sim_packet_capture_session</strong></a></td>
+<td><strong>GET</strong> /sims/{sim_id}/packet_capture_sessions/{session_id}</td>
+<td>Get Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#list_sim_packet_capture_sessions"><strong>list_sim_packet_capture_sessions</strong></a></td>
+<td><strong>GET</strong> /sims/{sim_id}/packet_capture_sessions</td>
+<td>List Packet Capture Sessions</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#list_sim_session_events"><strong>list_sim_session_events</strong></a></td>
+<td><strong>GET</strong> /sims/{sim_id}/events/sessions</td>
+<td>List Session Events.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#list_sims"><strong>list_sims</strong></a></td>
+<td><strong>GET</strong> /sims</td>
+<td>List SIMs.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#list_subscription_containers"><strong>list_subscription_containers</strong></a></td>
+<td><strong>GET</strong> /sims/{sim_id}/profiles/{iccid}/subscription_containers</td>
+<td>Get subscription container status.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#put_sim_tags"><strong>put_sim_tags</strong></a></td>
+<td><strong>PUT</strong> /sims/{sim_id}/tags</td>
+<td>Bulk insert or update SIM tags.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#put_subscription_container_country_mapping_entries"><strong>put_subscription_container_country_mapping_entries</strong></a></td>
+<td><strong>PUT</strong> /sims/{sim_id}/profiles/{iccid}/subscription_containers/country_mapping</td>
+<td>Updates subscription container country mapping entries.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#register_sim"><strong>register_sim</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/register</td>
+<td>Register SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#remove_arc_sim_credentials"><strong>remove_arc_sim_credentials</strong></a></td>
+<td><strong>DELETE</strong> /sims/{sim_id}/credentials/arc</td>
+<td>(DEPRECATED) Remove the credentials for Arc from a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#renew_arc_sim_credentials"><strong>renew_arc_sim_credentials</strong></a></td>
+<td><strong>PUT</strong> /sims/{sim_id}/credentials/arc</td>
+<td>Renew the credentials for Arc to a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#report_sim_local_info"><strong>report_sim_local_info</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/report_local_info</td>
+<td>Triggers SIM to report SIM local info.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#send_sms_to_sim"><strong>send_sms_to_sim</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/send_sms</td>
+<td>Send SMS to SIM</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#set_sim_expiry_time"><strong>set_sim_expiry_time</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/set_expiry_time</td>
+<td>Update expiry time of SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#set_sim_group"><strong>set_sim_group</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/set_group</td>
+<td>Set Group id of a SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#set_sim_imei_lock"><strong>set_sim_imei_lock</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/set_imei_lock</td>
+<td>Set IMEI lock configuration for the SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#set_sim_to_standby"><strong>set_sim_to_standby</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/set_to_standby</td>
+<td>Set SIM to standby mode.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#stop_sim_packet_capture_session"><strong>stop_sim_packet_capture_session</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/packet_capture_sessions/{session_id}/stop</td>
+<td>Stop SIM Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#suspend_sim"><strong>suspend_sim</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/suspend</td>
+<td>Suspend SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#terminate_sim"><strong>terminate_sim</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/terminate</td>
+<td>Terminate SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#terminate_subscription_container"><strong>terminate_subscription_container</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/profiles/{iccid}/subscribers/{imsi}/terminate</td>
+<td>Terminate subscription container</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#unset_sim_expiry_time"><strong>unset_sim_expiry_time</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/unset_expiry_time</td>
+<td>Delete expiry time of the SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#unset_sim_group"><strong>unset_sim_group</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/unset_group</td>
+<td>Unset Group to SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#unset_sim_imei_lock"><strong>unset_sim_imei_lock</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/unset_imei_lock</td>
+<td>Unset IMEI lock configuration for SIM.</td>
+</tr>
+<tr>
+<td><em>SimApi</em></td>
+<td><a href="docs/SimApi/#update_sim_speed_class"><strong>update_sim_speed_class</strong></a></td>
+<td><strong>POST</strong> /sims/{sim_id}/update_speed_class</td>
+<td>Update SIM speed class.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#create_soralet"><strong>create_soralet</strong></a></td>
+<td><strong>POST</strong> /soralets</td>
+<td>Create a Soralet.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#delete_soralet"><strong>delete_soralet</strong></a></td>
+<td><strong>DELETE</strong> /soralets/{soralet_id}</td>
+<td>Delete Soralet.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#delete_soralet_version"><strong>delete_soralet_version</strong></a></td>
+<td><strong>DELETE</strong> /soralets/{soralet_id}/versions/{version}</td>
+<td>Delete a Soralet version.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#get_soralet"><strong>get_soralet</strong></a></td>
+<td><strong>GET</strong> /soralets/{soralet_id}</td>
+<td>Get a Soralet.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#get_soralet_logs"><strong>get_soralet_logs</strong></a></td>
+<td><strong>GET</strong> /soralets/{soralet_id}/logs</td>
+<td>Get log messages from Soralet.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#list_soralet_versions"><strong>list_soralet_versions</strong></a></td>
+<td><strong>GET</strong> /soralets/{soralet_id}/versions</td>
+<td>List versions of Soralet.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#list_soralets"><strong>list_soralets</strong></a></td>
+<td><strong>GET</strong> /soralets</td>
+<td>List Soralets.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#test_soralet"><strong>test_soralet</strong></a></td>
+<td><strong>POST</strong> /soralets/{soralet_id}/test</td>
+<td>Execute Soralet with arguments.</td>
+</tr>
+<tr>
+<td><em>SoraletApi</em></td>
+<td><a href="docs/SoraletApi/#upload_soralet_code"><strong>upload_soralet_code</strong></a></td>
+<td><strong>POST</strong> /soralets/{soralet_id}/versions</td>
+<td>Upload code and create a new version.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#export_air_stats"><strong>export_air_stats</strong></a></td>
+<td><strong>POST</strong> /stats/air/operators/{operator_id}/export</td>
+<td>Export Air Usage Report of All Subscribers.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#export_beam_stats"><strong>export_beam_stats</strong></a></td>
+<td><strong>POST</strong> /stats/beam/operators/{operator_id}/export</td>
+<td>Export Beam Usage Report of All Subscribers.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#get_air_stats"><strong>get_air_stats</strong></a></td>
+<td><strong>GET</strong> /stats/air/subscribers/{imsi}</td>
+<td>Get Air Usage Report of Subscriber.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#get_air_stats_of_sim"><strong>get_air_stats_of_sim</strong></a></td>
+<td><strong>GET</strong> /stats/air/sims/{simId}</td>
+<td>Get Air Usage Report of SIM.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#get_beam_stats"><strong>get_beam_stats</strong></a></td>
+<td><strong>GET</strong> /stats/beam/subscribers/{imsi}</td>
+<td>Get Beam Usage Report of Subscriber.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#get_harvest_exported_data_stats"><strong>get_harvest_exported_data_stats</strong></a></td>
+<td><strong>GET</strong> /stats/harvest/operators/{operator_id}</td>
+<td>Get &#39;Harvest usage report&#39; for the specified operator.</td>
+</tr>
+<tr>
+<td><em>StatsApi</em></td>
+<td><a href="docs/StatsApi/#get_napter_audit_logs_exported_data_stats"><strong>get_napter_audit_logs_exported_data_stats</strong></a></td>
+<td><strong>GET</strong> /stats/napter/audit_logs</td>
+<td>Get Napter audit logs&#39; monthly exported data stats</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#activate_subscriber"><strong>activate_subscriber</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/activate</td>
+<td>Activate Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#deactivate_subscriber"><strong>deactivate_subscriber</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/deactivate</td>
+<td>Deactivate Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#delete_subscriber_session"><strong>delete_subscriber_session</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/delete_session</td>
+<td>Delete Session</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#delete_subscriber_tag"><strong>delete_subscriber_tag</strong></a></td>
+<td><strong>DELETE</strong> /subscribers/{imsi}/tags/{tag_name}</td>
+<td>Delete Subscriber Tag.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#delete_subscriber_transfer_token"><strong>delete_subscriber_transfer_token</strong></a></td>
+<td><strong>DELETE</strong> /subscribers/transfer_token/{token}</td>
+<td>Delete Subscribers Transfer Token.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#disable_termination"><strong>disable_termination</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/disable_termination</td>
+<td>Disable Termination of Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#enable_termination"><strong>enable_termination</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/enable_termination</td>
+<td>Enable Termination of Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#export_subscribers"><strong>export_subscribers</strong></a></td>
+<td><strong>POST</strong> /subscribers/export</td>
+<td>Export all subscribers.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#get_data_from_subscriber"><strong>get_data_from_subscriber</strong></a></td>
+<td><strong>GET</strong> /subscribers/{imsi}/data</td>
+<td>Get data sent from a subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#get_subscriber"><strong>get_subscriber</strong></a></td>
+<td><strong>GET</strong> /subscribers/{imsi}</td>
+<td>Get Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#issue_subscriber_transfer_token"><strong>issue_subscriber_transfer_token</strong></a></td>
+<td><strong>POST</strong> /subscribers/transfer_token/issue</td>
+<td>Issue Subscribers Transfer Token.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#list_session_events"><strong>list_session_events</strong></a></td>
+<td><strong>GET</strong> /subscribers/{imsi}/events/sessions</td>
+<td>List Session Events.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#list_subscribers"><strong>list_subscribers</strong></a></td>
+<td><strong>GET</strong> /subscribers</td>
+<td>List Subscribers.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#put_bundles"><strong>put_bundles</strong></a></td>
+<td><strong>PUT</strong> /subscribers/{imsi}/bundles</td>
+<td>Set Bundles to Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#put_subscriber_tags"><strong>put_subscriber_tags</strong></a></td>
+<td><strong>PUT</strong> /subscribers/{imsi}/tags</td>
+<td>Bulk Insert or Update Subscriber Tags.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#register_subscriber"><strong>register_subscriber</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/register</td>
+<td>Register Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#report_local_info"><strong>report_local_info</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/report_local_info</td>
+<td>Triggers Subscriber to report SIM local info.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#send_sms"><strong>send_sms</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/send_sms</td>
+<td>Send SMS to Subscriber</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#send_sms_by_msisdn"><strong>send_sms_by_msisdn</strong></a></td>
+<td><strong>POST</strong> /subscribers/msisdn/{msisdn}/send_sms</td>
+<td>Send SMS to Subscriber by MSISDN</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#send_subscriber_downlink_ping"><strong>send_subscriber_downlink_ping</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/downlink/ping</td>
+<td>Send ping requests to a subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#set_expiry_time"><strong>set_expiry_time</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/set_expiry_time</td>
+<td>Update Expiry Time of Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#set_group"><strong>set_group</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/set_group</td>
+<td>Set Group to Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#set_imei_lock"><strong>set_imei_lock</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/set_imei_lock</td>
+<td>Set IMEI lock configuration for Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#set_subscriber_to_standby"><strong>set_subscriber_to_standby</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/set_to_standby</td>
+<td>Set Subscriber to standby mode.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#suspend_subscriber"><strong>suspend_subscriber</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/suspend</td>
+<td>Suspend Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#terminate_subscriber"><strong>terminate_subscriber</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/terminate</td>
+<td>Terminate Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#unset_expiry_time"><strong>unset_expiry_time</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/unset_expiry_time</td>
+<td>Delete Expiry Time of Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#unset_group"><strong>unset_group</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/unset_group</td>
+<td>Unset Group to Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#unset_imei_lock"><strong>unset_imei_lock</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/unset_imei_lock</td>
+<td>Unset IMEI lock configuration for Subscriber.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#update_speed_class"><strong>update_speed_class</strong></a></td>
+<td><strong>POST</strong> /subscribers/{imsi}/update_speed_class</td>
+<td>Update Subscriber speed class.</td>
+</tr>
+<tr>
+<td><em>SubscriberApi</em></td>
+<td><a href="docs/SubscriberApi/#verify_subscriber_transfer_token"><strong>verify_subscriber_transfer_token</strong></a></td>
+<td><strong>POST</strong> /subscribers/transfer_token/verify</td>
+<td>Verify Subscriber Transfer Token.</td>
+</tr>
+<tr>
+<td><em>SystemNotificationApi</em></td>
+<td><a href="docs/SystemNotificationApi/#delete_system_notification"><strong>delete_system_notification</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/system_notifications/{type}</td>
+<td>Delete system notification</td>
+</tr>
+<tr>
+<td><em>SystemNotificationApi</em></td>
+<td><a href="docs/SystemNotificationApi/#get_system_notification"><strong>get_system_notification</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/system_notifications/{type}</td>
+<td>Get system notification</td>
+</tr>
+<tr>
+<td><em>SystemNotificationApi</em></td>
+<td><a href="docs/SystemNotificationApi/#list_system_notifications"><strong>list_system_notifications</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/system_notifications</td>
+<td>List system notifications</td>
+</tr>
+<tr>
+<td><em>SystemNotificationApi</em></td>
+<td><a href="docs/SystemNotificationApi/#set_system_notification"><strong>set_system_notification</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/system_notifications/{type}</td>
+<td>Set system notification</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#create_user"><strong>create_user</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/users/{user_name}</td>
+<td>Create User.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#create_user_password"><strong>create_user_password</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/users/{user_name}/password</td>
+<td>Create Password.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#delete_user"><strong>delete_user</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/users/{user_name}</td>
+<td>Delete User.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#delete_user_auth_key"><strong>delete_user_auth_key</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/users/{user_name}/auth_keys/{auth_key_id}</td>
+<td>Delete User AuthKey.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#delete_user_password"><strong>delete_user_password</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/users/{user_name}/password</td>
+<td>Delete Password.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#enable_user_mfa"><strong>enable_user_mfa</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/users/{user_name}/mfa</td>
+<td>Enable SAM user&#39;s MFA</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#generate_user_auth_key"><strong>generate_user_auth_key</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/users/{user_name}/auth_keys</td>
+<td>Generate AuthKey.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#get_default_permissions"><strong>get_default_permissions</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/default_permissions</td>
+<td>Get the default permissions</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#get_user"><strong>get_user</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}</td>
+<td>Get User.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#get_user_auth_key"><strong>get_user_auth_key</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}/auth_keys/{auth_key_id}</td>
+<td>Get AuthKey.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#get_user_mfa_status"><strong>get_user_mfa_status</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}/mfa</td>
+<td>Get SAM user&#39;s MFA status</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#get_user_permission"><strong>get_user_permission</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}/permission</td>
+<td>Get User Permission.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#has_user_password"><strong>has_user_password</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}/password</td>
+<td>Has User Password.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#list_user_auth_keys"><strong>list_user_auth_keys</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users/{user_name}/auth_keys</td>
+<td>List User AuthKeys.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#list_users"><strong>list_users</strong></a></td>
+<td><strong>GET</strong> /operators/{operator_id}/users</td>
+<td>List Users.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#revoke_user_mfa"><strong>revoke_user_mfa</strong></a></td>
+<td><strong>DELETE</strong> /operators/{operator_id}/users/{user_name}/mfa</td>
+<td>Revoke SAM user&#39;s MFA</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#update_default_permissions"><strong>update_default_permissions</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/users/default_permissions</td>
+<td>Update the default permissions</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#update_user"><strong>update_user</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/users/{user_name}</td>
+<td>Update User.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#update_user_password"><strong>update_user_password</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/users/{user_name}/password</td>
+<td>Update Password.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#update_user_permission"><strong>update_user_permission</strong></a></td>
+<td><strong>PUT</strong> /operators/{operator_id}/users/{user_name}/permission</td>
+<td>Update Permission to User.</td>
+</tr>
+<tr>
+<td><em>UserApi</em></td>
+<td><a href="docs/UserApi/#verify_user_mfa"><strong>verify_user_mfa</strong></a></td>
+<td><strong>POST</strong> /operators/{operator_id}/users/{user_name}/mfa/verify</td>
+<td>Verify SAM user&#39;s MFA OTP code when MFA activation phase</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#close_gate"><strong>close_gate</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/gate/close</td>
+<td>Close SORACOM Gate.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#create_mirroring_peer"><strong>create_mirroring_peer</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/mirroring/peers</td>
+<td>Add node in the list of Junction mirroring peers</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#create_packet_capture_session"><strong>create_packet_capture_session</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions</td>
+<td>Create Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#create_virtual_private_gateway"><strong>create_virtual_private_gateway</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways</td>
+<td>Create Virtual Private Gateway.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#create_vpc_peering_connection"><strong>create_vpc_peering_connection</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/vpc_peering_connections</td>
+<td>Create VPC Peering Connection</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#delete_mirroring_peer"><strong>delete_mirroring_peer</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/junction/mirroring/peers/{ipaddr}</td>
+<td>Remove peer from the list of Junction mirroring peers</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#delete_packet_capture_session"><strong>delete_packet_capture_session</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions/{session_id}</td>
+<td>Delete Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#delete_virtual_private_gateway_ip_address_map_entry"><strong>delete_virtual_private_gateway_ip_address_map_entry</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/ip_address_map/{key}</td>
+<td>Delete VPG IP address map entry</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#delete_vpc_peering_connection"><strong>delete_vpc_peering_connection</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/vpc_peering_connections/{pcx_id}</td>
+<td>Delete VPC Peering Connection.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#get_packet_capture_session"><strong>get_packet_capture_session</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions/{session_id}</td>
+<td>Get Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#get_virtual_private_gateway"><strong>get_virtual_private_gateway</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}</td>
+<td>Get Virtual Private Gateway.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#list_gate_peers"><strong>list_gate_peers</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/gate/peers</td>
+<td>List VPG Gate peers</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#list_packet_capture_sessions"><strong>list_packet_capture_sessions</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions</td>
+<td>List Packet Capture Sessions</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#list_virtual_private_gateway_ip_address_map_entries"><strong>list_virtual_private_gateway_ip_address_map_entries</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways/{vpg_id}/ip_address_map</td>
+<td>List VPG IP address map entries</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#list_virtual_private_gateways"><strong>list_virtual_private_gateways</strong></a></td>
+<td><strong>GET</strong> /virtual_private_gateways</td>
+<td>List Virtual Private Gateways.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#open_gate"><strong>open_gate</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/gate/open</td>
+<td>Open SORACOM Gate.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#put_virtual_private_gateway_ip_address_map_entry"><strong>put_virtual_private_gateway_ip_address_map_entry</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/ip_address_map</td>
+<td>Put an entry in VPG IP address map</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#register_gate_peer"><strong>register_gate_peer</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/gate/peers</td>
+<td>Register VPG Gate peer</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#set_inspection_configuration"><strong>set_inspection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/set_inspection</td>
+<td>Set configuration for Junction inspection feature</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#set_redirection_configuration"><strong>set_redirection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/set_redirection</td>
+<td>Set configuration for Junction redirection feature</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#set_routing_filter"><strong>set_routing_filter</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/set_routing_filter</td>
+<td>Sets Virtual Private Gateway outbound routing filter.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#stop_packet_capture_session"><strong>stop_packet_capture_session</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/packet_capture_sessions/{session_id}/stop</td>
+<td>Stop Packet Capture Session</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#terminate_virtual_private_gateway"><strong>terminate_virtual_private_gateway</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/terminate</td>
+<td>Terminate Virtual Private Gateway.</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#unregister_gate_peer"><strong>unregister_gate_peer</strong></a></td>
+<td><strong>DELETE</strong> /virtual_private_gateways/{vpg_id}/gate/peers/{outer_ip_address}</td>
+<td>Unregister VPG gate peer</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#unset_inspection_configuration"><strong>unset_inspection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/unset_inspection</td>
+<td>Unset configuration for Junction inspection feature</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#unset_redirection_configuration"><strong>unset_redirection_configuration</strong></a></td>
+<td><strong>POST</strong> /virtual_private_gateways/{vpg_id}/junction/unset_redirection</td>
+<td>Unset configuration for Junction redirection feature</td>
+</tr>
+<tr>
+<td><em>VirtualPrivateGatewayApi</em></td>
+<td><a href="docs/VirtualPrivateGatewayApi/#update_mirroring_peer"><strong>update_mirroring_peer</strong></a></td>
+<td><strong>PUT</strong> /virtual_private_gateways/{vpg_id}/junction/mirroring/peers/{ipaddr}</td>
+<td>Update a Junction mirroring peer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation-for-models">Documentation For Models<a class="headerlink" href="#documentation-for-models" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="docs/APIAuditLogEntry/">APIAuditLogEntry</a></li>
+<li><a href="docs/APICallError/">APICallError</a></li>
+<li><a href="docs/APICallErrorMessage/">APICallErrorMessage</a></li>
+<li><a href="docs/ActionConfig/">ActionConfig</a></li>
+<li><a href="docs/ActionConfigProperty/">ActionConfigProperty</a></li>
+<li><a href="docs/AirStatsResponse/">AirStatsResponse</a></li>
+<li><a href="docs/ArcCredentialAttachRequest/">ArcCredentialAttachRequest</a></li>
+<li><a href="docs/ArcCredentialAttachResponse/">ArcCredentialAttachResponse</a></li>
+<li><a href="docs/ArcCredentialRenewRequest/">ArcCredentialRenewRequest</a></li>
+<li><a href="docs/ArcCredentialRenewResponse/">ArcCredentialRenewResponse</a></li>
+<li><a href="docs/ArcSessionCreateResponse/">ArcSessionCreateResponse</a></li>
+<li><a href="docs/ArcSessionStatus/">ArcSessionStatus</a></li>
+<li><a href="docs/AttachRoleRequest/">AttachRoleRequest</a></li>
+<li><a href="docs/AttributeUpdate/">AttributeUpdate</a></li>
+<li><a href="docs/AuthKeyResponse/">AuthKeyResponse</a></li>
+<li><a href="docs/AuthRequest/">AuthRequest</a></li>
+<li><a href="docs/AuthResponse/">AuthResponse</a></li>
+<li><a href="docs/AvailableLongTermDiscountModel/">AvailableLongTermDiscountModel</a></li>
+<li><a href="docs/AvailableLongTermDiscountResponse/">AvailableLongTermDiscountResponse</a></li>
+<li><a href="docs/BeamStatsResponse/">BeamStatsResponse</a></li>
+<li><a href="docs/Capabilities/">Capabilities</a></li>
+<li><a href="docs/Cell/">Cell</a></li>
+<li><a href="docs/CellIdentifier/">CellIdentifier</a></li>
+<li><a href="docs/CellLocation/">CellLocation</a></li>
+<li><a href="docs/CompanyInformationModel/">CompanyInformationModel</a></li>
+<li><a href="docs/ContractUpdatedResponse/">ContractUpdatedResponse</a></li>
+<li><a href="docs/ContractUpdatingRequest/">ContractUpdatingRequest</a></li>
+<li><a href="docs/CouponResponse/">CouponResponse</a></li>
+<li><a href="docs/CreateAndUpdateCredentialsModel/">CreateAndUpdateCredentialsModel</a></li>
+<li><a href="docs/CreateEstimatedCouponRequest/">CreateEstimatedCouponRequest</a></li>
+<li><a href="docs/CreateEstimatedOrderRequest/">CreateEstimatedOrderRequest</a></li>
+<li><a href="docs/CreateEstimatedVolumeDiscountRequest/">CreateEstimatedVolumeDiscountRequest</a></li>
+<li><a href="docs/CreateEventHandlerRequest/">CreateEventHandlerRequest</a></li>
+<li><a href="docs/CreateGroupRequest/">CreateGroupRequest</a></li>
+<li><a href="docs/CreateOrUpdateRoleRequest/">CreateOrUpdateRoleRequest</a></li>
+<li><a href="docs/CreatePortMappingRequest/">CreatePortMappingRequest</a></li>
+<li><a href="docs/CreateRoleResponse/">CreateRoleResponse</a></li>
+<li><a href="docs/CreateSimRequest/">CreateSimRequest</a></li>
+<li><a href="docs/CreateSoraletRequest/">CreateSoraletRequest</a></li>
+<li><a href="docs/CreateUserPasswordRequest/">CreateUserPasswordRequest</a></li>
+<li><a href="docs/CreateUserRequest/">CreateUserRequest</a></li>
+<li><a href="docs/CreateVirtualPrivateGatewayRequest/">CreateVirtualPrivateGatewayRequest</a></li>
+<li><a href="docs/CreateVpcPeeringConnectionRequest/">CreateVpcPeeringConnectionRequest</a></li>
+<li><a href="docs/CredentialsModel/">CredentialsModel</a></li>
+<li><a href="docs/CreditCard/">CreditCard</a></li>
+<li><a href="docs/DailyBill/">DailyBill</a></li>
+<li><a href="docs/DailyBillResponse/">DailyBillResponse</a></li>
+<li><a href="docs/DataEntry/">DataEntry</a></li>
+<li><a href="docs/DataSourceResourceMetadata/">DataSourceResourceMetadata</a></li>
+<li><a href="docs/DataTrafficStats/">DataTrafficStats</a></li>
+<li><a href="docs/Device/">Device</a></li>
+<li><a href="docs/DeviceObjectModel/">DeviceObjectModel</a></li>
+<li><a href="docs/DiagnosticRequest/">DiagnosticRequest</a></li>
+<li><a href="docs/DiagnosticResponse/">DiagnosticResponse</a></li>
+<li><a href="docs/DownlinkPingRequest/">DownlinkPingRequest</a></li>
+<li><a href="docs/DownlinkPingResponse/">DownlinkPingResponse</a></li>
+<li><a href="docs/EmailsModel/">EmailsModel</a></li>
+<li><a href="docs/EnableMFAOTPResponse/">EnableMFAOTPResponse</a></li>
+<li><a href="docs/Error/">Error</a></li>
+<li><a href="docs/EstimatedCouponModel/">EstimatedCouponModel</a></li>
+<li><a href="docs/EstimatedOrderItemModel/">EstimatedOrderItemModel</a></li>
+<li><a href="docs/EstimatedOrderModel/">EstimatedOrderModel</a></li>
+<li><a href="docs/EstimatedVolumeDiscountModel/">EstimatedVolumeDiscountModel</a></li>
+<li><a href="docs/EventHandlerModel/">EventHandlerModel</a></li>
+<li><a href="docs/ExecuteSoraletRequest/">ExecuteSoraletRequest</a></li>
+<li><a href="docs/ExecuteSoraletResponse/">ExecuteSoraletResponse</a></li>
+<li><a href="docs/ExpiryTime/">ExpiryTime</a></li>
+<li><a href="docs/ExportRequest/">ExportRequest</a></li>
+<li><a href="docs/FileEntry/">FileEntry</a></li>
+<li><a href="docs/FileExportResponse/">FileExportResponse</a></li>
+<li><a href="docs/FunnelAWSFirehoseDestination/">FunnelAWSFirehoseDestination</a></li>
+<li><a href="docs/FunnelAWSIoTDestination/">FunnelAWSIoTDestination</a></li>
+<li><a href="docs/FunnelAWSKinesisDestination/">FunnelAWSKinesisDestination</a></li>
+<li><a href="docs/FunnelAcroquestTorrentioDestination/">FunnelAcroquestTorrentioDestination</a></li>
+<li><a href="docs/FunnelAppressoDataSpiderDestination/">FunnelAppressoDataSpiderDestination</a></li>
+<li><a href="docs/FunnelAzureEventHubDestination/">FunnelAzureEventHubDestination</a></li>
+<li><a href="docs/FunnelBrainsTechImpulseDestination/">FunnelBrainsTechImpulseDestination</a></li>
+<li><a href="docs/FunnelConfiguration/">FunnelConfiguration</a></li>
+<li><a href="docs/FunnelContentType/">FunnelContentType</a></li>
+<li><a href="docs/FunnelDestination/">FunnelDestination</a></li>
+<li><a href="docs/FunnelEsrijArcgisOnlineDestination/">FunnelEsrijArcgisOnlineDestination</a></li>
+<li><a href="docs/FunnelFusicMockmockDatarecorderDestination/">FunnelFusicMockmockDatarecorderDestination</a></li>
+<li><a href="docs/FunnelGooglePubSubDestination/">FunnelGooglePubSubDestination</a></li>
+<li><a href="docs/FunnelInfoteriaPlatioDestination/">FunnelInfoteriaPlatioDestination</a></li>
+<li><a href="docs/FunnelKiiThingifDestination/">FunnelKiiThingifDestination</a></li>
+<li><a href="docs/FunnelLandlogDestination/">FunnelLandlogDestination</a></li>
+<li><a href="docs/FunnelOptimCloudiotosDestination/">FunnelOptimCloudiotosDestination</a></li>
+<li><a href="docs/FunnelSensorCorpusDestination/">FunnelSensorCorpusDestination</a></li>
+<li><a href="docs/FunnelTeradataIntellicloudDestination/">FunnelTeradataIntellicloudDestination</a></li>
+<li><a href="docs/FunnelWingarcMotionboardDestination/">FunnelWingarcMotionboardDestination</a></li>
+<li><a href="docs/FunnelYaskawaMmcloudDestination/">FunnelYaskawaMmcloudDestination</a></li>
+<li><a href="docs/Gadget/">Gadget</a></li>
+<li><a href="docs/GadgetRegistrationRequest/">GadgetRegistrationRequest</a></li>
+<li><a href="docs/GatePeer/">GatePeer</a></li>
+<li><a href="docs/GenerateOperatorsAuthKeyResponse/">GenerateOperatorsAuthKeyResponse</a></li>
+<li><a href="docs/GenerateTokenRequest/">GenerateTokenRequest</a></li>
+<li><a href="docs/GenerateTokenResponse/">GenerateTokenResponse</a></li>
+<li><a href="docs/GenerateUserAuthKeyResponse/">GenerateUserAuthKeyResponse</a></li>
+<li><a href="docs/GetBillingHistoryResponse/">GetBillingHistoryResponse</a></li>
+<li><a href="docs/GetDefaultPermissionsResponse/">GetDefaultPermissionsResponse</a></li>
+<li><a href="docs/GetExportedFileResponse/">GetExportedFileResponse</a></li>
+<li><a href="docs/GetLatestBill/">GetLatestBill</a></li>
+<li><a href="docs/GetOperatorResponse/">GetOperatorResponse</a></li>
+<li><a href="docs/GetOrderResponse/">GetOrderResponse</a></li>
+<li><a href="docs/GetPaymentMethodResult/">GetPaymentMethodResult</a></li>
+<li><a href="docs/GetPaymentTransactionResult/">GetPaymentTransactionResult</a></li>
+<li><a href="docs/GetShippingAddressResponse/">GetShippingAddressResponse</a></li>
+<li><a href="docs/GetUserPasswordResponse/">GetUserPasswordResponse</a></li>
+<li><a href="docs/GetUserPermissionResponse/">GetUserPermissionResponse</a></li>
+<li><a href="docs/GetVolumeDiscountResponse/">GetVolumeDiscountResponse</a></li>
+<li><a href="docs/GlobalSimAppletPLMNRecord/">GlobalSimAppletPLMNRecord</a></li>
+<li><a href="docs/Group/">Group</a></li>
+<li><a href="docs/GroupConfigurationUpdateRequest/">GroupConfigurationUpdateRequest</a></li>
+<li><a href="docs/HarvestExportedDataStatsResponse/">HarvestExportedDataStatsResponse</a></li>
+<li><a href="docs/ImeiLock/">ImeiLock</a></li>
+<li><a href="docs/IndividualInformationModel/">IndividualInformationModel</a></li>
+<li><a href="docs/InlineObject/">InlineObject</a></li>
+<li><a href="docs/InlineObject1/">InlineObject1</a></li>
+<li><a href="docs/InlineObject2/">InlineObject2</a></li>
+<li><a href="docs/InlineObject3/">InlineObject3</a></li>
+<li><a href="docs/Insight/">Insight</a></li>
+<li><a href="docs/IpAddressMapEntry/">IpAddressMapEntry</a></li>
+<li><a href="docs/IssueAddEmailTokenRequest/">IssueAddEmailTokenRequest</a></li>
+<li><a href="docs/IssuePasswordResetTokenRequest/">IssuePasswordResetTokenRequest</a></li>
+<li><a href="docs/IssueSubscriberTransferTokenRequest/">IssueSubscriberTransferTokenRequest</a></li>
+<li><a href="docs/IssueSubscriberTransferTokenResponse/">IssueSubscriberTransferTokenResponse</a></li>
+<li><a href="docs/JunctionInspectionConfiguration/">JunctionInspectionConfiguration</a></li>
+<li><a href="docs/JunctionMirroringConfiguration/">JunctionMirroringConfiguration</a></li>
+<li><a href="docs/JunctionMirroringPeer/">JunctionMirroringPeer</a></li>
+<li><a href="docs/JunctionRedirectionConfiguration/">JunctionRedirectionConfiguration</a></li>
+<li><a href="docs/LagoonDashboardPermissionsResponse/">LagoonDashboardPermissionsResponse</a></li>
+<li><a href="docs/LagoonDashboardPermissionsResponsePermissions/">LagoonDashboardPermissionsResponsePermissions</a></li>
+<li><a href="docs/LagoonDashboardPermissionsUpdatingRequest/">LagoonDashboardPermissionsUpdatingRequest</a></li>
+<li><a href="docs/LagoonDashboardPermissionsUpdatingRequestPermissions/">LagoonDashboardPermissionsUpdatingRequestPermissions</a></li>
+<li><a href="docs/LagoonLicensePackStatusResponse/">LagoonLicensePackStatusResponse</a></li>
+<li><a href="docs/LagoonLicensePacksUpdatingRequest/">LagoonLicensePacksUpdatingRequest</a></li>
+<li><a href="docs/LagoonLicensePacksUpdatingRequestLicensePackQuantities/">LagoonLicensePacksUpdatingRequestLicensePackQuantities</a></li>
+<li><a href="docs/LagoonMigrationFromClassicRequest/">LagoonMigrationFromClassicRequest</a></li>
+<li><a href="docs/LagoonPlanChangingRequest/">LagoonPlanChangingRequest</a></li>
+<li><a href="docs/LagoonRegistrationRequest/">LagoonRegistrationRequest</a></li>
+<li><a href="docs/LagoonRegistrationResponse/">LagoonRegistrationResponse</a></li>
+<li><a href="docs/LagoonUser/">LagoonUser</a></li>
+<li><a href="docs/LagoonUserCreationRequest/">LagoonUserCreationRequest</a></li>
+<li><a href="docs/LagoonUserCreationResponse/">LagoonUserCreationResponse</a></li>
+<li><a href="docs/LagoonUserEmailUpdatingRequest/">LagoonUserEmailUpdatingRequest</a></li>
+<li><a href="docs/LagoonUserPasswordUpdatingRequest/">LagoonUserPasswordUpdatingRequest</a></li>
+<li><a href="docs/LagoonUserPermissionUpdatingRequest/">LagoonUserPermissionUpdatingRequest</a></li>
+<li><a href="docs/LastSeen/">LastSeen</a></li>
+<li><a href="docs/ListCouponResponse/">ListCouponResponse</a></li>
+<li><a href="docs/ListOrderResponse/">ListOrderResponse</a></li>
+<li><a href="docs/ListOrderedSubscriberResponse/">ListOrderedSubscriberResponse</a></li>
+<li><a href="docs/ListPaymentStatementResponse/">ListPaymentStatementResponse</a></li>
+<li><a href="docs/ListProductResponse/">ListProductResponse</a></li>
+<li><a href="docs/ListRolesResponse/">ListRolesResponse</a></li>
+<li><a href="docs/ListShippingAddressResponse/">ListShippingAddressResponse</a></li>
+<li><a href="docs/ListVolumeDiscountResponse/">ListVolumeDiscountResponse</a></li>
+<li><a href="docs/LogEntry/">LogEntry</a></li>
+<li><a href="docs/LoraData/">LoraData</a></li>
+<li><a href="docs/LoraDevice/">LoraDevice</a></li>
+<li><a href="docs/LoraGateway/">LoraGateway</a></li>
+<li><a href="docs/LoraNetworkSet/">LoraNetworkSet</a></li>
+<li><a href="docs/MFAAuthenticationRequest/">MFAAuthenticationRequest</a></li>
+<li><a href="docs/MFAIssueRevokingTokenRequest/">MFAIssueRevokingTokenRequest</a></li>
+<li><a href="docs/MFARevokingTokenVerifyRequest/">MFARevokingTokenVerifyRequest</a></li>
+<li><a href="docs/MFAStatusOfUseResponse/">MFAStatusOfUseResponse</a></li>
+<li><a href="docs/MappingEntries/">MappingEntries</a></li>
+<li><a href="docs/MonthlyBill/">MonthlyBill</a></li>
+<li><a href="docs/NapterAuditLogDirection/">NapterAuditLogDirection</a></li>
+<li><a href="docs/NapterAuditLogEntry/">NapterAuditLogEntry</a></li>
+<li><a href="docs/NapterAuditLogsExportedDataStatsResponse/">NapterAuditLogsExportedDataStatsResponse</a></li>
+<li><a href="docs/ObjectInstance/">ObjectInstance</a></li>
+<li><a href="docs/OpenGateRequest/">OpenGateRequest</a></li>
+<li><a href="docs/OperatorMFAVerifyingResponse/">OperatorMFAVerifyingResponse</a></li>
+<li><a href="docs/OrderItemModel/">OrderItemModel</a></li>
+<li><a href="docs/OrderedSubscriber/">OrderedSubscriber</a></li>
+<li><a href="docs/PacketCaptureSession/">PacketCaptureSession</a></li>
+<li><a href="docs/PacketCaptureSessionRequest/">PacketCaptureSessionRequest</a></li>
+<li><a href="docs/PaymentAmount/">PaymentAmount</a></li>
+<li><a href="docs/PaymentDescription/">PaymentDescription</a></li>
+<li><a href="docs/PaymentStatementResponse/">PaymentStatementResponse</a></li>
+<li><a href="docs/Placement/">Placement</a></li>
+<li><a href="docs/PortMapping/">PortMapping</a></li>
+<li><a href="docs/PortMappingDestination/">PortMappingDestination</a></li>
+<li><a href="docs/PortMappingSource/">PortMappingSource</a></li>
+<li><a href="docs/PreviousSessionStatus/">PreviousSessionStatus</a></li>
+<li><a href="docs/PriceByQuantity/">PriceByQuantity</a></li>
+<li><a href="docs/ProductModel/">ProductModel</a></li>
+<li><a href="docs/PutIpAddressMapEntryRequest/">PutIpAddressMapEntryRequest</a></li>
+<li><a href="docs/ReferenceUrl/">ReferenceUrl</a></li>
+<li><a href="docs/RegisterGatePeerRequest/">RegisterGatePeerRequest</a></li>
+<li><a href="docs/RegisterLoraDeviceRequest/">RegisterLoraDeviceRequest</a></li>
+<li><a href="docs/RegisterOperatorsRequest/">RegisterOperatorsRequest</a></li>
+<li><a href="docs/RegisterPayerInformationModel/">RegisterPayerInformationModel</a></li>
+<li><a href="docs/RegisterSimRequest/">RegisterSimRequest</a></li>
+<li><a href="docs/RegisterSubscribersRequest/">RegisterSubscribersRequest</a></li>
+<li><a href="docs/ResourceInstance/">ResourceInstance</a></li>
+<li><a href="docs/RoleResponse/">RoleResponse</a></li>
+<li><a href="docs/RoutingFilterEntry/">RoutingFilterEntry</a></li>
+<li><a href="docs/RuleConfig/">RuleConfig</a></li>
+<li><a href="docs/RuleConfigProperty/">RuleConfigProperty</a></li>
+<li><a href="docs/SessionEvent/">SessionEvent</a></li>
+<li><a href="docs/SessionStatus/">SessionStatus</a></li>
+<li><a href="docs/SetDeviceObjectModelScopeRequest/">SetDeviceObjectModelScopeRequest</a></li>
+<li><a href="docs/SetGroupRequest/">SetGroupRequest</a></li>
+<li><a href="docs/SetImeiLockRequest/">SetImeiLockRequest</a></li>
+<li><a href="docs/SetNetworkSetRequest/">SetNetworkSetRequest</a></li>
+<li><a href="docs/SetSystemNotificationsRequest/">SetSystemNotificationsRequest</a></li>
+<li><a href="docs/SetUserPermissionRequest/">SetUserPermissionRequest</a></li>
+<li><a href="docs/ShippingAddressModel/">ShippingAddressModel</a></li>
+<li><a href="docs/ShippingCostModel/">ShippingCostModel</a></li>
+<li><a href="docs/SigfoxData/">SigfoxData</a></li>
+<li><a href="docs/SigfoxDevice/">SigfoxDevice</a></li>
+<li><a href="docs/SigfoxRegistrationRequest/">SigfoxRegistrationRequest</a></li>
+<li><a href="docs/Sim/">Sim</a></li>
+<li><a href="docs/SimProfile/">SimProfile</a></li>
+<li><a href="docs/SimplifiedSubscriber/">SimplifiedSubscriber</a></li>
+<li><a href="docs/SmsForwardingReport/">SmsForwardingReport</a></li>
+<li><a href="docs/SmsForwardingRequest/">SmsForwardingRequest</a></li>
+<li><a href="docs/SoracomBeamStats/">SoracomBeamStats</a></li>
+<li><a href="docs/Soralet/">Soralet</a></li>
+<li><a href="docs/SoraletDataSource/">SoraletDataSource</a></li>
+<li><a href="docs/SoraletLog/">SoraletLog</a></li>
+<li><a href="docs/SoraletVersion/">SoraletVersion</a></li>
+<li><a href="docs/Subscriber/">Subscriber</a></li>
+<li><a href="docs/SubscriptionContainer/">SubscriptionContainer</a></li>
+<li><a href="docs/SubscriptionContainerStatus/">SubscriptionContainerStatus</a></li>
+<li><a href="docs/SubscriptionContainerStatusCountryMapping/">SubscriptionContainerStatusCountryMapping</a></li>
+<li><a href="docs/SubscriptionContainerStatusMappingRecord/">SubscriptionContainerStatusMappingRecord</a></li>
+<li><a href="docs/SupportTokenResponse/">SupportTokenResponse</a></li>
+<li><a href="docs/SystemNotificationsModel/">SystemNotificationsModel</a></li>
+<li><a href="docs/TagSet/">TagSet</a></li>
+<li><a href="docs/TagUpdateRequest/">TagUpdateRequest</a></li>
+<li><a href="docs/TrafficVolumeRanking/">TrafficVolumeRanking</a></li>
+<li><a href="docs/UpdateDefaultPermissionsRequest/">UpdateDefaultPermissionsRequest</a></li>
+<li><a href="docs/UpdateEventHandlerRequest/">UpdateEventHandlerRequest</a></li>
+<li><a href="docs/UpdatePasswordRequest/">UpdatePasswordRequest</a></li>
+<li><a href="docs/UpdatePermissionRequest/">UpdatePermissionRequest</a></li>
+<li><a href="docs/UpdateSpeedClassRequest/">UpdateSpeedClassRequest</a></li>
+<li><a href="docs/UpdateUserRequest/">UpdateUserRequest</a></li>
+<li><a href="docs/UserDetailResponse/">UserDetailResponse</a></li>
+<li><a href="docs/VerifyAddEmailTokenRequest/">VerifyAddEmailTokenRequest</a></li>
+<li><a href="docs/VerifyOperatorsRequest/">VerifyOperatorsRequest</a></li>
+<li><a href="docs/VerifyPasswordResetTokenRequest/">VerifyPasswordResetTokenRequest</a></li>
+<li><a href="docs/VerifySubscriberTransferTokenRequest/">VerifySubscriberTransferTokenRequest</a></li>
+<li><a href="docs/VerifySubscriberTransferTokenResponse/">VerifySubscriberTransferTokenResponse</a></li>
+<li><a href="docs/VirtualPrivateGateway/">VirtualPrivateGateway</a></li>
+<li><a href="docs/VolumeDiscountModel/">VolumeDiscountModel</a></li>
+<li><a href="docs/VpcPeeringConnection/">VpcPeeringConnection</a></li>
+</ul>
+<h2 id="documentation-for-authorization">Documentation For Authorization<a class="headerlink" href="#documentation-for-authorization" title="Permanent link">&para;</a></h2>
+<h2 id="api_key">api_key<a class="headerlink" href="#api_key" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Type</strong>: API key</li>
+<li><strong>API key parameter name</strong>: X-Soracom-API-Key</li>
+<li><strong>Location</strong>: HTTP header</li>
+</ul>
+<h2 id="api_token">api_token<a class="headerlink" href="#api_token" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Type</strong>: API key</li>
+<li><strong>API key parameter name</strong>: X-Soracom-Token</li>
+<li><strong>Location</strong>: HTTP header</li>
+</ul>
+<h2 id="author">Author<a class="headerlink" href="#author" title="Permanent link">&para;</a></h2>
+<h2 id="notes-for-large-openapi-documents">Notes for Large OpenAPI documents<a class="headerlink" href="#notes-for-large-openapi-documents" title="Permanent link">&para;</a></h2>
+<p>If the OpenAPI document is large, imports in soracom_api.apis and soracom_api.models may fail with a
+RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:</p>
+<p>Solution 1:
+Use specific imports for apis and models like:
+- <code>from soracom_api.api.default_api import DefaultApi</code>
+- <code>from soracom_api.model.pet import Pet</code></p>
+<p>Solution 2:
+Before importing the package, adjust the maximum recursion limit as shown below:</p>
+<pre><code>import sys
+sys.setrecursionlimit(1500)
+import soracom_api
+from soracom_api.apis import *
+from soracom_api.models import *
+</code></pre>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+      
+        
+        <a href="../sandbox/" class="md-footer__link md-footer__link--next" aria-label="次: SORACOM API Sandbox" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              SORACOM API Sandbox
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Soracom, Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/soracom" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/SORACOM_PR" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+    
+  </body>
+</html>
