@@ -12,7 +12,7 @@ This project only contains auto-generated codes from SORACOM API schema from Ope
 
 ### Look at some notebooks without executing any code
 
-* <a href="https://nbviewer.jupyter.org/github/soracom-labs/openapi-client-python/blob/main/index.ipynb"><img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg" alt="Render nbviewer" /></a>
+* <a href="https://nbviewer.org/github/soracom-labs/openapi-client-python/blob/main/notebooks/index.ipynb"><img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg" alt="Render nbviewer" /></a>
 
 ### Run notebooks in locals
 
