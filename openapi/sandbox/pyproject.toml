@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "soracom_sandbox"
-version = "0.0.1"
+version = "0.0.2"
 description = "SORACOM SANDBOX API Client for the Python programming language based on the OpenAPI specification"
 authors = ["ks6088ts <ks6088ts@gmail.com>"]
 license = "MIT"
